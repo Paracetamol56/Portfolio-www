@@ -16,10 +16,29 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
+section {
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+}
+
 .fillTextWithgradient {
   background-image: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 25%, #8251e9 50%, #ad56e3 75%, #df7bf5 100%);
   background-clip: text;
   color: transparent;
+}
+
+.coloredOnHover {
+  transition: all var(--easing) 0.1s;
+}
+
+.coloredOnHover :hover {
+  color: #8251e9;
+  transition: all var(--easing) 0.1s;
 }
 
 /* Navbar section */
@@ -107,7 +126,7 @@ header {
 }
 
 header .background {
-  height: 100%;
+  height: calc(100% - 50px);
   width: 100%;
   overflow: hidden;
   position: absolute;
@@ -195,4 +214,25 @@ header .downButton a {
   font-size: 1rem;
   font-weight: 500;
   transition: all 0.5s var(--easing);
+}
+
+/* Sections */
+
+section {
+  width: 100%;
+  z-index: 1;
+  margin-top: 50px;
+}
+
+section h2 {
+  font-family: 'Roboto' sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+section h2 .section-number {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8251e9;
 }
