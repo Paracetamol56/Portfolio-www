@@ -32,15 +32,6 @@ section {
   color: transparent;
 }
 
-.coloredOnHover {
-  transition: all var(--easing) 0.1s;
-}
-
-.coloredOnHover :hover {
-  color: #8251e9;
-  transition: all var(--easing) 0.1s;
-}
-
 /* Navbar section */
 
 nav {
@@ -113,6 +104,13 @@ nav .nav-container .nav-menu .nav-menu-list-element {
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   font-size: 1rem;
+
+  transition: all var(--easing) 0.5s;
+}
+
+nav .nav-container .nav-menu .nav-menu-list-element:hover {
+  color: #8251e9;
+  transition: all var(--easing) 0.2s;
 }
 
 /* Header section */
@@ -165,7 +163,7 @@ header .bgCodeBox {
 header .bgCodeBox:hover {
   color: var(--bgCodeBox-hover-color);
 
-  transition: all 0.1s var(--easing);
+  transition: all 0s;
 }
 
 header .titles {
@@ -224,15 +222,102 @@ section {
   margin-top: 50px;
 }
 
-section h2 {
+section .section-title h2 {
   font-family: 'Roboto' sans-serif;
   font-size: 2rem;
   font-weight: 700;
+  white-space: nowrap;
+  margin: 0;
 }
 
-section h2 .section-number {
+section .section-title h2 .section-titel-number {
   font-family: 'Roboto Mono', monospace;
   font-size: 2rem;
   font-weight: 700;
-  color: #8251e9;
+  color: #b4e2f9;
+}
+
+section .section-title hr {
+  width: 100%;
+  height: 2px;
+  border: transparent;
+  background-image: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 25%, #8251e9 50%, #ad56e3 75%, #df7bf5 100%);
+  margin: 0;
+  padding: 0;
+}
+
+/* Github dashboard */
+
+.repos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: auto;
+  width: fit-content;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 250px;
+  width: 300px;
+  padding: 10px;
+  margin: 15px;
+  border: #000000 2px solid;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  background-image: linear-gradient(135deg, #2c1b4f 0%, #111416 100%);
+  transition: all var(--easing) 0.5s;
+}
+
+.repo-card:hover {
+  border: #5f78ef 2px solid;
+  box-shadow: 0px 0px 20px #5f77ef9a;
+  transition: all var(--easing) 0.1s;
+}
+
+.repo-card .repo-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.repo-card .repo-card-header i {
+  color: #b4e2f9;
+}
+
+.repo-card .repo-card-header h2 {
+  color: #b4e2f9;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.repo-card hr {
+  width: 100%;
+  height: 2px;
+  border: transparent;
+  background-color: #b4e2f9;
+}
+
+.repo-card .repo-card-content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.repo-card .repo-card-language-ratio {
+  background-color: #333333;
+  height: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
