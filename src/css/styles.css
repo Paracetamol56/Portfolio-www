@@ -27,10 +27,28 @@ section {
 }
 
 .fillTextWithgradient {
-  background-image: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 25%, #8251e9 50%, #ad56e3 75%, #df7bf5 100%);
-  background-clip: text;
-  color: transparent;
+  background: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 25%, #8251e9 50%, #ad56e3 75%, #df7bf5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+/* Custom scrollbar */
+
+/* (doesn't work on Firefox) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+  box-shadow: inset 0 0 2px #5f78ef;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8251e9;
+  border-radius: 5px;
+} 
 
 /* Navbar section */
 
@@ -99,19 +117,49 @@ nav .nav-container .nav-menu .nav-menu-list {
 }
 
 nav .nav-container .nav-menu .nav-menu-list-element {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav .nav-container .nav-menu .nav-menu-list-element a {
   color: #ffffff;
+  text-align: center;
   text-decoration: none;
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   font-size: 1rem;
-  border-bottom: 3px solid #8251e9;
-
+  margin: auto 0;
+  transform: translateY(0);
   transition: all var(--easing) 0.5s;
 }
 
-nav .nav-container .nav-menu .nav-menu-list-element:hover {
+nav .nav-container .nav-menu .nav-menu-list-element a.active {
   color: #8251e9;
-  
+}
+
+nav .nav-container .nav-menu .nav-menu-list-element div {
+  height: 2px;
+  width: 100%;
+  background-color: #8251e9;
+  margin: 0;
+  padding: 0;
+  transform:scaleX(0%);
+  transition: all var(--easing) 0.5s;
+}
+
+nav .nav-container .nav-menu .nav-menu-list-element:hover > a {
+  color: #8251e9;
+  transform: translateY(2px);
+  transition: all var(--easing) 0.2s;
+}
+
+nav .nav-container .nav-menu .nav-menu-list-element:hover > div {
+  transform: scaleX(100%);
   transition: all var(--easing) 0.2s;
 }
 
