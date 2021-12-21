@@ -104,12 +104,14 @@ nav .nav-container .nav-menu .nav-menu-list-element {
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   font-size: 1rem;
+  border-bottom: 3px solid #8251e9;
 
   transition: all var(--easing) 0.5s;
 }
 
 nav .nav-container .nav-menu .nav-menu-list-element:hover {
   color: #8251e9;
+  
   transition: all var(--easing) 0.2s;
 }
 
@@ -246,6 +248,79 @@ section .section-title hr {
   padding: 0;
 }
 
+/* Footer */
+
+footer {
+  width: 100%;
+  padding: 50px 0 50px 0;
+  background-color: #111416;
+}
+
+footer .footer-logo-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+}
+
+footer .footer-logo-icon {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.25s var(--easing);
+}
+
+footer .footer-logo-icon:hover {
+  color: #8251e9;
+  transition: all 0.25s var(--easing);
+}
+
+footer .footer-author {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+  margin: 20px 0;
+  padding: 0;
+}
+
+footer .footer-author span.hearth {
+  color: #ffffff;
+  transition: all 0.25s var(--easing);
+}
+
+footer .footer-author span.hearth:hover {
+  color: #8251e9;
+  transition: all 0.25s var(--easing);
+}
+
+footer .footer-credits {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-align: center;
+  color: #ffffff;
+  margin: 20px 0;
+  padding: 0;
+}
+
+footer .footer-credits a {
+  color: #ffffff;
+  text-decoration: dotted underline;
+  transition: all 0.25s var(--easing);
+}
+
+footer .footer-credits a:hover {
+  color: #8251e9;
+  text-decoration: solid underline;
+  transition: all 0.25s var(--easing);
+}
+
 /* Github dashboard */
 
 .repos {
@@ -267,6 +342,7 @@ section .section-title hr {
   padding: 10px;
   margin: 15px;
   border: #000000 2px solid;
+  border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
   background-image: linear-gradient(135deg, #2c1b4f 0%, #111416 100%);
   transition: all var(--easing) 0.5s;
@@ -281,7 +357,7 @@ section .section-title hr {
 .repo-card .repo-card-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   height: 50px;
   width: 100%;
@@ -291,12 +367,17 @@ section .section-title hr {
 
 .repo-card .repo-card-header i {
   color: #b4e2f9;
+  margin-left: 5px;
+  font-size: 1rem;
 }
 
 .repo-card .repo-card-header h2 {
   color: #b4e2f9;
   margin: 0;
   font-family: 'Roboto Mono', monospace;
+  margin-right: auto;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .repo-card hr {
