@@ -28,6 +28,7 @@ section {
 
 .fillTextWithgradient {
   background: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 25%, #8251e9 50%, #ad56e3 75%, #df7bf5 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -154,7 +155,6 @@ nav .nav-container .nav-menu .nav-menu-list-element div {
 
 nav .nav-container .nav-menu .nav-menu-list-element:hover > a {
   color: #8251e9;
-  transform: translateY(2px);
   transition: all var(--easing) 0.2s;
 }
 
@@ -171,6 +171,9 @@ header {
   max-height: 1600px;
   width: 100%;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header .background {
@@ -217,13 +220,13 @@ header .bgCodeBox:hover {
 }
 
 header .titles {
-  width: 100%;
-  position: absolute;
-  top: 50%;
+  width: fit-content;
+  margin: auto;
   text-align: center;
   pointer-events: none;
 
-  transform: translateY(-50%);
+  transform: translateY(-50%),
+  translateZ(200px);
 
   font-family: 'Roboto mono', monospace;
   font-weight: 300;
