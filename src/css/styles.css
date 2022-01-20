@@ -65,7 +65,8 @@ nav {
   align-items: center;
   height: 50px;
   width: 100%;
-  z-index: 1;
+  z-index: 4;
+  position: fixed;
 
   color: #ffffff;
 }
@@ -92,7 +93,7 @@ nav .nav-container .nav-logo .nav-logo-link {
   text-decoration: none;
   font-size: 1.2rem;
   font-family: 'Roboto Mono', monospace;
-  font-weight: 500;
+  font-weight: 200;
   letter-spacing: 0.1rem;
 }
 
@@ -171,7 +172,7 @@ nav .nav-container .nav-menu .nav-menu-list-element:hover > div {
 
 header {
   background-image: radial-gradient(circle, rgba(44,27,79,1) 0%, #111416 100%);
-  height: calc(100vh - 50px);
+  height: 100vh;
   max-height: 1600px;
   width: 100%;
   position: relative;
