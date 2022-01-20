@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Robots -->
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Device -->
+    <!-- <meta name="viwport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Title -->
+    <title>Mathéo'sportfolio</title>
+    <!-- Description -->
+    <meta name="description" content="Mathéo's projects">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a class="nav-logo-link coloredOnHover" href="/">
+                    <span class=" nav-logo-link-bold">Portfolio</span> Mathéo Galuba
+                </a>
+            </div>
+            <div class="nav-menu">
+                <ul class="nav-menu-list">
+                    <li class="nav-menu-list-element">
+                        <a class="active" href="/">Home</a>
+                        <div></div>
+                    </li>
+                    <li class="nav-menu-list-element">
+                        <a href="/about">About</a>
+                        <div></div>
+                    </li>
+                    <li class="nav-menu-list-element">
+                        <a href="/contact">Contact</a>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="background" id="codeBlocksBackground">
+
+        </div>
+
+        <div class="titles" id="titles">
+            <h1 class="fillTextWithgradient">Mathéo's portfolio</h1>
+            <h2 class="fillTextWithgradient">Welcome to my world</h2>
+        </div>
+
+        <div class="downButton">
+            <a href="#section1">
+                LEARN MORE<br>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+
+        <!-- Header paralax -->
+        <script>
+            // Header paralax
+            backgroundParalax = document.getElementById("codeBlocksBackground");
+            titleParalax = document.getElementById("titles");
+            window.addEventListener("scroll", function () {
+                backgroundParalax.style.transform = "translateY(" + window.pageYOffset / 2 + "px)";
+                titleParalax.style.transform = "translateY(" + window.pageYOffset / 3 + "px)";
+            }); 
+        </script>
+    </header>
+
+    <footer>
+        <div class="container">
+            <ul class="footer-logo-list">
+                <li>
+                    <a href="https://github.com/Paracetamol56" target="_blank" rel="nofollow"
+                        class="footer-logo-icon fab fa-github"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/matheogaluba/" target="_blank" rel="nofollow"
+                        class="footer-logo-icon fab fa-linkedin"></a>
+                </li>
+            </ul>
+            <div class="footer-author">
+                <p>
+                    Made with <span class="hearth fas fa-heart"></span> by Mathéo Galuba - © Copyright 2022
+                </p>
+            </div>
+            <div class="footer-credits">
+                <p>
+                    Icons from <a href="https://fontawesome.com/" target="_blank" rel="nofollow">Font Awesome</a>.
+                    Web fonts from <a href="https://fonts.google.com/" target="_blank" rel="nofollow">Google</a>.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!--Scripts -->
+    <!--JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Smooth scrolling -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+    <!-- Header animation -->
+    <script type="module" src="js/header.js"></script>
+</body>
+
+</html>
