@@ -16,4 +16,9 @@ router.get('/contact', function (req, res, next) {
     res.render('contact');
 });
 
+/* github page. */
+router.get('/githubdashboard', function (req, res, next) {
+    res.render('githubDashboard');
+});
+
 module.exports = router;
