@@ -2,82 +2,54 @@ const $ = selector => {
     return document.querySelector(selector);
 };
 
+// setInterval(() => {
+//     next();
+// }, 5000);
+
 function next() {
-    if ($(".hide")) {
-        $(".hide").remove();
+    console.log("next");
+
+    // Put last element of the carroussel in the first position
+    console.log($(".carroussel").children);
+    $(".carroussel").insertBefore($(".carroussel").lastElementChild, $(".carroussel").firstElementChild);
+    console.log($(".carroussel").children);
+
+    // for each element in the carroussel
+    // assign classe hide to every carroussel child
+    for (let i = 0; i < $(".carroussel").children.length; i++) {
+        $(".carroussel").children[i].classList = "hide carroussel-card";
     }
 
-    /* Step */
-
-    if ($(".prev")) {
-        $(".prev").classList.add("hide");
-        $(".prev").classList.remove("prev");
-    }
-
-    $(".act").classList.add("prev");
-    $(".act").classList.remove("act");
-
-    $(".next").classList.add("act");
-    $(".next").classList.remove("next");
-
-    /* New Next */
-
-    $(".new-next").classList.remove("new-next");
-
-    const addedEl = document.createElement('li');
-
-    $(".list").appendChild(addedEl);
-    addedEl.classList.add("next", "new-next");
+    // Assing classes to the 3 first elements
+    $(".carroussel").children[0].classList = "next carroussel-card";
+    $(".carroussel").children[1].classList = "act carroussel-card";
+    $(".carroussel").children[2].classList = "prev carroussel-card";
 }
 
 function prev() {
-    $(".new-next").remove();
+    console.log("prev");
 
-    /* Step */
+    // Put first element of the carroussel in the last position
+    console.log($(".carroussel").children);
+    $(".carroussel").appendChild($(".carroussel").firstElementChild);
+    console.log($(".carroussel").children);
 
-    $(".next").classList.add("new-next");
-
-    $(".act").classList.add("next");
-    $(".act").classList.remove("act");
-
-    $(".prev").classList.add("act");
-    $(".prev").classList.remove("prev");
-
-    /* New Prev */
-
-    $(".hide").classList.add("prev");
-    $(".hide").classList.remove("hide");
-
-    const addedEl = document.createElement('li');
-
-    $(".list").insertBefore(addedEl, $(".list").firstChild);
-    addedEl.classList.add("hide");
-}
-
-slide = element => {
-    /* Next slide */
-
-    if (element.classList.contains('next')) {
-        next();
-
-        /* Previous slide */
-
-    } else if (element.classList.contains('prev')) {
-        prev();
+    // for each element in the carroussel
+    // assign classe hide to every carroussel child
+    for (let i = 0; i < $(".carroussel").children.length; i++) {
+        $(".carroussel").children[i].classList = "hide carroussel-card";
     }
+
+    // Assing classes to the 3 first elements
+    $(".carroussel").children[0].classList = "next carroussel-card";
+    $(".carroussel").children[1].classList = "act carroussel-card";
+    $(".carroussel").children[2].classList = "prev carroussel-card";
 }
 
-const slider = $(".list"),
-    swipe = new Hammer($(".swipe"));
-
-slider.onclick = event => {
-    slide(event.target);
-}
-
-swipe.on("swipeleft", (ev) => {
-    next();
+$(".prev").addEventListener("click", () => {
+    prev();
 });
 
-swipe.on("swiperight", (ev) => {
-    prev();
+$(".next").addEventListener("click", () => {
+    next();
 });

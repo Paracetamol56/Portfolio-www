@@ -342,24 +342,14 @@ section .section-title hr {
 /* Carrousel */
 
 .carroussel {
+  height: 400px;
   width: 100%;
-  height: 200px;
   margin: 40px 0;
+  padding: 0;
   position: relative;
 }
 
-.carroussel .list {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%)
-}
-
-.carroussel .list li {
+.carroussel li.carroussel-card {
   list-style-type: none;
   position: absolute;
   left: 50%;
@@ -367,7 +357,8 @@ section .section-title hr {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 200px;
+  width: 70vw;
+  max-width: 500px;
   height: 100%;
   padding: 10px;
   margin-left: -100px;
@@ -377,51 +368,31 @@ section .section-title hr {
   background-image: linear-gradient(135deg, #2c1b4f 0%, #111416 100%);
   opacity: .25;
   border: #5f78ef 2px solid;
-}
-
-.carroussel .list .act {
-  
-  opacity: 1;
   transition: transform 1s, opacity 1s;
 }
 
-.carroussel .list .prev,
-.carroussel .list .next {
+.carroussel li.carroussel-card.prev {
+  transform: translateX(-500px) scale(.85);
   cursor: pointer;
+  transition: transform 1s, opacity 1s;
 }
 
-.carroussel .list .prev {
-  transform: translateX(-220px) scale(.85);
+.carroussel li.carroussel-card.act {
+  opacity: 1;
+  transform: translateX(0px) scale(1);
+  transition: transform 1s, opacity 1s;
 }
 
-.carroussel .list .next {
-  transform: translateX(220px) scale(.85);
+.carroussel li.carroussel-card.next {
+  transform: translateX(500px) scale(.85);
+  cursor: pointer;
+  transition: transform 1s, opacity 1s;
 }
 
-.carroussel .list .hide {
+.carroussel li.carroussel-card.hide {
+  opacity: 0;
   transform: translateX(-420px) scale(.85);
-}
-
-.carroussel .list .new-next {
-  transform: translateX(420px) scale(.85);
-}
-
-.carroussel .list .hide,
-.carroussel .list .new-next {
-  opacity: 0;
   transition: opacity .5s, transform .5s;
-}
-
-.carroussel .swipe {
-  width: 270px;
-  height: 200px;
-  position: absolute;
-  background-color: green;
-  border-radius: 2px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  opacity: 0;
 }
 
 /* Footer */
