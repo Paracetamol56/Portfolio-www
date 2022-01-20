@@ -1,3 +1,4 @@
+// Header background
 $(document).ready(function () {
   let codeBlocksBackground = document.getElementById("codeBlocksBackground");
 
@@ -85,3 +86,5 @@ $(document).ready(function () {
     }
   }
 });
+
+

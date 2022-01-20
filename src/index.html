@@ -61,6 +61,17 @@
                 <i class="fas fa-chevron-down"></i>
             </a>
         </div>
+
+        <!-- Header paralax -->
+        <script>
+            // Header paralax
+            backgroundParalax = document.getElementById("codeBlocksBackground");
+            titleParalax = document.getElementById("titles");
+            window.addEventListener("scroll", function () {
+                backgroundParalax.style.transform = "translateY(" + window.pageYOffset / 2 + "px)";
+                titleParalax.style.transform = "translateY(" + window.pageYOffset / 3 + "px)";
+            }); 
+        </script>
     </header>
 
     <section id="section1">
@@ -147,13 +158,14 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Header animation -->
-    <script type="module" src="js/header.js"></script>
-    <!-- Title effect -->
-    <script type="module" src="js/titleEffect.js"></script>
+    <!--Scripts -->
+    < !--JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- Smooth scrolling -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+        <!-- Header animation -->
+        <script type="module" src="js/header.js"></script>
 </body>
 
 </html>

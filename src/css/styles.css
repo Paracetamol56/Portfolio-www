@@ -6,6 +6,10 @@
   --easing: cubic-bezier(0.5, 0, 0.5, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000000;
   margin: 0;
@@ -166,11 +170,13 @@ nav .nav-container .nav-menu .nav-menu-list-element:hover > div {
 /* Header section */
 
 header {
-  background-image: radial-gradient(circle, rgba(44,27,79,1) 0%, #111416 100%);;
+  background-image: radial-gradient(circle, rgba(44,27,79,1) 0%, #111416 100%);
   height: calc(100vh - 50px);
   max-height: 1600px;
   width: 100%;
+  position: relative;
   z-index: 1;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,6 +185,7 @@ header {
 header .background {
   height: calc(100% - 50px);
   width: 100%;
+  z-index: 0;
   overflow: hidden;
   position: absolute;
   display: grid;
@@ -193,6 +200,7 @@ header .background {
 header .bgCodeBox {
   width: 80px;
   height: 80px;
+  z-index: 1;
   background-color: transparent;
   padding: 2px;
   margin: 0;
@@ -221,6 +229,7 @@ header .bgCodeBox:hover {
 
 header .titles {
   width: fit-content;
+  z-index: 2;
   margin: auto;
   text-align: center;
   pointer-events: none;
@@ -271,7 +280,9 @@ header .downButton a {
 
 section {
   width: 100%;
-  z-index: 1;
+  position: relative;
+  z-index: 3;
+  background-color: #000000;
   margin-top: 50px;
 }
 
