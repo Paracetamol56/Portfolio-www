@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paracetamol56/Portfolio.git"
+  },
+  "author": "Mathéo Galuba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paracetamol56/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Paracetamol56/Portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
