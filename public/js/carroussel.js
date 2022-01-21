@@ -5,8 +5,6 @@ const interval = setInterval(() => {
 }, 10000);
 
 function next() {
-    console.log("next");
-
     // Put last element of the carroussel in the first position
     carroussel.insertBefore(carroussel.lastElementChild, carroussel.firstElementChild);
 
@@ -18,8 +16,6 @@ function next() {
 }
 
 function prev() {
-    console.log("prev");
-
     // Put first element of the carroussel in the last position
     carroussel.appendChild(carroussel.firstElementChild);
 

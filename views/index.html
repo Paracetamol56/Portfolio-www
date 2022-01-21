@@ -58,7 +58,7 @@
         </div>
 
         <div class="downButton">
-            <a href="#section1">
+            <a href="#about">
                 LEARN MORE<br>
                 <i class="fas fa-chevron-down"></i>
             </a>
@@ -76,7 +76,7 @@
         </script>
     </header>
 
-    <section id="about">
+    <section id="about" class="fade-in">
         <div class="container">
 
             <div class="section-title">
@@ -105,7 +105,7 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <div class="container">
 
             <div class="section-title">
@@ -114,9 +114,59 @@
             </div>
 
             <ul class="carroussel">
-                <li class="carroussel-card hide">0</li>
-                <li class="carroussel-card prev">1</li>
+                <li class="carroussel-card hide">
+                    <img class="carroussel-card-thumbnail" src="images/s4jgxi73.bmp" alt="thumbnail">
+                    <div class="carroussel-card-content">
+                        <h3 class="carroussel-card-header">
+                            <span class="carroussel-card-header-number">05.</span> Project
+                        </h3>
+                        <p class="carroussel-card-desc">
+                            Curabitur nunc enim, ornare a sapien in, pretium pharetra mauris. Mauris consectetur augue
+                            ac mauris vulputate aliquet...
+                        </p>
+                        <a class="carroussel-card-button" href="/project/2">Lear more</a>
+                    </div>
+                </li>
+                <li class="carroussel-card prev">
+                    <img class="carroussel-card-thumbnail" src="images/s4jgxi73.bmp" alt="thumbnail">
+                    <div class="carroussel-card-content">
+                        <h3 class="carroussel-card-header">
+                            <span class="carroussel-card-header-number">04.</span> Project
+                        </h3>
+                        <p class="carroussel-card-desc">
+                            Curabitur nunc enim, ornare a sapien in, pretium pharetra mauris. Mauris consectetur augue
+                            ac mauris vulputate aliquet...
+                        </p>
+                        <a class="carroussel-card-button" href="/project/2">Lear more</a>
+                    </div>
+                </li>
                 <li class="carroussel-card act">
+                    <img class="carroussel-card-thumbnail" src="images/s4jgxi73.bmp" alt="thumbnail">
+                    <div class="carroussel-card-content">
+                        <h3 class="carroussel-card-header">
+                            <span class="carroussel-card-header-number">03.</span> Project
+                        </h3>
+                        <p class="carroussel-card-desc">
+                            Curabitur nunc enim, ornare a sapien in, pretium pharetra mauris. Mauris consectetur augue
+                            ac mauris vulputate aliquet...
+                        </p>
+                        <a class="carroussel-card-button" href="/project/2">Lear more</a>
+                    </div>
+                </li>
+                <li class="carroussel-card next">
+                    <img class="carroussel-card-thumbnail" src="images/s4jgxi73.bmp" alt="thumbnail">
+                    <div class="carroussel-card-content">
+                        <h3 class="carroussel-card-header">
+                            <span class="carroussel-card-header-number">02.</span> Project
+                        </h3>
+                        <p class="carroussel-card-desc">
+                            Curabitur nunc enim, ornare a sapien in, pretium pharetra mauris. Mauris consectetur augue
+                            ac mauris vulputate aliquet...
+                        </p>
+                        <a class="carroussel-card-button" href="/project/2">Lear more</a>
+                    </div>
+                </li>
+                <li class="carroussel-card hide">
                     <img class="carroussel-card-thumbnail" src="images/s4jgxi73.bmp" alt="thumbnail">
                     <div class="carroussel-card-content">
                         <h3 class="carroussel-card-header">
@@ -129,11 +179,14 @@
                         <a class="carroussel-card-button" href="/project/2">Lear more</a>
                     </div>
                 </li>
-                <li class="carroussel-card next">3</li>
-                <li class="carroussel-card hide">4</li>
             </ul>
 
             <script src="js/carroussel.js"></script>
+
+            <!-- CTA button to go to the project page -->
+            <a class="cta-button fade-in" href="/project">
+                <span class="cta-button-text">See more projects</span>
+            </a>
         </div>
     </section>
 
@@ -178,6 +231,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
     <!-- Header animation -->
     <script type="module" src="js/header.js"></script>
+    <!-- Fader animation -->
+    <script type="module" src="js/fader.js"></script>
 </body>
 
 </html>

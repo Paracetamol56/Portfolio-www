@@ -53,6 +53,8 @@ section {
   background:url(images/tipFooter.gif) no-repeat;
 }
 
+/* Global classes */
+
 .container {
   width: 75%;
   margin: auto;
@@ -63,6 +65,49 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.cta-button {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #8251e9;
+
+  /* Center the button */
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+
+  overflow: hidden;
+  padding: 10px;
+  box-shadow: 0px 0px 20px #5f77ef9a;
+  transition: transform 1s, opacity 1s;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 90%);
+  background-position: 100%;
+  background-size: 400%;
+  border: #5f78ef 2px solid;
+
+  transition: all .5s var(--easing);
+}
+
+.cta-button:hover {
+  color: #5f78ef;
+  background-position: 0%;
+  transition: all .5s var(--easing);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(75px);
+  transition: all .5s var(--easing);
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all .5s var(--easing);
 }
 
 /* Custom scrollbar */
@@ -313,6 +358,7 @@ section {
   z-index: 3;
   background-color: #000000;
   margin-top: 50px;
+  overflow-x: hidden;
 }
 
 section .section-title h2 {
@@ -438,6 +484,7 @@ section .section-title hr {
   cursor: pointer;
   align-self: flex-end;
 }
+
 
 
 /* Footer */
