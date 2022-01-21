@@ -342,7 +342,7 @@ section .section-title hr {
 /* Carrousel */
 
 .carroussel {
-  height: 400px;
+  height: 450px;
   width: 100%;
   margin: 40px 0;
   padding: 0;
@@ -359,40 +359,86 @@ section .section-title hr {
   justify-content: flex-start;
   align-items: center;
   width: 400px;
-  height: 400px;
-  padding: 10px;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
   box-shadow: 0px 0px 20px #5f77ef9a;
   transition: transform 1s, opacity 1s;
   border-radius: 5px;
   background-image: linear-gradient(135deg, #2c1b4f 0%, #111416 100%);
   opacity: .25;
   border: #5f78ef 2px solid;
-  transition: all 1s;
+  transition: all 1s var(--easing);
 }
 
 .carroussel li.carroussel-card.prev {
   transform: translateX(-500px) scale(.85);
   cursor: pointer;
-  transition: all 1s;
+  z-index: 1;
+  transition: all 1s var(--easing);
 }
 
 .carroussel li.carroussel-card.act {
   opacity: 1;
   transform: translateX(0px) scale(1);
-  transition: all 1s;
+  z-index: 2;
+  transition: all 1s var(--easing);
 }
 
 .carroussel li.carroussel-card.next {
   transform: translateX(500px) scale(.85);
   cursor: pointer;
-  transition: all 1s;
+  z-index: 1;
+  transition: all 1s var(--easing);
 }
 
 .carroussel li.carroussel-card.hide {
   opacity: 0;
-  transform: translateX(0px) scale(.85);
-  transition: all 1s;
+  transform: translateX(0px) scale(.70);
+  z-index: 0;
+  transition: all 1s var(--easing);
 }
+
+.carroussel .carroussel-card-thumbnail {
+  width: 100%;
+}
+
+.carroussel .carroussel-card-content {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.carroussel .carroussel-card-header-number {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b4e2f9;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.carroussel .carroussel-card-header {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.carroussel .carroussel-card-button {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #8251e9;
+  margin-top: auto;
+  text-decoration: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
 
 /* Footer */
 

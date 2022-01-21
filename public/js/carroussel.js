@@ -11,10 +11,10 @@ function next() {
     carroussel.insertBefore(carroussel.lastElementChild, carroussel.firstElementChild);
 
     // Assing classes to the 3 first elements
-    carroussel.children[2].classList = "prev carroussel-card";
-    carroussel.children[1].classList = "act carroussel-card";
-    carroussel.children[0].classList = "next carroussel-card";
-    carroussel.children[3].classList = "hide carroussel-card";
+    carroussel.children[3].classList = "prev carroussel-card";
+    carroussel.children[2].classList = "act carroussel-card";
+    carroussel.children[1].classList = "next carroussel-card";
+    carroussel.children[4].classList = "hide carroussel-card";
 }
 
 function prev() {
@@ -24,17 +24,28 @@ function prev() {
     carroussel.appendChild(carroussel.firstElementChild);
 
     // Assing classes to the 3 first elements
-    carroussel.lastElementChild.classList = "hide carroussel-card";
-    carroussel.children[0].classList = "next carroussel-card";
-    carroussel.children[1].classList = "act carroussel-card";
-    carroussel.children[2].classList = "prev carroussel-card";
+    carroussel.children[0].classList = "hide carroussel-card";
+    carroussel.children[1].classList = "next carroussel-card";
+    carroussel.children[2].classList = "act carroussel-card";
+    carroussel.children[3].classList = "prev carroussel-card";
 }
 
 // Event listener on carroussel click
 carroussel.addEventListener("click", function (e) {
-    if (e.target.classList.contains("next")) {
+    // get the fisrt e parent with class carroussel-card
+    var card = e.target;
+    var limit = 4;
+    while (!card.classList.contains("carroussel-card")) {
+        card = card.parentElement;
+        limit--;
+        if (limit <= 0) {
+            return;
+        }
+    }
+
+    if (card.classList.contains("next")) {
         next();
-    } else if (e.target.classList.contains("prev")) {
+    } else if (card.classList.contains("prev")) {
         prev();
     }
 });
