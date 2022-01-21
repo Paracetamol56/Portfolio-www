@@ -11,11 +11,9 @@ function next() {
     carroussel.insertBefore(carroussel.lastElementChild, carroussel.firstElementChild);
 
     // Assing classes to the 3 first elements
-    carroussel.children[1].classList = "act carroussel-card";
-
-    carroussel.children[0].classList = "next carroussel-card";
-
     carroussel.children[2].classList = "prev carroussel-card";
+    carroussel.children[1].classList = "act carroussel-card";
+    carroussel.children[0].classList = "next carroussel-card";
     carroussel.children[3].classList = "hide carroussel-card";
 }
 
