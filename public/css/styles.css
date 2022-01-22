@@ -257,7 +257,7 @@ header {
 }
 
 header .background {
-  height: calc(100% - 50px);
+  height: 100%;
   width: 100%;
   z-index: 0;
   overflow: hidden;
@@ -478,14 +478,18 @@ section .section-title hr {
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   font-size: 1.2rem;
-  color: #8251e9;
+  color: #ffffff;
   margin-top: auto;
   text-decoration: none;
   cursor: pointer;
   align-self: flex-end;
+  transition: all 0.5s var(--easing);
 }
 
-
+.carroussel .carroussel-card-button:hover {
+  color: #8251e9;
+  transition: all 0.5s var(--easing);
+}
 
 /* Footer */
 
