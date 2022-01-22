@@ -4,8 +4,9 @@
   "description": "Personal portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "jest",
+    "start": "node index.js",
+    "start-dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,15 @@
     "express": "^4.17.2",
     "html": "^1.0.0",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "supertest": "^6.2.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
