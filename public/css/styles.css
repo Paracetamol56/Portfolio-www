@@ -100,13 +100,11 @@ section {
 
 .fade-in {
   opacity: 0;
-  transform: translateY(75px);
   transition: all .5s var(--easing);
 }
 
 .fade-in.appear {
   opacity: 1;
-  transform: translateY(0px);
   transition: all .5s var(--easing);
 }
 
@@ -489,6 +487,12 @@ section .section-title hr {
 .carroussel .carroussel-card-button:hover {
   color: #8251e9;
   transition: all 0.5s var(--easing);
+}
+
+/* About page */
+
+.school-table {
+  background-color: #002aff;
 }
 
 /* Footer */
