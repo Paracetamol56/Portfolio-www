@@ -188,7 +188,7 @@
                 <h3 class="skill-header">Langues</h3>
                 <div class="language-list">
                     <div class="language french">
-                        <img class="language-flag french" src="/images/languages/1200px-Flag_of_France.svg.png" alt="">
+                        <img class="language-flag french" src="/images/languages/France-Flag.png" alt="">
                         <h5 class="language-title french">Bonjour !</h5>
                         <hr class="language-separator french">
                         <p class="language-content french">
@@ -196,8 +196,7 @@
                         </p>
                     </div>
                     <div class="language english">
-                        <img class="language-flag english"
-                            src="/images/languages/1024px-Flag_of_the_United_Kingdom.svg.png" alt="">
+                        <img class="language-flag english" src="/images/languages/UK-Flag.png" alt="">
                         <h5 class="language-title english">Hello !</h5>
                         <hr class="language-separator english">
                         <p class="language-content english">
@@ -206,7 +205,7 @@
                         </p>
                     </div>
                     <div class="language german">
-                        <img class="language-flag german" src="/images/languages/1200px-Flag_of_Germany.svg.png" alt="">
+                        <img class="language-flag german" src="/images/languages/Germany-Flag.png" alt="">
                         <h5 class="language-title german">Guten tag !</h5>
                         <hr class="language-separator german">
                         <p class="language-content german">
@@ -266,21 +265,73 @@
 
             <div>
                 <h3 class="skill-header">Technologies maitrisés</h3>
-                <ul>
-                    <li>C++ <span class="hearth fas fa-heart"></span></li>
-                    <li>Python</li>
-                    <li>Git</li>
-                    <li>Unity</li>
-                    <li>JavaScript</li>
-                    <li>Base de données relationnelles (SQL...)</li>
-                    <li>Base de données non relationnelles (Firebase...)</li>
-                    <li>Mathématiques discrètes</li>
-                    <li>Web frontend (HTML, CSS, JavaScript)</li>
-                    <li>Web backend (Node.js, Express)</li>
-                    <li>Suite Adobe (Photoshop, Illustrator, )</li>
-                    <li>Modélisation 3D (Blender)</li>
-                </ul>
+                <div class="technologies-container">
+                    <div class="technology">
+                        <img src="/images/technologies/C++.svg" alt="Firebase.svg" draggable="false">
+                        <p>C++</p>
+                    </div>
+                    <div class="technology">
+                        <img src="/images/technologies/Python.svg" alt="Firebase.svg" draggable="false">
+                        <p>Python</p>
+                    </div>
+                    <div class="technology">
+                        <img src="/images/technologies/Git.svg" alt="Firebase.svg" draggable="false">
+                        <p>Git</p>
+                    </div>
+                    <div class="technology">
+                        <img src="/images/technologies/Unity.svg" alt="Firebase.svg" draggable="false">
+                        <p>Unity</p>
+                    </div>
+                    <div class="technology">
+                        <img src="/images/technologies/SQL.svg" alt="Firebase.svg" draggable="false">
+                        <p>Base de données relationnelles (SQL...)</p>
+                    </div>
+                    <div class="technology">
+                        <img src="/images/technologies/Firebase.svg" alt="Firebase.svg" draggable="false">
+                        <p>Base de données non relationnelles (Firebase...)</p>
+                    </div>
+                    <div class="technology">
+                        <img src="/images/technologies/Frontend.svg" alt="Firebase.svg" draggable="false">
+                        <p>Web frontend (HTML, CSS, JavaScript...)</p>
+                    </div>
+                    <div class="technology">
+                        <img src="/images/technologies/Nodejs.svg" alt="Firebase.svg" draggable="false">
+                        <p>Web backend (Node.js, Express...)</p>
+                    </div>
+                    <div class="technology">
+                        <img src="/images/technologies/Adobe.svg" alt="Firebase.svg" draggable="false">
+                        <p>Suite Adobe (Photoshop, Illustrator...)</p>
+                    </div>
+                    <div class="technology">
+                        <img src="/images/technologies/Blender.svg" alt="Firebase.svg" draggable="false">
+                        <p>Modélisation 3D (Blender)</p>
+                    </div>
+                    <p class="technology-name">Passer le pointeur sur une technologie</p>
+                </div>
             </div>
+            <script>
+                // Modify typing effect values HERE
+                const speed = 20; // The speed/duration of the effect in milliseconds
+
+                function typeWriter(text, i) {
+                    if (i < (text.length)) {
+                        technologyName.innerHTML = text.substring(0, i + 1);
+
+                        setTimeout(function () {
+                            typeWriter(text, i + 1)
+                        }, speed);
+                    }
+                }
+
+                const technologies = document.querySelector('.technologies-container');
+                const technologyName = document.querySelector('.technology-name');
+                for (let i = 0; i < technologies.children.length; i++) {
+                    const technology = technologies.children[i];
+                    technology.addEventListener('mouseover', () => {
+                        typeWriter(technology.children[1].innerHTML, 0);
+                    });
+                };
+            </script>
         </div>
     </section>
 
