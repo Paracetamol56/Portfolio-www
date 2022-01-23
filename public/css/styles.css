@@ -763,11 +763,55 @@ section .section-title hr {
   display: none;
 }
 
-.technologies-container p.technology-name {
+p.technology-name {
   color: #b4e2f9;
   font-size: 1.2rem;
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
+  text-align: center;
+}
+
+/* Interests */
+
+.interests-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.interest {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+}
+
+.interest .interest-title {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 5px 0;
+  color: #b4e2f9;
+}
+
+.interest .interest-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.interest .interest-content .interest-logo {
+  font-size: 3rem;
+  color: #b4e2f9;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 16px;
+  margin-right: 10px;
 }
 
 /* Footer */
