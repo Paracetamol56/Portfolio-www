@@ -6,8 +6,11 @@ const appearObserver = new IntersectionObserver((entries) => {
         if (!entry.isIntersecting) {
             return;
         } else {
-            entry.target.classList.add('appear');
-            appearObserver.unobserve(entry.target);
+            // wait a 0.5s delay
+            setTimeout(() => {
+                entry.target.classList.add('appear');
+                appearObserver.unobserve(entry.target);
+            }, 250);
         }
     });
 });
