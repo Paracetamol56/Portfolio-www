@@ -716,7 +716,7 @@ section .section-title hr {
 }
 
 .skill-element i.fas {
-  font-size: 2rem;
+  font-size: 4rem;
   color: #b4e2f9;
   margin: 20px;
 }
@@ -726,7 +726,8 @@ section .section-title hr {
   font-weight: 500;
   font-size: 1.2rem;
   color: #ffffff;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .skill-element p {
