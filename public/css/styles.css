@@ -33,8 +33,8 @@ section {
 }
 
 .fillTextWithgradient {
-  background: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 25%, #8251e9 50%, #ad56e3 75%, #df7bf5 100%);
-  background-clip: text;
+  background: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 25%, #8251e9 50%, #ad56e3 75%, #df7bf5 100%) !important;
+  background-clip: text !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -214,7 +214,7 @@ nav .nav-container .nav-menu .nav-menu-list-element:hover > div {
 /* Header section */
 
 header {
-  background-image: radial-gradient(circle, rgba(44,27,79,1) 0%, #111416 100%);
+  background-image: radial-gradient(circle, rgba(44,27,79,1) 0%, #111416 100%) !important;
   height: 100vh;
   max-height: 1600px;
   width: 100%;
@@ -255,7 +255,7 @@ header .bgCodeBox {
   font-family: 'Fira Code', monospace;
   font-size: 16px;
   line-height: 20px;
-  color: var(--bgCodeBox-color);
+  color: var(--bgCodeBox-color) !important;
 
   transform: scale(0, 0);
   animation-name: bummer;
@@ -266,7 +266,7 @@ header .bgCodeBox {
 }
 
 header .bgCodeBox:hover {
-  color: var(--bgCodeBox-hover-color);
+  color: var(--bgCodeBox-hover-color)  !important;
 
   transition: all 0s;
 }
