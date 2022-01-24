@@ -370,8 +370,6 @@ header .bgCodeBox {
   font-size: 16px;
   line-height: 20px;
   color: var(--bgCodeBox-color) !important;
-  -webkit-transform: scale(0, 0);
-          transform: scale(0, 0);
   -webkit-animation-name: bummer;
           animation-name: bummer;
   -webkit-animation-duration: 1s;
