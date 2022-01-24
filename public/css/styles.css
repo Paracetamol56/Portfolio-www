@@ -25,34 +25,6 @@ section {
   font-family: 'Roboto', sans-serif;
 }
 
-/* tooltip styles */
-
-#tooltip {
-  position:absolute;
-  z-index:9999;
-  color:#fff;
-  font-size:10px;
-  width:180px;   
-}
-
-#tooltip .tipHeader {
-  height:8px;
-  background:url(images/tipHeader.gif) no-repeat;
-}
-
-/* IE hack */
-*html #tooltip .tipHeader {margin-bottom:-6px;}
-
-#tooltip .tipBody {
-  background-color:#000;
-  padding:5px 5px 5px 15px;
-}
-
-#tooltip .tipFooter {
-  height:8px;
-  background:url(images/tipFooter.gif) no-repeat;
-}
-
 /* Global classes */
 
 .container {
@@ -100,13 +72,11 @@ section {
 
 .fade-in {
   opacity: 0;
-  transform: translateY(75px);
   transition: all .5s var(--easing);
 }
 
 .fade-in.appear {
   opacity: 1;
-  transform: translateY(0px);
   transition: all .5s var(--easing);
 }
 
@@ -489,6 +459,359 @@ section .section-title hr {
 .carroussel .carroussel-card-button:hover {
   color: #8251e9;
   transition: all 0.5s var(--easing);
+}
+
+/* About page */
+
+/* School table */
+
+.school-table {
+  width: 100%;
+  margin: 20px 0px 0px 0px;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+.school-table-tr {
+  box-shadow: 0px 0px 20px #5f77ef9a;
+  border: #5f78ef 2px solid;
+  border-radius: 5px;
+  margin: 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+
+  background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 100%);
+
+  background-position: 100%;
+  background-size: 400%;
+  transition: all 1s var(--easing);
+}
+
+.school-table-tr:hover {
+  background-position: 0%;
+  transition: all 1s var(--easing);
+}
+
+.school-table-years,
+.school-table-description {
+  color: #ffffff;
+  padding: 10px;
+  border: none;
+}
+
+.school-table-years {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #b4e2f9;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.school-table-years p {
+  margin: 0;
+}
+
+.school-table-years span {
+  position: absolute;
+  left: auto;
+  top: 35px;
+  bottom: 35px;
+  right: auto;
+  width: 2px;
+  background-color: #b4e2f9;
+}
+
+.school-table-description {
+  margin-left: 70px;
+}
+
+.school-table-description ul:first-child,
+.school-table-description p:first-child,
+.school-table-description h3:first-child,
+.school-table-description h4:first-child {
+  margin-top: 0;
+}
+
+.school-table-description ul:last-child,
+.school-table-description p:last-child,
+.school-table-description h3:last-child,
+.school-table-description h4:last-child {
+  margin-bottom: 20px;
+}
+
+.school-link {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  transition: all 0.5s var(--easing);
+}
+
+.school-link:hover {
+  color: #8251e9;
+  right: 10px;
+  transition: all 0.5s var(--easing);
+}
+
+/* Skills */
+
+.skill-header {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Languages */
+
+.language-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.language {
+  position: relative;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  transition: all 1s var(--easing);
+}
+
+.language .language-flag {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 5px;
+  filter: blur(20px);
+  opacity: 0;
+  transition: all 0.5s var(--easing);
+}
+
+.language:hover > .language-flag {
+  filter: blur(2px);
+  opacity: .25;
+  transition: all 0.5s var(--easing);
+}
+
+.language .language-title {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #b4e2f9;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  z-index: 2;
+}
+
+.language .language-separator {
+  width: 100%;
+  height: 2px;
+  border: none;
+  margin: 10px 0;
+  z-index: 2;
+}
+
+.language .language-separator.french {
+  background-image: linear-gradient(90deg, #b4e2f9 0%, #6a6ced 100%);
+}
+
+.language .language-separator.english {
+  background-image: linear-gradient(90deg, #6a6ced 0%, #9f54e5 100%);
+}
+
+.language .language-separator.german {
+  background-image: linear-gradient(90deg, #9f54e5 0%, #df7bf5 100%);
+}
+
+.language .language-content {
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  z-index: 2;
+}
+
+.languages-content-color {
+  color: #8251e9
+}
+
+/* Skills */
+
+.skill-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.skill-element {
+  width: 100%;
+  max-width: 400px;
+  height: 135px;
+  margin: 15px;
+
+  border: #5f78ef 2px solid;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #5f77ef9a;
+  background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 100%);
+  background-position: 100%;
+  background-size: 400%;
+  overflow-y: hidden;
+  transition: all 1s var(--easing);
+}
+
+.skill-element:hover {
+  background-position: 0%;
+  transition: all 1s var(--easing);
+}
+
+.skill-element-inside {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  transform: translate(0, 0);
+  transition: all .5s var(--easing);
+}
+
+.skill-element:hover > .skill-element-inside {
+  transform: translate(0, -85px);
+  transition: all .5s var(--easing);
+}
+
+.skill-element:hover .skill-element-title {
+  color: #b4e2f9;
+  transition: all .5s var(--easing);
+}
+
+.skill-element i.fas {
+  font-size: 4rem;
+  color: #b4e2f9;
+  margin: 20px;
+}
+
+.skill-element .skill-element-title {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.skill-element p {
+  text-align: center;
+  margin: 0 10px;
+}
+
+/* Technologies */
+
+.technologies-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.technology {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.technology img {
+  width: 50px;
+  height: 50px;
+}
+
+.technology p {
+  display: none;
+}
+
+p.technology-name {
+  color: #b4e2f9;
+  font-size: 1.2rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Interests */
+
+.interests-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.interest {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+}
+
+.interest .interest-title {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 5px 0;
+  color: #b4e2f9;
+}
+
+.interest .interest-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.interest .interest-content .interest-logo {
+  font-size: 3rem;
+  color: #b4e2f9;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 16px;
+  margin-right: 10px;
 }
 
 /* Footer */
