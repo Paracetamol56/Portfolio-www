@@ -3,6 +3,9 @@
 :root {
 	--easing: cubic-bezier(0.5, 0, 0.5, 1);
 }
+*, *:before, *:after{
+    box-sizing: border-box;
+}
 html {
 	scroll-behavior: smooth;
 }
@@ -66,8 +69,16 @@ section {
 	}
 }
 .container {
-	width: 75%;
+	width: 60%;
 	margin: auto;
+	@media only screen and (max-width: 1400px) {
+		width: 75%;
+	}
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		margin: 0;
+		padding: 0 10px;
+	}
 }
 .fillTextWithgradient {
 	background: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 25%, #8251e9 50%, #ad56e3 75%, #df7bf5 100%) !important;
@@ -149,7 +160,6 @@ nav {
 		justify-content: space-between;
 		align-items: center;
 		height: 100%;
-		width: 75%;
 		.nav-logo {
 			display: flex;
 			flex-direction: row;
@@ -163,6 +173,26 @@ nav {
 				font-family: 'Roboto Mono', monospace;
 				font-weight: 200;
 				letter-spacing: 0.1rem;
+				.nav-logo-svg {
+					height: 20px;
+					margin-right: 10px;
+					.cls-1 {
+						fill: #ffffff;
+						transition: all .2s var(--easing);
+					}
+					.cls-2 {
+						fill: #b4b4b4;
+						transition: all .2s var(--easing);
+					}
+					.cls-1:hover {
+						fill: #8251e9;
+						transition: all .2s var(--easing);
+					}
+					.cls-2:hover {
+						fill: #8251e9;
+						transition: all .2s var(--easing);
+					}
+				}
 				.nav-logo-link-bold {
 					font-weight: 700;
 				}
@@ -174,11 +204,11 @@ nav {
 			justify-content: center;
 			align-items: center;
 			height: 100%;
-			width: 400px;
+			width: 250px;
 			.nav-menu-list {
 				display: flex;
 				flex-direction: row;
-				justify-content: space-evenly;
+				justify-content: space-between;
 				align-items: center;
 				margin: 0;
 				padding: 0;
@@ -225,6 +255,50 @@ nav {
 					>div {
 						transform: scaleX(100%);
 						transition: all var(--easing) 0.2s;
+					}
+				}
+			}
+			.nav-menu-toggle {
+				height: 1px; 
+				width: 1px;
+				overflow: hidden;
+				clip: rect(1px, 1px, 1px, 1px);
+				opacity: 0;
+				white-space: nowrap;
+				+ label {
+					width: 30px;
+					height: 30px;
+					cursor: pointer;
+					.nav-menu-toggle-icon {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 100%;
+						height: 100%;
+						stroke-width: 6;
+						stroke: #ffffff;
+						.nav-menu-toggle-icon-group {
+							transform: translateX(0);
+							transition: transform 0.25s var(--easing);
+							.nav-menu-toggle-icon-close {
+								transform: translateX(-100%);
+							}
+						}
+					}
+				}
+				&:checked {
+					+ label {
+						.nav-menu-toggle-icon {
+							.nav-menu-toggle-icon-group {
+								transform: translateX(100%);
+								transition: transform 0.25s var(--easing);
+							}
+						}
+					}
+					~ .nav-menu-list {
+						position: static;
+						background-color: red;
+						transform: translate(0, 100px);
 					}
 				}
 			}

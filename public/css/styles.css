@@ -3,6 +3,11 @@
   --easing: cubic-bezier(0.5, 0, 0.5, 1);
 }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -78,8 +83,22 @@ section .section-title hr {
 }
 
 .container {
-  width: 75%;
+  width: 60%;
   margin: auto;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+  }
 }
 
 .fillTextWithgradient {
@@ -209,7 +228,6 @@ nav .nav-container {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  width: 75%;
 }
 
 nav .nav-container .nav-logo {
@@ -238,6 +256,35 @@ nav .nav-container .nav-logo .nav-logo-link {
   letter-spacing: 0.1rem;
 }
 
+nav .nav-container .nav-logo .nav-logo-link .nav-logo-svg {
+  height: 20px;
+  margin-right: 10px;
+}
+
+nav .nav-container .nav-logo .nav-logo-link .nav-logo-svg .cls-1 {
+  fill: #ffffff;
+  -webkit-transition: all 0.2s var(--easing);
+  transition: all 0.2s var(--easing);
+}
+
+nav .nav-container .nav-logo .nav-logo-link .nav-logo-svg .cls-2 {
+  fill: #b4b4b4;
+  -webkit-transition: all 0.2s var(--easing);
+  transition: all 0.2s var(--easing);
+}
+
+nav .nav-container .nav-logo .nav-logo-link .nav-logo-svg .cls-1:hover {
+  fill: #8251e9;
+  -webkit-transition: all 0.2s var(--easing);
+  transition: all 0.2s var(--easing);
+}
+
+nav .nav-container .nav-logo .nav-logo-link .nav-logo-svg .cls-2:hover {
+  fill: #8251e9;
+  -webkit-transition: all 0.2s var(--easing);
+  transition: all 0.2s var(--easing);
+}
+
 nav .nav-container .nav-logo .nav-logo-link .nav-logo-link-bold {
   font-weight: 700;
 }
@@ -257,7 +304,7 @@ nav .nav-container .nav-menu {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  width: 400px;
+  width: 250px;
 }
 
 nav .nav-container .nav-menu .nav-menu-list {
@@ -268,9 +315,9 @@ nav .nav-container .nav-menu .nav-menu-list {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -341,6 +388,67 @@ nav .nav-container .nav-menu .nav-menu-list-element:hover > div {
           transform: scaleX(100%);
   -webkit-transition: all var(--easing) 0.2s;
   transition: all var(--easing) 0.2s;
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+  white-space: nowrap;
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle + label {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle + label .nav-menu-toggle-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  stroke-width: 6;
+  stroke: #ffffff;
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle + label .nav-menu-toggle-icon .nav-menu-toggle-icon-group {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.25s var(--easing);
+  transition: -webkit-transform 0.25s var(--easing);
+  transition: transform 0.25s var(--easing);
+  transition: transform 0.25s var(--easing), -webkit-transform 0.25s var(--easing);
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle + label .nav-menu-toggle-icon .nav-menu-toggle-icon-group .nav-menu-toggle-icon-close {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle:checked + label .nav-menu-toggle-icon .nav-menu-toggle-icon-group {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.25s var(--easing);
+  transition: -webkit-transform 0.25s var(--easing);
+  transition: transform 0.25s var(--easing);
+  transition: transform 0.25s var(--easing), -webkit-transform 0.25s var(--easing);
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle:checked ~ .nav-menu-list {
+  position: static;
+  background-color: red;
+  -webkit-transform: translate(0, 100px);
+          transform: translate(0, 100px);
 }
 
 header {
