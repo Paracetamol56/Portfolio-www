@@ -1061,6 +1061,57 @@ p.technology-name {
   margin-right: 10px;
 }
 
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form .contact-form-input {
+  width: 100%;
+  margin: 10px 0;
+  height: 40px;
+  border: none;
+  border-bottom: #b4e2f9 2px solid;
+  background-color: transparent;
+  color: #b4e2f9;
+  font-size: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  -webkit-transition: all 0.5s var(--easing);
+  transition: all 0.5s var(--easing);
+}
+
+.contact-form .contact-form-input:focus {
+  outline: none;
+  border-bottom: #8251e9 2px solid;
+  color: #8251e9;
+  -webkit-transition: all 0.5s var(--easing);
+  transition: all 0.5s var(--easing);
+}
+
+.contact-form textarea.contact-form-input {
+  resize: vertical;
+  overflow: auto;
+}
+
+.contact-form .contact-form-button {
+  font-size: 1rem;
+}
+
 footer {
   width: 100%;
   padding: 50px 0 50px 0;

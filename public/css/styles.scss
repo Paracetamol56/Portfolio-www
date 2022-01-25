@@ -715,6 +715,41 @@ p.technology-name {
 		}
 	}
 }
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	.contact-form-input {
+		width: 100%;
+		margin: 10px 0;
+		height: 40px;
+		border: none;
+		border-bottom: #b4e2f9 2px solid;
+		background-color: transparent;
+		color: #b4e2f9;
+		font-size: 1rem;
+		font-family: 'Roboto Mono', monospace;
+		font-weight: 500;
+		transition: all 0.5s var(--easing);
+		&:focus {
+			outline: none;
+			border-bottom: #8251e9 2px solid;
+			color: #8251e9;
+			transition: all 0.5s var(--easing);
+		}
+	}
+	textarea.contact-form-input {
+		resize: vertical;
+		overflow: auto;
+	}
+	.contact-form-button {
+		font-size: 1rem;
+	}
+}
 footer {
 	width: 100%;
 	padding: 50px 0 50px 0;

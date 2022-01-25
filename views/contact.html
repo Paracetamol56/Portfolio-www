@@ -53,8 +53,8 @@
         </div>
 
         <div class="titles" id="titles">
-            <h1 class="fillTextWithgradient">Mathéo's portfolio</h1>
-            <h2 class="fillTextWithgradient">Welcome to my world</h2>
+            <h1 class="fillTextWithgradient">Contact</h1>
+            <h2 class="fillTextWithgradient">Envoyez moi un message</h2>
         </div>
 
         <div class="downButton">
@@ -75,6 +75,24 @@
             }); 
         </script>
     </header>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez moi</h2>
+                <hr>
+            </div>
+            <form id="contact-form" class="contact-form" role="form">
+                <input type="text" class="contact-form-input" id="name" placeholder="Nom" name="name" value="" required>
+                <input type="email" class="contact-form-input" id="email" placeholder="Email" name="email" value=""
+                    required>
+                <textarea class="contact-form-input" rows="10" placeholder="Message" name="message" required></textarea>
+                <button class="cta-button contact-form-button" id="contact-form-submit" type="submit" value="SEND">
+                    <i class="fa fa-paper-plane"></i><span class="send-text"> Envoyer</span>
+                </button>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
