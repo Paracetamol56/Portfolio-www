@@ -17,9 +17,13 @@
     <title>Mathéo'sportfolio</title>
     <!-- Description -->
     <meta name="description" content="Portfolio de Mathéo Galuba, étudiant en informatique">
+    <!--Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
 </head>
 
-<body>
+<body class="loading">
     <nav>
         <div class="nav-container container">
             <div class="nav-logo">
@@ -266,14 +270,15 @@
             <span></span>
             <span></span>
         </div>
+        <script>
+            $(window).on('load', function () {
+                $('.loader-wrapper').fadeOut(500);
+                $('body').removeClass('loading');
+            });
+        </script>
     </div>
 
-    <!--Scripts -->
-    <!--JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Smooth scrolling -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+    <!-- Scripts -->
     <!-- Header animation -->
     <script type="module" src="js/header.js"></script>
     <!-- Fader animation -->

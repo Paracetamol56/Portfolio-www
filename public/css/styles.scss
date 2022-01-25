@@ -101,23 +101,12 @@ section {
 	.loader-logo {
 		width: 100px;
 		filter: drop-shadow(0px 0px 5px #5f77ef9a);
+		animation: 2s var(--easing) 0s normal forwards 1 loader-fade-in;
 		.cls-1 {
 			fill: #8251e9;
 		}
 		.cls-2 {
 			fill: #5f3cab;
-		}
-		polygon:nth-child(1) {
-			fill: #5f3cab;
-			transition: logo 2s;
-		}
-		@keyframes logo {
-			0% {
-			  opacity: 0;
-			}
-			100% {
-			  opacity: 1;
-			}
 		}
 	}
 	.loader-animation {
@@ -126,6 +115,7 @@ section {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		animation: 2s var(--easing) 0s normal forwards 1 loader-fade-in;
 		span {
 			float: left;
 			width: 8px;
@@ -203,6 +193,14 @@ section {
 			60% {
 				transform: translateY(0px);
 			}
+		}
+	}
+	@keyframes loader-fade-in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			  opacity: 1;
 		}
 	}
 }
