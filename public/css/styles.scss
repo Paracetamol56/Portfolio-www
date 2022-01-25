@@ -95,8 +95,116 @@ section {
 	background-image: radial-gradient(circle, #2c1b4f 0%, #111416 100%) !important;
 	z-index: 99;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	.loader-logo {
+		width: 100px;
+		filter: drop-shadow(0px 0px 5px #5f77ef9a);
+		.cls-1 {
+			fill: #8251e9;
+		}
+		.cls-2 {
+			fill: #5f3cab;
+		}
+		polygon:nth-child(1) {
+			fill: #5f3cab;
+			transition: logo 2s;
+		}
+		@keyframes logo {
+			0% {
+			  opacity: 0;
+			}
+			100% {
+			  opacity: 1;
+			}
+		}
+	}
+	.loader-animation {
+		width: 100px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		span {
+			float: left;
+			width: 8px;
+			height: 8px;
+			background: #8251e9;
+			filter: drop-shadow(0px 0px 5px #5f77ef9a);
+			border-radius: 50%;
+			&:nth-child(1) {
+				animation: dot-1 2s infinite;
+			}
+			&:nth-child(2) {
+				animation: dot-2 2s infinite;
+			}
+			&:nth-child(3) {
+				animation: dot-3 2s infinite;
+			}
+			&:nth-child(4) {
+				animation: dot-4 2s infinite;
+			}
+			&:nth-child(5) {
+				animation: dot-5 2s infinite;
+			}
+		}
+		@keyframes dot-1 {
+			0% {
+				transform: translateY(0px);
+			}
+			10% {
+				transform: translateY(-5px);
+			}
+			20% {
+				transform: translateY(0px);
+			}
+		}
+		@keyframes dot-2 {
+			10% {
+				transform: translateY(0px);
+			}
+			20% {
+				transform: translateY(-5px);
+			}
+			30% {
+				transform: translateY(0px);
+			}
+		}
+		@keyframes dot-3 {
+			20% {
+				transform: translateY(0px);
+			}
+			30% {
+				transform: translateY(-5px);
+			}
+			40% {
+				transform: translateY(0px);
+			}
+		}
+		@keyframes dot-4 {
+			30% {
+				transform: translateY(0px);
+			}
+			40% {
+				transform: translateY(-5px);
+			}
+			50% {
+				transform: translateY(0px);
+			}
+		}
+		@keyframes dot-5 {
+			40% {
+				transform: translateY(0px);
+			}
+			50% {
+				transform: translateY(-5px);
+			}
+			60% {
+				transform: translateY(0px);
+			}
+		}
+	}
 }
 .cta-button {
 	font-family: 'Roboto Mono', monospace;
