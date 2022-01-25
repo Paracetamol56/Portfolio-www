@@ -13,6 +13,10 @@ body {
   padding: 0;
 }
 
+body.loading {
+  overflow: hidden;
+}
+
 h1 {
   color: #ffffff;
 }
@@ -84,6 +88,25 @@ section .section-title hr {
   background-clip: text !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #2c1b4f 0%, #111416 100%) !important;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cta-button {

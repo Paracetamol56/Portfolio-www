@@ -10,6 +10,9 @@ body {
 	background-color: #000000;
 	margin: 0;
 	padding: 0;
+	&.loading {
+		overflow: hidden;
+	}
 }
 h1 {
 	color: #ffffff;
@@ -71,6 +74,18 @@ section {
 	background-clip: text !important;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+.loader-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: radial-gradient(circle, #2c1b4f 0%, #111416 100%) !important;
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .cta-button {
 	font-family: 'Roboto Mono', monospace;
