@@ -11,21 +11,33 @@
     <!-- Robots -->
     <meta name="robots" content="noindex, nofollow">
     <!-- Device -->
-    <!-- <meta name="viwport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
     <meta name="format-detection" content="telephone=no">
     <!-- Title -->
     <title>Mathéo'sportfolio</title>
     <!-- Description -->
-    <meta name="description" content="Mathéo's projects">
+    <meta name="description" content="Portfolio de Mathéo Galuba, étudiant en informatique">
+    <!--Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
 </head>
 
-<body>
+<body class="loading">
     <nav>
-        <div class="nav-container">
+        <div class="nav-container container">
             <div class="nav-logo">
                 <a class="nav-logo-link coloredOnHover" href="/">
-                    <span class=" nav-logo-link-bold">Portfolio</span> Mathéo Galuba
+                    <svg class="nav-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 900">
+                        <polygon class="cls-1"
+                            points="346.07 287.66 512.15 0 1080 0 1080 180 616.07 180 450 467.66 346.07 287.66" />
+                        <polygon class="cls-1" points="450 647.56 180 180 0 180 180 540 346.07 827.65 450 647.56" />
+                        <polygon class="cls-1"
+                            points="1080 269.9 1080 900 630 900 720 720 900 720 900 449.9 771.91 450 875.86 269.95 1080 269.9" />
+                        <polygon class="cls-2"
+                            points="667.98 270 346.07 827.65 387.85 900 512.1 900 875.86 269.95 667.98 270" />
+                        <polygon class="cls-2" points="0 900 180 900 180 540 0 180 0 900" />
+                    </svg> <span class=" nav-logo-link-bold">Portfolio</span> Mathéo Galuba
                 </a>
             </div>
             <div class="nav-menu">
@@ -43,6 +55,22 @@
                         <div></div>
                     </li>
                 </ul>
+                <input id="nav-menu-toggle-id" class="nav-menu-toggle" type="checkbox" />
+                <label for="nav-menu-toggle-id">
+                    <svg class="nav-menu-toggle-icon" viewBox="0 0 60 30">
+                        <g class="nav-menu-toggle-icon-group">
+                            <g class="nav-menu-toggle-icon-open">
+                                <path d="M 6 0 L 54 0" />
+                                <path d="M 6 15 L 54 15" />
+                                <path d="M 6 30 L 54 30" />
+                            </g>
+                            <g class="nav-menu-toggle-icon-close">
+                                <path d="M 15 0 L 45 30" />
+                                <path d="M 15 30 L 45 0" />
+                            </g>
+                        </g>
+                    </svg>
+                </label>
             </div>
         </div>
     </nav>
@@ -115,7 +143,9 @@
 
             <ul class="carroussel">
                 <li class="carroussel-card hide">
-                    <img class="carroussel-card-thumbnail" src="images/s4jgxi73.bmp" alt="thumbnail">
+                    <img class="carroussel-card-thumbnail"
+                        src="https://github.com/Paracetamol56/Portfolio/blob/5b5cb9229686f9936a1017193a637020980cf093/public/images/s4jgxi73.png"
+                        alt="thumbnail">
                     <div class="carroussel-card-content">
                         <h3 class="carroussel-card-header">
                             <span class="carroussel-card-header-number">05.</span> Project
@@ -128,7 +158,9 @@
                     </div>
                 </li>
                 <li class="carroussel-card prev">
-                    <img class="carroussel-card-thumbnail" src="images/s4jgxi73.bmp" alt="thumbnail">
+                    <img class="carroussel-card-thumbnail"
+                        src="https://github.com/Paracetamol56/Portfolio/blob/5b5cb9229686f9936a1017193a637020980cf093/public/images/s4jgxi73.png"
+                        alt="thumbnail">
                     <div class="carroussel-card-content">
                         <h3 class="carroussel-card-header">
                             <span class="carroussel-card-header-number">04.</span> Project
@@ -141,7 +173,9 @@
                     </div>
                 </li>
                 <li class="carroussel-card act">
-                    <img class="carroussel-card-thumbnail" src="images/s4jgxi73.bmp" alt="thumbnail">
+                    <img class="carroussel-card-thumbnail"
+                        src="https://github.com/Paracetamol56/Portfolio/blob/5b5cb9229686f9936a1017193a637020980cf093/public/images/s4jgxi73.png"
+                        alt="thumbnail">
                     <div class="carroussel-card-content">
                         <h3 class="carroussel-card-header">
                             <span class="carroussel-card-header-number">03.</span> Project
@@ -154,7 +188,9 @@
                     </div>
                 </li>
                 <li class="carroussel-card next">
-                    <img class="carroussel-card-thumbnail" src="images/s4jgxi73.bmp" alt="thumbnail">
+                    <img class="carroussel-card-thumbnail"
+                        src="https://github.com/Paracetamol56/Portfolio/blob/5b5cb9229686f9936a1017193a637020980cf093/public/images/s4jgxi73.png"
+                        alt="thumbnail">
                     <div class="carroussel-card-content">
                         <h3 class="carroussel-card-header">
                             <span class="carroussel-card-header-number">02.</span> Project
@@ -167,7 +203,9 @@
                     </div>
                 </li>
                 <li class="carroussel-card hide">
-                    <img class="carroussel-card-thumbnail" src="images/s4jgxi73.bmp" alt="thumbnail">
+                    <img class="carroussel-card-thumbnail"
+                        src="https://github.com/Paracetamol56/Portfolio/blob/5b5cb9229686f9936a1017193a637020980cf093/public/images/s4jgxi73.png"
+                        alt="thumbnail">
                     <div class="carroussel-card-content">
                         <h3 class="carroussel-card-header">
                             <span class="carroussel-card-header-number">01.</span> Project
@@ -223,12 +261,34 @@
         </div>
     </footer>
 
-    <!--Scripts -->
-    <!--JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Smooth scrolling -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"></script>
+    <!-- Loader -->
+    <div id="loader" class="loader-wrapper">
+        <svg id="Calque_2" class="loader-logo" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1080 900">
+            <polygon class="cls-1"
+                points="346.07 287.66 512.15 0 1080 0 1080 180 616.07 180 450 467.66 346.07 287.66" />
+            <polygon class="cls-1" points="450 647.56 180 180 0 180 180 540 346.07 827.65 450 647.56" />
+            <polygon class="cls-1"
+                points="1080 269.9 1080 900 630 900 720 720 900 720 900 449.9 771.91 450 875.86 269.95 1080 269.9" />
+            <polygon class="cls-2" points="667.98 270 346.07 827.65 387.85 900 512.1 900 875.86 269.95 667.98 270" />
+            <polygon class="cls-2" points="0 900 180 900 180 540 0 180 0 900" />
+        </svg>
+        <div class="loader-animation">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <script>
+            $(window).on('load', function () {
+                $('.loader-wrapper').fadeOut(500);
+                $('body').removeClass('loading');
+            });
+        </script>
+    </div>
+
+    <!-- Scripts -->
     <!-- Header animation -->
     <script type="module" src="js/header.js"></script>
     <!-- Fader animation -->

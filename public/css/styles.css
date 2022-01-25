@@ -3,6 +3,11 @@
   --easing: cubic-bezier(0.5, 0, 0.5, 1);
 }
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,6 +16,10 @@ body {
   background-color: #000000;
   margin: 0;
   padding: 0;
+}
+
+body.loading {
+  overflow: hidden;
 }
 
 h1 {
@@ -74,8 +83,22 @@ section .section-title hr {
 }
 
 .container {
-  width: 75%;
+  width: 60%;
   margin: auto;
+}
+
+@media only screen and (max-width: 1400px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+  }
 }
 
 .fillTextWithgradient {
@@ -84,6 +107,264 @@ section .section-title hr {
   background-clip: text !important;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #2c1b4f 0%, #111416 100%) !important;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loader-wrapper .loader-logo {
+  width: 100px;
+  -webkit-filter: drop-shadow(0px 0px 5px #5f77ef9a);
+          filter: drop-shadow(0px 0px 5px #5f77ef9a);
+  -webkit-animation: 2s var(--easing) 0s normal forwards 1 loader-fade-in;
+          animation: 2s var(--easing) 0s normal forwards 1 loader-fade-in;
+}
+
+.loader-wrapper .loader-logo .cls-1 {
+  fill: #8251e9;
+}
+
+.loader-wrapper .loader-logo .cls-2 {
+  fill: #5f3cab;
+}
+
+.loader-wrapper .loader-animation {
+  width: 100px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-animation: 2s var(--easing) 0s normal forwards 1 loader-fade-in;
+          animation: 2s var(--easing) 0s normal forwards 1 loader-fade-in;
+}
+
+.loader-wrapper .loader-animation span {
+  float: left;
+  width: 8px;
+  height: 8px;
+  background: #8251e9;
+  -webkit-filter: drop-shadow(0px 0px 5px #5f77ef9a);
+          filter: drop-shadow(0px 0px 5px #5f77ef9a);
+  border-radius: 50%;
+}
+
+.loader-wrapper .loader-animation span:nth-child(1) {
+  -webkit-animation: dot-1 2s infinite;
+          animation: dot-1 2s infinite;
+}
+
+.loader-wrapper .loader-animation span:nth-child(2) {
+  -webkit-animation: dot-2 2s infinite;
+          animation: dot-2 2s infinite;
+}
+
+.loader-wrapper .loader-animation span:nth-child(3) {
+  -webkit-animation: dot-3 2s infinite;
+          animation: dot-3 2s infinite;
+}
+
+.loader-wrapper .loader-animation span:nth-child(4) {
+  -webkit-animation: dot-4 2s infinite;
+          animation: dot-4 2s infinite;
+}
+
+.loader-wrapper .loader-animation span:nth-child(5) {
+  -webkit-animation: dot-5 2s infinite;
+          animation: dot-5 2s infinite;
+}
+
+@-webkit-keyframes dot-1 {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  10% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  20% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes dot-1 {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  10% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  20% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes dot-2 {
+  10% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  20% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  30% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes dot-2 {
+  10% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  20% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  30% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes dot-3 {
+  20% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  30% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  40% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes dot-3 {
+  20% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  30% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  40% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes dot-4 {
+  30% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  40% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes dot-4 {
+  30% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  40% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes dot-5 {
+  40% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  60% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes dot-5 {
+  40% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  60% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes loader-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loader-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .cta-button {
@@ -186,7 +467,6 @@ nav .nav-container {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  width: 75%;
 }
 
 nav .nav-container .nav-logo {
@@ -215,6 +495,35 @@ nav .nav-container .nav-logo .nav-logo-link {
   letter-spacing: 0.1rem;
 }
 
+nav .nav-container .nav-logo .nav-logo-link .nav-logo-svg {
+  height: 20px;
+  margin-right: 10px;
+}
+
+nav .nav-container .nav-logo .nav-logo-link .nav-logo-svg .cls-1 {
+  fill: #ffffff;
+  -webkit-transition: all 0.2s var(--easing);
+  transition: all 0.2s var(--easing);
+}
+
+nav .nav-container .nav-logo .nav-logo-link .nav-logo-svg .cls-2 {
+  fill: #b4b4b4;
+  -webkit-transition: all 0.2s var(--easing);
+  transition: all 0.2s var(--easing);
+}
+
+nav .nav-container .nav-logo .nav-logo-link .nav-logo-svg .cls-1:hover {
+  fill: #8251e9;
+  -webkit-transition: all 0.2s var(--easing);
+  transition: all 0.2s var(--easing);
+}
+
+nav .nav-container .nav-logo .nav-logo-link .nav-logo-svg .cls-2:hover {
+  fill: #8251e9;
+  -webkit-transition: all 0.2s var(--easing);
+  transition: all 0.2s var(--easing);
+}
+
 nav .nav-container .nav-logo .nav-logo-link .nav-logo-link-bold {
   font-weight: 700;
 }
@@ -234,7 +543,7 @@ nav .nav-container .nav-menu {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  width: 400px;
+  width: 250px;
 }
 
 nav .nav-container .nav-menu .nav-menu-list {
@@ -245,9 +554,9 @@ nav .nav-container .nav-menu .nav-menu-list {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -318,6 +627,67 @@ nav .nav-container .nav-menu .nav-menu-list-element:hover > div {
           transform: scaleX(100%);
   -webkit-transition: all var(--easing) 0.2s;
   transition: all var(--easing) 0.2s;
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+  white-space: nowrap;
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle + label {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle + label .nav-menu-toggle-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  stroke-width: 6;
+  stroke: #ffffff;
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle + label .nav-menu-toggle-icon .nav-menu-toggle-icon-group {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.25s var(--easing);
+  transition: -webkit-transform 0.25s var(--easing);
+  transition: transform 0.25s var(--easing);
+  transition: transform 0.25s var(--easing), -webkit-transform 0.25s var(--easing);
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle + label .nav-menu-toggle-icon .nav-menu-toggle-icon-group .nav-menu-toggle-icon-close {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle:checked + label .nav-menu-toggle-icon .nav-menu-toggle-icon-group {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.25s var(--easing);
+  transition: -webkit-transform 0.25s var(--easing);
+  transition: transform 0.25s var(--easing);
+  transition: transform 0.25s var(--easing), -webkit-transform 0.25s var(--easing);
+}
+
+nav .nav-container .nav-menu .nav-menu-toggle:checked ~ .nav-menu-list {
+  position: static;
+  background-color: red;
+  -webkit-transform: translate(0, 100px);
+          transform: translate(0, 100px);
 }
 
 header {
