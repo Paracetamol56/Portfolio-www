@@ -17,13 +17,14 @@ module.exports = {
         console.log(req.body);
 
         mailOptions = {
-            from: 'mathe0@gmx.fr',
+            from: process.env.MAIL_USER,
             to: 'matheo.galu56@gmail.com',
             subject: 'You have a new message from your portfolio contact form',
             text: 'Mathéo, you have a new message from your portfolio contact form.\n\n' +
                 'Name: ' + req.body.name + '\n' +
                 'Email: ' + req.body.email + '\n' +
-                'Message: ' + req.body.message
+                'Message:\n' +
+                req.body.message
         };
 
         transporter.sendMail(mailOptions, function (error, info) {
