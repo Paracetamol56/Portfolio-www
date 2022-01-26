@@ -1,4 +1,3 @@
-const html = require('html');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
