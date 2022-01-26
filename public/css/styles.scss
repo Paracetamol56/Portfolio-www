@@ -216,7 +216,6 @@ section {
 	overflow: hidden;
 	padding: 10px;
 	box-shadow: 0 0 20px #5f77ef9a;
-	transition: transform 1s, opacity 1s;
 	border-radius: 5px;
 	background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 90%);
 	background-position: 100%;
@@ -516,7 +515,6 @@ header {
 		padding: 0;
 		overflow: hidden;
 		box-shadow: 0 0 20px #5f77ef9a;
-		transition: transform 1s, opacity 1s;
 		border-radius: 5px;
 		background-image: linear-gradient(135deg, #2c1b4f 0%, #111416 100%);
 		opacity: .25;
@@ -614,7 +612,6 @@ header {
 	}
 }
 .school-table-years {
-	color: #ffffff;
 	padding: 10px;
 	border: none;
 	font-family: 'Roboto Mono', monospace;
