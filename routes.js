@@ -18,7 +18,7 @@ router.get('/contact', function (req, res, next) {
 });
 
 /* github page. */
-router.get('/githubdashboard', function (req, res, next) {
+router.get('/githubdashboard', function (req, res) {
     res.render('githubDashboard');
 });
 
