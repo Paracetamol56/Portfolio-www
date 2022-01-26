@@ -1,5 +1,4 @@
 const express = require('express');
-const { render } = require('express/lib/response');
 const path = require('path');
 const port = 8880;
 
