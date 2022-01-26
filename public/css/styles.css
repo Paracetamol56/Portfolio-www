@@ -382,10 +382,6 @@ section .section-title hr {
   padding: 10px;
   -webkit-box-shadow: 0 0 20px #5f77ef9a;
           box-shadow: 0 0 20px #5f77ef9a;
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s, -webkit-transform 1s;
   border-radius: 5px;
   background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 90%);
   background-position: 100%;
@@ -842,10 +838,6 @@ header .downButton a {
   overflow: hidden;
   -webkit-box-shadow: 0 0 20px #5f77ef9a;
           box-shadow: 0 0 20px #5f77ef9a;
-  -webkit-transition: opacity 1s, -webkit-transform 1s;
-  transition: opacity 1s, -webkit-transform 1s;
-  transition: transform 1s, opacity 1s;
-  transition: transform 1s, opacity 1s, -webkit-transform 1s;
   border-radius: 5px;
   background-image: linear-gradient(135deg, #2c1b4f 0%, #111416 100%);
   opacity: .25;
@@ -987,7 +979,6 @@ header .downButton a {
 }
 
 .school-table-years {
-  color: #ffffff;
   padding: 10px;
   border: none;
   font-family: 'Roboto Mono', monospace;
