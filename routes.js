@@ -23,7 +23,7 @@ router.get('/githubdashboard', function (req, res, next) {
 });
 
 /* mailer API */
-router.post('/contact/sendmail', function (req, res, next) {
+router.post('/contact/sendmail', function (req, res) {
     controller.sendMail(req, res);
 });
 
