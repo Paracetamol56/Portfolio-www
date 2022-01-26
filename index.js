@@ -14,8 +14,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Routers
-var pageRouter = require('./routes');
-app.use('/', pageRouter);
+var router = require('./routes');
+app.use('/', router);
 
 // error handler
 app.use(function (req, res) {

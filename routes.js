@@ -1,4 +1,5 @@
 const express = require('express');
+const controller = require('./controller');
 var router = express.Router();
 
 /* home page. */
@@ -19,6 +20,11 @@ router.get('/contact', function (req, res, next) {
 /* github page. */
 router.get('/githubdashboard', function (req, res, next) {
     res.render('githubDashboard');
+});
+
+/* mailer API */
+router.post('/contact/sendmail', function (req, res, next) {
+    controller.sendMail(req, res);
 });
 
 module.exports = router;
