@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
 });
 
 /* about page. */
-router.get('/about', function (req, res, next) {
+router.get('/about', function (req, res) {
     res.render('about');
 });
 
