@@ -13,7 +13,7 @@ router.get('/about', function (req, res, next) {
 });
 
 /* contact page. */
-router.get('/contact', function (req, res, next) {
+router.get('/contact', function (req, res) {
     res.render('contact');
 });
 
