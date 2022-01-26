@@ -1,6 +1,6 @@
 const carroussel = document.querySelector(".carroussel");
 
-const interval = setInterval(() => {
+setInterval(() => {
     next();
 }, 10000);
 
