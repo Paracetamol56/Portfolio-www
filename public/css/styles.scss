@@ -431,18 +431,19 @@ nav {
 				position: absolute;
 				right: -100%;
 				top: 50px;
-				width: 40%;
-				min-width: 200px;
-				height: calc(100vh - 50px);
-				flex-direction: column;
-				justify-content: space-around;
+				width: 40% !important;
+				min-width: 200px !important;
+				height: calc(100vh - 50px) !important;
+				flex-direction: column !important;
+				justify-content: flex-start !important;
+				align-items: center !important;
 				padding: 0;
 				transition: all 0.25s var(--easing);
 				&.nav-active {
 					right: 0;
 				}
 				li.nav-menu-list-element {
-					height: 30px;
+					height: 50px !important;
 					width: 100%;
 					a {
 						height: 100%;

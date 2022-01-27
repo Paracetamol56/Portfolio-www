@@ -718,15 +718,19 @@ nav .nav-container .nav-menu input.nav-menu-toggle:checked + label .nav-menu-tog
     position: absolute;
     right: -100%;
     top: 50px;
-    width: 40%;
-    min-width: 200px;
-    height: calc(100vh - 50px);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    width: 40% !important;
+    min-width: 200px !important;
+    height: calc(100vh - 50px) !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
     padding: 0;
     -webkit-transition: all 0.25s var(--easing);
     transition: all 0.25s var(--easing);
@@ -735,7 +739,7 @@ nav .nav-container .nav-menu input.nav-menu-toggle:checked + label .nav-menu-tog
     right: 0;
   }
   nav .nav-menu ul.nav-menu-list li.nav-menu-list-element {
-    height: 30px;
+    height: 50px !important;
     width: 100%;
   }
   nav .nav-menu ul.nav-menu-list li.nav-menu-list-element a {
