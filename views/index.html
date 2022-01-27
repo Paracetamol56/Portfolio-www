@@ -37,22 +37,36 @@
                         <polygon class="cls-2"
                             points="667.98 270 346.07 827.65 387.85 900 512.1 900 875.86 269.95 667.98 270" />
                         <polygon class="cls-2" points="0 900 180 900 180 540 0 180 0 900" />
-                    </svg> <span class=" nav-logo-link-bold">Portfolio</span> Mathéo Galuba
+                    </svg>
+                    <span class="nav-logo-link-bold">Portfolio</span>
+                    <span class="nav-logo-link-thin"> Mathéo Galuba</span>
                 </a>
             </div>
             <div class="nav-menu">
                 <ul class="nav-menu-list">
                     <li class="nav-menu-list-element">
-                        <a class="active" href="/">Home</a>
-                        <div></div>
+                        <a class="active" href="/">
+                            <span>Accueil</span>
+                            <div></div>
+                        </a>
                     </li>
                     <li class="nav-menu-list-element">
-                        <a href="/about">About</a>
-                        <div></div>
+                        <a href="/about">
+                            <span>À propos</span>
+                            <div></div>
+                        </a>
                     </li>
                     <li class="nav-menu-list-element">
-                        <a href="/contact">Contact</a>
-                        <div></div>
+                        <a href="/projects">
+                            <span>Projets</span>
+                            <div></div>
+                        </a>
+                    </li>
+                    <li class="nav-menu-list-element">
+                        <a href="/contact">
+                            <span>Contact</span>
+                            <div></div>
+                        </a>
                     </li>
                 </ul>
                 <input id="nav-menu-toggle-id" class="nav-menu-toggle" type="checkbox" />
@@ -72,6 +86,17 @@
                     </svg>
                 </label>
             </div>
+            <script>
+                // add class nav-active to nav-menu-list when nav-menu-toggle is checked
+                $('#nav-menu-toggle-id').click(function () {
+                    if ($(this).is(':checked')) {
+                        $('.nav-menu-list').addClass('nav-active');
+                        $(hearer).a;
+                    } else {
+                        $('.nav-menu-list').removeClass('nav-active');
+                    }
+                });
+            </script>
         </div>
     </nav>
 
