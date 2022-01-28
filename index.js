@@ -16,12 +16,10 @@ app.use(express.urlencoded({ extended: false }));
 var router = require('./routes');
 app.use('/', router);
 
-// error handler
-app.use(function (req, res) {
-    console.log(req);
-    console.log(res);
-    // render the error page
-    res.status(500).render('error/500.html');
+// 500 error page
+app.use(function (err, req, res, next) {
+    console.error(err.stack);
+    res.status(500).render('error/500');
 });
 
 app.listen(port, () => {
