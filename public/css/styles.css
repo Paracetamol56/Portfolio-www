@@ -105,7 +105,7 @@ section .section-title hr {
   background: -webkit-gradient(linear, left top, right top, from(#b4e2f9), color-stop(25%, #5f78ef), color-stop(50%, #8251e9), color-stop(75%, #ad56e3), to(#df7bf5)) !important;
   background: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 25%, #8251e9 50%, #ad56e3 75%, #df7bf5 100%) !important;
   background-clip: text !important;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
 }
 
