@@ -17,7 +17,7 @@ var router = require('./routes');
 app.use('/', router);
 
 // 500 error page
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
     console.error(err.stack);
     res.status(500).render('error/500');
 });
