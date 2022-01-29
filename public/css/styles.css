@@ -1617,7 +1617,7 @@ footer .footer-credits {
   padding: 0;
 }
 
-footer .footer-credits a {
+footer a {
   color: #ffffff;
   -webkit-text-decoration: dotted underline;
           text-decoration: dotted underline;
@@ -1625,7 +1625,7 @@ footer .footer-credits a {
   transition: all 0.25s var(--easing);
 }
 
-footer .footer-credits a:hover {
+footer a:hover {
   color: #8251e9;
   -webkit-text-decoration: solid underline;
           text-decoration: solid underline;
