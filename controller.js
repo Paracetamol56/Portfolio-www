@@ -1,7 +1,24 @@
 const nodemailer = require('nodemailer');
+const fs = require('fs');
 require('dotenv').config();
 
 module.exports = {
+    renderProject: function (req, res) {
+        // get the "id" parameter from the request
+        var id = req.query.id;
+        console.log(id);
+        if (id == null) {
+            res.render('projects');
+            return;
+        }
+        if (!fs.existsSync(`./views/projects/${id}.html`)) {
+            res.status(404);
+            res.render('error/404');
+            return;
+        }
+        res.render('projects/' + id);
+    },
+
     sendMail: function (req, res) {
         var transporter = nodemailer.createTransport({
             host: "mail.gmx.com",

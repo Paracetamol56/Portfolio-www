@@ -16,6 +16,11 @@ describe('Test Handlers', function () {
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
     });
 
+    it('responds to /project', async () => {
+        const res = await supertest(app).get('/project');
+        expect(res.header['content-type']).toBe('text/html; charset=utf-8');
+    });
+
     it('responds to /contact', async () => {
         const res = await supertest(app).get('/contact');
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');

@@ -18,12 +18,13 @@ router.get('/contact', function (req, res) {
 });
 
 // github page.
-router.get('/githubdashboard', function (req, res) {
-    res.render('githubDashboard');
+router.get('/project', function (req, res) {
+    controller.renderProject(req, res);
 });
 
 // 404 error page
 router.get('*', function (req, res) {
+    res.status(404);
     res.render('error/404');
 });
 
