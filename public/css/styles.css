@@ -1284,7 +1284,7 @@ header .downButton a {
 .skill-element {
   width: 100%;
   max-width: 400px;
-  height: 135px;
+  height: 150px;
   margin: 15px;
   border: #5f78ef 2px solid;
   border-radius: 5px;
@@ -1327,14 +1327,15 @@ header .downButton a {
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   font-size: 1.2rem;
+  text-align: center;
   color: #ffffff;
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .skill-element p {
   text-align: center;
-  margin: 0 10px;
+  margin: 0 6px;
 }
 
 .skill-element-inside {
