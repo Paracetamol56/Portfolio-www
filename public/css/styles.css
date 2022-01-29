@@ -1195,19 +1195,6 @@ header .downButton a {
   transition: all 1s var(--easing);
 }
 
-.language .language-flag {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  border-radius: 5px;
-  -webkit-filter: blur(20px);
-          filter: blur(20px);
-  opacity: 0;
-  -webkit-transition: all 0.5s var(--easing);
-  transition: all 0.5s var(--easing);
-}
-
 .language:hover > .language-flag {
   -webkit-filter: blur(2px);
           filter: blur(2px);
@@ -1260,6 +1247,19 @@ header .downButton a {
 
 .languages-content-color {
   color: #8251e9;
+}
+
+@media only screen and (max-width: 768px) {
+  .language-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .language {
+    width: 100%;
+    margin: 20px 0;
+  }
 }
 
 .skill-container {

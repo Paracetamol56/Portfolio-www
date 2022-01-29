@@ -772,16 +772,6 @@ header {
 	align-items: center;
 	margin: 0;
 	transition: all 1s var(--easing);
-	.language-flag {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-		border-radius: 5px;
-		filter: blur(20px);
-		opacity: 0;
-		transition: all 0.5s var(--easing);
-	}
 	&:hover {
 		>.language-flag {
 			filter: blur(2px);
@@ -825,6 +815,15 @@ header {
 }
 .languages-content-color {
 	color: #8251e9;
+}
+@media only screen and (max-width: 768px) {
+	.language-list {
+		flex-direction: column;
+	}
+	.language {
+		width: 100%;
+		margin: 20px 0;
+	}
 }
 .skill-container {
 	display: flex;
