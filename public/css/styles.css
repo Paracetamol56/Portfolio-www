@@ -1706,6 +1706,7 @@ p.technology-name {
 footer {
   width: 100%;
   padding: 50px 0;
+  position: relative;
   background-color: #111416;
 }
 
@@ -1789,5 +1790,14 @@ footer a:hover {
           text-decoration: solid underline;
   -webkit-transition: all 0.25s var(--easing);
   transition: all 0.25s var(--easing);
+}
+
+footer .bottom-gradient {
+  width: 100%;
+  height: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b4e2f9), color-stop(25%, #5f78ef), color-stop(50%, #8251e9), color-stop(75%, #ad56e3), to(#df7bf5));
+  background-image: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 25%, #8251e9 50%, #ad56e3 75%, #df7bf5 100%);
+  position: absolute;
+  bottom: 0;
 }
 /*# sourceMappingURL=styles.css.map */
