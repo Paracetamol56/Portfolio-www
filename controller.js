@@ -4,9 +4,7 @@ require('dotenv').config();
 
 module.exports = {
     renderProject: function (req, res) {
-        // get the "id" parameter from the request
         var id = req.query.id;
-        console.log(id);
         if (id == null) {
             res.render('projects');
             return;

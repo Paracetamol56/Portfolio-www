@@ -65,7 +65,7 @@ section .section-title h2 {
   margin: 0;
 }
 
-section .section-title h2 .section-titel-number {
+section .section-title h2 .section-title-number {
   font-family: 'Roboto Mono', monospace;
   font-size: 2rem;
   font-weight: 700;
@@ -1494,6 +1494,110 @@ p.technology-name {
   margin-right: 10px;
 }
 
+.info-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+}
+
+.info-container .project-info {
+  width: 160px;
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 20px;
+}
+
+.info-container .project-info .project-info-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background-color: #2c1b4f;
+  border-radius: 50%;
+  -webkit-transition: all 0.25s var(--easing);
+  transition: all 0.25s var(--easing);
+  z-index: 4;
+}
+
+.info-container .project-info:hover > .project-info-background {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.25s var(--easing);
+  transition: all 0.25s var(--easing);
+}
+
+.info-container .project-info h3 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #b4e2f9;
+  margin: 0;
+  z-index: 5;
+}
+
+.info-container .project-info i {
+  font-size: 3rem;
+  color: #8251e9;
+  margin: 10px;
+  z-index: 5;
+}
+
+.info-container .project-info svg {
+  height: 3rem;
+  margin: 10px;
+  z-index: 5;
+}
+
+.info-container .project-info svg .cls-1 {
+  fill: #8251e9;
+}
+
+.info-container .project-info p {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: #8251e9;
+  margin: 0;
+  z-index: 5;
+}
+
+.project-image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1631,124 +1735,5 @@ footer a:hover {
           text-decoration: solid underline;
   -webkit-transition: all 0.25s var(--easing);
   transition: all 0.25s var(--easing);
-}
-
-.repos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.repo-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 250px;
-  width: 300px;
-  padding: 10px;
-  margin: 15px;
-  border: #000000 2px solid;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(135deg, #2c1b4f 0%, #111416 100%);
-  -webkit-transition: all var(--easing) 0.5s;
-  transition: all var(--easing) 0.5s;
-}
-
-.repo-card:hover {
-  border: #5f78ef 2px solid;
-  -webkit-box-shadow: 0 0 20px #5f77ef9a;
-          box-shadow: 0 0 20px #5f77ef9a;
-  -webkit-transition: all var(--easing) 0.1s;
-  transition: all var(--easing) 0.1s;
-}
-
-.repo-card .repo-card-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 50px;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.repo-card .repo-card-header i {
-  color: #b4e2f9;
-  margin-left: 5px;
-  font-size: 1rem;
-}
-
-.repo-card .repo-card-header h2 {
-  color: #b4e2f9;
-  margin: 0;
-  font-family: 'Roboto Mono', monospace;
-  margin-right: auto;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.repo-card hr {
-  width: 100%;
-  height: 2px;
-  border: transparent;
-  background-color: #b4e2f9;
-}
-
-.repo-card .repo-card-content {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.repo-card .repo-card-language-ratio {
-  background-color: #333333;
-  height: 10px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 /*# sourceMappingURL=styles.css.map */
