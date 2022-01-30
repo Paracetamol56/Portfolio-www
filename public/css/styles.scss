@@ -1046,7 +1046,42 @@ p.technology-name {
 	width: 100%;
 	object-fit: cover;
 }
-
+.project-linklist {
+	width: fit-content;
+	margin: 40px auto 0 auto;
+	padding: 0;
+	list-style: none;
+	.project-linklist-item {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		a {
+			color: #ffffff;
+			font-family: 'Roboto Mono', monospace;
+			font-weight: 500;
+			font-size: 1.2rem;
+			letter-spacing: 0.1rem;
+			text-decoration: none;
+			margin: 10px 0;
+			padding: 0;
+			transition: all .5s var(--easing);
+			&:hover {
+				color: #8251e9;
+				transition: all .5s var(--easing);
+			}
+			i.project-linklist-logo {
+				font-size: 2rem;
+				margin: 0;
+				padding: 0;
+				margin-right: 10px;
+			}
+		}
+	}
+}
 
 
 
