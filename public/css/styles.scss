@@ -466,7 +466,7 @@ nav {
 	}
 }
 header {
-	background-image: radial-gradient(circle, rgba(44,27,79,1) 0%, #111416 100%) !important;
+	background-image: radial-gradient(circle, #2c1b4f 0%, #111416 100%) !important;
 	height: 100vh;
 	max-height: 1600px;
 	width: 100%;
@@ -1082,20 +1082,6 @@ p.technology-name {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .contact-form {
 	display: flex;
 	flex-direction: column;
@@ -1103,7 +1089,7 @@ p.technology-name {
 	align-items: center;
 	width: 100%;
 	max-width: 600px;
-	margin: auto;
+	margin: 50px auto 100px auto;
 	.contact-form-input {
 		width: 100%;
 		margin: 10px 0;
@@ -1126,9 +1112,17 @@ p.technology-name {
 	textarea.contact-form-input {
 		resize: vertical;
 		overflow: auto;
+		height: 180px;
 	}
 	.contact-form-button {
 		font-size: 1rem;
+	}
+	.contact-form-state {
+		font-size: 1rem;
+		color: #b4e2f9;
+		font-family: 'Roboto Mono', monospace;
+		font-weight: 500;
+		margin: 10px 0;
 	}
 }
 footer {
@@ -1152,6 +1146,7 @@ footer {
 		color: #ffffff;
 		transition: all 0.25s var(--easing);
 		&:hover {
+			text-decoration: none;
 			color: #8251e9;
 			transition: all 0.25s var(--easing);
 		}
