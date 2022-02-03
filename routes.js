@@ -17,9 +17,14 @@ router.get('/contact', function (req, res) {
     res.render('contact');
 });
 
-// github page.
+// project page.
 router.get('/project', function (req, res) {
     controller.renderProject(req, res);
+});
+
+// project page =============== TEST.
+router.get('/testproject', function (req, res) {
+    res.render('project');
 });
 
 // 404 error page

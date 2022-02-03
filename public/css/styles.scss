@@ -1017,6 +1017,48 @@ p.technology-name {
 		}
 	}
 }
+.project-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 20px 0;
+	position: relative;
+	.thumbnail-container {
+		height: 300px;
+		width: 300px;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		.thumbnail {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	.project-description {
+		margin-left: 20px;
+		width: 100%;
+	}
+	.project-link {
+		font-family: 'Roboto Mono', monospace;
+		font-weight: 500;
+		color: #ffffff;
+		text-decoration: none;
+		cursor: pointer;
+		position: absolute;
+		right: 15px;
+		bottom: 10px;
+		transition: all 0.5s var(--easing);
+		&:hover {
+			color: #8251e9;
+			right: 10px;
+			transition: all 0.5s var(--easing);
+		}
+	}
+}
 .info-container {
 	width: 100%;
 	display: flex;

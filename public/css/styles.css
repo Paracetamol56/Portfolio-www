@@ -1588,6 +1588,67 @@ p.technology-name {
   margin-right: 10px;
 }
 
+.project-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px 0;
+  position: relative;
+}
+
+.project-row .thumbnail-container {
+  height: 300px;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-row .thumbnail-container .thumbnail {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.project-row .project-description {
+  margin-left: 20px;
+  width: 100%;
+}
+
+.project-row .project-link {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  -webkit-transition: all 0.5s var(--easing);
+  transition: all 0.5s var(--easing);
+}
+
+.project-row .project-link:hover {
+  color: #8251e9;
+  right: 10px;
+  -webkit-transition: all 0.5s var(--easing);
+  transition: all 0.5s var(--easing);
+}
+
 .info-container {
   width: 100%;
   display: -webkit-box;
