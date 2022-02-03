@@ -1009,14 +1009,108 @@ header .downButton a {
   transition: all 0.5s var(--easing);
 }
 
-.school-table {
+.cv-and-school {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media only screen and (max-width: 1500px) {
+  .cv-and-school {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.cv-and-school .imagebutton {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.cv-and-school .imagebutton img {
+  width: auto;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  -webkit-transition: all 0.5s var(--easing);
+  transition: all 0.5s var(--easing);
+}
+
+.cv-and-school .imagebutton p {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'fira code', monospace;
+  color: #8251e9;
+  font-size: 2rem;
+  font-weight: 700;
+  -webkit-transition: all 0.5s var(--easing);
+  transition: all 0.5s var(--easing);
+}
+
+.cv-and-school .imagebutton:hover img {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  -webkit-transition: all 0.5s var(--easing);
+  transition: all 0.5s var(--easing);
+}
+
+.cv-and-school .imagebutton:hover p {
+  opacity: 1;
+  -webkit-transition: all 0.5s var(--easing);
+  transition: all 0.5s var(--easing);
+}
+
+.cv-and-school .school-table {
   width: 100%;
   margin: 20px 0 0;
   padding: 0;
   border-collapse: collapse;
 }
 
-.school-table-tr {
+.cv-and-school .school-table-tr {
   -webkit-box-shadow: 0 0 20px #5f77ef9a;
           box-shadow: 0 0 20px #5f77ef9a;
   border: #5f78ef 2px solid;
@@ -1043,13 +1137,13 @@ header .downButton a {
   transition: all 1s var(--easing);
 }
 
-.school-table-tr:hover {
+.cv-and-school .school-table-tr:hover {
   background-position: 0%;
   -webkit-transition: all 1s var(--easing);
   transition: all 1s var(--easing);
 }
 
-.school-table-years {
+.cv-and-school .school-table-years {
   padding: 10px;
   border: none;
   font-family: 'Roboto Mono', monospace;
@@ -1077,11 +1171,11 @@ header .downButton a {
           align-items: center;
 }
 
-.school-table-years p {
+.cv-and-school .school-table-years p {
   margin: 0;
 }
 
-.school-table-years span {
+.cv-and-school .school-table-years span {
   position: absolute;
   left: auto;
   top: 35px;
@@ -1091,46 +1185,46 @@ header .downButton a {
   background-color: #b4e2f9;
 }
 
-.school-table-description {
+.cv-and-school .school-table-description {
   color: #ffffff;
   padding: 10px;
   border: none;
   margin-left: 70px;
 }
 
-.school-table-description ul:first-child {
+.cv-and-school .school-table-description ul:first-child {
   margin-top: 0;
 }
 
-.school-table-description ul:last-child {
+.cv-and-school .school-table-description ul:last-child {
   margin-bottom: 20px;
 }
 
-.school-table-description p:first-child {
+.cv-and-school .school-table-description p:first-child {
   margin-top: 0;
 }
 
-.school-table-description p:last-child {
+.cv-and-school .school-table-description p:last-child {
   margin-bottom: 20px;
 }
 
-.school-table-description h3:first-child {
+.cv-and-school .school-table-description h3:first-child {
   margin-top: 0;
 }
 
-.school-table-description h3:last-child {
+.cv-and-school .school-table-description h3:last-child {
   margin-bottom: 20px;
 }
 
-.school-table-description h4:first-child {
+.cv-and-school .school-table-description h4:first-child {
   margin-top: 0;
 }
 
-.school-table-description h4:last-child {
+.cv-and-school .school-table-description h4:last-child {
   margin-bottom: 20px;
 }
 
-.school-link {
+.cv-and-school .school-link {
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   color: #ffffff;
@@ -1143,7 +1237,7 @@ header .downButton a {
   transition: all 0.5s var(--easing);
 }
 
-.school-link:hover {
+.cv-and-school .school-link:hover {
   color: #8251e9;
   right: 10px;
   -webkit-transition: all 0.5s var(--easing);

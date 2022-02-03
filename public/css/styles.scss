@@ -641,113 +641,168 @@ header {
 		}
 	}
 }
-.school-table {
-	width: 100%;
-	margin: 20px 0 0;
-	padding: 0;
-	border-collapse: collapse;
-}
-.school-table-tr {
-	box-shadow: 0 0 20px #5f77ef9a;
-	border: #5f78ef 2px solid;
-	border-radius: 5px;
-	margin: 30px 0;
+.cv-and-school {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
-	position: relative;
-	background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 100%);
-	background-position: 100%;
-	background-size: 400%;
-	transition: all 1s var(--easing);
-	&:hover {
-		background-position: 0%;
-		transition: all 1s var(--easing);
-	}
-}
-.school-table-years {
-	padding: 10px;
-	border: none;
-	font-family: 'Roboto Mono', monospace;
-	font-weight: 500;
-	font-size: 1.1rem;
-	color: #b4e2f9;
-	width: 50px;
-	position: absolute;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
-	p {
-		margin: 0;
+	align-items: flex-start;
+	@media only screen and (max-width: 1500px) {
+		flex-direction: column;
+		align-items: center;
 	}
-	span {
+	.imagebutton {
+		width: fit-content;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin: 30px 0;
+		padding: 20px;
+		position: relative;
+		cursor: pointer;
+		img {
+			width: auto;
+			height: 500px;
+			margin: 0;
+			padding: 0;
+			border-radius: 5px;
+			filter: blur(0px);
+			transition: all 0.5s var(--easing);
+		}
+		p {
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+			font-family: 'fira code', monospace;
+			color: #8251e9;
+			font-size: 2rem;
+			font-weight: 700;
+			transition: all 0.5s var(--easing);
+		}
+		&:hover {
+			img {
+				filter: blur(3px);
+				transition: all 0.5s var(--easing);
+			}
+			p {
+				opacity: 1;
+				transition: all 0.5s var(--easing);
+			}
+		}
+	}
+	.school-table {
+		width: 100%;
+		margin: 20px 0 0;
+		padding: 0;
+		border-collapse: collapse;
+	}
+	.school-table-tr {
+		box-shadow: 0 0 20px #5f77ef9a;
+		border: #5f78ef 2px solid;
+		border-radius: 5px;
+		margin: 30px 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		position: relative;
+		background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 100%);
+		background-position: 100%;
+		background-size: 400%;
+		transition: all 1s var(--easing);
+		&:hover {
+			background-position: 0%;
+			transition: all 1s var(--easing);
+		}
+	}
+	.school-table-years {
+		padding: 10px;
+		border: none;
+		font-family: 'Roboto Mono', monospace;
+		font-weight: 500;
+		font-size: 1.1rem;
+		color: #b4e2f9;
+		width: 50px;
 		position: absolute;
-		left: auto;
-		top: 35px;
-		bottom: 35px;
-		right: auto;
-		width: 2px;
-		background-color: #b4e2f9;
-	}
-}
-.school-table-description {
-	color: #ffffff;
-	padding: 10px;
-	border: none;
-	margin-left: 70px;
-	ul {
-		&:first-child {
-			margin-top: 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		p {
+			margin: 0;
 		}
-		&:last-child {
-			margin-bottom: 20px;
-		}
-	}
-	p {
-		&:first-child {
-			margin-top: 0;
-		}
-		&:last-child {
-			margin-bottom: 20px;
+		span {
+			position: absolute;
+			left: auto;
+			top: 35px;
+			bottom: 35px;
+			right: auto;
+			width: 2px;
+			background-color: #b4e2f9;
 		}
 	}
-	h3 {
-		&:first-child {
-			margin-top: 0;
+	.school-table-description {
+		color: #ffffff;
+		padding: 10px;
+		border: none;
+		margin-left: 70px;
+		ul {
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 20px;
+			}
 		}
-		&:last-child {
-			margin-bottom: 20px;
+		p {
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 20px;
+			}
+		}
+		h3 {
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 20px;
+			}
+		}
+		h4 {
+			&:first-child {
+				margin-top: 0;
+			}
+			&:last-child {
+				margin-bottom: 20px;
+			}
 		}
 	}
-	h4 {
-		&:first-child {
-			margin-top: 0;
-		}
-		&:last-child {
-			margin-bottom: 20px;
-		}
-	}
-}
-.school-link {
-	font-family: 'Roboto Mono', monospace;
-	font-weight: 500;
-	color: #ffffff;
-	text-decoration: none;
-	cursor: pointer;
-	position: absolute;
-	right: 15px;
-	bottom: 10px;
-	transition: all 0.5s var(--easing);
-	&:hover {
-		color: #8251e9;
-		right: 10px;
+	.school-link {
+		font-family: 'Roboto Mono', monospace;
+		font-weight: 500;
+		color: #ffffff;
+		text-decoration: none;
+		cursor: pointer;
+		position: absolute;
+		right: 15px;
+		bottom: 10px;
 		transition: all 0.5s var(--easing);
+		&:hover {
+			color: #8251e9;
+			right: 10px;
+			transition: all 0.5s var(--easing);
+		}
 	}
 }
 .skill-header {
@@ -962,20 +1017,6 @@ p.technology-name {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .info-container {
 	width: 100%;
 	display: flex;
