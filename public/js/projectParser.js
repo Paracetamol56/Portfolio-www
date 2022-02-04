@@ -34,6 +34,89 @@ function renderProject(id) {
                 "</div>"
             );
         });
+
+        // Image
+        const image = $("#project-image");
+        image.attr("src", data.image);
+
+        // Link section
+        const linkContainer = $("#links").find(".project-linklist");
+        // for each element in data.links
+        console.log(data.links);
+        $.each(data.links, function (index, value) {
+            console.log(index);
+            console.log(value);
+            if (value) {
+                if (index === "github") {
+                    linkContainer.append(
+                        "<li class=\"project-linklist-item\">" +
+                        "    <a href=\"" + value + "\" target=\"_blank\">" +
+                        "        <i class=\"project-linklist-logo fab fa-github\"></i>" +
+                        "        Repository GitHub" +
+                        "        <i class=\"fas fa-external-link-alt\"></i>" +
+                        "    </a>" +
+                        "</li>"
+                    );
+                }
+                else if (index === "website") {
+                    linkContainer.append(
+                        "<li class=\"project-linklist-item\">" +
+                        "    <a href=\"" + value + "\" target=\"_blank\">" +
+                        "        <i class=\"project-linklist-logo fas fa-globe\"></i>" +
+                        "        Site Web" +
+                        "        <i class=\"fas fa-external-link-alt\"></i>" +
+                        "    </a>" +
+                        "</li>"
+                    );
+                }
+                else if (index === "youtube") {
+                    linkContainer.append(
+                        "<li class=\"project-linklist-item\">" +
+                        "    <a href=\"" + value + "\" target=\"_blank\">" +
+                        "        <i class=\"project-linklist-logo fab fa-youtube\"></i>" +
+                        "        Vidéo YouTube" +
+                        "        <i class=\"fas fa-external-link-alt\"></i>" +
+                        "    </a>" +
+                        "</li>"
+                    );
+                }
+                else if (index === "download") {
+                    console.log(value);
+                    var icons = "(";
+                    $.each(value.icons, function (index, value) {
+                        icons += "<i class=\"fab " + value + "\"></i> ";
+                    });
+                    icons = icons.slice(0, -1) + ')';
+                    linkContainer.append(
+                        "<li class=\"project-linklist-item\">" +
+                        "    <a href=\"" + value.link + "\" target=\"_blank\">" +
+                        "        <i class=\"project-linklist-logo fas fa-download\"></i>" +
+                        "        Telechargement " + icons +
+                        "        <i class=\"fas fa-external-link-alt\"></i>" +
+                        "    </a>" +
+                        "</li>"
+                    );
+                }
+                else if (index === "itchio") {
+                    linkContainer.append(
+                        "<li class=\"project-linklist-item\">" +
+                        "    <a href=\"" + value + "\" target=\"_blank\">" +
+                        "        <i class=\"project-linklist-logo fab fa-itch-io\"></i>" +
+                        "        Jouer sur Itch.io" +
+                        "        <i class=\"fas fa-external-link-alt\"></i>" +
+                        "    </a>" +
+                        "</li>"
+                    );
+                }
+            };
+        });
+        // Description
+        const description = $("#description-content");
+        $.each(data.description, function (index, value) {
+            console.log(index);
+            console.log(value);
+        });
+
     });
 }
 
