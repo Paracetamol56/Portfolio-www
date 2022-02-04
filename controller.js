@@ -9,12 +9,12 @@ module.exports = {
             res.render('projects');
             return;
         }
-        if (!fs.existsSync(`./views/projects/${id}.html`)) {
+        if (!fs.existsSync(`.\\public\\content\\projects\\${id}.json`)) {
             res.status(404);
             res.render('error/404');
             return;
         }
-        res.render('projects/' + id);
+        res.render('project');
     },
 
     sendMail: function (req, res) {

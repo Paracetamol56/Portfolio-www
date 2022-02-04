@@ -3,7 +3,6 @@ function renderProject(id) {
     // get the json data from the server
     $.getJSON("/content/projects/" + id + ".json", function (data) {
         data = data[0];
-        console.log(data);
 
         // Title and subtitle
         const title = $("#titles").find("h1");
@@ -112,8 +111,6 @@ function renderProject(id) {
         // Description
         const descriptionContainer = $("#description").find(".container");
         $.each(data.description, function (index, value) {
-            console.log(index);
-            console.log(value);
             // Append index as a h4 title
             descriptionContainer.append(
                 "<h4>" + index + "</h4>"
