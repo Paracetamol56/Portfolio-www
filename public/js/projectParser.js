@@ -42,7 +42,6 @@ function renderProject(id) {
         // Link section
         const linkContainer = $("#links").find(".project-linklist");
         // for each element in data.links
-        console.log(data.links);
         $.each(data.links, function (index, value) {
             console.log(index);
             console.log(value);
@@ -111,12 +110,19 @@ function renderProject(id) {
             };
         });
         // Description
-        const description = $("#description-content");
+        const descriptionContainer = $("#description").find(".container");
         $.each(data.description, function (index, value) {
             console.log(index);
             console.log(value);
+            // Append index as a h4 title
+            descriptionContainer.append(
+                "<h4>" + index + "</h4>"
+            );
+            // Append value as a p
+            descriptionContainer.append(
+                "<p>" + value + "</p>"
+            );
         });
-
     });
 }
 
