@@ -1,0 +1,53 @@
+[
+    {
+        "title": "L’Observeur 2",
+        "subtitle": "Catalogue d'objets astronomique pour amateurs",
+        "image": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/d5670d79cf7b6c8fe3a0a087ad017894dbd4aef1/public/images/s4jgxi73.png",
+        "infos": {
+            "Status": {
+                "text": "En cours",
+                "type": "fa",
+                "icon": "fa-tasks"
+            },
+            "Date": {
+                "text": "Janvier 2022",
+                "type": "fa",
+                "icon": "fa-calendar"
+            },
+            "Langage": {
+                "text": "C++",
+                "type": "svg",
+                "icon": "<svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 306 344.4\" style=\"enable-background:new 0 0 306 344.4;\" xml:space=\"preserve\"><path d=\"M302.1,86.1L302.1,86.1c-2.4-4.2-5.7-7.8-9.4-9.9l-126.5-73C158.9-1,147-1,139.7,3.2l-126.5,73C6,80.4,0,90.7,0,99.1v146.1c0,4.2,1.5,8.9,3.9,13.1l0,0c2.4,4.2,5.7,7.8,9.4,9.9l126.5,73c7.3,4.2,19.2,4.2,26.5,0l126.5-73c7.3-4.2,13.2-14.5,13.2-23V99.1C306,94.9,304.5,90.2,302.1,86.1z M153,274.2c-56.2,0-102-45.8-102-102s45.8-102,102-102c36.3,0,70.1,19.5,88.3,51l-44.1,25.5c-9.1-15.7-26-25.5-44.2-25.5c-28.1,0-51,22.9-51,51s22.9,51,51,51c18.2,0,35.1-9.8,44.2-25.5l44.1,25.5C223.1,254.6,189.3,274.2,153,274.2z M255,177.8h-11.3v11.3h-11.3v-11.3H221v-11.3h11.3v-11.3h11.3v11.3H255V177.8z M297.5,177.8h-11.3v11.3h-11.3v-11.3h-11.3v-11.3h11.3v-11.3h11.3v11.3h11.3V177.8z\"/></svg>"
+            },
+            "Technologie": {
+                "text": "QT6",
+                "type": "svg",
+                "icon": "<svg version=\"1.1\" id=\"svg2\" inkscape:version=\"0.91 r13725\" sodipodi:docname=\"TheQtCompany_logo_2.svg\" xmlns:cc=\"http://creativecommons.org/ns#\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:inkscape=\"http://www.inkscape.org/namespaces/inkscape\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:sodipodi=\"http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd\" xmlns:svg=\"http://www.w3.org/2000/svg\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 462 339\" style=\"enable-background:new 0 0 462 339;\" xml:space=\"preserve\"><path d=\"M63.5,0C42.3,21.1,21.1,42.2,0,63.4V339h397.6c21.5-21.3,43-42.7,64.4-64.2V0H63.5z M246.2,292.6c-10.1,4.7-20.2,9.4-30.4,14c-8.6-14.2-17.2-28.5-25.9-42.7c-11.7,1.9-23.7,1.8-35.5,0.5c-14.1-1.7-28.5-6-39.3-15.5c-8.4-7.2-13.6-17.4-17.2-27.7c-5.9-17.4-7.5-36-7.7-54.2c-0.1-19.8,1.1-39.8,7.1-58.8c4.6-14.3,12.2-28.5,25.1-36.8c15.1-10,33.8-12.5,51.6-12.4c16.9,0.2,34.7,3.2,48.8,13.3c10.2,7.2,16.8,18.2,21.2,29.7c7.2,18.8,9.2,39.1,9.5,59.1c0,20.1-0.9,40.7-7.5,59.8c-4.5,13-13,24.6-24.2,32.7C229.9,266.6,238.1,279.5,246.2,292.6z M325.3,209c0.3,6.3,0.1,12.9,2.9,18.7c2,4.5,7.5,5.6,11.9,5.8c8.3,0,16.7-0.5,25-0.7c0.5,8.4,1,16.7,1.5,25.1c-16.6,2.8-34,6.1-50.5,0.9c-7-2.1-13.4-6.7-16.2-13.5c-5-11.7-5.5-24.7-5.7-37.2c0-22.7,0-45.3,0-68c-7.4,0-14.8,0-22.2,0c0-9.1,0-18.2,0-27.3c7.4,0,14.8,0,22.2,0c0-14,0-28,0-42c10.6,0,21.2,0,31.8,0c0,14,0,28,0,42c13.5,0,27.1,0,40.7,0c-0.2,9.1-0.5,18.2-0.7,27.3c-13.5,0-27.1,0-40.6,0C325.3,163,325.2,186,325.3,209z\"/><path id=\"path12\" d=\"M160.5,87.7c10.3-1.3,21.1-1,30.8,2.9c7.9,3.1,14.6,9.2,18.1,17c5.4,11.7,7.5,24.7,8.6,37.5c1.1,17,1,34.2-1.4,51.1c-1.7,10.1-4,20.7-10.8,28.6c-6.9,8-17.6,11.4-27.8,12.2c-10.8,0.8-22.2,0-31.9-5.1c-5.7-3-10.5-7.8-13.3-13.6c-3.4-7-5.3-14.6-6.6-22.2c-4-24.2-4.9-49.2,0.5-73.2c2.2-9.1,5.5-18.4,12.1-25.2C144.5,91.8,152.5,88.8,160.5,87.7z\"/></svg>"
+            },
+            "Equipe": {
+                "text": "1",
+                "type": "fa",
+                "icon": "fa-user"
+            }
+        },
+        "links": {
+            "github": "https://github.com/Paracetamol56/Observeur2",
+            "website": "",
+            "youtube": "",
+            "download": {
+                "link": "https://github.com/Paracetamol56/Observeur2/releases/tag/alpha-0.2.0",
+                "icons": [
+                    "fa-windows"
+                ]
+            },
+            "itchio": ""
+        },
+        "description": {
+            "Problématique": "Il existe plusieurs catalogues d'objets du ciel profond (Messier, NGC, Herschel, IC, etc…). Cependant, ces catalogues sont souvent immenses et difficile à trier selon la période de l'année, les instruments à disposition ou même les préférences de chacun.",
+            "Fonctionnalités": "L'Observeur2 doit être une interface simple pour visualiser, modifier ou créer une base de données personnalisé pour chaque astronome. Toutefois, cette base de données doit être suffisamment complète pour répondre à des besoins pratique. Par exemple, la visibilité des objets par rapport aux saisons. Le logicielle doit aussi connaitre la position de l'observateur pour adapter le contenu.",
+            "Partage": "La base de données doit être contenu dans un fichier non chiffré pour permettre le partage entre plusieurs personnes facilement.",
+            "Level up": "<ul><li>Maitrise du Framework QT</li><li>Utilisation de base de données SQLite en local</li><li>Développement d’algorithmes astronomiques complexes</li></ul>",
+            "Conclusion": "Je suis très satisfait des fonctionnalités offertes par le logiciel même s’il reste encore beaucoup à faire avant de pouvoir le distribuer.<br>Une version pour le web pourrait être une option envisageable pour le futur."
+        }
+    }
+]
