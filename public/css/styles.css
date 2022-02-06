@@ -1608,7 +1608,7 @@ p.technology-name {
 
 .project-row .thumbnail-container {
   height: 300px;
-  width: 300px;
+  aspect-ratio: 16/9;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -1627,6 +1627,30 @@ p.technology-name {
 .project-row .project-description {
   margin-left: 20px;
   width: 100%;
+}
+
+.project-row .project-description ul.project-description-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-row .project-description ul.project-description-list li {
+  margin: 0;
+  margin-left: 10px;
+  padding: 5px 0;
+  font-size: 1.2rem;
+}
+
+.project-row .project-description ul.project-description-list li svg {
+  height: 1.5rem;
+  fill: #ffffff;
+}
+
+.project-row .project-description ul.project-description-list li i,
+.project-row .project-description ul.project-description-list li svg {
+  width: 1.5rem;
+  margin-right: 5px;
 }
 
 .project-row .project-link {

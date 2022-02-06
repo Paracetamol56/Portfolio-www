@@ -22,6 +22,11 @@ router.get('/project', function (req, res) {
     controller.renderProject(req, res);
 });
 
+// project page.
+router.get('/content/projects', function (req, res) {
+    controller.sendAllProjects(req, res);
+});
+
 // 404 error page
 router.get('*', function (req, res) {
     res.status(404);
