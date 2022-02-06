@@ -9,7 +9,7 @@ module.exports = {
             res.render('projects');
             return;
         }
-        if (!fs.existsSync(`.\\public\\content\\projects\\${id}.json`)) {
+        if (!fs.existsSync(`./public/content/projects/${id}.json`)) {
             res.status(404);
             res.render('error/404');
             return;
@@ -20,9 +20,9 @@ module.exports = {
     sendAllProjects: function (req, res) {
         // Combine all projects json into one json and send it as json
         var projects = [];
-        var projectFiles = fs.readdirSync('.\\public\\content\\projects');
+        var projectFiles = fs.readdirSync('./public/content/projects');
         for (var i = 0; i < projectFiles.length; i++) {
-            var project = JSON.parse(fs.readFileSync(`.\\public\\content\\projects\\${projectFiles[i]}`));
+            var project = JSON.parse(fs.readFileSync(`./public/content/projects/${projectFiles[i]}`));
             project.id = projectFiles[i].replace('.json', '');
             projects.push(project);
         }
