@@ -23,9 +23,7 @@ function renderProjects() {
                 });
                 projectContainer.append(
                     "<div class=\"project-row\">" +
-                    "    <div class=\"thumbnail-container\">" +
-                    "        <img src=\"" + value.image + "\" class=\"thumbnail\" alt=\"Thumbnail\">" +
-                    "    </div>" +
+                    "    <img src=\"" + value.image + "\" class=\"thumbnail\" alt=\"Thumbnail\">" +
                     "    <div class=\"project-description\">" +
                     "        <div class=\"section-title\">" +
                     "            <h2><span class=\"section-title-number\">" + number + "</span> " + value.title + "</h2>" +
