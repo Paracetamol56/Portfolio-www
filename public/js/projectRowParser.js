@@ -4,7 +4,7 @@ function renderProjects() {
     const projectContainer = $("#projects").find(".container");
 
     $.ajax({
-        url: '/content/projects',
+        url: 'https://matheo-galuba.com/content/projects',
         type: 'GET',
         success: function (data) {
             $.each(data, function (index, value) {
