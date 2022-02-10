@@ -4,7 +4,7 @@ function renderProjects() {
     const projectContainer = $("#projects").find(".container");
 
     $.ajax({
-        url: 'https://matheo-galuba.com/content/projects',
+        url: '/content/projects',
         type: 'GET',
         success: function (data) {
             $.each(data, function (index, value) {
@@ -21,7 +21,8 @@ function renderProjects() {
                     }
                     infos += "<li>" + icon + " " + info.text + "</li>";
                 });
-                projectContainer.append(
+                // Append the project to the container in first position
+                projectContainer.prepend(
                     "<div class=\"project-row\">" +
                     "    <img src=\"" + value.image + "\" class=\"thumbnail\" alt=\"Thumbnail\">" +
                     "    <div class=\"project-description\">" +

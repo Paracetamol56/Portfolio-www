@@ -21,7 +21,7 @@ module.exports = {
         // Combine all projects json into one json and send it as json
         var projects = [];
         var projectFiles = fs.readdirSync('./public/content/projects');
-        for (var i = projectFiles.length - 1; i >= 0; i--) {
+        for (var i = 0; i < projectFiles.length; i++) {
             var project = JSON.parse(fs.readFileSync(`./public/content/projects/${projectFiles[i]}`));
             project.id = projectFiles[i].replace('.json', '');
             projects.push(project);

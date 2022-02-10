@@ -1,7 +1,7 @@
 // function to get the json data from the server with the id in parameter
 function renderProject(id) {
     // get the json data from the server
-    $.getJSON("https://matheo-galuba.com/content/projects/" + id + ".json", function (data) {
+    $.getJSON("/content/projects/" + id + ".json", function (data) {
         data = data[0];
 
         // Title and subtitle
