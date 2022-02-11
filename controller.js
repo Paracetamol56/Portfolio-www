@@ -23,7 +23,7 @@ module.exports = {
         var projectFiles = fs.readdirSync('./public/content/projects');
         for (var i = 0; i < projectFiles.length; i++) {
             var project = JSON.parse(fs.readFileSync(`./public/content/projects/${projectFiles[i]}`));
-            project.id = projectFiles[i].replace('.json', '');
+            project[0].id = projectFiles[i].replace('.json', '');
             projects.push(project);
         }
         res.json(projects);

@@ -910,9 +910,17 @@ header .downButton a {
   -webkit-box-shadow: 0 0 20px #5f77ef9a;
           box-shadow: 0 0 20px #5f77ef9a;
   border-radius: 5px;
-  background-image: linear-gradient(135deg, #2c1b4f 0%, #111416 100%);
+  background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 100%);
+  background-position: 100%;
+  background-size: 400%;
   opacity: .25;
   border: #5f78ef 2px solid;
+  -webkit-transition: all 1s var(--easing);
+  transition: all 1s var(--easing);
+}
+
+.carroussel li.carroussel-card:hover {
+  background-position: 0%;
   -webkit-transition: all 1s var(--easing);
   transition: all 1s var(--easing);
 }
@@ -953,12 +961,13 @@ header .downButton a {
   transition: all 1s var(--easing);
 }
 
-.carroussel .carroussel-card-thumbnail {
+.carroussel li.carroussel-card .carroussel-card-thumbnail {
   width: 100%;
 }
 
-.carroussel .carroussel-card-content {
+.carroussel li.carroussel-card .carroussel-card-content {
   height: 100%;
+  width: 100%;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -973,7 +982,7 @@ header .downButton a {
   text-align: left;
 }
 
-.carroussel .carroussel-card-header-number {
+.carroussel li.carroussel-card .carroussel-card-content .carroussel-card-header-number {
   font-family: 'Roboto Mono', monospace;
   font-size: 1.5rem;
   font-weight: 700;
@@ -982,29 +991,29 @@ header .downButton a {
   margin-bottom: 10px;
 }
 
-.carroussel .carroussel-card-header {
+.carroussel li.carroussel-card .carroussel-card-content .carroussel-card-header {
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
   font-size: 1.5rem;
   margin: 10px 0;
 }
 
-.carroussel .carroussel-card-button {
+.carroussel li.carroussel-card .carroussel-card-content .carroussel-card-button {
   font-family: 'Roboto Mono', monospace;
   font-weight: 500;
-  font-size: 1.2rem;
   color: #ffffff;
-  margin-top: auto;
   text-decoration: none;
   cursor: pointer;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
   -webkit-transition: all 0.5s var(--easing);
   transition: all 0.5s var(--easing);
 }
 
-.carroussel .carroussel-card-button:hover {
+.carroussel li.carroussel-card .carroussel-card-content .carroussel-card-button:hover {
   color: #8251e9;
+  right: 10px;
   -webkit-transition: all 0.5s var(--easing);
   transition: all 0.5s var(--easing);
 }

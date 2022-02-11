@@ -1,9 +1,5 @@
 const carroussel = document.querySelector(".carroussel");
 
-setInterval(() => {
-    next();
-}, 10000);
-
 function next() {
     // Put last element of the carroussel in the first position
     carroussel.insertBefore(carroussel.lastElementChild, carroussel.firstElementChild);
@@ -45,3 +41,39 @@ carroussel.addEventListener("click", function (e) {
         prev();
     }
 });
+
+function fillCarrousselContent() {
+    const carrousselList = $(".carroussel");
+
+    $.ajax({
+        url: '/content/projects',
+        type: 'GET',
+        success: function (data) {
+            data = data.slice(0, 5);
+            $.each(data, function (index, value) {
+                value = value[0];
+                console.log(value);
+                carrousselList.append(
+                    "<li class=\"carroussel-card hide\">" +
+                    "<img class=\"carroussel-card-thumbnail\"" +
+                    "src=\"" + value.image + "\" alt=\"thumbnail\">" +
+                    "<div class=\"carroussel-card-content\">" +
+                    "<h3 class=\"carroussel-card-header\">" +
+                    "<span class=\"carroussel-card-header-number\">" + value.id.toString() + ".</span> " + value.title +
+                    "</h3>" +
+                    "<p class=\"carroussel-card-desc\">" + value.subtitle + "</p>" +
+                    "<a class=\"carroussel-card-button\" href=\"/project?id=" + value.id + "\">VOIR PLUS <i class=\"fas fa-chevron-right\"></i></a>" +
+                    "</div>" +
+                    "</li>"
+                );
+            });
+
+            // Initialization
+            carroussel.children[3].classList = "prev carroussel-card";
+            carroussel.children[2].classList = "act carroussel-card";
+            carroussel.children[1].classList = "next carroussel-card";
+        }
+    });
+}
+
+fillCarrousselContent();
