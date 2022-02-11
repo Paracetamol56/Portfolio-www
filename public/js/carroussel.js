@@ -52,7 +52,6 @@ function fillCarrousselContent() {
             data = data.slice(0, 5);
             $.each(data, function (index, value) {
                 value = value[0];
-                console.log(value);
                 carrousselList.append(
                     "<li class=\"carroussel-card hide\">" +
                     "<img class=\"carroussel-card-thumbnail\"" +
