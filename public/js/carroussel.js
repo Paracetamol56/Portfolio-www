@@ -77,3 +77,5 @@ function fillCarrousselContent() {
 }
 
 fillCarrousselContent();
+
+setInterval(next, 10000);
