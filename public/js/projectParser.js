@@ -22,8 +22,6 @@ function renderProject(id) {
                 icon = value.icon;
             }
 
-            console.log(icon);
-
             infoContainer.append(
                 "<div class=\"project-info\">" +
                 "    <div class=\"project-info-background\"></div>" +
@@ -42,8 +40,6 @@ function renderProject(id) {
         const linkContainer = $("#links").find(".project-linklist");
         // for each element in data.links
         $.each(data.links, function (index, value) {
-            console.log(index);
-            console.log(value);
             if (value) {
                 if (index === "github") {
                     linkContainer.append(
@@ -79,7 +75,6 @@ function renderProject(id) {
                     );
                 }
                 else if (index === "download") {
-                    console.log(value);
                     var icons = "(";
                     $.each(value.icons, function (index, value) {
                         icons += "<i class=\"fab " + value + "\"></i> ";
@@ -120,6 +115,25 @@ function renderProject(id) {
                 "<p>" + value + "</p>"
             );
         });
+
+        // Maintenance section
+        const maintenanceSection = $("#maintenance");
+        if (data.maintenance) {
+            const maintenanceContainer = maintenanceSection.find(".container");
+            $.each(data.maintenance, function (index, value) {
+                // Append index as a h4 title
+                maintenanceContainer.append(
+                    "<h4>" + index + "</h4>"
+                );
+                // Append value as a p
+                maintenanceContainer.append(
+                    "<p>" + value + "</p>"
+                );
+            });
+        }
+        else {
+            maintenanceSection.remove();
+        }
     });
 }
 
