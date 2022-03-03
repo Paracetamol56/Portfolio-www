@@ -52,13 +52,14 @@ function fillCarrousselContent() {
             data = data.slice(0, 5);
             $.each(data, function (index, value) {
                 value = value[0];
+                const number = (index + 1).toString().padStart(2, '0');
                 carrousselList.append(
                     "<li class=\"carroussel-card hide\">" +
                     "<img class=\"carroussel-card-thumbnail\"" +
                     "src=\"" + value.image + "\" alt=\"thumbnail\">" +
                     "<div class=\"carroussel-card-content\">" +
                     "<h3 class=\"carroussel-card-header\">" +
-                    "<span class=\"carroussel-card-header-number\">" + value.id.toString() + ".</span> " + value.title +
+                    "<span class=\"carroussel-card-header-number\">" + number + ".</span> " + value.title +
                     "</h3>" +
                     "<p class=\"carroussel-card-desc\">" + value.subtitle + "</p>" +
                     "<a class=\"carroussel-card-button\" href=\"/project?id=" + value.id + "\">VOIR PLUS <i class=\"fas fa-chevron-right\"></i></a>" +
