@@ -5,9 +5,9 @@
         "image": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/3/header.png",
         "infos": {
             "Status": {
-                "text": "En cours",
+                "text": "Maintenance",
                 "type": "fa",
-                "icon": "fa-tasks"
+                "icon": "fa-wrench"
             },
             "Date": {
                 "text": "Janvier 2022",

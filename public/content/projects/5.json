@@ -5,9 +5,9 @@
         "image": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/5/header.png",
         "infos": {
             "Status": {
-                "text": "Maintenance",
+                "text": "Terminé",
                 "type": "fa",
-                "icon": "fa-wrench"
+                "icon": "fa-check-square"
             },
             "Date": {
                 "text": "Decembre 2021",
