@@ -46,6 +46,20 @@ h6 {
   color: #ffffff;
 }
 
+a {
+  color: #ffffff;
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
+  -webkit-transition: all 0.25s var(--easing);
+  transition: all 0.25s var(--easing);
+}
+
+a:hover {
+  color: #8251e9;
+  -webkit-text-decoration: solid underline;
+          text-decoration: solid underline;
+}
+
 section {
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
