@@ -165,11 +165,19 @@
         </div>
     </section>
 
-    <section id="image" class="fade-in">
-        <div class="container">
-            <img src="https://raw.githubusercontent.com/Paracetamol56/Portfolio/d5670d79cf7b6c8fe3a0a087ad017894dbd4aef1/public/images/s4jgxi73.png"
-                alt="thumbnail" class="project-image" id="project-image">
-        </div>
+    <section id="image">
+        <img src="https://raw.githubusercontent.com/Paracetamol56/Portfolio/d5670d79cf7b6c8fe3a0a087ad017894dbd4aef1/public/images/s4jgxi73.png"
+            alt="thumbnail" class="project-image" id="project-image">
+
+        <script>
+            // Image paralax
+            imageParalax = document.getElementById("project-image");
+
+            window.addEventListener("scroll", function () {
+                calculatedOffset = window.pageYOffset / 3 - imageParalax.clientHeight / 2;
+                imageParalax.style.transform = "translateY(" + calculatedOffset + "px)";
+            }); 
+        </script>
     </section>
 
     <section id="links" class="fade-in">

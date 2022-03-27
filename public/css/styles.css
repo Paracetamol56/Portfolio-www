@@ -1807,10 +1807,13 @@ p.technology-name {
   z-index: 5;
 }
 
-.project-image {
+section#image {
+  height: 950px;
+  overflow: hidden;
+}
+
+section#image .project-image {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .project-linklist {
