@@ -54,37 +54,6 @@
 </head>
 
 <body class="loading">
-    <!--
-    <div class="wip-warning">
-        <style>
-            .wip-warning {
-                position: fixed;
-                top: 120px;
-                left: -270px;
-                width: 800px;
-                height: 2rem;
-                rotate: -45deg;
-                background-color: #ff000080;
-                z-index: 99999;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .wip-warning p {
-                margin: 0;
-                padding: 0;
-                text-transform: uppercase;
-                color: white;
-                font-family: 'Roboto', sans-serif;
-                font-size: 1.5rem;
-                font-weight: bold;
-                text-align: center;
-            }
-        </style>
-        <p>Work in progress</p>
-    </div>
-    -->
     <nav>
         <div class="nav-container container">
             <div class="nav-logo">
@@ -186,7 +155,20 @@
 
     <section id="projects">
         <div class="container">
-
+            <div class="project-row">
+                <img src="{{thumbnail}}" class="thumbnail" alt="Thumbnail">
+                <div class="project-description">
+                    <div class="section-title">
+                        <h2><span class="section-title-number">{{number}}</span>{{title}}</h2>
+                        <hr>
+                        <h3>{{subtitle}}</h3>
+                    </div>
+                    <ul class="project-description-list">{{infos}}</ul>
+                    <a class="project-link" href="{{link}}">VOIR PLUS
+                        <i class=" fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
