@@ -141,6 +141,14 @@ function renderProject(id) {
         else {
             maintenanceSection.remove();
         }
+
+        // Project-navigation section
+        const projectNavigation = $("#project-navigation");
+        console.log(projectNavigation.html());
+        projectNavigation.html(projectNavigation.html()
+            .replace("{{prev-id}}", Number(id) - 1)
+            .replace("{{next-id}}", Number(id) + 1)
+        );
     });
 }
 

@@ -1215,6 +1215,44 @@ section#image {
 		}
 	}
 }
+.project-navigation-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	.project-navigation-link {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 0;
+		color: #ffffff;
+		text-decoration: none;
+		transition: all .5s var(--easing);
+		i {
+			font-size: 1.5rem;
+			margin: 10px;
+			padding: 0;
+		}
+		p {
+			font-family: 'Roboto Mono', monospace;
+			font-weight: 500;
+			font-size: 1.2rem;
+			letter-spacing: 0.1rem;
+			margin: 10px 0;
+			padding: 0;
+		}
+		&.left:hover {
+			color: #8251e9;
+			transform: translateX(-5px);
+			cursor: pointer;
+		}
+		&.right:hover {
+			color: #8251e9;
+			transform: translateX(5px);
+			cursor: pointer;
+		}
+	}
+}
 .contact-form {
 	display: flex;
 	flex-direction: column;
