@@ -101,6 +101,13 @@ function renderProject(id) {
                         "</li>"
                     );
                 }
+                else if (index === "text") {
+                    linkContainer.append(
+                        "<li class=\"project-linklist-item\">" +
+                        "    <p> " + value + "</p>" +
+                        "</li>"
+                    );
+                }
             };
         });
         // Description

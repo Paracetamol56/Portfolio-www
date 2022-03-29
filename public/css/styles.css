@@ -1844,6 +1844,7 @@ section#image .project-image {
           align-items: center;
 }
 
+.project-linklist .project-linklist-item p,
 .project-linklist .project-linklist-item a {
   color: #ffffff;
   font-family: 'Roboto Mono', monospace;
@@ -1853,6 +1854,9 @@ section#image .project-image {
   text-decoration: none;
   margin: 10px 0;
   padding: 0;
+}
+
+.project-linklist .project-linklist-item a {
   -webkit-transition: all 0.5s var(--easing);
   transition: all 0.5s var(--easing);
 }
@@ -1863,7 +1867,7 @@ section#image .project-image {
   transition: all 0.5s var(--easing);
 }
 
-.project-linklist .project-linklist-item a i.project-linklist-logo {
+.project-linklist .project-linklist-item i.project-linklist-logo {
   font-size: 2rem;
   margin: 0;
   padding: 0;

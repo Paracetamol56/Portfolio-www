@@ -1189,6 +1189,7 @@ section#image {
 		flex-direction: row;
 		justify-content: flex-start;
 		align-items: center;
+		p,
 		a {
 			color: #ffffff;
 			font-family: 'Roboto Mono', monospace;
@@ -1198,17 +1199,19 @@ section#image {
 			text-decoration: none;
 			margin: 10px 0;
 			padding: 0;
+		}
+		a {
 			transition: all .5s var(--easing);
 			&:hover {
 				color: #8251e9;
 				transition: all .5s var(--easing);
 			}
-			i.project-linklist-logo {
-				font-size: 2rem;
-				margin: 0;
-				padding: 0;
-				margin-right: 10px;
-			}
+		}
+		i.project-linklist-logo {
+			font-size: 2rem;
+			margin: 0;
+			padding: 0;
+			margin-right: 10px;
 		}
 	}
 }
