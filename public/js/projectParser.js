@@ -144,13 +144,30 @@ function renderProject(id) {
 
         // Project-navigation section
         const projectNavigation = $("#project-navigation");
-        console.log(projectNavigation.html());
-        projectNavigation.html(projectNavigation.html()
-            .replace("{{prev-id}}", Number(id) - 1)
-            .replace("{{next-id}}", Number(id) + 1)
-        );
+        var prev = $("#project-navigation .prev")[0];
+        var next = $("#project-navigation .next")[0];
+        if (id <= 0) {
+            prev.classList.add("disabled");
+            prev.classList.remove("prev");
+        }
+        else {
+            prev.setAttribute("href", "/project?id=" + (Number(id) - 1));
+        }
+        // Test if next project exists
+        var nextProjectUrl = "/project?id=" + (Number(id) + 1);
+        $.ajax({
+            url: nextProjectUrl,
+            type: "GET",
+            success: function (data) {
+                next.setAttribute("href", nextProjectUrl);
+            },
+            error: function (data) {
+                next.classList.add("disabled");
+                next.classList.remove("next");
+            }
+        });
     });
-}
+};
 
 // Get the ip parameter in the page uri
 function getParameterByName(name) {

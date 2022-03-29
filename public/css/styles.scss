@@ -1241,15 +1241,20 @@ section#image {
 			margin: 10px 0;
 			padding: 0;
 		}
-		&.left:hover {
+		&.prev:hover {
 			color: #8251e9;
 			transform: translateX(-5px);
 			cursor: pointer;
 		}
-		&.right:hover {
+		&.next:hover {
 			color: #8251e9;
 			transform: translateX(5px);
 			cursor: pointer;
+		}
+		&.disabled {
+			color: #ffffff42;
+			cursor: default;
+			transform: translateX(0);
 		}
 	}
 }

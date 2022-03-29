@@ -1923,18 +1923,25 @@ section#image .project-image {
   padding: 0;
 }
 
-.project-navigation-wrapper .project-navigation-link.left:hover {
+.project-navigation-wrapper .project-navigation-link.prev:hover {
   color: #8251e9;
   -webkit-transform: translateX(-5px);
           transform: translateX(-5px);
   cursor: pointer;
 }
 
-.project-navigation-wrapper .project-navigation-link.right:hover {
+.project-navigation-wrapper .project-navigation-link.next:hover {
   color: #8251e9;
   -webkit-transform: translateX(5px);
           transform: translateX(5px);
   cursor: pointer;
+}
+
+.project-navigation-wrapper .project-navigation-link.disabled {
+  color: #ffffff42;
+  cursor: default;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .contact-form {
