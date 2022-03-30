@@ -2004,6 +2004,15 @@ section#image .project-image {
   margin: 10px 0;
 }
 
+.contact-privacy-message {
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+  margin: 10px 0;
+  text-align: center;
+}
+
 footer {
   width: 100%;
   padding: 50px 0;
