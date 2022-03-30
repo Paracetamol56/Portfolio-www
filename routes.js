@@ -14,6 +14,12 @@ router.get('/contact', function (req, res) {
     res.render('contact');
 });
 
+// privacy page.
+router.get('/privacy', function (req, res) {
+    console.log(req.ip + ' is requesting /privacy');
+    res.render('privacyPolicy');
+});
+
 // project page.
 router.get('/project', function (req, res) {
     console.log(req.ip + ' is requesting /project');
