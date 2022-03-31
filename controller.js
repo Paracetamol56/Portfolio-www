@@ -40,7 +40,7 @@ module.exports = {
             }
         });
 
-        console.log('Newmessage to send')
+        console.log('New message to send')
         console.log(req.body);
 
         mailOptions = {
@@ -58,10 +58,10 @@ module.exports = {
             console.log(mailOptions);
             if (error) {
                 console.error('Error when sending email' + error);
-                res.send(error);
+                res.status(500).send(error);
             } else {
                 console.log('Email sent: ' + info.response);
-                res.send('Email sent: ' + info.response)
+                res.status(200).send('Email sent: ' + info.response)
             }
         });
     }

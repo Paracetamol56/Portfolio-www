@@ -49,6 +49,7 @@ function fillCarrousselContent() {
         url: '/content/projects',
         type: 'GET',
         success: function (data) {
+            data.reverse();
             data = data.slice(0, 5);
             $.each(data, function (index, value) {
                 value = value[0];

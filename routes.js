@@ -5,19 +5,19 @@ var router = express.Router();
 // home page.
 router.get('/', function (req, res) {
     console.log(req.ip + ' is requesting ' + req.path);
-    res.render('index');
+    res.status(200).render('index');
 });
 
 // contact page.
 router.get('/contact', function (req, res) {
     console.log(req.ip + ' is requesting ' + req.path);
-    res.render('contact');
+    res.status(200).render('contact');
 });
 
 // privacy page.
 router.get('/privacy', function (req, res) {
     console.log(req.ip + ' is requesting ' + req.path);
-    res.render('privacyPolicy');
+    res.status(200).render('privacyPolicy');
 });
 
 // project page.
@@ -35,8 +35,7 @@ router.get('/content/projects', function (req, res) {
 // 404 error page
 router.get('*', function (req, res) {
     console.log(req.ip + ' is requesting ' + req.path);
-    res.status(404);
-    res.render('error/404');
+    res.status(404).render('error/404');
 });
 
 // mailer API
