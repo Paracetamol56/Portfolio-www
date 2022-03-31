@@ -40,6 +40,7 @@ module.exports = {
             }
         });
 
+        console.log('Newmessage to send')
         console.log(req.body);
 
         mailOptions = {
