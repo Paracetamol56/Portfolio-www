@@ -5,14 +5,14 @@
         "image": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/6/header.png",
         "infos": {
             "Status": {
-                "text": "En cours",
+                "text": "Terminé",
                 "type": "fa",
-                "icon": "fa-hammer"
+                "icon": "fa-check-square"
             },
             "Date": {
-                "text": "Mars 2022",
+                "text": "Avril 2022",
                 "type": "fa",
-                "icon": "fa-calendar"
+                "icon": "fa-calendar-check"
             },
             "Langage": {
                 "text": "C#",
@@ -33,7 +33,7 @@
         "links": {
             "github": "https://github.com/cegepmatane/projet-specialise-2022-Matheo-Galuba",
             "website": "",
-            "youtube": "",
+            "youtube": "https://www.youtube.com/watch?v=L8SqIz3clD0",
             "download": "",
             "itchio": ""
         },
