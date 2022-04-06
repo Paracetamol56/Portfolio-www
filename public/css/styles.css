@@ -896,12 +896,13 @@ header .downButton a {
 .about-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 0fr;
-      grid-template-rows: 1fr 0fr;
+  -ms-grid-columns: 1fr 1fr 0fr;
+      grid-template-columns: 1fr 1fr 0fr;
+  -ms-grid-rows: 0fr 0fr;
+      grid-template-rows: 0fr 0fr;
   grid-column-gap: 20px;
   grid-row-gap: 5px;
+  overflow: hidden;
 }
 
 .about-grid .about-introduction {
@@ -920,14 +921,30 @@ header .downButton a {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-area: 1 / 3 / 3 / 4;
+  max-height: 450px;
+  margin-top: 22.4px;
+  background-image: radial-gradient(circle, #2c1b4f 0%, #111416 100%);
+  background-size: 100% 100%;
+  background-position: center;
+  -webkit-transition: all 0.5s var(--easing);
+  transition: all 0.5s var(--easing);
+}
+
+.about-grid .about-picture:hover {
+  background-size: 200% 200%;
 }
 
 .about-grid .about-picture img {
-  width: 100%;
-  height: 100%;
+  width: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+  .about-grid .about-picture {
+    display: none;
+  }
 }
 
 .about-grid .about-occupation {
