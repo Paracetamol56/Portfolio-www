@@ -74,16 +74,14 @@ section {
 }
 
 section .section-title h2 {
-  font-family: 'Roboto'sans-serif;
+  font-family: 'Roboto Mono', monospace;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   white-space: nowrap;
   margin: 0;
 }
 
 section .section-title h2 .section-title-number {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 2rem;
   font-weight: 700;
   color: #b4e2f9;
 }
