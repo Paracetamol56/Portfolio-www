@@ -605,7 +605,8 @@ header {
 		animation-fill-mode: forwards;
 		transition: all 0.75s var(--easing);
 
-		&:hover {
+		&:hover,
+		&.light {
 			color: var(--bgCodeBox-hover-color) !important;
 			transition: all 0s;
 		}

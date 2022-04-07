@@ -85,6 +85,18 @@ $(document).ready(function () {
       }
     }
   }
+
+  // Call the function triggerHover() at random intervals between 0 and 1 second
+  setInterval(triggerHover, Math.random() * 200);
 });
 
-
+// Function that add the light class to a random child of the codeBlocksBackground durring 1 second
+function triggerHover() {
+  console.log("triggerHover");
+  var codeBlocksBackground = document.getElementById("codeBlocksBackground");
+  var randomChild = codeBlocksBackground.children[Math.floor(Math.random() * codeBlocksBackground.children.length)];
+  $(randomChild).addClass("light");
+  setTimeout(function () {
+    $(randomChild).removeClass("light");
+  }, 200);
+}

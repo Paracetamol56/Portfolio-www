@@ -831,7 +831,7 @@ header .bgCodeBox {
   transition: all 0.75s var(--easing);
 }
 
-header .bgCodeBox:hover {
+header .bgCodeBox:hover, header .bgCodeBox.light {
   color: var(--bgCodeBox-hover-color) !important;
   -webkit-transition: all 0s;
   transition: all 0s;
