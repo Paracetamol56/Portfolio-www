@@ -5,9 +5,9 @@
         "image": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/2/header.png",
         "infos": {
             "Status": {
-                "text": "Maintenance",
+                "text": "Terminé",
                 "type": "fa",
-                "icon": "fa-wrench"
+                "icon": "fa-check-square"
             },
             "Date": {
                 "text": "Juin 2021",
@@ -48,11 +48,6 @@
             "Timeline": "Mon rôle dans le projet était de réaliser les assets d’environnement et le level design.<br>Dans le jeu, le personnage évolue à travers 4 niveaux chacun avec une ambiance particulière (couleurs, lumières, objets, etc…) j’ai donc réalisé 4 différents jeux d’assets pour chacun des niveaux.<br>Vient ensuite le temps d’intégrer ces assets dans le moteur de jeu. Comme je m’occupait des assets “statiques” d’environnement, j’ai utilisé le système de tilesheet de Unity pour rendre le travail de level design beaucoup plus simple. Certains asset sons purement décoratifs mais d’autres sont physiques et nécessites donc l’utilisation de colliers.<br>Enfin, je me suis chargé du level design de 2 des 4 niveaux du jeu en accord avec les décisions de l’équipe pour refléter au mieux l’ambiance que l’on voulait donner au jeu.<br>En parallèle, je me suis chargé de la gestion de projet, notamment avec git pour que tous les membre du groupe puisse avoir le projet dans sa version la plus récente et pouvoir modifier sa partie.",
             "Level up": "<ul><li>Création d’assets en pixel art</li><li>Maitrise des tilesheets dans Unity</li><li>Level design</li><li>Travail en équipe</li></ul>",
             "Conclusion": "Même si je ne me suis pas trop occupé de la partie développement, j’ai néanmoins beaucoup appris sur la création de jeu vidéo et j’ai pu progresser sur des aspects complémentaires au code."
-        },
-        "maintenance": {
-            "Description de la maintenance": "La maintenance a pour but de la maintenance et de corriger les bugs et de rendre l’expérience de jeu plus agréable en se basant sur les retours des joueurs. Dans un deuxième temps, on souhaite créer des images promotionnelles pour présenter le jeu sur les réseaux et plus largement sur Internet.",
-            "Veille technologique": "Étant donné que le développement est terminé, la plupart des recherches consistent à trouver des méthodes d’optimisation et de bonne pratique de programmation Unity.",
-            "Projet GitHub": "Voici le devboard utilisé pour suivre la maintenance du projet :<br><a href=\"https: //github.com/Paracetamol56/E428/projects/2\" target=\"_blank\">https: //github.com/Paracetamol56/E428/projects/2</a>"
         }
     }
 ]

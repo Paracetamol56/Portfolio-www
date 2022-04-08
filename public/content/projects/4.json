@@ -5,14 +5,14 @@
         "image": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/4/header.png",
         "infos": {
             "Status": {
-                "text": "Maintenance",
+                "text": "Terminé",
                 "type": "fa",
-                "icon": "fa-wrench"
+                "icon": "fa-check-square"
             },
             "Date": {
                 "text": "Mars 2022",
                 "type": "fa",
-                "icon": "fa-calendar"
+                "icon": "fa-calendar-check"
             },
             "Langage": {
                 "text": "C#",
@@ -48,11 +48,6 @@
             "Timeline": "Pour ce projet, nous avons utilisé la méthode agile et nous avons découpé nos 2 mois de développement en 3 sprints.<br>D’abord, j’étais chargé d’implémenter le contrôleur de vols pour que les avions soient fonctionnels. C’était une fonctionnalité centrale du projet sur laquelle toutes les autres parties du développement reposaient.<br>Ensuite, j’ai continué d’implémenter des fonctionnalités à mon contrôleur pour respecter un maximum tous les comportements d’un vrai avion.<br>Enfin, j’ai participé à la programmation du gameplay avec le mode de jeu canadair.",
             "Level up": "<ul><li>Maîtrise de Unity 3D</li><li>Travail en équipe avec la méthode agile</li></ul>",
             "Conclusion": "L’aspect simulation de ce projet m’a vraiment plu, en plus, le travail avec une équipe de cette taille a été une nouvelle expérience pour moi et je suis très content de l’organisation et de l’ambiance de travail que nous avons réussies à établir."
-        },
-        "maintenance": {
-            "Description de la maintenance": "Le but de cette maintenance est d’implémenter un nouveau mode de jeu : le mode freestyle. Le joueur doit suivre un parcours généré automatiquement et passer des portes pour remporter des points.<br>Voici le backlog des fonctionnalités de cette maintenance : <ul><li>Création d’une courbe procédurale en 3 dimensions.</li><li>Création des portes : Modélisation 3D, utilisation avancée de quaternions pour diriger la porte dans la bonne direction</li><li>Gameplay : Implémenter un compteur de points ainsi que des statistiques de base (temps entre chaque porte, moyennes de temps, etc...)</li></ul>",
-            "Veille technologique": "La partie qui demande le plus de recherche dans ma maintenance est sans doute la partie algorithmique avec la génération procédurale d’une courbe dans l’espace.<ul><li>Première idée, les “random walks” ou “marches aléatoires”.<br>Le principe mathématique est de discrétiser l’espace (puisqu’on est en 3D) en voxels et de se déplacer de voxel en voxel en croisant une direction à chaque déplacement.<br>Ce concept est expliqué et visualisé ici : <a href=\"https://www.youtube.com/watch?v=7A83lXbs6Ik\" traget=\"_blank\">www.youtube.com/watch?v=7A83lXbs6Ik</a><br>Problème : c’est un algorithme très utile dans certain cas mais beaucoup trop aléatoire quand il s’agit de piloter un avion. On veut des courbes douces pour que le pilote ait le temps d’effectuer son virage.</li><li>Deuxième idée : les courbes de Béziers<br>On peut grandement améliorer le lissage d’une courbe avec les courbes de Béziers.<br>Cette technique est abordée en détails ici : <a href=\"https://www.youtube.com/watch?v=aVwxzDHniEw\" traget=\"_blank\">https://www.youtube.com/watch?v=aVwxzDHniEw</a><br>Le principe est de reprendre l’idée précédente et de rendre les virages plus doux pour le pilote.<br>C’est un algorithme assez difficile à mettre en place et il n’existe pas forcément beaucoup d’exemples en 3 dimensions</li><li>Troisième idée : Restreindre l’algorithme des “random walks”<br>Dans l’algorithme des “random walks”, le point suivant est choisi aléatoirement parmi toutes les possibilités dans un cube ou une sphère autour du point d’origine, ce qui est peu appréciable dans notre cas. Cependant, on peut restreindre cet espace de décision à un cône dirigé dans la direction de l’avion pour générer des points toujours dans une même direction avec de l’aléatoire pour faire des virages abordables.</li><ul>",
-            "Projet GitHub": "Voici le devboard utilisé pour suivre la maintenance du projet :<br><a href=\"https://github.com/Paracetamol56/SkyAirlineCorporation/projects/2\" traget=\"_blank\">github.com/Paracetamol56/SkyAirlineCorporation/projects/2</a>"
         }
     }
 ]
