@@ -92,7 +92,6 @@ $(document).ready(function () {
 
 // Function that add the light class to a random child of the codeBlocksBackground durring 1 second
 function triggerHover() {
-  console.log("triggerHover");
   var codeBlocksBackground = document.getElementById("codeBlocksBackground");
   var randomChild = codeBlocksBackground.children[Math.floor(Math.random() * codeBlocksBackground.children.length)];
   $(randomChild).addClass("light");
