@@ -107,17 +107,17 @@ export default {
     ];
 
     // for each cell of the grid
-    for (var i = 0; i < gridSize[0]; i++) {
-      for (var j = 0; j < gridSize[1]; j++) {
+    for (let i = 0; i < gridSize[0]; i++) {
+      for (let j = 0; j < gridSize[1]; j++) {
         // If the cell is lucky
         if (Math.random() <= 0.7) {
           // create a p element in this cell
-          var codeBlock = document.createElement("p");
+          let codeBlock = document.createElement("p");
           codeBlock.classList.add("bgCodeBox");
 
-          var randomContent = "";
+          let randomContent = "";
           // generate a random content in a list of random types
-          var randomNumber = Math.random();
+          let randomNumber = Math.random();
           if (randomNumber <= 0.25) {
             // generate 4 lines of 8 random characters in hexadecimal
             for (let k = 0; k < 4; k++) {
@@ -140,7 +140,7 @@ export default {
           } else if (randomNumber <= 0.9) {
             // generate a random character
             for (let k = 0; k < 4; k++) {
-              for (var l = 0; l < 8; l++) {
+              for (let l = 0; l < 8; l++) {
                 randomContent +=
                   randomCharacters[
                     Math.floor(Math.random() * randomCharacters.length)
@@ -170,10 +170,16 @@ export default {
           codeBlocksBackground.appendChild(codeBlock);
         }
       }
-
-      // Call the function triggerHover() at random intervals between 0 and 1 second
-      setInterval(this.triggerHover, Math.random() * 10000);
     }
+
+    // Clear all interval
+    var highestTimeoutId = setTimeout(";");
+    for (let i = 0; i < highestTimeoutId; i++) {
+      clearTimeout(i);
+    }
+
+    // Set an interval to trigger the hover effect
+    setInterval(this.triggerHover, Math.floor(Math.random() * 500));
   },
 };
 </script>
