@@ -1,8 +1,6 @@
 <template>
   <header>
-    <div class="background" id="codeBlocksBackground">
-      <p class="bgCodeBox">Don't delete me</p>
-    </div>
+    <div class="background" id="codeBlocksBackground"></div>
 
     <div class="titles" id="titles">
       <h1 class="fillTextWithgradient lang" key="title">{{ title }}</h1>
