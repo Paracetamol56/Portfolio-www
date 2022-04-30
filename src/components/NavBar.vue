@@ -31,9 +31,13 @@
         </a>
       </div>
       <div class="nav-menu">
-        <ul class="nav-menu-list" v-bind:class="{ 'nav-active': navActive }">
+        <ul
+          id="nav-menu-list"
+          class="nav-menu-list"
+          v-bind:class="{ 'nav-active': navActive }"
+        >
           <li class="nav-menu-list-element">
-            <a class="active" href="/">
+            <a href="/">
               <span>Accueil</span>
               <div></div>
             </a>
@@ -84,6 +88,42 @@ export default {
     return {
       navActive: false,
     };
+  },
+  methods: {
+    updateActive: function (path) {
+      const menuList = document.getElementById("nav-menu-list");
+      // For each a tag in the menu list
+      for (let i = 0; i < menuList.children.length; i++) {
+        const menuLinkElement = menuList.children[i].children[0];
+        menuLinkElement.classList.remove("active");
+        // Get the href of the menu link and remove the server name
+        const menuLinkHref = menuLinkElement
+          .getAttribute("href")
+          .replace(window.location.origin, "");
+        if (menuLinkHref === path) {
+          menuLinkElement.classList.add("active");
+        }
+      }
+    },
+  },
+  mounted: function () {
+    this.updateActive(window.location.pathname);
+
+    let menuList = document.getElementById("nav-menu-list");
+    // For each a tag in the menu list
+    for (let i = 0; i < menuList.children.length; i++) {
+      const menuLinkElement = menuList.children[i].children[0];
+      // Keep a reference of current object
+      const self = this;
+      // Add an event listener to use Vue router instead of defult link behavior
+      menuLinkElement.addEventListener("click", function (e) {
+        e.preventDefault();
+        self.$router.push(menuLinkElement.href);
+        self.updateActive(
+          menuLinkElement.href.replace(window.location.origin, "")
+        );
+      });
+    }
   },
 };
 </script>
