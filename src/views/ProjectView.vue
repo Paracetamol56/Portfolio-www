@@ -1,9 +1,9 @@
 <template>
-  <h2>Home</h2>
+  <h2>Project</h2>
 </template>
 
 <script>
 export default {
-  name: "HomeView",
+  name: "ProjectView",
 };
 </script>
