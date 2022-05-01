@@ -7,7 +7,7 @@
       <h2 class="fillTextWithgradient lang" key="subtitle">{{ subtitle }}</h2>
     </div>
 
-    <div class="downButton">
+    <div v-if="sectionLink !== ''" class="downButton">
       <a v-bind:href="sectionLink">
         VOIR PLUS<br />
         <i class="fas fa-chevron-down"></i>
@@ -31,8 +31,14 @@ export default {
     },
     sectionLink: {
       type: String,
-      required: true,
+      required: false,
+      default: "",
     },
+  },
+  data: function () {
+    return {
+      interval: null,
+    };
   },
   methods: {
     triggerHover: function () {
@@ -172,14 +178,14 @@ export default {
       }
     }
 
-    // Clear all interval
-    var highestTimeoutId = setTimeout(";");
-    for (let i = 0; i < highestTimeoutId; i++) {
-      clearTimeout(i);
-    }
-
     // Set an interval to trigger the hover effect
-    setInterval(this.triggerHover, Math.floor(Math.random() * 500));
+    this.interval = setInterval(
+      this.triggerHover,
+      Math.floor(Math.random() * 500)
+    );
+  },
+  unmounted: function () {
+    clearInterval(this.interval);
   },
 };
 </script>

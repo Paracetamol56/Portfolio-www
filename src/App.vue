@@ -1,15 +1,46 @@
 <template>
   <NavBar />
   <router-view />
+  <PageFooter />
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
+import NavBar from "@/components/global/NavBar.vue";
+import PageFooter from "@/components/global/PageFooter.vue";
 
 export default {
   name: "App",
   components: {
     NavBar,
+    PageFooter,
+  },
+  mounted: function () {
+    document.onreadystatechange = () => {
+      if (document.readyState === "complete") {
+        // Fade in animation
+        const fadeInElements = document.getElementsByClassName("fade-in");
+
+        // Enter in viewport observer
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("appear");
+              }
+            });
+          },
+          {
+            threshold: 0.5,
+          }
+        );
+
+        // For each element
+        for (let i = 0; i < fadeInElements.length; i++) {
+          // Add the observer
+          observer.observe(fadeInElements[i]);
+        }
+      }
+    };
   },
 };
 </script>
@@ -327,12 +358,13 @@ section {
 
 .fade-in {
   opacity: 0;
-  transition: all 0.5s var(--easing);
+  transform: scale(0.95);
+  transition: opacity 0.5s var(--easing), transform 0.5s var(--easing);
 }
 
 .fade-in.appear {
   opacity: 1;
-  transition: all 0.5s var(--easing);
+  transform: scale(1);
 }
 
 -webkit-scrollbar {

@@ -4,16 +4,18 @@
     subtitle="Bienvenue dans mon univers"
     sectionLink="#home"
   />
-  <h2>Home</h2>
+  <AboutSection />
 </template>
 
 <script>
-import PageHeader from "@/components/PageHeader.vue";
+import PageHeader from "@/components/global/PageHeader.vue";
+import AboutSection from "@/components/home/AboutSection.vue";
 
 export default {
   name: "HomeView",
   components: {
     PageHeader,
+    AboutSection,
   },
 };
 </script>

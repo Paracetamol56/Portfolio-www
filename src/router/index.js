@@ -11,17 +11,22 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('../views/HomeView.vue')
+    component: () => import('@/views/HomeView.vue')
   },
   {
     path: '/project',
     name: 'project',
-    component: () => import('../views/ProjectView.vue')
+    component: () => import('@/views/ProjectView.vue')
   },
   {
     path: '/contact',
     name: 'contact',
-    component: () => import('../views/ContactView.vue')
+    component: () => import('@/views/ContactView.vue')
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: '404',
+    component: () => import('@/views/404View.vue')
   }
 ]
 

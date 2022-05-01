@@ -1,17 +1,12 @@
 <template>
-  <PageHeader
-    title="Mathéo's portfolio"
-    subtitle="Bienvenue dans mon univers"
-    sectionLink="#home"
-  />
-  <h2>Contact</h2>
+  <PageHeader title="Error 404" subtitle="Page not found" />
 </template>
 
 <script>
 import PageHeader from "@/components/global/PageHeader.vue";
 
 export default {
-  name: "ContactView",
+  name: "404View",
   components: {
     PageHeader,
   },
