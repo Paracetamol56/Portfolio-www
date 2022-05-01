@@ -36,8 +36,16 @@ export default {
 
         // For each element
         for (let i = 0; i < fadeInElements.length; i++) {
-          // Add the observer
-          observer.observe(fadeInElements[i]);
+          // If element is already in viewport
+          if (
+            fadeInElements[i].getBoundingClientRect().top < window.innerHeight
+          ) {
+            // Add class "appear"
+            fadeInElements[i].classList.add("appear");
+          } else {
+            // Add observer
+            observer.observe(fadeInElements[i]);
+          }
         }
       }
     };

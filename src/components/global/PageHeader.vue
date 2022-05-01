@@ -184,7 +184,7 @@ export default {
       Math.floor(Math.random() * 500)
     );
   },
-  unmounted: function () {
+  beforeUnmount: function () {
     clearInterval(this.interval);
   },
 };
