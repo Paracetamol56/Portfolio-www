@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav id="navbar" class="translucent">
     <div class="nav-container container">
       <div class="nav-logo">
         <a class="nav-logo-link coloredOnHover" href="/">
@@ -55,6 +55,7 @@
             </a>
           </li>
         </ul>
+
         <input
           id="nav-menu-toggle-id"
           class="nav-menu-toggle"
@@ -87,43 +88,49 @@ export default {
   data: function () {
     return {
       navActive: false,
+      linkList: [],
     };
   },
   methods: {
     updateActive: function (path) {
-      const menuList = document.getElementById("nav-menu-list");
       // For each a tag in the menu list
-      for (let i = 0; i < menuList.children.length; i++) {
-        const menuLinkElement = menuList.children[i].children[0];
-        menuLinkElement.classList.remove("active");
+      this.linkList.forEach((link) => {
+        link.classList.remove("active");
         // Get the href of the menu link and remove the server name
-        const menuLinkHref = menuLinkElement
-          .getAttribute("href")
-          .replace(window.location.origin, "");
-        if (menuLinkHref === path) {
-          menuLinkElement.classList.add("active");
+        if (link.href === path) {
+          link.classList.add("active");
         }
-      }
+      });
     },
   },
   mounted: function () {
-    this.updateActive(window.location.pathname);
+    this.linkList = document.querySelectorAll(".nav-menu-list-element a");
+    this.updateActive(window.location.href);
 
-    let menuList = document.getElementById("nav-menu-list");
     // For each a tag in the menu list
-    for (let i = 0; i < menuList.children.length; i++) {
-      const menuLinkElement = menuList.children[i].children[0];
-      // Keep a reference of current object
-      const self = this;
+    this.linkList.forEach((link) => {
       // Add an event listener to use Vue router instead of defult link behavior
-      menuLinkElement.addEventListener("click", function (e) {
-        e.preventDefault();
-        self.$router.push(menuLinkElement.href);
-        self.updateActive(
-          menuLinkElement.href.replace(window.location.origin, "")
-        );
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        // If middle click is pressed, open the link in a new tab
+        if (event.which === 2) {
+          window.open(link.href, "_blank");
+        } else if (event.which === 1) {
+          this.updateActive(link.href);
+          this.$router.push(link.href);
+        }
       });
-    }
+    });
+
+    // Add an event listner when scrolling and get the scroll position
+    window.addEventListener("scroll", () => {
+      if (window.scrollY < window.innerHeight) {
+        document.getElementById("navbar").classList.add("translucent");
+      } else {
+        document.getElementById("navbar").classList.remove("translucent");
+      }
+    });
   },
 };
 </script>
@@ -140,6 +147,10 @@ nav {
   z-index: 4;
   position: fixed;
   color: #ffffff;
+  transition: background-color 0.5s var(--easing);
+  &.translucent {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
   .nav-container {
     display: flex;
@@ -248,7 +259,7 @@ nav {
               font-weight: 500;
               font-size: 1rem;
               color: #ffffff;
-              transition: all var(--easing) 0.5s;
+              transition: color var(--easing) 0.25s;
             }
 
             div {
@@ -260,18 +271,18 @@ nav {
               margin: 0;
               padding: 0;
               transform: scaleX(0%);
-              transition: all var(--easing) 0.5s;
+              transform-origin: right;
+              transition: transform var(--easing) 0.25s;
             }
 
             &:hover {
               > a {
                 color: #8251e9;
-                transition: all var(--easing) 0.2s;
               }
 
               > div {
                 transform: scaleX(100%);
-                transition: all var(--easing) 0.2s;
+                transform-origin: left;
               }
             }
           }

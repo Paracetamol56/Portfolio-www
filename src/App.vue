@@ -1,52 +1,26 @@
 <template>
+  <LoaderAnimation ref="loader" />
   <NavBar />
   <router-view />
   <PageFooter />
 </template>
 
 <script>
+import LoaderAnimation from "@/components/global/LoaderAnimation.vue";
 import NavBar from "@/components/global/NavBar.vue";
 import PageFooter from "@/components/global/PageFooter.vue";
 
 export default {
   name: "App",
   components: {
+    LoaderAnimation,
     NavBar,
     PageFooter,
   },
   mounted: function () {
     document.onreadystatechange = () => {
-      if (document.readyState === "complete") {
-        // Fade in animation
-        const fadeInElements = document.getElementsByClassName("fade-in");
-
-        // Enter in viewport observer
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("appear");
-              }
-            });
-          },
-          {
-            threshold: 0.5,
-          }
-        );
-
-        // For each element
-        for (let i = 0; i < fadeInElements.length; i++) {
-          // If element is already in viewport
-          if (
-            fadeInElements[i].getBoundingClientRect().top < window.innerHeight
-          ) {
-            // Add class "appear"
-            fadeInElements[i].classList.add("appear");
-          } else {
-            // Add observer
-            observer.observe(fadeInElements[i]);
-          }
-        }
+      if (document.readyState == "complete") {
+        this.$refs.loader.disapear();
       }
     };
   },
