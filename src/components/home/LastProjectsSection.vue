@@ -6,7 +6,37 @@
         <hr />
       </div>
 
-      <ul class="carroussel" ref="carroussel"></ul>
+      <ul class="project-list" ref="project-list">
+        <li class="project-item">
+          <img
+            class="project-item-image"
+            src="https://via.placeholder.com/500x600"
+          />
+          <div class="project-item-text">
+            <p class="project-item-text-date">2020 - 2022</p>
+            <h3 class="project-item-text-title">
+              <span class="project-item-text-title-number">01.</span> Projet 1
+            </h3>
+            <p class="project-item-text-description">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
+              commodi placeat, recusandae aspernatur harum tempora architecto?
+            </p>
+            <a class="project-item-text-link" href="#">Voir le projet</a>
+          </div>
+        </li>
+        <li class="project-item">
+          <img
+            class="project-item-image"
+            src="https://via.placeholder.com/500x600"
+          />
+          <div class="project-item-text">
+            <p>2020 - 2022</p>
+            <h3>Projet 1</h3>
+            <p></p>
+            <a href="#">Voir le projet</a>
+          </div>
+        </li>
+      </ul>
 
       <a class="cta-button fade-in" href="/project">
         <span class="cta-button-text">Voir tous les projets</span>
@@ -23,160 +53,91 @@ export default {
       interval: null,
     };
   },
-  methods: {
-    next: function () {
-      // Put last element of the carroussel in the first position
-      this.$refs.carroussel.insertBefore(
-        this.$refs.carroussel.lastElementChild,
-        this.$refs.carroussel.firstElementChild
-      );
-
-      // Assing classes to the 3 first elements
-      this.$refs.carroussel.children[3].classList = "prev carroussel-card";
-      this.$refs.carroussel.children[2].classList = "act carroussel-card";
-      this.$refs.carroussel.children[1].classList = "next carroussel-card";
-      this.$refs.carroussel.children[4].classList = "hide carroussel-card";
-    },
-    prev: function () {
-      // Put first element of the carroussel in the last position
-      this.$refs.carroussel.appendChild(
-        this.$refs.carroussel.firstElementChild
-      );
-
-      // Assing classes to the 3 first elements
-      this.$refs.carroussel.children[0].classList = "hide carroussel-card";
-      this.$refs.carroussel.children[1].classList = "next carroussel-card";
-      this.$refs.carroussel.children[2].classList = "act carroussel-card";
-      this.$refs.carroussel.children[3].classList = "prev carroussel-card";
-    },
-  },
+  methods: {},
   mounted: function () {
     // Load the content
     // ToDo
-
-    // Initialization
-    this.$refs.carroussel.children[3].classList = "prev carroussel-card";
-    this.$refs.carroussel.children[2].classList = "act carroussel-card";
-    this.$refs.carroussel.children[1].classList = "next carroussel-card";
-
-    // Set the interval to call the next function
-    this.interval = setInterval(this.next, 10000);
   },
-  beforeUnmount: function () {
-    clearInterval(this.interval);
-  },
+  beforeUnmount: function () {},
 };
 </script>
 
 <style scoped lang="scss">
 section#projects {
-  .carroussel {
-    height: 450px;
-    width: 100%;
-    margin: 40px 0;
-    padding: 0;
-    position: relative;
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
 
-    li.carroussel-card {
-      list-style-type: none;
-      position: absolute;
-      left: 50%;
-      margin-left: -200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      width: 400px;
-      height: 100%;
+    .project-item {
+      height: 600px;
+      margin: 0;
       padding: 0;
+      position: relative;
+      list-style: none;
       overflow: hidden;
-      box-shadow: 0 0 20px #5f77ef9a;
-      border-radius: 5px;
-      background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 100%);
-      background-position: 100%;
-      background-size: 400%;
-      opacity: 0.25;
-      border: #5f78ef 2px solid;
-      transition: all 1s var(--easing);
 
-      &:hover {
-        background-position: 0%;
-        transition: all 1s var(--easing);
-      }
-
-      &.prev {
-        transform: translateX(-500px) scale(0.85);
-        cursor: pointer;
+      .project-item-image {
         z-index: 1;
-        transition: all 1s var(--easing);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(max(100%, 600px));
       }
 
-      &.act {
-        opacity: 1;
-        transform: translateX(0) scale(1);
+      .project-item-text {
         z-index: 2;
-        transition: all 1s var(--easing);
-      }
-
-      &.next {
-        transform: translateX(500px) scale(0.85);
-        cursor: pointer;
-        z-index: 1;
-        transition: all 1s var(--easing);
-      }
-
-      &.hide {
-        opacity: 0;
-        transform: translateX(0) scale(0.7);
-        z-index: 0;
-        transition: all 1s var(--easing);
-      }
-
-      .carroussel-card-thumbnail {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-      }
-
-      .carroussel-card-content {
         height: 100%;
-        width: 100%;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        text-align: left;
+        padding: 1.5rem;
+        background-image: linear-gradient(
+          135deg,
+          #2c1b4fa0 70%,
+          #111416a0 100%
+        );
+        background-size: 400%;
+        background-position: 100%;
+        transition: background-position 1s var(--easing);
 
-        .carroussel-card-header-number {
-          font-family: "Roboto Mono", monospace;
+        &:hover {
+          background-position: 0%;
+          .project-item-text-link {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        .project-item-text-date {
+          font-family: "Roboto-Mono", monospace;
+          font-size: 1rem;
+          margin: 0;
+        }
+
+        .project-item-text-title {
+          font-family: "Roboto-Mono", monospace;
           font-size: 1.5rem;
           font-weight: 700;
-          color: #b4e2f9;
           margin: 0;
-          margin-bottom: 10px;
         }
 
-        .carroussel-card-header {
-          font-family: "Roboto Mono", monospace;
-          font-weight: 500;
-          font-size: 1.5rem;
-          margin: 10px 0;
+        .project-item-text-description {
+          font-family: "Roboto-Mono", monospace;
+          font-size: 1rem;
+          margin: 0;
         }
 
-        .carroussel-card-button {
-          font-family: "Roboto Mono", monospace;
-          font-weight: 500;
-          color: #ffffff;
+        .project-item-text-link {
+          font-family: "Roboto-Mono", monospace;
+          font-size: 1rem;
           text-decoration: none;
-          cursor: pointer;
-          position: absolute;
-          right: 15px;
-          bottom: 10px;
-          transition: all 0.5s var(--easing);
-
-          &:hover {
-            color: #8251e9;
-            right: 10px;
-            transition: all 0.5s var(--easing);
-          }
+          margin: 0;
+          opacity: 0;
+          transform: translateX(1rem);
+          transition: opacity 0.5s var(--easing), transform 0.5s var(--easing);
         }
       }
     }
