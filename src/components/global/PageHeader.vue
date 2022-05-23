@@ -1,5 +1,6 @@
 <template>
-  <header>
+  <header ref="background" @mousemove="mouseMove">
+    <div class="background-gradient" ref="backgroundGradient"></div>
     <div class="background" id="codeBlocksBackground"></div>
 
     <div class="titles" id="titles">
@@ -50,9 +51,69 @@ export default {
           Math.floor(Math.random() * codeBlocksBackground.children.length)
         ];
       randomChild.classList.add("light");
+      this.writeContent(randomChild, this.generateBlockContent());
       setTimeout(function () {
         randomChild.classList.remove("light");
-      }, 200);
+      }, 400);
+    },
+    mouseMove: function (event) {
+      // Get the mouse position
+      let x = event.clientX - window.innerWidth / 2;
+      let y = event.clientY - window.innerHeight / 2;
+
+      this.$refs.backgroundGradient.style.top = -y / 5 + "px";
+      this.$refs.backgroundGradient.style.left = -x / 5 + "px";
+    },
+    generateBlockContent: function () {
+      let randomCharacters = "-_+=*&^%$#@!~`<>?:;.,|\\/{}[]()\"'";
+
+      let randomContent = "";
+      // generate a random content in a list of random types
+      let randomNumber = Math.random();
+      if (randomNumber <= 0.25) {
+        // generate 4 lines of 8 random characters in hexadecimal
+        for (let k = 0; k < 4; k++) {
+          randomContent += Math.random()
+            .toString(16)
+            .substr(2, 8)
+            .toUpperCase();
+          randomContent += "\n";
+        }
+      } else if (randomNumber <= 0.5) {
+        // generate a random number of random characters in binary
+        randomNumber = Math.floor(Math.random() * 8) + 1;
+        for (let k = 0; k < 4; k++) {
+          randomContent += Math.random().toString(2).substr(2, 8).toUpperCase();
+          randomContent += "\n";
+        }
+      } else if (randomNumber <= 0.9) {
+        // generate a random character
+        for (let k = 0; k < 4; k++) {
+          for (let l = 0; l < 8; l++) {
+            randomContent +=
+              randomCharacters[
+                Math.floor(Math.random() * randomCharacters.length)
+              ];
+          }
+          randomContent += "\n";
+        }
+      } else {
+        randomContent = "////////\n////////\n////////\n////////";
+      }
+      return randomContent;
+    },
+    writeContent: async function (element, content) {
+      element.innerHTML = "";
+      // write content in element character by character
+      let i = 0;
+      let interval = setInterval(function () {
+        if (i < content.length) {
+          element.innerHTML += content[i];
+          i++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 10);
     },
   },
   mounted: function () {
@@ -70,47 +131,12 @@ export default {
     let codeBlocksBackground = document.getElementById("codeBlocksBackground");
 
     // get the grid size of the codeBlocksBackground
-    var gridSize = [20, 25];
+    var gridSize = [window.innerWidth / 80, window.innerHeight / 80];
 
     let grays = ["#343739", "#2d3032", "#26292b", "#1f2224", "#191c1e"];
 
     // list of predifined colors
     let colors = ["#b4e2f9", "#5f78ef", "#8251e9", "#ad56e3", "#df7bf5"];
-
-    let randomCharacters = [
-      "-",
-      "_",
-      "+",
-      "=",
-      "*",
-      "&",
-      "^",
-      "%",
-      "$",
-      "#",
-      "@",
-      "!",
-      "~",
-      "`",
-      "<",
-      ">",
-      "?",
-      ":",
-      ";",
-      ".",
-      ",",
-      "|",
-      "\\",
-      "/",
-      "{",
-      "}",
-      "[",
-      "]",
-      "(",
-      ")",
-      '"',
-      "'",
-    ];
 
     // for each cell of the grid
     for (let i = 0; i < gridSize[0]; i++) {
@@ -121,44 +147,7 @@ export default {
           let codeBlock = document.createElement("p");
           codeBlock.classList.add("bgCodeBox");
 
-          let randomContent = "";
-          // generate a random content in a list of random types
-          let randomNumber = Math.random();
-          if (randomNumber <= 0.25) {
-            // generate 4 lines of 8 random characters in hexadecimal
-            for (let k = 0; k < 4; k++) {
-              randomContent += Math.random()
-                .toString(16)
-                .substr(2, 8)
-                .toUpperCase();
-              randomContent += "\n";
-            }
-          } else if (randomNumber <= 0.5) {
-            // generate a random number of random characters in binary
-            randomNumber = Math.floor(Math.random() * 8) + 1;
-            for (let k = 0; k < 4; k++) {
-              randomContent += Math.random()
-                .toString(2)
-                .substr(2, 8)
-                .toUpperCase();
-              randomContent += "\n";
-            }
-          } else if (randomNumber <= 0.9) {
-            // generate a random character
-            for (let k = 0; k < 4; k++) {
-              for (let l = 0; l < 8; l++) {
-                randomContent +=
-                  randomCharacters[
-                    Math.floor(Math.random() * randomCharacters.length)
-                  ];
-              }
-              randomContent += "\n";
-            }
-          } else {
-            randomContent = "////////\n////////\n////////\n////////";
-          }
-
-          codeBlock.innerHTML = randomContent;
+          this.writeContent(codeBlock, this.generateBlockContent());
 
           // random color from the list of grays
           let randomColor = grays[Math.floor(Math.random() * grays.length)];
@@ -209,7 +198,7 @@ header {
       background-color: transparent;
       padding: 2px;
       margin: 0;
-      text-align: center;
+      text-align: left;
       cursor: default;
       user-select: none;
       font-family: "Fira Code", monospace;
@@ -233,11 +222,7 @@ header {
 
 <style scoped lang="scss">
 header {
-  background-image: radial-gradient(
-    circle,
-    #2c1b4f 0%,
-    #111416 100%
-  ) !important;
+  background-color: #111416;
   height: 100vh;
   max-height: 1600px;
   width: 100%;
@@ -247,6 +232,27 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  div.background-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(
+      calc(-1 * max(25vh, 25vw)),
+      calc(-1 * max(50vh, 50vw))
+    );
+    filter: blur(50px);
+    width: calc(max(100vh, 100vw) * 1.5);
+    height: calc(max(100vh, 100vw) * 1.5);
+    z-index: -1;
+    background-image: radial-gradient(
+      circle,
+      #2c1b4fff 0%,
+      #11141600 50%
+    ) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   div.titles {
     width: fit-content;
