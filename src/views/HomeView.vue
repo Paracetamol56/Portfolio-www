@@ -4,18 +4,23 @@
     subtitle="Bienvenue dans mon univers"
     sectionLink="#about"
   />
-  <LastProjectsSection />
+  <main>
+    <LastProjectsSection />
+    <TravelSection />
+  </main>
 </template>
 
 <script>
 import PageHeader from "@/components/global/PageHeader.vue";
 import LastProjectsSection from "@/components/home/LastProjectsSection.vue";
+import TravelSection from "@/components/home/TravelSection.vue";
 
 export default {
   name: "HomeView",
   components: {
     PageHeader,
     LastProjectsSection,
+    TravelSection,
   },
   methods: {
     updateFadeInElements: function () {

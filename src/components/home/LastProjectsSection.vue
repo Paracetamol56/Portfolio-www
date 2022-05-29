@@ -2,7 +2,7 @@
   <section id="projects" class="fade-in">
     <div class="container">
       <div class="section-title">
-        <h2><span class="section-title-number">02.</span> Derniers projets</h2>
+        <h2><span class="section-title-number">01.</span> Derniers projets</h2>
         <hr />
       </div>
 
@@ -64,7 +64,9 @@ export default {
 
 <style scoped lang="scss">
 section#projects {
-  .project-list {
+  ul.project-list {
+    margin: 1rem 0;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 1rem;

@@ -4,16 +4,18 @@
     subtitle="Bienvenue dans mon univers"
     sectionLink="#home"
   />
-  <h2>Contact</h2>
+  <ContactForm />
 </template>
 
 <script>
 import PageHeader from "@/components/global/PageHeader.vue";
+import ContactForm from "@/components/contact/ContactForm.vue";
 
 export default {
   name: "ContactView",
   components: {
     PageHeader,
+    ContactForm,
   },
   methods: {
     updateFadeInElements: function () {

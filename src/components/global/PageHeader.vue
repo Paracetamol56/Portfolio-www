@@ -8,11 +8,9 @@
       <h2 class="fillTextWithgradient lang" key="subtitle">{{ subtitle }}</h2>
     </div>
 
-    <div v-if="sectionLink !== ''" class="downButton">
-      <a v-bind:href="sectionLink">
-        VOIR PLUS<br />
-        <i class="fas fa-chevron-down"></i>
-      </a>
+    <div v-if="sectionLink !== ''" class="downButton" @click="scrollToMain()">
+      VOIR PLUS<br />
+      <i class="fas fa-chevron-down"></i>
     </div>
   </header>
 </template>
@@ -114,6 +112,9 @@ export default {
           clearInterval(interval);
         }
       }, 10);
+    },
+    scrollToMain: function () {
+      window.scrollTo(0, window.innerHeight);
     },
   },
   mounted: function () {
@@ -283,19 +284,17 @@ header {
     text-align: center;
     cursor: default;
     transition: all 0.1s ease-in;
+    text-decoration: none;
+    font-family: "Roboto mono", monospace;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.5s var(--easing);
 
     &:hover {
-      transform: translate(-50%, -5px);
-      transition: all 0.1s ease-in;
-    }
-
-    a {
-      text-decoration: none;
-      font-family: "Roboto", sans-serif;
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: all 0.5s var(--easing);
+      transform: translate(-50%, 5px);
+      transition: transform 0.1s ease-in;
     }
   }
 }
