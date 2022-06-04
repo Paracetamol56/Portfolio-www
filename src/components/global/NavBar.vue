@@ -345,7 +345,7 @@ nav {
 
       ul.nav-menu-list {
         margin: 0;
-        background-color: #000000;
+        background-color: #00000080;
         position: absolute;
         right: -100%;
         top: 50px;

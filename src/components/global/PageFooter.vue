@@ -43,11 +43,6 @@
           >
         </p>
       </div>
-      <div class="footer-policy">
-        <p>
-          Check out the <a href="/privacy" rel="nofollow">privacy policy</a>
-        </p>
-      </div>
       <div class="footer-credits">
         <p>
           Icons from
@@ -76,7 +71,6 @@ footer {
   padding: 50px 0;
   position: relative;
   background-color: #111416;
-
   .footer-logo-list {
     display: flex;
     flex-direction: row;
@@ -87,20 +81,19 @@ footer {
     padding: 0;
     list-style: none;
   }
-
   .footer-logo-icon {
     font-size: 2rem;
     text-decoration: none;
-    color: #ffffff;
-    transition: all 0.25s var(--easing);
-
+    color: var(--text-color);
+    transform: scale(1);
+    transition: color 0.25s var(--easing), transform 0.25s var(--easing);
     &:hover {
       text-decoration: none;
-      color: #8251e9;
-      transition: all 0.25s var(--easing);
+      color: var(--primary-color);
+      transform: scale(1.1);
+      transition: color 0.1s var(--easing), transform 0.1s var(--easing);
     }
   }
-
   .footer-author {
     font-family: "Roboto Mono", monospace;
     font-size: 0.8rem;
@@ -109,28 +102,15 @@ footer {
     color: #ffffff;
     margin: 20px 0;
     padding: 0;
-
     span.hearth {
       color: #ffffff;
       transition: all 0.25s var(--easing);
-
       &:hover {
         color: #8251e9;
         transition: all 0.25s var(--easing);
       }
     }
   }
-
-  .footer-policy {
-    font-family: "Roboto Mono", monospace;
-    font-size: 0.8rem;
-    font-weight: 300;
-    text-align: center;
-    color: #ffffff;
-    margin: 20px 0;
-    padding: 0;
-  }
-
   .footer-credits {
     font-family: "Roboto Mono", monospace;
     font-size: 0.8rem;
@@ -140,7 +120,6 @@ footer {
     margin: 20px 0;
     padding: 0;
   }
-
   a {
     color: #ffffff;
     text-decoration: dotted underline;
@@ -152,7 +131,6 @@ footer {
       transition: all 0.25s var(--easing);
     }
   }
-
   .bottom-gradient {
     width: 100%;
     height: 10px;
