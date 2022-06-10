@@ -28,11 +28,6 @@ export default {
       required: false,
       default: "",
     },
-    sectionLink: {
-      type: String,
-      required: false,
-      default: "",
-    },
   },
   data: function () {
     return {

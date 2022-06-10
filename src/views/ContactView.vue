@@ -2,19 +2,21 @@
   <PageHeader
     title="Mathéo's portfolio"
     subtitle="Bienvenue dans mon univers"
-    sectionLink="#home"
   />
+  <LocationSection />
   <ContactForm />
 </template>
 
 <script>
 import PageHeader from "@/components/global/PageHeader.vue";
+import LocationSection from "@/components/contact/LocationSection.vue";
 import ContactForm from "@/components/contact/ContactForm.vue";
 
 export default {
   name: "ContactView",
   components: {
     PageHeader,
+    LocationSection,
     ContactForm,
   },
   methods: {

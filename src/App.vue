@@ -64,6 +64,7 @@ body {
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
+  font-family: "Roboto Mono", monospace;
 
   &.loading {
     overflow: hidden;
@@ -107,7 +108,6 @@ a {
 
 section {
   color: var(--text-color);
-  font-family: "Roboto", sans-serif;
   width: 100%;
   position: relative;
   z-index: 3;
@@ -116,19 +116,21 @@ section {
   overflow-x: hidden;
 
   .section-title {
+    margin: 20px 0;
     h2 {
       font-family: "Roboto Mono", monospace;
-      font-size: 2rem;
+      font-size: 4rem;
       font-weight: 500;
-      white-space: nowrap;
+      white-space: wrap;
       margin: 0;
-
-      .section-title-number {
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+      span.section-title-number {
         font-weight: 700;
         color: var(--secondary-color);
       }
     }
-
     hr {
       width: 100%;
       height: 2px;
@@ -136,6 +138,26 @@ section {
       background-image: var(--accent-gradient);
       margin: 0;
       padding: 0;
+    }
+    p.section-title-subtitle {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin: 0;
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+      }
+    }
+    &.centered {
+      text-align: center;
+
+      h2 {
+        position: relative;
+        span.section-title-number {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
     }
   }
 }

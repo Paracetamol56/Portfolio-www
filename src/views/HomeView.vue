@@ -2,7 +2,6 @@
   <PageHeader
     title="Mathéo's portfolio"
     subtitle="Bienvenue dans mon univers"
-    sectionLink="#about"
   />
   <main>
     <LastProjectsSection />

@@ -6,8 +6,13 @@
         <hr />
       </div>
 
-      <ul class="project-list" ref="project-list">
-        <li class="project-item">
+      <Carousel
+        class="project-list"
+        ref="project-list"
+        :settings="settings"
+        :breakpoints="breakpoints"
+      >
+        <Slide class="project-item">
           <img
             class="project-item-image"
             src="https://via.placeholder.com/500x600"
@@ -23,8 +28,8 @@
             </p>
             <a class="project-item-text-link" href="#">Voir le projet</a>
           </div>
-        </li>
-        <li class="project-item">
+        </Slide>
+        <Slide class="project-item">
           <img
             class="project-item-image"
             src="https://via.placeholder.com/500x600"
@@ -35,8 +40,11 @@
             <p></p>
             <a href="#">Voir le projet</a>
           </div>
-        </li>
-      </ul>
+        </Slide>
+      </Carousel>
+
+      <Pagination />
+      <Navigation />
 
       <a class="cta-button fade-in" href="/project">
         <span class="cta-button-text">Voir tous les projets</span>
@@ -46,11 +54,38 @@
 </template>
 
 <script>
+import { Carousel, Navigation, Slide, Pagination } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
+
 export default {
   name: "LastProjectsSection",
+  components: {
+    Carousel,
+    Navigation,
+    Slide,
+    Pagination,
+  },
   data: function () {
     return {
-      interval: null,
+      // carousel settings
+      settings: {
+        itemsToShow: 1,
+        snapAlign: "center",
+      },
+      // breakpoints are mobile first
+      // any settings not specified will fallback to the carousel settings
+      breakpoints: {
+        // 700px and up
+        700: {
+          itemsToShow: 3.5,
+          snapAlign: "center",
+        },
+        // 1024 and up
+        1024: {
+          itemsToShow: 5,
+          snapAlign: "start",
+        },
+      },
     };
   },
   methods: {},
