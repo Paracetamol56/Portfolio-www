@@ -3,11 +3,13 @@
     <div class="container">
       <div class="section-title centered">
         <h2>
-          <span class="section-title-number">01.</span>
-          Location
+          <span class="section-title-number type-write">01.</span>
+          <span class="type-write">Location</span>
         </h2>
         <hr />
-        <p class="section-title-subtitle">Where am I in the universe?</p>
+        <p class="section-title-subtitle type-write">
+          Where am I in the universe?
+        </p>
       </div>
     </div>
     <div class="map-container">
@@ -22,7 +24,8 @@
       </GMapMap>
       <div class="location-infos">
         <p class="location-infos-text">
-          <b>Earth</b> <span class="colored">C-137</span>
+          <span class="type-write"><b>Earth </b></span>
+          <span class="colored">C-137</span>
         </p>
         <p class="location-infos-text coordinates">
           {{ centerHumanReadable.lat.deg }}<span class="colored">°</span>
@@ -376,6 +379,9 @@ export default {
       p.location-infos-text {
         font-size: 1.4rem;
         color: var(--text-color);
+        &.coordinates {
+          font-weight: 300;
+        }
         span.colored {
           color: var(--secondary-color);
         }

@@ -9,13 +9,14 @@
   },
   "dependencies": {
     "@fawmi/vue-google-maps": "^0.9.67",
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "globe.gl": "^2.26.2",
+    "swiper": "^8.2.3",
     "vue": "^3.2.13",
     "vue-i18n": "^9.1.10",
     "vue-router": "^4.0.3",
-    "vue3-carousel": "^0.1.40",
-    "world-map-vue": "^0.2.1"
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

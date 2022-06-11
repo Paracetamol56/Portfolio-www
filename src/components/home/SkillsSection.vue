@@ -242,7 +242,7 @@ export default {
   }
 
   .language-title {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Fira Code", monospace;
     font-weight: 500;
     font-size: 1.5rem;
     color: #b4e2f9;
@@ -354,7 +354,7 @@ ul.skill-container {
       }
 
       h4.skill-element-title {
-        font-family: "Roboto Mono", monospace;
+        font-family: "Fira Code", monospace;
         font-weight: 500;
         font-size: 1.2rem;
         text-align: center;
@@ -405,7 +405,7 @@ ul.technologies-container {
     p {
       color: #b4e2f9;
       font-size: 1.2rem;
-      font-family: "Roboto Mono", monospace;
+      font-family: "Fira Code", monospace;
       font-weight: 500;
     }
   }
@@ -414,7 +414,7 @@ ul.technologies-container {
 p.technology-name {
   color: #b4e2f9;
   font-size: 1.2rem;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Fira Code", monospace;
   font-weight: 500;
   text-align: center;
 }

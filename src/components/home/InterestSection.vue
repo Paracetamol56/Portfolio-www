@@ -86,7 +86,7 @@ export default {
   align-items: left;
 
   .interest-title {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Fira Code", monospace;
     font-weight: 500;
     font-size: 1.5rem;
     margin: 5px 0;

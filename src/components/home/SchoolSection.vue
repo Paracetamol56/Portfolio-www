@@ -155,7 +155,7 @@ export default {
   .school-table-years {
     padding: 10px;
     border: none;
-    font-family: "Roboto Mono", monospace;
+    font-family: "Fira Code", monospace;
     font-weight: 500;
     font-size: 1.1rem;
     color: #b4e2f9;
@@ -233,7 +233,7 @@ export default {
   }
 
   .school-link {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Fira Code", monospace;
     font-weight: 500;
     color: #ffffff;
     text-decoration: none;

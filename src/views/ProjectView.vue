@@ -3,16 +3,18 @@
     title="Mathéo's portfolio"
     subtitle="Bienvenue dans mon univers"
   />
-  <h2>Project</h2>
+  <ProjectListSection />
 </template>
 
 <script>
 import PageHeader from "@/components/global/PageHeader.vue";
+import ProjectListSection from "@/components/projects/ProjectListSection.vue";
 
 export default {
   name: "ProjectView",
   components: {
     PageHeader,
+    ProjectListSection,
   },
   methods: {
     updateFadeInElements: function () {

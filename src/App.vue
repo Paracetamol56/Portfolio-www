@@ -17,10 +17,29 @@ export default {
     NavBar,
     PageFooter,
   },
+  methods: {
+    typeWrite(element) {
+      console.log("typeWrite", element.innerHTML);
+      const text = element.innerText;
+      const textLength = text.length;
+      let current = 0;
+      const type = setInterval(() => {
+        element.innerText = text.substring(0, current);
+        current++;
+        if (current > textLength) {
+          clearInterval(type);
+        }
+      }, 100);
+    },
+  },
   mounted: function () {
+    // const textToType = document.querySelectorAll(".type-write");
     document.onreadystatechange = () => {
       if (document.readyState == "complete") {
         this.$refs.loader.disapear();
+        // textToType.forEach((element) => {
+        //   this.typeWrite(element);
+        // });
       }
     };
   },
@@ -29,7 +48,12 @@ export default {
 
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+// Usage :
+// font-family: 'Fira Code', monospace;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Roboto Mono', monospace;
 
 :root {
   --text-color: #f5f3fa;
@@ -64,7 +88,7 @@ body {
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Fira Code", monospace;
 
   &.loading {
     overflow: hidden;
@@ -118,7 +142,7 @@ section {
   .section-title {
     margin: 20px 0;
     h2 {
-      font-family: "Roboto Mono", monospace;
+      font-family: "Fira Code", monospace;
       font-size: 4rem;
       font-weight: 500;
       white-space: wrap;
@@ -182,6 +206,15 @@ section {
   background-clip: text !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-color) !important;
 }
 
 .loader-wrapper {
@@ -331,7 +364,7 @@ section {
 }
 
 .cta-button {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Fira Code", monospace;
   font-weight: 500;
   font-size: 1.5rem;
   text-decoration: none;
@@ -346,7 +379,8 @@ section {
   background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 90%);
   background-position: 100%;
   background-size: 400%;
-  transition: background-position 0.5s var(--easing), color 0.5s var(--easing);
+  transition: background-position 0.5s var(--easing), color 0.5s var(--easing),
+    box-shadow 0.5s var(--easing);
 
   &:hover {
     text-decoration: none;

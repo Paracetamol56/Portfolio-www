@@ -4,16 +4,16 @@
       <div class="section-title centered">
         <h2>
           <span class="section-title-number">02.</span>
-          Contact
+          <span class="type-write">Contact</span>
         </h2>
         <hr />
-        <p class="section-title-subtitle">Let's get in touch</p>
+        <p class="section-title-subtitle type-write">Let's get in touch</p>
       </div>
       <form
         id="contact-form"
         class="contact-form"
         role="form"
-        action="https://formsubmit.co/matheo.galu56@gmail.com"
+        action="https://formsubmit.co/f56d1dfa92f74b144fde232317962208"
         method="POST"
       >
         <div class="concat-form-horizontal-wrapper">
@@ -79,8 +79,8 @@
           type="submit"
           value="SEND"
         >
-          <i class="fa fa-paper-plane"></i
-          ><span class="send-text"> Envoyer</span>
+          <i class="fa fa-paper-plane"></i>
+          <span class="send-text"> Envoyer</span>
         </button>
         <p class="contact-form-state" id="state-feedback"></p>
       </form>
@@ -128,7 +128,7 @@ export default {
       background-color: transparent;
       color: #b4e2f9;
       font-size: 1rem;
-      font-family: "Roboto Mono", monospace;
+      font-family: "Fira Code", monospace;
       font-weight: 500;
       transition: all 0.5s var(--easing);
 
@@ -149,7 +149,7 @@ export default {
       background-color: transparent;
       color: #b4e2f9;
       font-size: 1rem;
-      font-family: "Roboto Mono", monospace;
+      font-family: "Fira Code", monospace;
       font-weight: 500;
       transition: all 0.5s var(--easing);
 
@@ -162,7 +162,7 @@ export default {
 
       .contact-form-select-option {
         font-size: 1rem;
-        font-family: "Roboto Mono", monospace;
+        font-family: "Fira Code", monospace;
         font-weight: 500;
       }
     }
@@ -177,7 +177,7 @@ export default {
     .contact-form-state {
       font-size: 1rem;
       color: #b4e2f9;
-      font-family: "Roboto Mono", monospace;
+      font-family: "Fira Code", monospace;
       font-weight: 500;
       margin: 10px 0;
     }

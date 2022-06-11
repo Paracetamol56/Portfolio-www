@@ -171,7 +171,7 @@ nav {
         color: #ffffff;
         text-decoration: none;
         font-size: 1.2rem;
-        font-family: "Roboto Mono", monospace;
+        font-family: "Fira Code", monospace;
         font-weight: 200;
         letter-spacing: 0.1rem;
 
@@ -255,7 +255,7 @@ nav {
 
             span {
               text-align: center;
-              font-family: "Roboto Mono", monospace;
+              font-family: "Fira Code", monospace;
               font-weight: 500;
               font-size: 1rem;
               color: #ffffff;

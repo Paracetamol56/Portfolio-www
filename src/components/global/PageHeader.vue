@@ -4,8 +4,12 @@
     <div class="background" id="codeBlocksBackground"></div>
 
     <div class="titles" id="titles">
-      <h1 class="fillTextWithgradient lang" key="title">{{ title }}</h1>
-      <h2 class="fillTextWithgradient lang" key="subtitle">{{ subtitle }}</h2>
+      <h1 class="fillTextWithgradient type-write" key="title">
+        {{ title }}
+      </h1>
+      <h2 class="fillTextWithgradient type-write" key="subtitle">
+        {{ subtitle }}
+      </h2>
     </div>
 
     <div v-if="sectionLink !== ''" class="downButton" @click="scrollToMain()">
@@ -257,7 +261,7 @@ header {
     text-align: center;
     pointer-events: none;
     transform: translateY(-50%), translateZ(200px);
-    font-family: "Roboto mono", monospace;
+    font-family: "Fira Code", monospace;
     font-weight: 300;
     h1 {
       font-size: 4rem;
@@ -280,7 +284,7 @@ header {
     cursor: default;
     transition: all 0.1s ease-in;
     text-decoration: none;
-    font-family: "Roboto mono", monospace;
+    font-family: "Fira Code", monospace;
     color: #ffffff;
     font-size: 1rem;
     font-weight: 500;

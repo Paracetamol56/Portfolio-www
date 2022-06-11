@@ -95,7 +95,7 @@ footer {
     }
   }
   .footer-author {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Fira Code", monospace;
     font-size: 0.8rem;
     font-weight: 300;
     text-align: center;
@@ -112,7 +112,7 @@ footer {
     }
   }
   .footer-credits {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Fira Code", monospace;
     font-size: 0.8rem;
     font-weight: 300;
     text-align: center;
