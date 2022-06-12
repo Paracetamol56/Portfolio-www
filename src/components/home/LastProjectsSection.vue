@@ -17,70 +17,12 @@
       :centeredSlides="true"
       :modules="modules"
     >
-      <SwiperSlide class="project-item">
-        <img
-          class="project-item-image"
-          src="https://via.placeholder.com/720x1280"
-        />
-        <div class="project-item-text">
-          <p class="project-item-text-date">2020 - 2022</p>
-          <h3 class="project-item-text-title">
-            <span class="project-item-text-title-number">01.</span> Projet 1
-          </h3>
-          <p class="project-item-text-description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam
-            commodi placeat, recusandae aspernatur harum tempora architecto?
-          </p>
-          <a class="project-item-text-link" href="#">Voir le projet -></a>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide class="project-item">
-        <img
-          class="project-item-image"
-          src="https://via.placeholder.com/500x600"
-        />
-        <div class="project-item-text">
-          <p>2020 - 2022</p>
-          <h3>Projet 1</h3>
-          <p></p>
-          <a href="#">Voir le projet</a>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide class="project-item">
-        <img
-          class="project-item-image"
-          src="https://via.placeholder.com/500x600"
-        />
-        <div class="project-item-text">
-          <p>2020 - 2022</p>
-          <h3>Projet 1</h3>
-          <p></p>
-          <a href="#">Voir le projet</a>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide class="project-item">
-        <img
-          class="project-item-image"
-          src="https://via.placeholder.com/500x600"
-        />
-        <div class="project-item-text">
-          <p>2020 - 2022</p>
-          <h3>Projet 1</h3>
-          <p></p>
-          <a href="#">Voir le projet</a>
-        </div>
-      </SwiperSlide>
-      <SwiperSlide class="project-item">
-        <img
-          class="project-item-image"
-          src="https://via.placeholder.com/500x600"
-        />
-        <div class="project-item-text">
-          <p>2020 - 2022</p>
-          <h3>Projet 1</h3>
-          <p></p>
-          <a href="#">Voir le projet</a>
-        </div>
+      <SwiperSlide
+        class="project-slider-item"
+        v-for="project in projects"
+        :key="project"
+      >
+        <ProjectCard :project="project" />
       </SwiperSlide>
     </Swiper>
 
@@ -92,6 +34,8 @@
 </template>
 
 <script>
+import ProjectCard from "@/components/global/ProjectCard.vue";
+
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -101,13 +45,24 @@ import { Navigation, Pagination } from "swiper";
 export default {
   name: "LastProjectsSection",
   components: {
+    ProjectCard,
     Swiper,
     SwiperSlide,
   },
   data: function () {
     return {
       modules: [Navigation, Pagination],
+      projects: [],
     };
+  },
+  mounted: function () {
+    this.$store.watch(
+      (state) => state.projects,
+      () => {
+        this.projects = this.$store.getters.getProjects.reverse();
+      },
+      { immediate: true }
+    );
   },
 };
 </script>

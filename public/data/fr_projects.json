@@ -1,6 +1,6 @@
 [
     {
-        "number": "1",
+        "id": "1",
         "title": "That level again Unity",
         "subtitle": "Jeu 2D de platforme avec de la logic et de la strategie",
         "header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/0/header.png",
@@ -11,7 +11,7 @@
         "tags": [
             "Unity",
             "C#",
-            "2D Game",
+            "2DGame",
             "Platformer"
         ],
         "technologies": [
@@ -60,7 +60,7 @@
         ]
     },
     {
-        "number": "2",
+        "id": "2",
         "title": "L'ISS en 3D",
         "subtitle": "Visionneuse interactive de l'ISS",
         "header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/1/header.png",
@@ -71,7 +71,7 @@
         "tags": [
             "Blender",
             "3D",
-            "Unreal Engine",
+            "UnrealEngine",
             "ISS"
         ],
         "technologies": [
@@ -104,7 +104,7 @@
         ]
     },
     {
-        "number": "3",
+        "id": "3",
         "title": "E428",
         "subtitle": "Jeu de platforme 2D en pixel art",
         "header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/2/header.png",
@@ -115,8 +115,8 @@
         "tags": [
             "Unity",
             "C#",
-            "2D Game",
-            "Pixel Art",
+            "2DGame",
+            "PixelArt",
             "Platformer"
         ],
         "technologies": [
@@ -178,7 +178,7 @@
         ]
     },
     {
-        "number": "4",
+        "id": "4",
         "title": "L’Observeur 2",
         "subtitle": "Catalogue d'objets astronomiques pour amateurs",
         "header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/3/header.png",
