@@ -84,7 +84,7 @@ export default {
 .project-card {
   width: 100%;
   aspect-ratio: 16/9;
-  margin: 1rem 0;
+  margin: 0;
   position: relative;
   overflow: hidden;
   @media (max-width: 768px) {

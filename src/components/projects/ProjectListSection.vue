@@ -40,14 +40,18 @@ export default {
 
 <style scoped lang="scss">
 section#projects {
+  .container {
+    width: 90%;
+  }
   .projet-list {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: flex-start;
     margin: 0;
     padding: 0;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>
