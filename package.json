@@ -20,7 +20,7 @@
   "homepage": "https://github.com/Paracetamol56/Portfolio#readme",
   "dependencies": {
     "dotenv": "^14.3.0",
-    "ejs": "^3.0.2",
+    "ejs": "^3.1.7",
     "express": "^4.17.2",
     "html": "^1.0.0",
     "node-mailer": "^0.1.1",
