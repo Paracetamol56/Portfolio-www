@@ -1,5 +1,3 @@
 github: [Paracetamol56]
 patreon: paracetamol56
-custom:
-  - name: PayPal
-    url: https://paypal.me/gamatheo?country.x=FR&locale.x=fr_FR
+custom: "https://paypal.me/gamatheo"
