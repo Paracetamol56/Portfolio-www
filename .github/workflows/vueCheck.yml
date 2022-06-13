@@ -1,4 +1,4 @@
-name: check-vue-tsc
+name: Vue check
 on: push
 
 jobs:
@@ -10,3 +10,10 @@ jobs:
         with:
           node-version: 14
       - uses: keita-hino/vue-tsc-action@main
+
+  spelling:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Check Spelling
+      uses: UnicornGlobal/spellcheck-github-actions@master
