@@ -1,40 +1,36 @@
 <template>
-  <section id="projects" class="fade-in">
+  <section id="projects">
     <div class="container">
-      <div class="section-title">
-        <h2><span class="section-title-number">01.</span> Derniers projets</h2>
-        <hr />
-      </div>
-      <ul class="projet-list">
-        <li
-          class="project-list-item"
+      <div class="projet-list">
+        <ProjectCard
           v-for="project in projects"
           :key="project"
-        >
-          <img
-            class="project-list-item-image"
-            src="https://via.placeholder.com/720x1280"
-            alt="header"
-          />
-        </li>
-      </ul>
+          :project="project"
+        />
+      </div>
     </div>
   </section>
 </template>
 
 <script>
+import ProjectCard from "@/components/global/ProjectCard.vue";
+
 export default {
   name: "ProjectListSection",
+  components: {
+    ProjectCard,
+  },
   data: function () {
     return {
       projects: [],
     };
   },
+  methods: {},
   mounted: function () {
     this.$store.watch(
       (state) => state.projects,
       () => {
-        this.projects = this.$store.getters.getProjects;
+        this.projects = this.$store.getters.getProjects.reverse();
       },
       { immediate: true }
     );
@@ -44,26 +40,18 @@ export default {
 
 <style scoped lang="scss">
 section#projects {
+  .container {
+    width: 90%;
+  }
   .projet-list {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: flex-start;
     margin: 0;
     padding: 0;
-    list-style: none;
     width: 100%;
-    .project-list-item {
-      width: 100%;
-      margin: 1rem 0;
-      position: relative;
-      overflow: hidden;
-      img.project-list-item-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>

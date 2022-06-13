@@ -43,6 +43,12 @@
             </a>
           </li>
           <li class="nav-menu-list-element">
+            <a href="/about">
+              <span>A propos</span>
+              <div></div>
+            </a>
+          </li>
+          <li class="nav-menu-list-element">
             <a href="/project">
               <span>Projets</span>
               <div></div>
@@ -170,13 +176,13 @@ nav {
         display: block;
         color: #ffffff;
         text-decoration: none;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-family: "Fira Code", monospace;
         font-weight: 200;
         letter-spacing: 0.1rem;
 
         .nav-logo-svg {
-          height: 20px;
+          height: 1.2rem;
           margin-right: 10px;
 
           .cls-1 {
@@ -214,7 +220,7 @@ nav {
       justify-content: center;
       align-items: center;
       height: 100%;
-      width: 28%;
+      width: 50%;
       min-width: 375px;
 
       ul.nav-menu-list {
@@ -257,7 +263,7 @@ nav {
               text-align: center;
               font-family: "Fira Code", monospace;
               font-weight: 500;
-              font-size: 1rem;
+              font-size: 1.2rem;
               color: #ffffff;
               transition: color var(--easing) 0.25s;
             }

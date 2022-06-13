@@ -48,7 +48,7 @@ export default {
 
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 // Usage :
 // font-family: 'Fira Code', monospace;
@@ -122,11 +122,11 @@ h6 {
 a {
   color: var(--text-color);
   text-decoration: dotted underline;
-  transition: all 0.25s var(--easing);
+  text-underline-offset: 3px;
+  transition: color 0.2s var(--easing);
 
   &:hover {
     color: var(--primary-color);
-    text-decoration: solid underline;
   }
 }
 
@@ -143,7 +143,7 @@ section {
     margin: 20px 0;
     h2 {
       font-family: "Fira Code", monospace;
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 500;
       white-space: wrap;
       margin: 0;
