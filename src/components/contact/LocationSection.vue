@@ -53,8 +53,8 @@ export default {
   data: function () {
     return {
       center: {
-        lat: 48.84788230218662,
-        lng: -67.5450566764216,
+        lat: 45.04193875516838,
+        lng: 3.8839575096914793,
       },
       centerHumanReadable: {
         lat: {
@@ -213,10 +213,27 @@ export default {
           },
           {
             featureType: "road",
+            stylers: [
+              {
+                visibility: "off",
+              },
+            ],
+          },
+          {
+            featureType: "road",
             elementType: "geometry.fill",
             stylers: [
               {
                 color: "#2c2c2c",
+              },
+            ],
+          },
+          {
+            featureType: "road",
+            elementType: "labels",
+            stylers: [
+              {
+                visibility: "off",
               },
             ],
           },
@@ -262,15 +279,6 @@ export default {
             stylers: [
               {
                 color: "#4e4e4e",
-              },
-            ],
-          },
-          {
-            featureType: "road.local",
-            elementType: "labels",
-            stylers: [
-              {
-                visibility: "off",
               },
             ],
           },
