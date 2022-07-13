@@ -85,13 +85,11 @@ footer {
     font-size: 2rem;
     text-decoration: none;
     color: var(--text-color);
-    transform: scale(1);
-    transition: color 0.25s var(--easing), transform 0.25s var(--easing);
+    transition: color 0.25s var(--easing);
     &:hover {
       text-decoration: none;
       color: var(--primary-color);
-      transform: scale(1.1);
-      transition: color 0.1s var(--easing), transform 0.1s var(--easing);
+      transition: color 0.1s var(--easing);
     }
   }
   .footer-author {
