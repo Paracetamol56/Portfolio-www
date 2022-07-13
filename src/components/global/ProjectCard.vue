@@ -138,12 +138,15 @@ export default {
     .project-card-text-link {
       font-size: 1rem;
       font-weight: 500;
+      padding: 0.2rem 0.5rem;
       color: var(--text-color);
+      text-decoration: none;
+      border: 1px solid var(--text-color);
       transform: translate(0, 0) scale(1) !important;
-      transition: color 0.2s var(--easing), transform 0.2s var(--easing) !important;
+      transition: color 0.2s var(--easing), border 0.2s var(--easing);
       &:hover {
         color: var(--secondary-color);
-        transform: translate(0, 1rem) scale(1.1) !important;
+        border: 1px solid var(--secondary-color);
       }
     }
   }
