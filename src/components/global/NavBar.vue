@@ -1,3 +1,11 @@
+<i18n>
+{
+  "en": {
+    "hello": "hello world!"
+  },
+}
+</i18n>
+
 <template>
   <nav id="navbar" class="translucent">
     <div class="nav-container container">
@@ -31,6 +39,7 @@
         </a>
       </div>
       <div class="nav-menu">
+        <p>{{ $t("hello") }}</p>
         <ul
           id="nav-menu-list"
           class="nav-menu-list"
