@@ -1,8 +1,17 @@
 <i18n>
 {
   "en": {
-    "hello": "hello world!"
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
   },
+  "fr": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  }
 }
 </i18n>
 
@@ -39,7 +48,6 @@
         </a>
       </div>
       <div class="nav-menu">
-        <p>{{ $t("hello") }}</p>
         <ul
           id="nav-menu-list"
           class="nav-menu-list"
@@ -47,25 +55,33 @@
         >
           <li class="nav-menu-list-element">
             <a href="/">
-              <span>Accueil</span>
+              <span>
+                {{ $t("home") }}
+              </span>
               <div></div>
             </a>
           </li>
           <li class="nav-menu-list-element">
             <a href="/about">
-              <span>A propos</span>
+              <span>
+                {{ $t("about") }}
+              </span>
               <div></div>
             </a>
           </li>
           <li class="nav-menu-list-element">
             <a href="/project">
-              <span>Projets</span>
+              <span>
+                {{ $t("projects") }}
+              </span>
               <div></div>
             </a>
           </li>
           <li class="nav-menu-list-element">
             <a href="/contact">
-              <span>Contact</span>
+              <span>
+                {{ $t("contact") }}
+              </span>
               <div></div>
             </a>
           </li>
