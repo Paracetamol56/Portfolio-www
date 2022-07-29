@@ -40,9 +40,6 @@ export default {
 
 <style scoped lang="scss">
 section#projects {
-  .container {
-    width: 90%;
-  }
   .projet-list {
     margin: 0;
     padding: 0;
