@@ -124,7 +124,7 @@ export default {
           window.open(link.href, "_blank");
         } else if (event.which === 1) {
           this.updateActive(link.href);
-          this.$router.push(link.href);
+          this.$router.push(link.pathname);
         }
       });
     });
