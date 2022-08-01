@@ -1,3 +1,32 @@
+<i18n>
+{
+  "en": {
+    "made": {
+      "with": "Made with",
+      "by": "by {0}",
+      "under": "Under Apache 2.0",
+      "license": "License",
+    },
+    "credit": {
+      "icons": "Icons from",
+      "webfonts": "Webfonts from",
+    },
+  },
+  "fr": {
+    "made": {
+      "with": "Fait avec",
+      "by": "par {0}",
+      "under": "Sous licence Apache 2.0",
+      "license": "Licence",
+    },
+    "credit": {
+      "icons": "Icônes de",
+      "webfonts": "Webfonts de ",
+    },
+  },
+}
+</i18n>
+
 <template>
   <footer>
     <div class="container">
@@ -33,24 +62,28 @@
       </ul>
       <div class="footer-author">
         <p>
-          Made with <span class="hearth fas fa-heart"></span> by Mathéo Galuba -
-          Under Apache 2.0
+          {{ $t("made.with") }}
+          <span class="hearth fas fa-heart"></span>
+          {{ $t("made.by", ["Mathéo Galuba"]) }}
+          -
+          {{ $t("made.under") }}
           <a
             href="https://github.com/Paracetamol56/Portfolio/blob/master/LICENSE"
             target="_blank"
             rel="nofollow"
-            >License</a
           >
+            {{ $t("made.license") }}
+          </a>
         </p>
       </div>
       <div class="footer-credits">
         <p>
-          Icons from
-          <a href="https://fontawesome.com/" target="_blank" rel="nofollow"
-            >Font Awesome</a
-          >. Web fonts from
-          <a href="https://fonts.google.com/" target="_blank" rel="nofollow"
-            >Google</a
+          {{ $t("credit.icons") }}
+          <a href="https://fontawesome.com/" target="_blank" rel="nofollow">
+            Font Awesome</a
+          >. {{ $t("credit.webfonts") }}
+          <a href="https://fonts.google.com/" target="_blank" rel="nofollow">
+            Google</a
           >.
         </p>
       </div>
