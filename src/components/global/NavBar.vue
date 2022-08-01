@@ -87,6 +87,16 @@
           </li>
         </ul>
 
+        <select @change="setLocale($event.target.value)">
+          <option
+            v-for="locale in $i18n.availableLocales"
+            :key="`locale-${locale}`"
+            :value="locale"
+          >
+            {{ locale }}
+          </option>
+        </select>
+
         <input
           id="nav-menu-toggle-id"
           class="nav-menu-toggle"
@@ -108,18 +118,6 @@
             </g>
           </svg>
         </label>
-      </div>
-
-      <div>
-        <select v-model="$i18n.locale">
-          <option
-            v-for="locale in $i18n.availableLocales"
-            :key="`locale-${locale}`"
-            :value="locale"
-          >
-            {{ locale }}
-          </option>
-        </select>
       </div>
     </div>
   </nav>
@@ -143,6 +141,21 @@ export default {
         if (link.href === path) {
           link.classList.add("active");
         }
+      });
+    },
+
+    setLocale: function (locale) {
+      console.log(locale);
+      // Validate locale
+      if (!this.$i18n.availableLocales.includes(locale)) {
+        return;
+      }
+
+      this.$router.push({
+        location: false,
+        query: {
+          lang: locale,
+        },
       });
     },
   },

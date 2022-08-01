@@ -32,6 +32,29 @@ export default {
       }, 100);
     },
   },
+  created: function () {
+    this.$router.beforeEach((to, from, next) => {
+      var lang = to.query.lang;
+      if (!lang) {
+        if (from.query.lang) {
+          lang = from.query.lang;
+        } else {
+          lang = this.$i18n.fallbackLocale;
+        }
+        next({
+          path: to.path,
+          query: { lang: lang },
+        });
+      }
+      if (!this.$i18n.availableLocales.includes(lang)) {
+        to.query.lang = this.$i18n.fallbackLocale;
+      }
+
+      this.$i18n.locale = lang;
+
+      next();
+    });
+  },
   mounted: function () {
     // const textToType = document.querySelectorAll(".type-write");
     document.onreadystatechange = () => {
