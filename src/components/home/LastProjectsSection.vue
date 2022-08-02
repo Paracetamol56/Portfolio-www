@@ -2,7 +2,10 @@
   <section id="projects" class="fade-in">
     <div class="container">
       <div class="section-title">
-        <h2><span class="section-title-number">01.</span> Derniers projets</h2>
+        <h2>
+          <span class="section-title-number">{{ number }}.</span> Derniers
+          projets
+        </h2>
         <hr />
       </div>
     </div>
@@ -48,6 +51,12 @@ export default {
     ProjectCard,
     Swiper,
     SwiperSlide,
+  },
+  props: {
+    number: {
+      type: String,
+      required: true,
+    },
   },
   data: function () {
     return {
