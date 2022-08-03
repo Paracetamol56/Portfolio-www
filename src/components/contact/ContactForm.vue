@@ -1,13 +1,56 @@
+<i18n>
+{
+  "en": {
+    "title": "Message",
+    "subtitle": "Let's get in touch",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "subject-option": {
+        "1": "Need help on a project",
+        "2": "Work with me for the long term",
+        "3": "Discuss about technology, or something else",
+        "4": "Just say hello to me",
+      },
+      "message": "Message",
+      "send": "Send",
+    },
+  },
+  "fr": {
+    "title": "Message",
+    "subtitle": "Prenons contact",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "subject-option": {
+        "1": "Besoin d'aide sur un projet",
+        "2": "Travailler avec moi sur le long terme",
+        "3": "Discuter de technologie, ou d'autre chose",
+        "4": "Simplement me dire bonjour",
+      },
+      "message": "Message",
+      "send": "Envoyer",
+    },
+  },
+}
+</i18n>
+
 <template>
   <section id="contact" class="fade-in">
     <div class="container">
       <div class="section-title centered">
         <h2>
           <span class="section-title-number">02.</span>
-          <span class="type-write">Contact</span>
+          <span class="type-write">
+            {{ $t("title") }}
+          </span>
         </h2>
         <hr />
-        <p class="section-title-subtitle type-write">Let's get in touch</p>
+        <p class="section-title-subtitle type-write">
+          {{ $t("subtitle") }}
+        </p>
       </div>
       <form
         id="contact-form"
@@ -21,7 +64,7 @@
             type="text"
             class="contact-form-input"
             id="name"
-            placeholder="Nom"
+            :placeholder="$t('form.name')"
             name="name"
             value=""
             required
@@ -30,7 +73,7 @@
             type="email"
             class="contact-form-input"
             id="email"
-            placeholder="Email"
+            :placeholder="$t('form.email')"
             name="email"
             value=""
             required
@@ -43,26 +86,26 @@
           required
         >
           <option class="contact-form-select-option" value="" selected disabled>
-            Sujet
+            {{ $t("form.subject") }}
           </option>
           <option class="contact-form-select-option" value="help">
-            Besoin d'aide sur un projet
+            {{ $t("form.subject-option.1") }}
           </option>
           <option class="contact-form-select-option" value="work">
-            Travailler avec moi sur le long terme
+            {{ $t("form.subject-option.2") }}
           </option>
           <option class="contact-form-select-option" value="discuss">
-            Discuter de technologie, ou d'autre chose
+            {{ $t("form.subject-option.3") }}
           </option>
           <option class="contact-form-select-option" value="hello">
-            Simplement me dire bonjour
+            {{ $t("form.subject-option.4") }}
           </option>
         </select>
         <textarea
           class="contact-form-input"
           id="message"
           rows="10"
-          placeholder="Message"
+          :placeholder="$t('form.message')"
           name="message"
           required
         ></textarea>
@@ -80,7 +123,7 @@
           value="SEND"
         >
           <i class="fa fa-paper-plane"></i>
-          <span class="send-text"> Envoyer</span>
+          <span class="send-text">&nbsp;{{ $t("form.send") }}</span>
         </button>
         <p class="contact-form-state" id="state-feedback"></p>
       </form>
