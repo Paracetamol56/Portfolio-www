@@ -5,6 +5,8 @@ import App from './App.vue';
 import store from './store';
 import router from './router';
 
+document.title = "Portfolio - Mathéo"
+
 const i18n = createI18n({
     availableLocales: ['en', 'fr'],
     locale: 'en',
