@@ -1,25 +1,38 @@
+<i18n>
+{
+  "en": {
+    "title": "Mathéo's portfolio",
+    "subtitle": "Welcome to my universe",
+  },
+  "fr": {
+    "title": "Portfolio de Mathéo",
+    "subtitle": "Bienvenue dans mon univers",
+  }
+}
+</i18n>
+
 <template>
-  <PageHeader
-    title="Mathéo's portfolio"
-    subtitle="Bienvenue dans mon univers"
-  />
+  <PageHeader :title="$t('title')" :subtitle="$t('subtitle')" />
   <main>
-    <LastProjectsSection />
-    <TravelSection />
+    <AboutSection number="01" />
+    <LastProjectsSection number="02" />
+    <!-- <TravelSection /> -->
   </main>
 </template>
 
 <script>
 import PageHeader from "@/components/global/PageHeader.vue";
+import AboutSection from "@/components/home/AboutSection.vue";
 import LastProjectsSection from "@/components/home/LastProjectsSection.vue";
-import TravelSection from "@/components/home/TravelSection.vue";
+// import TravelSection from "@/components/home/TravelSection.vue";
 
 export default {
   name: "HomeView",
   components: {
     PageHeader,
     LastProjectsSection,
-    TravelSection,
+    AboutSection,
+    // TravelSection,
   },
   methods: {
     updateFadeInElements: function () {

@@ -1,3 +1,14 @@
+<i18n>
+{
+  "en": {
+    "see-more": "SEE MORE",
+  },
+  "fr": {
+    "see-more": "VOIR PLUS",
+  }
+}
+</i18n>
+
 <template>
   <header ref="background" @mousemove="mouseMove">
     <div class="background-gradient" ref="backgroundGradient"></div>
@@ -13,7 +24,7 @@
     </div>
 
     <div v-if="sectionLink !== ''" class="downButton" @click="scrollToMain()">
-      VOIR PLUS<br />
+      {{ $t("see-more") }}<br />
       <i class="fas fa-chevron-down"></i>
     </div>
   </header>

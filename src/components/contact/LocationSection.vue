@@ -1,14 +1,37 @@
+<i18n>
+{
+  "en": {
+    "title": "Location",
+    "subtitle": "Where am I in the universe?",
+    "planet": "Earth",
+    "city": "Annecy",
+    "region": "Haute-Savoie",
+    "country": "FRANCE",
+  },
+  "fr": {
+    "title": "Emplacement",
+    "subtitle": "Où suis-je dans l'univers?",
+    "planet": "Terre",
+    "city": "Annecy",
+    "region": "Haute-Savoie",
+    "country": "FRANCE",
+  },
+}
+</i18n>
+
+45.90089632660961, 6.128813463775949
+
 <template>
   <section id="location" class="fade-in">
     <div class="container">
       <div class="section-title centered">
         <h2>
           <span class="section-title-number type-write">01.</span>
-          <span class="type-write">Location</span>
+          <span class="type-write">{{ $t("title") }}</span>
         </h2>
         <hr />
         <p class="section-title-subtitle type-write">
-          Where am I in the universe?
+          {{ $t("subtitle") }}
         </p>
       </div>
     </div>
@@ -24,8 +47,10 @@
       </GMapMap>
       <div class="location-infos">
         <p class="location-infos-text">
-          <span class="type-write"><b>Earth </b></span>
-          <span class="colored">C-137</span>
+          <span class="type-write">
+            <b>{{ $t("planet") }}</b>
+          </span>
+          <span class="colored"> C-137</span>
         </p>
         <p class="location-infos-text coordinates">
           {{ centerHumanReadable.lat.deg }}<span class="colored">°</span>
@@ -40,7 +65,10 @@
         </p>
 
         <p class="location-infos-text">
-          <b>Matane</b>, Québec <br /><span class="colored">CANADA</span>
+          <b> {{ $t("city") }} </b>, {{ $t("region") }} <br />
+          <span class="colored">
+            {{ $t("country") }}
+          </span>
         </p>
       </div>
     </div>
@@ -53,8 +81,8 @@ export default {
   data: function () {
     return {
       center: {
-        lat: 45.04193875516838,
-        lng: 3.8839575096914793,
+        lat: 45.90089632660961,
+        lng: 6.128813463775949,
       },
       centerHumanReadable: {
         lat: {

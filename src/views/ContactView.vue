@@ -1,8 +1,18 @@
+<i18n>
+{
+  "en": {
+    "title": "Contact",
+    "subtitle": "",
+  },
+  "fr": {
+    "title": "Contact",
+    "subtitle": "",
+  }
+}
+</i18n>
+
 <template>
-  <PageHeader
-    title="Mathéo's portfolio"
-    subtitle="Bienvenue dans mon univers"
-  />
+  <PageHeader :title="$t('title')" subtitle="" />
   <LocationSection />
   <ContactForm />
 </template>

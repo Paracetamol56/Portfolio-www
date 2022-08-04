@@ -1,8 +1,17 @@
 <i18n>
 {
   "en": {
-    "hello": "hello world!"
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
   },
+  "fr": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  }
 }
 </i18n>
 
@@ -39,7 +48,6 @@
         </a>
       </div>
       <div class="nav-menu">
-        <p>{{ $t("hello") }}</p>
         <ul
           id="nav-menu-list"
           class="nav-menu-list"
@@ -47,28 +55,51 @@
         >
           <li class="nav-menu-list-element">
             <a href="/">
-              <span>Accueil</span>
+              <span>
+                {{ $t("home") }}
+              </span>
               <div></div>
             </a>
           </li>
           <li class="nav-menu-list-element">
             <a href="/about">
-              <span>A propos</span>
+              <span>
+                {{ $t("about") }}
+              </span>
               <div></div>
             </a>
           </li>
           <li class="nav-menu-list-element">
             <a href="/project">
-              <span>Projets</span>
+              <span>
+                {{ $t("projects") }}
+              </span>
               <div></div>
             </a>
           </li>
           <li class="nav-menu-list-element">
             <a href="/contact">
-              <span>Contact</span>
+              <span>
+                {{ $t("contact") }}
+              </span>
               <div></div>
             </a>
           </li>
+
+          <select
+            class="nav-lang-dropdown"
+            @change="setLocale($event.target.value)"
+            v-model="$i18n.locale"
+          >
+            <option
+              class="nav-lang-dropdown-option"
+              v-for="locale in $i18n.availableLocales"
+              :key="`locale-${locale}`"
+              :value="locale"
+            >
+              {{ locale }}
+            </option>
+          </select>
         </ul>
 
         <input
@@ -115,6 +146,21 @@ export default {
         if (link.href === path) {
           link.classList.add("active");
         }
+      });
+    },
+
+    setLocale: function (locale) {
+      console.log(locale);
+      // Validate locale
+      if (!this.$i18n.availableLocales.includes(locale)) {
+        return;
+      }
+
+      this.$router.push({
+        location: false,
+        query: {
+          lang: locale,
+        },
       });
     },
   },
@@ -353,6 +399,25 @@ nav {
     }
   }
 
+  select.nav-lang-dropdown {
+    position: absolute;
+    right: 10px;
+    height: 20px;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-size: 0.75rem;
+    font-family: "Fira Code", monospace;
+    font-weight: 500;
+    option.nav-lang-dropdown-option {
+      font-size: 0.75rem;
+      font-family: "Fira Code", monospace;
+      font-weight: 500;
+      color: var(--background-color);
+      background: none;
+    }
+  }
+
   @media only screen and (max-width: 1024px) {
     .nav-menu {
       width: fit-content !important;
@@ -401,6 +466,12 @@ nav {
           display: block !important;
         }
       }
+    }
+
+    select.nav-lang-dropdown {
+      position: relative;
+      margin-top: auto;
+      margin-bottom: 8px;
     }
   }
 }

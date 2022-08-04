@@ -1,8 +1,24 @@
+<i18n>
+{
+  "en": {
+    "title": "Last projects",
+    "button": "See all projects",
+  },
+  "fr": {
+    "title": "Derniers projets",
+    "button": "Voir tous les projets",
+  },
+}
+</i18n>
+
 <template>
   <section id="projects" class="fade-in">
     <div class="container">
       <div class="section-title">
-        <h2><span class="section-title-number">01.</span> Derniers projets</h2>
+        <h2>
+          <span class="section-title-number">{{ number }}.</span>
+          {{ $t("title") }}
+        </h2>
         <hr />
       </div>
     </div>
@@ -28,7 +44,7 @@
 
     <a class="cta-button" href="/project">
       <i class="fa fa-list"></i>
-      <span class="cta-button-text"> Voir tous les projets</span>
+      <span class="cta-button-text">&nbsp;{{ $t("button") }}</span>
     </a>
   </section>
 </template>
@@ -48,6 +64,12 @@ export default {
     ProjectCard,
     Swiper,
     SwiperSlide,
+  },
+  props: {
+    number: {
+      type: String,
+      required: true,
+    },
   },
   data: function () {
     return {
