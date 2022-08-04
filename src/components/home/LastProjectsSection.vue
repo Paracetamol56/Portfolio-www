@@ -52,6 +52,7 @@
 <script>
 import ProjectCard from "@/components/global/ProjectCard.vue";
 
+import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -77,14 +78,16 @@ export default {
       projects: [],
     };
   },
-  mounted: function () {
-    this.$store.watch(
-      (state) => state.projects,
-      () => {
-        this.projects = this.$store.getters.getProjects.reverse();
-      },
-      { immediate: true }
-    );
+  created: function () {
+    axios
+      .get("/data/fr_projects.json")
+      .then((response) => {
+        this.projects = response.data.reverse();
+        this.projects = this.projects.slice(0, 4);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>
