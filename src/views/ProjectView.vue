@@ -3,7 +3,7 @@
 </i18n>
 
 <template>
-  <PageHeader :title="title" :subtitle="subtitle" />
+  <PageHeader :title="project.title" :subtitle="project.subtitle" />
   <main>
     <h1>test</h1>
   </main>
@@ -11,6 +11,8 @@
 
 <script>
 import PageHeader from "@/components/global/PageHeader.vue";
+
+import axios from "axios";
 
 export default {
   name: "NavBar",
@@ -20,8 +22,7 @@ export default {
   data: function () {
     return {
       id: 0,
-      title: "test",
-      subtitle: "test",
+      project: null,
     };
   },
   methods: {
@@ -58,23 +59,34 @@ export default {
   },
   created: function () {
     // Get the project id from the path
-    const id = parseInt(this.$router.currentRoute.value.path.split("/")[2]);
+    this.id = parseInt(this.$router.currentRoute.value.path.split("/")[2]);
 
-    this.$store.watch(
-      (state) => state.projects,
-      () => {
-        try {
-          this.projects = this.$store.getters.getProjectById(id);
-          console.log(this.projects);
-        } catch (e) {
-          console.error(e);
-          // Call 404 page
-          this.$router.push("/404");
-          return;
+    // Check if the id is a integer greater than 0
+    if (!Number.isInteger(this.id) || this.id < 1) {
+      // Redirect to the 404 page
+      this.$router.push("404");
+      return;
+    }
+
+    axios.get("/data/fr_projects.json").then((response) => {
+      console.log(response);
+      // If the response is OK
+      if (response.status !== 200) {
+        console.error("Error while getting the project");
+        this.$router.push("404");
+        return;
+      }
+
+      response.data.find((project) => {
+        if (project.id == this.id) {
+          this.project = project;
         }
-      },
-      { immediate: true }
-    );
+      });
+      if (!this.project) {
+        this.$router.push("404");
+        return;
+      }
+    });
   },
   mounted: function () {
     this.updateFadeInElements();
