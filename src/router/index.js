@@ -20,8 +20,12 @@ const routes = [
     component: () => import('@/views/AboutView.vue')
   },
   {
-    path: '/project',
-    name: 'project',
+    path: '/projects',
+    name: 'projects',
+    component: () => import('@/views/ProjectsView.vue')
+  },
+  {
+    path: '/project/:catchAll(.*)',
     component: () => import('@/views/ProjectView.vue')
   },
   {

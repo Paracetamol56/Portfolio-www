@@ -70,7 +70,7 @@
             </a>
           </li>
           <li class="nav-menu-list-element">
-            <a href="/project">
+            <a href="/projects">
               <span>
                 {{ $t("projects") }}
               </span>
