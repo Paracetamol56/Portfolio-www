@@ -1,10 +1,23 @@
+<i18n>
+{
+  "en": {
+    "title": "Last projects",
+    "button": "See all projects",
+  },
+  "fr": {
+    "title": "Derniers projets",
+    "button": "Voir tous les projets",
+  },
+}
+</i18n>
+
 <template>
   <section id="projects" class="fade-in">
     <div class="container">
       <div class="section-title">
         <h2>
-          <span class="section-title-number">{{ number }}.</span> Derniers
-          projets
+          <span class="section-title-number">{{ number }}.</span>
+          {{ $t("title") }}
         </h2>
         <hr />
       </div>
@@ -31,7 +44,7 @@
 
     <a class="cta-button" href="/project">
       <i class="fa fa-list"></i>
-      <span class="cta-button-text"> Voir tous les projets</span>
+      <span class="cta-button-text">&nbsp;{{ $t("button") }}</span>
     </a>
   </section>
 </template>
