@@ -15,6 +15,8 @@
 <script>
 import ProjectCard from "@/components/global/ProjectCard.vue";
 
+import axios from "axios";
+
 export default {
   name: "ProjectListSection",
   components: {
@@ -26,14 +28,15 @@ export default {
     };
   },
   methods: {},
-  mounted: function () {
-    this.$store.watch(
-      (state) => state.projects,
-      () => {
-        this.projects = this.$store.getters.getProjects.reverse();
-      },
-      { immediate: true }
-    );
+  created: function () {
+    axios
+      .get("/data/fr_projects.json")
+      .then((response) => {
+        this.projects = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>
