@@ -85,17 +85,22 @@
               <div></div>
             </a>
           </li>
-        </ul>
 
-        <select @change="setLocale($event.target.value)">
-          <option
-            v-for="locale in $i18n.availableLocales"
-            :key="`locale-${locale}`"
-            :value="locale"
+          <select
+            class="nav-lang-dropdown"
+            @change="setLocale($event.target.value)"
+            v-model="$i18n.locale"
           >
-            {{ locale }}
-          </option>
-        </select>
+            <option
+              class="nav-lang-dropdown-option"
+              v-for="locale in $i18n.availableLocales"
+              :key="`locale-${locale}`"
+              :value="locale"
+            >
+              {{ locale }}
+            </option>
+          </select>
+        </ul>
 
         <input
           id="nav-menu-toggle-id"
@@ -394,6 +399,25 @@ nav {
     }
   }
 
+  select.nav-lang-dropdown {
+    position: absolute;
+    right: 10px;
+    height: 20px;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-size: 0.75rem;
+    font-family: "Fira Code", monospace;
+    font-weight: 500;
+    option.nav-lang-dropdown-option {
+      font-size: 0.75rem;
+      font-family: "Fira Code", monospace;
+      font-weight: 500;
+      color: var(--background-color);
+      background: none;
+    }
+  }
+
   @media only screen and (max-width: 1024px) {
     .nav-menu {
       width: fit-content !important;
@@ -442,6 +466,12 @@ nav {
           display: block !important;
         }
       }
+    }
+
+    select.nav-lang-dropdown {
+      position: relative;
+      margin-top: auto;
+      margin-bottom: 8px;
     }
   }
 }
