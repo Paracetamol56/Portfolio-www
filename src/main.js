@@ -13,6 +13,28 @@ const i18n = createI18n({
     fallbackLocale: 'en'
 });
 
+router.beforeEach((to, from, next) => {
+    if (to.query.lang) {
+        next();
+        i18n.global.locale = to.query.lang;
+        return;
+    }
+
+    var lang;
+    if (from.query.lang) {
+        lang = from.query.lang;
+    } else {
+        lang = i18n.global.fallbackLocale;
+    }
+
+    next({
+        path: to.path,
+        query: { lang: lang }
+    });
+    i18n.global.locale = lang;
+    return;
+});
+
 const app = createApp(App);
 app.use(store);
 app.use(router);
