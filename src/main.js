@@ -2,7 +2,6 @@ import { createApp } from 'vue';
 import { createI18n } from 'vue-i18n';
 import VueGoogleMaps from '@fawmi/vue-google-maps';
 import App from './App.vue';
-import store from './store';
 import router from './router';
 
 document.title = "Portfolio - Mathéo"
@@ -36,7 +35,6 @@ router.beforeEach((to, from, next) => {
 });
 
 const app = createApp(App);
-app.use(store);
 app.use(router);
 app.use(i18n);
 app.use(VueGoogleMaps, {
