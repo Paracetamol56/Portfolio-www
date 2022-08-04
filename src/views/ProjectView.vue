@@ -69,8 +69,6 @@ export default {
     }
 
     axios.get("/data/fr_projects.json").then((response) => {
-      console.log(response);
-      // If the response is OK
       if (response.status !== 200) {
         console.error("Error while getting the project");
         this.$router.push("404");

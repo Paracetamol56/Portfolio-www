@@ -26,7 +26,7 @@
           <span class="colored"> #</span>{{ tag }}</span
         ><br />*/
       </p>
-      <a class="project-card-text-link" :href="`/project?id=${project.id}`">
+      <a class="project-card-text-link" :href="`/project/${project.id}`">
         Voir le projet ->
       </a>
     </div>
