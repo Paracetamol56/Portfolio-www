@@ -1,18 +1,32 @@
+<i18n>
+{
+  "en": {
+    "title": "About",
+    "subtitle": "Let me introduce myself",
+  },
+  "fr": {
+    "title": "À propos",
+    "subtitle": "Permettez-moi de me présenter",
+  }
+}
+</i18n>
+
 <template>
-  <PageHeader
-    title="Mathéo's portfolio"
-    subtitle="Bienvenue dans mon univers"
-  />
-  <main></main>
+  <PageHeader :title="$t('title')" :subtitle="$t('subtitle')" />
+  <main>
+    <FormationSection number="01" />
+  </main>
 </template>
 
 <script>
 import PageHeader from "@/components/global/PageHeader.vue";
+import FormationSection from "@/components/about/FormationSection.vue";
 
 export default {
   name: "AboutView",
   components: {
     PageHeader,
+    FormationSection,
   },
   methods: {
     updateFadeInElements: function () {
