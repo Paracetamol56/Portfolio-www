@@ -92,7 +92,8 @@
               :href="$t('formations.0.link')"
               target="_blank"
             >
-              {{ $t("school-website-button") }} <i></i>
+              {{ $t("school-website-button") }}
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </li>
@@ -116,6 +117,7 @@
               target="_blank"
             >
               {{ $t("school-website-button") }}
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </li>
@@ -135,6 +137,7 @@
               target="_blank"
             >
               {{ $t("school-website-button") }}
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </li>
