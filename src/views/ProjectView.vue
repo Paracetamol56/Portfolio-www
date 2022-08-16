@@ -5,7 +5,45 @@
 <template>
   <PageHeader :title="project.title" :subtitle="project.subtitle" />
   <main>
-    <h1>test</h1>
+    <section id="info">
+      <div class="container">
+        <div class="section-title">
+          <h2>
+            <span class="section-title-number">01.</span>
+            Info
+          </h2>
+          <hr />
+        </div>
+        <p>
+          date :
+          {{ project.dates.start.replaceAll("-", "/") }}&nbsp;-&nbsp;{{
+            project.dates.end.replaceAll("-", "/")
+          }}
+        </p>
+        <p>Status : {{ project.status }}</p>
+        <p>
+          <span v-for="tag in project.tags" :key="tag">{{ tag }},&nbsp;</span>
+        </p>
+        <p>Technologies :</p>
+        <ul>
+          <li v-for="technology in project.technologies" :key="technology">
+            {{ technology.name }}
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="image">
+      <img v-bind:src="project.header" alt="" />
+    </section>
+    <section id="links">
+      <ul>
+        <li v-for="link in project.links" :key="link">
+          <a :href="link.url">{{ link.url }}</a>
+        </li>
+      </ul>
+    </section>
+    <section id="presentation"></section>
+    <section id="galery"></section>
   </main>
 </template>
 
@@ -22,7 +60,7 @@ export default {
   data: function () {
     return {
       id: 0,
-      project: null,
+      project: {},
     };
   },
   methods: {
