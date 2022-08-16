@@ -60,6 +60,7 @@ export default {
   --background-color: #0c0816;
   --background-gradient: radial-gradient(circle, #2c1b4fff 0%, #111416ff 50%);
   --shadow-color: #5f77ef9a;
+  --link-color: #c2b0e9;
   --primary-color: #8251e9;
   --secondary-color: #b4e2f9;
   --tertiary-color: #5f78ef;
@@ -120,9 +121,8 @@ h6 {
 }
 
 a {
-  color: var(--text-color);
-  text-decoration: dotted underline;
-  text-underline-offset: 3px;
+  color: var(--link-color);
+  text-decoration: none;
   transition: color 0.2s var(--easing);
 
   &:hover {
