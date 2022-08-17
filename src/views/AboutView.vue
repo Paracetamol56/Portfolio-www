@@ -15,18 +15,21 @@
   <PageHeader :title="$t('title')" :subtitle="$t('subtitle')" />
   <main>
     <FormationSection number="01" />
+    <SkillSection number="02" />
   </main>
 </template>
 
 <script>
 import PageHeader from "@/components/global/PageHeader.vue";
 import FormationSection from "@/components/about/FormationSection.vue";
+import SkillSection from "@/components/about/SkillSection.vue";
 
 export default {
   name: "AboutView",
   components: {
     PageHeader,
     FormationSection,
+    SkillSection,
   },
   methods: {
     updateFadeInElements: function () {
