@@ -57,6 +57,7 @@ export default {
 
 :root {
   --text-color: #f5f3fa;
+  --comment-color: #949397;
   --background-color: #0c0816;
   --background-gradient: radial-gradient(circle, #2c1b4fff 0%, #111416ff 50%);
   --shadow-color: #5f77ef9a;
