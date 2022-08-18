@@ -42,15 +42,15 @@
       </SwiperSlide>
     </Swiper>
 
-    <a class="cta-button" href="/project">
-      <i class="fa fa-list"></i>
-      <span class="cta-button-text">&nbsp;{{ $t("button") }}</span>
-    </a>
+    <div class="button-wrapper">
+      <BoxButton :text="$t('button')" icon="" link="#" />
+    </div>
   </section>
 </template>
 
 <script>
 import ProjectCard from "@/components/miscellaneous/ProjectCard.vue";
+import BoxButton from "@/components/miscellaneous/buttons/BoxButton.vue";
 
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -65,6 +65,7 @@ export default {
     ProjectCard,
     Swiper,
     SwiperSlide,
+    BoxButton,
   },
   props: {
     number: {
@@ -100,84 +101,12 @@ section#projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 1rem;
-
-    .project-item {
-      height: 600px;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      list-style: none;
-      overflow: hidden;
-
-      .project-item-image {
-        z-index: 1;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: calc(max(100%, 600px));
-      }
-
-      .project-item-text {
-        z-index: 2;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 1.5rem;
-        background-image: linear-gradient(
-          135deg,
-          #2c1b4fa0 70%,
-          #111416a0 100%
-        );
-        background-size: 400%;
-        background-position: 100%;
-        transition: background-position 1s var(--easing);
-
-        &:hover {
-          background-position: 0%;
-          .project-item-text-link {
-            opacity: 1;
-            transform: translate(2rem, 0) !important;
-          }
-        }
-
-        .project-item-text-date {
-          font-family: "Fira Code", monospace;
-          font-size: 1.25rem;
-          margin: 0;
-        }
-
-        .project-item-text-title {
-          font-family: "Fira Code", monospace;
-          font-size: 2.5rem;
-          font-weight: 700;
-          margin: 0;
-        }
-
-        .project-item-text-description {
-          font-family: "Fira Code", monospace;
-          font-size: 1.25rem;
-          margin: 0;
-        }
-
-        .project-item-text-link {
-          font-family: "Fira Code", monospace;
-          font-size: 1.25rem;
-          text-decoration: none;
-          margin: 0;
-          opacity: 0;
-          transform: translate(0, 0) !important;
-          transition: color 0.5s var(--easing), opacity 0.5s var(--easing),
-            transform 0.5s var(--easing);
-          &:hover {
-            color: var(--secondary-color);
-            transform: translate(0, 1rem) !important;
-          }
-        }
-      }
-    }
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
   }
 }
 </style>
