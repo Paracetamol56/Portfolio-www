@@ -11,7 +11,7 @@
     "@fawmi/vue-google-maps": "^0.9.72",
     "axios": "^0.27.2",
     "core-js": "^3.24.1",
-    "globe.gl": "^2.26.2",
+    "globe.gl": "^2.26.3",
     "swiper": "^8.3.2",
     "vue": "^3.2.13",
     "vue-i18n": "^9.2.2",
