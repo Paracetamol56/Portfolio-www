@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import LoaderAnimation from "@/components/global/LoaderAnimation.vue";
-import NavBar from "@/components/global/NavBar.vue";
-import PageFooter from "@/components/global/PageFooter.vue";
+import LoaderAnimation from "@/components/miscellaneous/LoaderAnimation.vue";
+import NavBar from "@/components/miscellaneous/NavBar.vue";
+import PageFooter from "@/components/miscellaneous/PageFooter.vue";
 
 export default {
   name: "App",

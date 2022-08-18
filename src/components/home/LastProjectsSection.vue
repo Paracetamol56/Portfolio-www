@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import ProjectCard from "@/components/global/ProjectCard.vue";
+import ProjectCard from "@/components/miscellaneous/ProjectCard.vue";
 
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/vue";

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import PageHeader from "@/components/global/PageHeader.vue";
+import PageHeader from "@/components/miscellaneous/PageHeader.vue";
 import LocationSection from "@/components/contact/LocationSection.vue";
 import ContactForm from "@/components/contact/ContactForm.vue";
 
