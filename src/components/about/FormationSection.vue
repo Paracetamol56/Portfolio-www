@@ -64,9 +64,9 @@
 </i18n>
 
 <template>
-  <section id="formations" class="fade-in">
+  <section id="formations">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title fade-in">
         <h2>
           <span class="section-title-number">{{ number }}.</span>
           {{ $t("title") }}
@@ -74,7 +74,7 @@
         <hr />
       </div>
       <ul class="formation-list">
-        <li class="formation-item">
+        <li class="formation-item fade-in">
           <div class="formation-item-timeline">
             <p class="formation-start-date">{{ $t("formations.0.end") }}</p>
             <span class="formation-start-date-separator"></span>
@@ -96,7 +96,7 @@
             </a>
           </div>
         </li>
-        <li class="formation-item">
+        <li class="formation-item fade-in">
           <div class="formation-item-timeline">
             <p class="formation-start-date">{{ $t("formations.1.end") }}</p>
             <span class="formation-start-date-separator"></span>
@@ -118,7 +118,7 @@
             </a>
           </div>
         </li>
-        <li class="formation-item">
+        <li class="formation-item fade-in">
           <div class="formation-item-timeline">
             <p class="formation-start-date">{{ $t("formations.2.end") }}</p>
             <span class="formation-start-date-separator"></span>

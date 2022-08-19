@@ -187,9 +187,9 @@
 </i18n>
 
 <template>
-  <section id="formations" class="fade-in">
+  <section id="formations">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title fade-in">
         <h2>
           <span class="section-title-number">{{ number }}.</span>
           {{ $t("title") }}
@@ -197,11 +197,11 @@
         <hr />
       </div>
       <div class="skill-subsection">
-        <h3 class="fillTextWithgradient">
+        <h3 class="fillTextWithgradient fade-in">
           {{ $t("language-subtitle") }}
         </h3>
         <ul class="lang-list">
-          <li class="lang-item">
+          <li class="lang-item fade-in">
             <p class="lang-item-hello">Bonjour</p>
             <hr />
             <h4 class="lang-item-name">
@@ -209,7 +209,7 @@
             </h4>
             <p class="lang-item-level">// {{ $t("languages.0.level") }}</p>
           </li>
-          <li class="lang-item">
+          <li class="lang-item fade-in">
             <p class="lang-item-hello">Hello</p>
             <hr />
             <h4 class="lang-item-name">
@@ -220,7 +220,7 @@
               // {{ $t("languages.1.eu-level") }}
             </p>
           </li>
-          <li class="lang-item">
+          <li class="lang-item fade-in">
             <p class="lang-item-hello">Guten Tag</p>
             <hr />
             <h4 class="lang-item-name">
@@ -234,11 +234,11 @@
         </ul>
       </div>
       <div class="skill-subsection">
-        <h3 class="fillTextWithgradient">
+        <h3 class="fillTextWithgradient fade-in">
           {{ $t("skill-subtitle") }}
         </h3>
         <ul class="skill-list">
-          <li class="skill-item">
+          <li class="skill-item fade-in">
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-laptop-code"></i>
@@ -253,7 +253,7 @@
               </div>
             </div>
           </li>
-          <li class="skill-item">
+          <li class="skill-item fade-in">
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-cogs"></i>
@@ -268,7 +268,7 @@
               </div>
             </div>
           </li>
-          <li class="skill-item">
+          <li class="skill-item fade-in">
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-brain"></i>
@@ -283,7 +283,7 @@
               </div>
             </div>
           </li>
-          <li class="skill-item">
+          <li class="skill-item fade-in">
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-tasks"></i>
@@ -298,7 +298,7 @@
               </div>
             </div>
           </li>
-          <li class="skill-item">
+          <li class="skill-item fade-in">
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-gamepad"></i>
@@ -313,7 +313,7 @@
               </div>
             </div>
           </li>
-          <li class="skill-item">
+          <li class="skill-item fade-in">
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-server"></i>
@@ -331,12 +331,12 @@
         </ul>
       </div>
       <div class="skill-subsection">
-        <h3 class="fillTextWithgradient">
+        <h3 class="fillTextWithgradient fade-in">
           {{ $t("technologies-subtitle") }}
         </h3>
 
         <ul class="tech-list">
-          <li class="tech-item">
+          <li class="tech-item fade-in">
             <img
               class="tech-item-icon"
               src="@/assets/img/technologies/C++.svg"
@@ -349,7 +349,7 @@
               <br />*/
             </p>
           </li>
-          <li class="tech-item">
+          <li class="tech-item fade-in">
             <img
               class="tech-item-icon"
               src="@/assets/img/technologies/Python.svg"
@@ -362,7 +362,7 @@
               <br />*/
             </p>
           </li>
-          <li class="tech-item">
+          <li class="tech-item fade-in">
             <img
               class="tech-item-icon"
               src="@/assets/img/technologies/Git.svg"
@@ -375,7 +375,7 @@
               <br />*/
             </p>
           </li>
-          <li class="tech-item">
+          <li class="tech-item fade-in">
             <img
               class="tech-item-icon"
               src="@/assets/img/technologies/Unity.svg"
@@ -388,7 +388,7 @@
               <br />*/
             </p>
           </li>
-          <li class="tech-item">
+          <li class="tech-item fade-in">
             <img
               class="tech-item-icon"
               src="@/assets/img/technologies/SQL.svg"
@@ -401,7 +401,7 @@
               <br />*/
             </p>
           </li>
-          <li class="tech-item">
+          <li class="tech-item fade-in">
             <img
               class="tech-item-icon"
               src="@/assets/img/technologies/Firebase.svg"
@@ -414,7 +414,7 @@
               <br />*/
             </p>
           </li>
-          <li class="tech-item">
+          <li class="tech-item fade-in">
             <img
               class="tech-item-icon"
               src="@/assets/img/technologies/Frontend.svg"
@@ -427,7 +427,7 @@
               <br />*/
             </p>
           </li>
-          <li class="tech-item">
+          <li class="tech-item fade-in">
             <img
               class="tech-item-icon"
               src="@/assets/img/technologies/Nodejs.svg"
@@ -440,7 +440,7 @@
               <br />*/
             </p>
           </li>
-          <li class="tech-item">
+          <li class="tech-item fade-in">
             <img
               class="tech-item-icon"
               src="@/assets/img/technologies/Blender.svg"
@@ -453,7 +453,7 @@
               <br />*/
             </p>
           </li>
-          <li class="tech-item">
+          <li class="tech-item fade-in">
             <img
               class="tech-item-icon"
               src="@/assets/img/technologies/Adobe.svg"
