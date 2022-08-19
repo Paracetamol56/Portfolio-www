@@ -363,55 +363,23 @@ section {
     }
   }
 }
-
-.cta-button {
-  font-family: "Fira Code", monospace;
-  font-weight: 500;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--primary-color);
-  display: block;
-  margin: 20px auto;
-  width: fit-content;
-  overflow: hidden;
-  padding: 10px;
-  border: none;
-  outline: none;
-  background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 90%);
-  background-position: 100%;
-  background-size: 400%;
-  transition: background-position 0.5s var(--easing), color 0.5s var(--easing),
-    box-shadow 0.5s var(--easing);
-
-  &:hover {
-    text-decoration: none;
-    color: var(--tertiary-color);
-    background-position: 0%;
-    box-shadow: var(--shadow-color) 0px 0px 8px 2px;
-  }
-}
-
 .fade-in {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.5s var(--easing), transform 0.5s var(--easing);
 }
-
 .fade-in.appear {
   opacity: 1;
   transform: scale(1);
 }
-
 -webkit-scrollbar {
   width: 10px;
 }
-
 -webkit-scrollbar-track {
   background-color: var(--background-color);
   box-shadow: inset 0 0 2px var(--tertiary-color);
   border-radius: 5px;
 }
-
 -webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 5px;
