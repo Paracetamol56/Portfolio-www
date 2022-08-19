@@ -207,6 +207,7 @@ section {
   background-clip: text !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
+  background-attachment: fixed;
 }
 
 .swiper-button-next,

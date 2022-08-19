@@ -5,6 +5,25 @@
     "language-subtitle": "Languages",
     "skill-subtitle": "Key skills",
     "technologies-subtitle": "Mastered technologies",
+    "languages": [
+      {
+        "hello": "Bonjour",
+        "name": "French",
+        "level": "Native speaker",
+      },
+      {
+        "hello": "Hello",
+        "name": "English",
+        "level": "Fluent in professional and personal communication",
+        "eu-level": "European level C1",
+      },
+      {
+        "hello": "Guten Tag",
+        "name": "German",
+        "level": "Very basic level",
+        "eu-level": "European level A2",
+      },
+    ],
     "skills": [
       {
         "title": "Software programming",
@@ -79,6 +98,22 @@
     "language-subtitle": "Langues",
     "skill-subtitle": "Compétences clés",
     "technologies-subtitle": "Technologies maîtrisées",
+    "languages": [
+      {
+        "name": "Français",
+        "level": "Langue maternelle",
+      },
+      {
+        "name": "Anglais",
+        "level": "Fluent en communication professionnelle et personnelle",
+        "eu-level": "Niveau européen C1",
+      },
+      {
+        "name": "Allemand",
+        "level": "Niveau très basique",
+        "eu-level": "Niveau européen A2",
+      },
+    ],
     "skills": [
       {
         "title": "Programation logicielle",
@@ -161,12 +196,44 @@
         </h2>
         <hr />
       </div>
-      <div>
+      <div class="skill-subsection">
         <h3 class="fillTextWithgradient">
           {{ $t("language-subtitle") }}
         </h3>
+        <ul class="lang-list">
+          <li class="lang-item">
+            <p class="lang-item-hello">Bonjour</p>
+            <hr />
+            <h4 class="lang-item-name">
+              {{ $t("languages.0.name") }}
+            </h4>
+            <p class="lang-item-level">// {{ $t("languages.0.level") }}</p>
+          </li>
+          <li class="lang-item">
+            <p class="lang-item-hello">Hello</p>
+            <hr />
+            <h4 class="lang-item-name">
+              {{ $t("languages.1.name") }}
+            </h4>
+            <p class="lang-item-level">// {{ $t("languages.1.level") }}</p>
+            <p class="lang-item-eu-level">
+              // {{ $t("languages.1.eu-level") }}
+            </p>
+          </li>
+          <li class="lang-item">
+            <p class="lang-item-hello">Guten Tag</p>
+            <hr />
+            <h4 class="lang-item-name">
+              {{ $t("languages.2.name") }}
+            </h4>
+            <p class="lang-item-level">// {{ $t("languages.2.level") }}</p>
+            <p class="lang-item-eu-level">
+              // {{ $t("languages.2.eu-level") }}
+            </p>
+          </li>
+        </ul>
       </div>
-      <div>
+      <div class="skill-subsection">
         <h3 class="fillTextWithgradient">
           {{ $t("skill-subtitle") }}
         </h3>
@@ -263,143 +330,144 @@
           </li>
         </ul>
       </div>
-      <div>
+      <div class="skill-subsection">
         <h3 class="fillTextWithgradient">
           {{ $t("technologies-subtitle") }}
         </h3>
+
+        <ul class="tech-list">
+          <li class="tech-item">
+            <img
+              class="tech-item-icon"
+              src="@/assets/img/technologies/C++.svg"
+              alt="-icon"
+            />
+            <p class="tech-item-name" v-html="$t('technologies.0.name')"></p>
+            <p class="tech-item-description">
+              /*<br />
+              <span v-html="$t('technologies.0.description')"></span>
+              <br />*/
+            </p>
+          </li>
+          <li class="tech-item">
+            <img
+              class="tech-item-icon"
+              src="@/assets/img/technologies/Python.svg"
+              alt="-icon"
+            />
+            <p class="tech-item-name" v-html="$t('technologies.1.name')"></p>
+            <p class="tech-item-description">
+              /*<br />
+              <span v-html="$t('technologies.1.description')"></span>
+              <br />*/
+            </p>
+          </li>
+          <li class="tech-item">
+            <img
+              class="tech-item-icon"
+              src="@/assets/img/technologies/Git.svg"
+              alt="-icon"
+            />
+            <p class="tech-item-name" v-html="$t('technologies.2.name')"></p>
+            <p class="tech-item-description">
+              /*<br />
+              <span v-html="$t('technologies.2.description')"></span>
+              <br />*/
+            </p>
+          </li>
+          <li class="tech-item">
+            <img
+              class="tech-item-icon"
+              src="@/assets/img/technologies/Unity.svg"
+              alt="-icon"
+            />
+            <p class="tech-item-name" v-html="$t('technologies.3.name')"></p>
+            <p class="tech-item-description">
+              /*<br />
+              <span v-html="$t('technologies.3.description')"></span>
+              <br />*/
+            </p>
+          </li>
+          <li class="tech-item">
+            <img
+              class="tech-item-icon"
+              src="@/assets/img/technologies/SQL.svg"
+              alt="-icon"
+            />
+            <p class="tech-item-name" v-html="$t('technologies.4.name')"></p>
+            <p class="tech-item-description">
+              /*<br />
+              <span v-html="$t('technologies.4.description')"></span>
+              <br />*/
+            </p>
+          </li>
+          <li class="tech-item">
+            <img
+              class="tech-item-icon"
+              src="@/assets/img/technologies/Firebase.svg"
+              alt="-icon"
+            />
+            <p class="tech-item-name" v-html="$t('technologies.5.name')"></p>
+            <p class="tech-item-description">
+              /*<br />
+              <span v-html="$t('technologies.5.description')"></span>
+              <br />*/
+            </p>
+          </li>
+          <li class="tech-item">
+            <img
+              class="tech-item-icon"
+              src="@/assets/img/technologies/Frontend.svg"
+              alt="-icon"
+            />
+            <p class="tech-item-name" v-html="$t('technologies.6.name')"></p>
+            <p class="tech-item-description">
+              /*<br />
+              <span v-html="$t('technologies.6.description')"></span>
+              <br />*/
+            </p>
+          </li>
+          <li class="tech-item">
+            <img
+              class="tech-item-icon"
+              src="@/assets/img/technologies/Nodejs.svg"
+              alt="-icon"
+            />
+            <p class="tech-item-name" v-html="$t('technologies.7.name')"></p>
+            <p class="tech-item-description">
+              /*<br />
+              <span v-html="$t('technologies.7.description')"></span>
+              <br />*/
+            </p>
+          </li>
+          <li class="tech-item">
+            <img
+              class="tech-item-icon"
+              src="@/assets/img/technologies/Blender.svg"
+              alt="-icon"
+            />
+            <p class="tech-item-name" v-html="$t('technologies.8.name')"></p>
+            <p class="tech-item-description">
+              /*<br />
+              <span v-html="$t('technologies.8.description')"></span>
+              <br />*/
+            </p>
+          </li>
+          <li class="tech-item">
+            <img
+              class="tech-item-icon"
+              src="@/assets/img/technologies/Adobe.svg"
+              alt="-icon"
+            />
+            <p class="tech-item-name" v-html="$t('technologies.9.name')"></p>
+            <p class="tech-item-description">
+              /*<br />
+              <span v-html="$t('technologies.9.description')"></span>
+              <br />*/
+            </p>
+          </li>
+        </ul>
       </div>
-      <ul class="tech-list">
-        <li class="tech-item">
-          <img
-            class="tech-item-icon"
-            src="@/assets/img/technologies/C++.svg"
-            alt="-icon"
-          />
-          <p class="tech-item-name" v-html="$t('technologies.0.name')"></p>
-          <p class="tech-item-description">
-            /*<br />
-            <span v-html="$t('technologies.0.description')"></span>
-            <br />*/
-          </p>
-        </li>
-        <li class="tech-item">
-          <img
-            class="tech-item-icon"
-            src="@/assets/img/technologies/Python.svg"
-            alt="-icon"
-          />
-          <p class="tech-item-name" v-html="$t('technologies.1.name')"></p>
-          <p class="tech-item-description">
-            /*<br />
-            <span v-html="$t('technologies.1.description')"></span>
-            <br />*/
-          </p>
-        </li>
-        <li class="tech-item">
-          <img
-            class="tech-item-icon"
-            src="@/assets/img/technologies/Git.svg"
-            alt="-icon"
-          />
-          <p class="tech-item-name" v-html="$t('technologies.2.name')"></p>
-          <p class="tech-item-description">
-            /*<br />
-            <span v-html="$t('technologies.2.description')"></span>
-            <br />*/
-          </p>
-        </li>
-        <li class="tech-item">
-          <img
-            class="tech-item-icon"
-            src="@/assets/img/technologies/Unity.svg"
-            alt="-icon"
-          />
-          <p class="tech-item-name" v-html="$t('technologies.3.name')"></p>
-          <p class="tech-item-description">
-            /*<br />
-            <span v-html="$t('technologies.3.description')"></span>
-            <br />*/
-          </p>
-        </li>
-        <li class="tech-item">
-          <img
-            class="tech-item-icon"
-            src="@/assets/img/technologies/SQL.svg"
-            alt="-icon"
-          />
-          <p class="tech-item-name" v-html="$t('technologies.4.name')"></p>
-          <p class="tech-item-description">
-            /*<br />
-            <span v-html="$t('technologies.4.description')"></span>
-            <br />*/
-          </p>
-        </li>
-        <li class="tech-item">
-          <img
-            class="tech-item-icon"
-            src="@/assets/img/technologies/Firebase.svg"
-            alt="-icon"
-          />
-          <p class="tech-item-name" v-html="$t('technologies.5.name')"></p>
-          <p class="tech-item-description">
-            /*<br />
-            <span v-html="$t('technologies.5.description')"></span>
-            <br />*/
-          </p>
-        </li>
-        <li class="tech-item">
-          <img
-            class="tech-item-icon"
-            src="@/assets/img/technologies/Frontend.svg"
-            alt="-icon"
-          />
-          <p class="tech-item-name" v-html="$t('technologies.6.name')"></p>
-          <p class="tech-item-description">
-            /*<br />
-            <span v-html="$t('technologies.6.description')"></span>
-            <br />*/
-          </p>
-        </li>
-        <li class="tech-item">
-          <img
-            class="tech-item-icon"
-            src="@/assets/img/technologies/Nodejs.svg"
-            alt="-icon"
-          />
-          <p class="tech-item-name" v-html="$t('technologies.7.name')"></p>
-          <p class="tech-item-description">
-            /*<br />
-            <span v-html="$t('technologies.7.description')"></span>
-            <br />*/
-          </p>
-        </li>
-        <li class="tech-item">
-          <img
-            class="tech-item-icon"
-            src="@/assets/img/technologies/Blender.svg"
-            alt="-icon"
-          />
-          <p class="tech-item-name" v-html="$t('technologies.8.name')"></p>
-          <p class="tech-item-description">
-            /*<br />
-            <span v-html="$t('technologies.8.description')"></span>
-            <br />*/
-          </p>
-        </li>
-        <li class="tech-item">
-          <img
-            class="tech-item-icon"
-            src="@/assets/img/technologies/Adobe.svg"
-            alt="-icon"
-          />
-          <p class="tech-item-name" v-html="$t('technologies.9.name')"></p>
-          <p class="tech-item-description">
-            /*<br />
-            <span v-html="$t('technologies.9.description')"></span>
-            <br />*/
-          </p>
-        </li>
-      </ul>
     </div>
   </section>
 </template>
@@ -422,6 +490,43 @@ h3 {
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: center;
+}
+.skill-subsection {
+  margin: 3rem 0;
+}
+ul.lang-list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 1rem;
+  li.lang-item {
+    margin: 0;
+    p.lang-item-hello {
+      margin: 0.5rem 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    hr {
+      width: 100%;
+      height: 2px;
+      border: none;
+      background-color: var(--secondary-color);
+    }
+    h4.lang-item-name {
+      margin: 0.5rem 0;
+    }
+    p.lang-item-level {
+      margin: 0;
+      color: var(--comment-color);
+    }
+    p.lang-item-eu-level {
+      margin: 0;
+      color: var(--comment-color);
+    }
+  }
 }
 ul.skill-list {
   list-style: none;
