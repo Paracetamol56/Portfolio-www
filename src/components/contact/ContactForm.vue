@@ -159,6 +159,10 @@ export default {
 
 <style lang="scss" scoped>
 #contact {
+  background-image: url("@/assets/img/BluryBackground.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   .contact-form {
     display: flex;
     flex-direction: column;
