@@ -549,6 +549,7 @@ ul.skill-list {
     );
     background-size: 400%;
     background-position: 100%;
+    border-radius: var(--border-radius);
     transition: background-position 1s var(--easing);
     .skill-item-content {
       width: 100%;
