@@ -1,10 +1,6 @@
 <template>
   <div class="project-card">
-    <img
-      class="project-card-image"
-      src="https://via.placeholder.com/1280x720"
-      alt="header"
-    />
+    <img class="project-card-image" :src="project.header" alt="header" />
     <div class="project-card-text">
       <p class="project-card-text-date">
         {{
@@ -26,7 +22,11 @@
           <span class="colored"> #</span>{{ tag }}</span
         ><br />*/
       </p>
-      <UnderlinedButton text="See more" href="#" target="_self" />
+      <UnderlinedButton
+        text="See more"
+        :href="`/project/${project.id}`"
+        target="_self"
+      />
     </div>
   </div>
 </template>
@@ -102,6 +102,8 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+    // make the image 80% transparent
+    opacity: 0.5;
   }
   .project-card-text {
     width: 100%;
