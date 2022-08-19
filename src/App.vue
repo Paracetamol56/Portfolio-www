@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import LoaderAnimation from "@/components/global/LoaderAnimation.vue";
-import NavBar from "@/components/global/NavBar.vue";
-import PageFooter from "@/components/global/PageFooter.vue";
+import LoaderAnimation from "@/components/miscellaneous/LoaderAnimation.vue";
+import NavBar from "@/components/miscellaneous/NavBar.vue";
+import PageFooter from "@/components/miscellaneous/PageFooter.vue";
 
 export default {
   name: "App",
@@ -61,6 +61,7 @@ export default {
   --background-color: #0c0816;
   --background-gradient: radial-gradient(circle, #2c1b4fff 0%, #111416ff 50%);
   --shadow-color: #5f77ef9a;
+  --link-color: #c2b0e9;
   --primary-color: #8251e9;
   --secondary-color: #b4e2f9;
   --tertiary-color: #5f78ef;
@@ -73,6 +74,7 @@ export default {
     #df7bf5 100%
   );
   --easing: cubic-bezier(0.5, 0, 0.5, 1);
+  --border-radius: 5px;
 }
 
 *,
@@ -121,9 +123,8 @@ h6 {
 }
 
 a {
-  color: var(--text-color);
-  text-decoration: dotted underline;
-  text-underline-offset: 3px;
+  color: var(--link-color);
+  text-decoration: none;
   transition: color 0.2s var(--easing);
 
   &:hover {
@@ -364,55 +365,23 @@ section {
     }
   }
 }
-
-.cta-button {
-  font-family: "Fira Code", monospace;
-  font-weight: 500;
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: var(--primary-color);
-  display: block;
-  margin: 20px auto;
-  width: fit-content;
-  overflow: hidden;
-  padding: 10px;
-  border: none;
-  outline: none;
-  background-image: linear-gradient(135deg, #2c1b4f 70%, #111416 90%);
-  background-position: 100%;
-  background-size: 400%;
-  transition: background-position 0.5s var(--easing), color 0.5s var(--easing),
-    box-shadow 0.5s var(--easing);
-
-  &:hover {
-    text-decoration: none;
-    color: var(--tertiary-color);
-    background-position: 0%;
-    box-shadow: var(--shadow-color) 0px 0px 8px 2px;
-  }
-}
-
 .fade-in {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.5s var(--easing), transform 0.5s var(--easing);
 }
-
 .fade-in.appear {
   opacity: 1;
   transform: scale(1);
 }
-
 -webkit-scrollbar {
   width: 10px;
 }
-
 -webkit-scrollbar-track {
   background-color: var(--background-color);
   box-shadow: inset 0 0 2px var(--tertiary-color);
   border-radius: 5px;
 }
-
 -webkit-scrollbar-thumb {
   background: var(--primary-color);
   border-radius: 5px;

@@ -155,7 +155,6 @@ footer {
     color: #ffffff;
     text-decoration: dotted underline;
     transition: all 0.25s var(--easing);
-
     &:hover {
       color: #8251e9;
       text-decoration: solid underline;

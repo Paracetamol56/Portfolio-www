@@ -1,10 +1,6 @@
 <template>
   <div class="project-card">
-    <img
-      class="project-card-image"
-      src="https://via.placeholder.com/1280x720"
-      alt="header"
-    />
+    <img class="project-card-image" :src="project.header" alt="header" />
     <div class="project-card-text">
       <p class="project-card-text-date">
         {{
@@ -26,16 +22,23 @@
           <span class="colored"> #</span>{{ tag }}</span
         ><br />*/
       </p>
-      <a class="project-card-text-link" :href="`/project/${project.id}`">
-        Voir le projet ->
-      </a>
+      <UnderlinedButton
+        text="See more"
+        :href="`/project/${project.id}`"
+        target="_self"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import UnderlinedButton from "@/components/miscellaneous/buttons/UnderlinedButton.vue";
+
 export default {
   name: "ProjectCard",
+  components: {
+    UnderlinedButton,
+  },
   props: {
     project: {
       type: Array,
@@ -87,6 +90,7 @@ export default {
   margin: 0;
   position: relative;
   overflow: hidden;
+  border-radius: var(--border-radius);
   @media (max-width: 768px) {
     aspect-ratio: unset;
     height: auto;
@@ -98,6 +102,8 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+    // make the image 80% transparent
+    opacity: 0.5;
   }
   .project-card-text {
     width: 100%;

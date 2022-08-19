@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import PageHeader from "@/components/global/PageHeader.vue";
+import PageHeader from "@/components/miscellaneous/PageHeader.vue";
 
 export default {
   name: "404View",

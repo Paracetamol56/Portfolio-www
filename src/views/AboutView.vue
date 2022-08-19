@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import PageHeader from "@/components/global/PageHeader.vue";
+import PageHeader from "@/components/miscellaneous/PageHeader.vue";
 import FormationSection from "@/components/about/FormationSection.vue";
 import SkillSection from "@/components/about/SkillSection.vue";
 

@@ -19,8 +19,6 @@
 }
 </i18n>
 
-45.90089632660961, 6.128813463775949
-
 <template>
   <section id="location" class="fade-in">
     <div class="container">
@@ -413,8 +411,12 @@ export default {
       top: 50%;
       transform: translateY(-50%);
       p.location-infos-text {
+        display: block;
+        width: fit-content;
+        padding: 0 2px;
         font-size: 1.4rem;
         color: var(--text-color);
+        background-color: #0c0816bf;
         &.coordinates {
           font-weight: 300;
         }

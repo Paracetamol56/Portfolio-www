@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import PageHeader from "@/components/global/PageHeader.vue";
+import PageHeader from "@/components/miscellaneous/PageHeader.vue";
 import AboutSection from "@/components/home/AboutSection.vue";
 import LastProjectsSection from "@/components/home/LastProjectsSection.vue";
 // import TravelSection from "@/components/home/TravelSection.vue";

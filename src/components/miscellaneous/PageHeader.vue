@@ -25,7 +25,17 @@
 
     <div v-if="sectionLink !== ''" class="downButton" @click="scrollToMain()">
       {{ $t("see-more") }}<br />
-      <i class="fas fa-chevron-down"></i>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"
+        ></path>
+      </svg>
     </div>
   </header>
 </template>
@@ -297,6 +307,7 @@ header {
     text-decoration: none;
     font-family: "Fira Code", monospace;
     color: #ffffff;
+    fill: #ffffff;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
