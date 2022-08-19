@@ -76,9 +76,9 @@
       <ul class="formation-list">
         <li class="formation-item">
           <div class="formation-item-timeline">
-            <p class="formation-start-date">{{ $t("formations.0.start") }}</p>
+            <p class="formation-start-date">{{ $t("formations.0.end") }}</p>
             <span class="formation-start-date-separator"></span>
-            <p class="formation-end-date">{{ $t("formations.0.end") }}</p>
+            <p class="formation-end-date">{{ $t("formations.0.start") }}</p>
           </div>
           <div class="formatioon-item-content">
             <h3 class="formation-title">{{ $t("formations.0.title") }}</h3>
@@ -98,9 +98,9 @@
         </li>
         <li class="formation-item">
           <div class="formation-item-timeline">
-            <p class="formation-start-date">{{ $t("formations.1.start") }}</p>
+            <p class="formation-start-date">{{ $t("formations.1.end") }}</p>
             <span class="formation-start-date-separator"></span>
-            <p class="formation-end-date">{{ $t("formations.1.end") }}</p>
+            <p class="formation-end-date">{{ $t("formations.1.start") }}</p>
           </div>
           <div class="formatioon-item-content">
             <h3 class="formation-title">{{ $t("formations.1.title") }}</h3>
@@ -120,9 +120,9 @@
         </li>
         <li class="formation-item">
           <div class="formation-item-timeline">
-            <p class="formation-start-date">{{ $t("formations.2.start") }}</p>
+            <p class="formation-start-date">{{ $t("formations.2.end") }}</p>
             <span class="formation-start-date-separator"></span>
-            <p class="formation-end-date">{{ $t("formations.2.end") }}</p>
+            <p class="formation-end-date">{{ $t("formations.2.start") }}</p>
           </div>
           <div class="formatioon-item-content">
             <h3 class="formation-title">{{ $t("formations.2.title") }}</h3>
@@ -159,7 +159,7 @@ export default {
 ul.formation-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 3rem;
   li.formation-item {
     display: flex;
     flex-direction: row;

@@ -31,6 +31,48 @@
         "description": "As a great self-hosting enthusiast, I learned to deploy, maintain and administer server-based services mainly on my own.",
       },
     ],
+    "technologies": [
+      {
+        "name": "C++ <span class='fas fa-heart'></span>",
+        "description": "High perfomance application with a good level of abstraction and multithreading, GUI (with QT and WXWidget), game development.",
+      },
+      {
+        "name": "Python",
+        "description": "Image rendering algorithms, artificial intelligence (with TensorFlow, PyTorch and Scikit Learn), computer vision (with OpenCV), data visualization (with Matplotlib).",
+      },
+      {
+        "name": "Git",
+        "description": "Version control, project management, code review (with Github and Gitlab)",
+      },
+      {
+        "name": "Unity",
+        "description": "2D, 3D and VR game development",
+      },
+      {
+        "name": "Relational databases",
+        "description": "MySQL, PostgreSQL, SQLite",
+      },
+      {
+        "name": "Non-relational databases",
+        "description": "Firebase",
+      },
+      {
+        "name": "Front-end",
+        "description": "HTML, CSS, JavaScript, VueJS and React",
+      },
+      {
+        "name": "Backend",
+        "description": "NodeJS, ExpressJS",
+      },
+      {
+        "name": "3D modelling",
+        "description": "Blender and 3DSMax",
+      },
+      {
+        "name": "Adobe suite",
+        "description": "Photoshop, Illustrator, After Effects, Premiere Pro",
+      }
+    ],
   },
   "fr": {
     "title": "Compétences et technologies",
@@ -63,6 +105,48 @@
         "description": "Grand enthousiaste de l’auto-hébergement, j’ai appris à déployer, maintenir et administrer des services sur serveur principalement en autodidacte.",
       },
     ],
+    "technologies": [
+      {
+        "title": "C++",
+        "description": "Application haute performance avec un niveau d’abstraction élevé et multithreading, interface graphique (avec QT et WXWidget), développement de jeux.",
+      },
+      {
+        "title": "Python",
+        "description": "Algorithmes de synthèse d’images, intelligence artificielle (avec TensorFlow, PyTorch et Scikit Learn), vision numérique (avec OpenCV), visualisation de données (avec Matplotlib).",
+      },
+      {
+        "title": "Git",
+        "description": "Versionnage, gestion de projet, révision de code (avec Github et Gitlab)",
+      },
+      {
+        "title": "Unity",
+        "description": "Développement de jeux 2D, 3D et VR",
+      },
+      {
+        "title": "Bases de données relationnelles",
+        "description": "MySQL, PostgreSQL, SQLite",
+      },
+      {
+        "title": "Bases de données non-relationnelles",
+        "description": "Firebase",
+      },
+      {
+        "title": "Web frontend",
+        "description": "HTML, CSS, JavaScript, VueJS et React",
+      },
+      {
+        "title": "Web backend",
+        "description": "NodeJS, ExpressJS",
+      },
+      {
+        "title": "Modélisation 3D",
+        "description": "Blender et 3DSMax",
+      },
+      {
+        "title": "Suites Adobe",
+        "description": "Photoshop, Illustrator, After Effects et Premiere Pro",
+      }
+    ]
   }
 }
 </i18n>
@@ -78,12 +162,12 @@
         <hr />
       </div>
       <div>
-        <h3>
+        <h3 class="fillTextWithgradient">
           {{ $t("language-subtitle") }}
         </h3>
       </div>
       <div>
-        <h3>
+        <h3 class="fillTextWithgradient">
           {{ $t("skill-subtitle") }}
         </h3>
         <ul class="skill-list">
@@ -180,10 +264,142 @@
         </ul>
       </div>
       <div>
-        <h3>
+        <h3 class="fillTextWithgradient">
           {{ $t("technologies-subtitle") }}
         </h3>
       </div>
+      <ul class="tech-list">
+        <li class="tech-item">
+          <img
+            class="tech-item-icon"
+            src="@/assets/img/technologies/C++.svg"
+            alt="-icon"
+          />
+          <p class="tech-item-name" v-html="$t('technologies.0.name')"></p>
+          <p class="tech-item-description">
+            /*<br />
+            <span v-html="$t('technologies.0.description')"></span>
+            <br />*/
+          </p>
+        </li>
+        <li class="tech-item">
+          <img
+            class="tech-item-icon"
+            src="@/assets/img/technologies/Python.svg"
+            alt="-icon"
+          />
+          <p class="tech-item-name" v-html="$t('technologies.1.name')"></p>
+          <p class="tech-item-description">
+            /*<br />
+            <span v-html="$t('technologies.1.description')"></span>
+            <br />*/
+          </p>
+        </li>
+        <li class="tech-item">
+          <img
+            class="tech-item-icon"
+            src="@/assets/img/technologies/Git.svg"
+            alt="-icon"
+          />
+          <p class="tech-item-name" v-html="$t('technologies.2.name')"></p>
+          <p class="tech-item-description">
+            /*<br />
+            <span v-html="$t('technologies.2.description')"></span>
+            <br />*/
+          </p>
+        </li>
+        <li class="tech-item">
+          <img
+            class="tech-item-icon"
+            src="@/assets/img/technologies/Unity.svg"
+            alt="-icon"
+          />
+          <p class="tech-item-name" v-html="$t('technologies.3.name')"></p>
+          <p class="tech-item-description">
+            /*<br />
+            <span v-html="$t('technologies.3.description')"></span>
+            <br />*/
+          </p>
+        </li>
+        <li class="tech-item">
+          <img
+            class="tech-item-icon"
+            src="@/assets/img/technologies/SQL.svg"
+            alt="-icon"
+          />
+          <p class="tech-item-name" v-html="$t('technologies.4.name')"></p>
+          <p class="tech-item-description">
+            /*<br />
+            <span v-html="$t('technologies.4.description')"></span>
+            <br />*/
+          </p>
+        </li>
+        <li class="tech-item">
+          <img
+            class="tech-item-icon"
+            src="@/assets/img/technologies/Firebase.svg"
+            alt="-icon"
+          />
+          <p class="tech-item-name" v-html="$t('technologies.5.name')"></p>
+          <p class="tech-item-description">
+            /*<br />
+            <span v-html="$t('technologies.5.description')"></span>
+            <br />*/
+          </p>
+        </li>
+        <li class="tech-item">
+          <img
+            class="tech-item-icon"
+            src="@/assets/img/technologies/Frontend.svg"
+            alt="-icon"
+          />
+          <p class="tech-item-name" v-html="$t('technologies.6.name')"></p>
+          <p class="tech-item-description">
+            /*<br />
+            <span v-html="$t('technologies.6.description')"></span>
+            <br />*/
+          </p>
+        </li>
+        <li class="tech-item">
+          <img
+            class="tech-item-icon"
+            src="@/assets/img/technologies/Nodejs.svg"
+            alt="-icon"
+          />
+          <p class="tech-item-name" v-html="$t('technologies.7.name')"></p>
+          <p class="tech-item-description">
+            /*<br />
+            <span v-html="$t('technologies.7.description')"></span>
+            <br />*/
+          </p>
+        </li>
+        <li class="tech-item">
+          <img
+            class="tech-item-icon"
+            src="@/assets/img/technologies/Blender.svg"
+            alt="-icon"
+          />
+          <p class="tech-item-name" v-html="$t('technologies.8.name')"></p>
+          <p class="tech-item-description">
+            /*<br />
+            <span v-html="$t('technologies.8.description')"></span>
+            <br />*/
+          </p>
+        </li>
+        <li class="tech-item">
+          <img
+            class="tech-item-icon"
+            src="@/assets/img/technologies/Adobe.svg"
+            alt="-icon"
+          />
+          <p class="tech-item-name" v-html="$t('technologies.9.name')"></p>
+          <p class="tech-item-description">
+            /*<br />
+            <span v-html="$t('technologies.9.description')"></span>
+            <br />*/
+          </p>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
@@ -201,6 +417,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 ul.skill-list {
   list-style: none;
   width: 100%;
@@ -274,6 +496,65 @@ ul.skill-list {
       background-position: 0%;
       .skill-item-content {
         transform: translateY(-50%);
+      }
+    }
+  }
+}
+ul.tech-list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 2rem 1rem;
+  li.tech-item {
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+    grid-template-rows: 0fr 0fr;
+    gap: 0.5rem;
+    grid-template-areas:
+      "icon name"
+      "icon description";
+    img.tech-item-icon {
+      grid-area: icon;
+      width: 60px;
+      height: 60px;
+      margin: auto;
+    }
+    p.tech-item-name {
+      grid-area: name;
+      position: relative;
+      width: fit-content;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-color);
+      margin: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        left: -2px;
+        right: -2px;
+        z-index: -1;
+        background-color: var(--primary-color);
+        transform: scaleX(0%);
+        transform-origin: right;
+        transition: transform 0.25s var(--easing);
+      }
+    }
+    p.tech-item-description {
+      grid-area: description;
+      font-size: 1rem;
+      color: var(--comment-color);
+      margin: 0;
+    }
+    &:hover {
+      .tech-item-name {
+        &::before {
+          transform: scaleX(100%);
+          transform-origin: left;
+        }
       }
     }
   }
