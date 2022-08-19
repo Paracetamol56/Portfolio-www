@@ -73,6 +73,7 @@ export default {
     #df7bf5 100%
   );
   --easing: cubic-bezier(0.5, 0, 0.5, 1);
+  --border-radius: 5px;
 }
 
 *,

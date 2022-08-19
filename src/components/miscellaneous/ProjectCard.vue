@@ -26,16 +26,19 @@
           <span class="colored"> #</span>{{ tag }}</span
         ><br />*/
       </p>
-      <a class="project-card-text-link" :href="`/project/${project.id}`">
-        Voir le projet ->
-      </a>
+      <UnderlinedButton text="See more" href="#" target="_self" />
     </div>
   </div>
 </template>
 
 <script>
+import UnderlinedButton from "@/components/miscellaneous/buttons/UnderlinedButton.vue";
+
 export default {
   name: "ProjectCard",
+  components: {
+    UnderlinedButton,
+  },
   props: {
     project: {
       type: Array,
@@ -87,6 +90,7 @@ export default {
   margin: 0;
   position: relative;
   overflow: hidden;
+  border-radius: var(--border-radius);
   @media (max-width: 768px) {
     aspect-ratio: unset;
     height: auto;

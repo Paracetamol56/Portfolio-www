@@ -1,5 +1,6 @@
 <template>
-  <a class="button" :href="link">
+  <a class="button" :href="href" :target="target">
+    <span class="icon" :v-if="icon != ''" v-html="icon"></span>
     {{ text }}
     <svg
       width="16"
@@ -41,9 +42,13 @@ export default {
       type: String,
       default: "",
     },
-    link: {
+    href: {
       type: String,
       required: true,
+    },
+    target: {
+      type: String,
+      default: "_self",
     },
   },
 };
