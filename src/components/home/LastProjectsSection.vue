@@ -25,8 +25,8 @@
 
     <Swiper
       class="project-slider"
-      :slides-per-view="1.5"
-      :space-between="30"
+      :slides-per-view="1.4"
+      :space-between="100"
       :navigation="true"
       :pagination="{ clickable: true }"
       :loop="true"
@@ -43,7 +43,11 @@
     </Swiper>
 
     <div class="button-wrapper">
-      <BoxButton :text="$t('button')" icon="" link="#" />
+      <BoxButton
+        :text="$t('button')"
+        icon='<i class="fa-solid fa-grid-2"></i>'
+        href="/projects"
+      />
     </div>
   </section>
 </template>
@@ -95,6 +99,10 @@ export default {
 
 <style scoped lang="scss">
 section#projects {
+  background-image: url("@/assets/img/BluryBackground.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   .project-slider {
     margin: 1rem 0;
     padding: 0;
