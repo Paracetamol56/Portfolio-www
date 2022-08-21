@@ -16,6 +16,7 @@
   <main>
     <FormationSection number="01" />
     <SkillSection number="02" />
+    <InterestSection number="03" />
   </main>
 </template>
 
@@ -23,6 +24,7 @@
 import PageHeader from "@/components/miscellaneous/PageHeader.vue";
 import FormationSection from "@/components/about/FormationSection.vue";
 import SkillSection from "@/components/about/SkillSection.vue";
+import InterestSection from "@/components/about/InterestSection.vue";
 
 export default {
   name: "AboutView",
@@ -30,6 +32,7 @@ export default {
     PageHeader,
     FormationSection,
     SkillSection,
+    InterestSection,
   },
   methods: {
     updateFadeInElements: function () {
