@@ -29,7 +29,7 @@
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 574 536"
+              viewBox="0 0 520 500"
             >
               <defs>
                 <radialGradient
@@ -37,7 +37,7 @@
                   cx="186.4"
                   cy="330.79"
                   r="102.5"
-                  gradientTransform="translate(-142.62 -520.81) scale(2.44 2.44)"
+                  gradientTransform="translate(-204.62 -556.81) scale(2.44 2.44)"
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop offset="0" stop-color="#ad56e3" stop-opacity="0.3" />
@@ -63,374 +63,57 @@
                   />
                   <stop offset="1" stop-color="#ad56e3" stop-opacity="0" />
                 </radialGradient>
-                <radialGradient
-                  id="radial-gradient-2"
-                  cx="238.88"
-                  cy="266.01"
-                  r="52.48"
-                  gradientTransform="translate(-142.62 -520.81) scale(2.44 2.44)"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stop-color="#5f78ef" stop-opacity="0.1" />
-                  <stop
-                    offset="0.17"
-                    stop-color="#5f78ef"
-                    stop-opacity="0.07"
-                  />
-                  <stop
-                    offset="0.59"
-                    stop-color="#5f78ef"
-                    stop-opacity="0.02"
-                  />
-                  <stop offset="1" stop-color="#5f78ef" stop-opacity="0" />
-                </radialGradient>
-                <radialGradient
-                  id="radial-gradient-3"
-                  cx="161.39"
-                  cy="281.59"
-                  r="35.67"
-                  gradientTransform="translate(-142.62 -520.81) scale(2.44 2.44)"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stop-color="#b4e2f9" stop-opacity="0.2" />
-                  <stop
-                    offset="0.14"
-                    stop-color="#b4e2f9"
-                    stop-opacity="0.15"
-                  />
-                  <stop
-                    offset="0.43"
-                    stop-color="#b4e2f9"
-                    stop-opacity="0.07"
-                  />
-                  <stop
-                    offset="0.72"
-                    stop-color="#b4e2f9"
-                    stop-opacity="0.02"
-                  />
-                  <stop offset="1" stop-color="#b4e2f9" stop-opacity="0" />
-                </radialGradient>
-                <radialGradient
-                  id="radial-gradient-4"
-                  cx="110.96"
-                  cy="354.98"
-                  r="52.48"
-                  gradientTransform="translate(-142.62 -520.81) scale(2.44 2.44)"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stop-color="#5f78ef" stop-opacity="0.3" />
-                  <stop
-                    offset="0.04"
-                    stop-color="#5f78ef"
-                    stop-opacity="0.28"
-                  />
-                  <stop
-                    offset="0.29"
-                    stop-color="#5f78ef"
-                    stop-opacity="0.16"
-                  />
-                  <stop
-                    offset="0.53"
-                    stop-color="#5f78ef"
-                    stop-opacity="0.07"
-                  />
-                  <stop
-                    offset="0.77"
-                    stop-color="#5f78ef"
-                    stop-opacity="0.02"
-                  />
-                  <stop offset="1" stop-color="#5f78ef" stop-opacity="0" />
-                </radialGradient>
-                <radialGradient
-                  id="radial-gradient-5"
-                  cx="241.34"
-                  cy="351.7"
-                  r="52.48"
-                  gradientTransform="translate(-142.62 -520.81) scale(2.44 2.44)"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stop-color="#5f78ef" stop-opacity="0.2" />
-                  <stop
-                    offset="0.12"
-                    stop-color="#5f78ef"
-                    stop-opacity="0.16"
-                  />
-                  <stop
-                    offset="0.42"
-                    stop-color="#5f78ef"
-                    stop-opacity="0.07"
-                  />
-                  <stop
-                    offset="0.72"
-                    stop-color="#5f78ef"
-                    stop-opacity="0.02"
-                  />
-                  <stop offset="1" stop-color="#5f78ef" stop-opacity="0" />
-                </radialGradient>
               </defs>
               <g id="Telescope">
                 <g id="Stand">
-                  <circle class="cls-1" cx="307.26" cy="292.88" r="26.73" />
+                  <circle class="cls-1" cx="249.42" cy="253.21" r="15.36" />
                   <line
-                    class="cls-2"
-                    x1="319.08"
-                    y1="319.21"
-                    x2="363.85"
-                    y2="410"
+                    class="cls-1"
+                    x1="256.21"
+                    y1="268.34"
+                    x2="281.94"
+                    y2="320.51"
                   />
                   <line
-                    class="cls-2"
-                    x1="250.66"
-                    y1="410"
-                    x2="295.44"
-                    y2="319.21"
+                    class="cls-1"
+                    x1="216.9"
+                    y1="320.51"
+                    x2="242.63"
+                    y2="268.34"
                   />
                 </g>
                 <g id="Tube">
                   <path
-                    class="cls-3"
-                    d="M127.49,122.51l53.17,18.41L150,229.5,96.82,211.09l30.67-88.58m0-17a17,17,0,0,0-16.07,11.44L80.74,205.53a17,17,0,0,0,10.51,21.63l53.17,18.41a17,17,0,0,0,21.63-10.5l30.68-88.59a17,17,0,0,0-10.51-21.63l-53.16-18.41a16.92,16.92,0,0,0-5.57-.94Z"
-                    transform="translate(62 36)"
+                    class="cls-2"
+                    d="M181.75,176l30.55,10.58-17.63,50.9L164.13,226.9,181.75,176m0-8.51a8.5,8.5,0,0,0-8,5.73l-17.63,50.9a8.51,8.51,0,0,0,5.25,10.82l30.55,10.58a8.72,8.72,0,0,0,2.78.47,8.51,8.51,0,0,0,8-5.73l17.63-50.9a8.51,8.51,0,0,0-5.26-10.82L184.53,168a8.72,8.72,0,0,0-2.78-.47Z"
                   />
                   <path
-                    class="cls-2"
-                    d="M274.74,264.35l87.14,24.44a12.56,12.56,0,0,0,15.28-8l13.75-39.72a12.57,12.57,0,0,0-7.07-15.73L214,155.07"
-                    transform="translate(62 36)"
+                    class="cls-1"
+                    d="M266.36,257.5l50.07,14.05a7.23,7.23,0,0,0,8.78-4.59l7.9-22.82a7.22,7.22,0,0,0-4.06-9l-97.6-40.39"
                   />
                   <line
-                    class="cls-2"
-                    x1="246.93"
-                    y1="275"
-                    x2="278.57"
-                    y2="284.63"
+                    class="cls-1"
+                    x1="214.75"
+                    y1="242.94"
+                    x2="232.94"
+                    y2="248.47"
                   />
                   <line
-                    class="cls-2"
-                    x1="465.59"
-                    y1="319.69"
-                    x2="475.27"
-                    y2="291.74"
-                  />
-                </g>
-              </g>
-              <g id="Stars">
-                <g id="Layer1">
-                  <circle
-                    id="Star"
-                    class="cls-4"
-                    cx="127.55"
-                    cy="106.52"
-                    r="8.5"
-                  />
-                  <circle
-                    id="Star-2"
-                    data-name="Star"
-                    class="cls-4"
-                    cx="333.53"
-                    cy="78.53"
-                    r="8.5"
-                  />
-                  <circle
-                    id="Star-3"
-                    data-name="Star"
-                    class="cls-4"
-                    cx="164.63"
-                    cy="336.52"
-                    r="8.5"
-                  />
-                  <circle
-                    id="Star-4"
-                    data-name="Star"
-                    class="cls-4"
-                    cx="475.55"
-                    cy="127.64"
-                    r="8.5"
-                  />
-                  <circle
-                    id="Star-5"
-                    data-name="Star"
-                    class="cls-4"
-                    cx="503.69"
-                    cy="372.54"
-                    r="8.5"
-                  />
-                  <circle
-                    id="Star-6"
-                    data-name="Star"
-                    class="cls-4"
-                    cx="391.65"
-                    cy="161.58"
-                    r="8.5"
-                  />
-                  <circle
-                    id="Star-7"
-                    data-name="Star"
-                    class="cls-4"
-                    cx="537.65"
-                    cy="279.58"
-                    r="8.5"
-                  />
-                  <circle
-                    id="Star-8"
-                    data-name="Star"
-                    class="cls-4"
-                    cx="128.51"
-                    cy="419.62"
-                    r="8.5"
-                  />
-                  <circle
-                    id="Star-9"
-                    data-name="Star"
-                    class="cls-4"
-                    cx="90.58"
-                    cy="305.54"
-                    r="8.5"
-                  />
-                  <circle
-                    id="Star-10"
-                    data-name="Star"
-                    class="cls-4"
-                    cx="220.58"
-                    cy="97.54"
-                    r="8.5"
-                  />
-                </g>
-                <g id="Layer2">
-                  <circle
-                    id="Star-11"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="386.65"
-                    cy="123.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-12"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="216.65"
-                    cy="45.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-13"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="266.65"
-                    cy="93.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-14"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="146.65"
-                    cy="136.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-15"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="150.65"
-                    cy="292.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-16"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="90.65"
-                    cy="183.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-17"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="432.65"
-                    cy="376.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-18"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="507.65"
-                    cy="242.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-19"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="518.65"
-                    cy="157.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-20"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="424.65"
-                    cy="78.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-21"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="424.65"
-                    cy="199.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-22"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="324.65"
-                    cy="127.58"
-                    r="4.25"
-                  />
-                  <circle
-                    id="Star-23"
-                    data-name="Star"
-                    class="cls-5"
-                    cx="237.65"
-                    cy="359.58"
-                    r="4.25"
+                    class="cls-1"
+                    x1="340.4"
+                    y1="268.61"
+                    x2="345.96"
+                    y2="252.55"
                   />
                 </g>
               </g>
               <g id="Gradients">
                 <circle
                   id="MainGradient"
-                  class="cls-6"
-                  cx="312"
-                  cy="286"
+                  class="cls-3"
+                  cx="250"
+                  cy="250"
                   r="250"
-                />
-                <circle
-                  id="Gradient1"
-                  class="cls-7"
-                  cx="440"
-                  cy="128"
-                  r="128"
-                />
-                <circle id="Gradient2" class="cls-8" cx="251" cy="166" r="87" />
-                <circle
-                  id="Gradient3"
-                  class="cls-9"
-                  cx="128"
-                  cy="345"
-                  r="128"
-                />
-                <circle
-                  id="Gradient4"
-                  class="cls-10"
-                  cx="446"
-                  cy="337"
-                  r="128"
                 />
               </g>
             </svg>
@@ -528,77 +211,23 @@ section#interest {
           transform: translate(-50%, -50%);
           width: 110%;
           &#astronomy-vector {
-            @keyframes stars1 {
-              0% {
-                transform: rotate(0deg);
-              }
-              50% {
-                transform: rotate(6deg);
-              }
-              100% {
-                transform: rotate(0deg);
-              }
-            }
-            @keyframes stars2 {
-              0% {
-                transform: rotate(0deg);
-              }
-              50% {
-                transform: rotate(3deg);
-              }
-              100% {
-                transform: rotate(0deg);
-              }
-            }
-            g#Stars {
+            g#Gradients {
               transform-origin: center;
-              transform: scale(1);
-              transition: transform 1s var(--easing);
-              g#Layer1 {
-                transform-origin: center;
-                animation: stars1 6s ease-in-out infinite;
-              }
-              g#Layer2 {
-                transform-origin: center;
-                animation: stars2 6s ease-in-out infinite;
-              }
+              transform: scale(0.8);
+              transition: transform 0.5s var(--easing);
             }
-            .cls-1,
-            .cls-2 {
+            .cls-1 {
               fill: none;
               stroke: #8251e9;
               stroke-linecap: round;
               stroke-linejoin: round;
-            }
-            .cls-1 {
-              stroke-width: 14.17px;
+              stroke-width: 8.5px;
             }
             .cls-2 {
-              stroke-width: 17.01px;
-            }
-            .cls-3 {
               fill: #8251e9;
             }
-            .cls-4 {
-              fill: #5f78ef;
-            }
-            .cls-5 {
-              fill: #b4e2f9;
-            }
-            .cls-6 {
+            .cls-3 {
               fill: url(#radial-gradient);
-            }
-            .cls-7 {
-              fill: url(#radial-gradient-2);
-            }
-            .cls-8 {
-              fill: url(#radial-gradient-3);
-            }
-            .cls-9 {
-              fill: url(#radial-gradient-4);
-            }
-            .cls-10 {
-              fill: url(#radial-gradient-5);
             }
           }
         }
@@ -619,8 +248,8 @@ section#interest {
       &:hover {
         .interest-row-illustration svg.interest-row-illustration-vector {
           &#astronomy-vector {
-            g#Stars {
-              transform: scale(1.1);
+            g#Gradients {
+              transform: scale(1);
             }
           }
         }
