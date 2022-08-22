@@ -2,9 +2,45 @@
 {
 	"en": {
 		"title": "Interests",
+		"interests": [
+			{
+				"title": "Astronomy",
+				"description": "From a very young age, I have been passionate about the stars with the desire to learn more about our universe. I practice amateur astronomy in a club which allows me to meet other people who share the same hooby."
+			},
+			{
+				"title": "Electronics",
+				"description": "Initiated by my father, I also like to create my own electronic circuits, in particular with the help of Arduino boards or Raspberry Pi. It is for me a concrete application of computer science, I find it motivating and formative."
+			},
+			{
+				"title": "Science",
+				"description": "I am passionate about science of all kinds, physics, biology, etc. and I like to learn more about our world. Moreover, with my Cartesian mind, I greatly appreciate the scientific method."
+			},
+			{
+				"title": "Sports",
+				"description": "Hating doing nothing, I have always practiced at least one sport. Beyond the physical aspect, it helps me detach myself from my screens and my work. Swimming, fencing, mountain biking, climbing, scuba diving and paragliding, I ended up developing a passion for risky sports. They taught me to control my stress and to analyze each situation without panicking."
+			}
+		]
 	},
 	"fr": {
 		"title": "Centres d'intérêts",
+		"interests": [
+			{
+				"title": "Astronomie",
+				"description": "Depuis très jeune, je suis attiré par les étoiles avec la volonté d’en apprendre plus sur notre univers. Je pratique l’astronomie amateur dans un club ce qui me permet de rencontrer d’autre personne qui partage la même passion."
+			},
+			{
+				"title": "Electronique",
+				"description": "Initier par mon père, j’aime aussi créer mes propres circuits électroniques, en particulier avec l’aide de cartes Arduino ou de Raspberry Pi. C’est pour moi une application concrète de l’informatique de, je trouve motivante et formatrice."
+			},
+			{
+				"title": "Science",
+				"description": "Je suis passionné de science en tout genre, physique, biologie, etc. et j’aime en apprendre plus sur notre monde. De plus, avec mon esprit cartésien, j’apprécie énormément la méthode scientifique."
+			},
+			{
+				"title": "Sports",
+				"description": "Détestant ne rien faire, j’ai toujours pratiqué au moins un sport. Au-delà de l’aspect physique, cela m’aide à me détacher de mes écrans et de mon travail. Natation, escrime, VTT, escalade, plongée sous-marine et parapente, j’ai fini par développer une passion pour les sports à risque. Ils m’ont appris à maitriser mon stress et à analyser chaque situation sans paniquer."
+			}
+		]
 	}
 }
 </i18n>
@@ -160,12 +196,11 @@
             </svg>
           </div>
           <div class="interest-row-content">
-            <h3 class="interest-row-title">Astronomy</h3>
+            <h3 class="interest-row-title">
+              {{ $t("interests.0.title") }}
+            </h3>
             <p class="interest-row-description">
-              Depuis très jeune, je suis attiré par les étoiles avec la volonté
-              d’en apprendre plus sur notre univers. Je pratique l’astronomie
-              amateur dans un club ce qui me permet de rencontrer d’autre
-              personne qui partage la même passion.
+              {{ $t("interests.0.description") }}
             </p>
           </div>
         </div>
@@ -274,12 +309,11 @@
             </svg>
           </div>
           <div class="interest-row-content">
-            <h3 class="interest-row-title">Electronique</h3>
+            <h3 class="interest-row-title">
+              {{ $t("interests.1.title") }}
+            </h3>
             <p class="interest-row-description">
-              Initier par mon père, j’aime aussi créer mes propres montages
-              électroniques en particulier avec l’aide de cartes Arduino ou de
-              Raspberry Pi. C’est pour moi une application concrète de
-              l’informatique de je trouve motivante et formatrice.
+              {{ $t("interests.1.description") }}
             </p>
           </div>
         </div>
@@ -396,11 +430,11 @@
             </svg>
           </div>
           <div class="interest-row-content">
-            <h3 class="interest-row-title">Science</h3>
+            <h3 class="interest-row-title">
+              {{ $t("interests.2.title") }}
+            </h3>
             <p class="interest-row-description">
-              Je suis passionné de science en tout genre, physique, biologie,
-              etc. et j’aime en apprendre plus sur notre monde. De plus avec mon
-              esprit cartésien, j’apprécie énormément la méthode scientifique.
+              {{ $t("interests.2.description") }}
             </p>
           </div>
         </div>
@@ -513,14 +547,11 @@
             </svg>
           </div>
           <div class="interest-row-content">
-            <h3 class="interest-row-title">Sports</h3>
+            <h3 class="interest-row-title">
+              {{ $t("interests.3.title") }}
+            </h3>
             <p class="interest-row-description">
-              Détestant ne rien faire, j’ai toujours pratiqué au moins un sport.
-              Au-delà de l’aspect physique, cela m’aide à me détacher de mon
-              écran et de mon travail. Natation, escrime, VTT, escalade, plongée
-              sous-marine et parapente, j’ai fini par développer une passion
-              pour les sports à risque. Ils m’ont appris à maitriser mon stress
-              et à analyser chaque situation sans paniquer.
+              {{ $t("interests.3.description") }}
             </p>
           </div>
         </div>
