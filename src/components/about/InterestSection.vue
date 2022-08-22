@@ -56,7 +56,7 @@
         <hr />
       </div>
       <div class="interest-wrapper">
-        <div class="interest-row">
+        <div class="interest-row fade-in">
           <div class="interest-row-illustration">
             <svg
               id="astronomy-vector"
@@ -204,7 +204,7 @@
             </p>
           </div>
         </div>
-        <div class="interest-row">
+        <div class="interest-row fade-in">
           <div class="interest-row-illustration">
             <svg
               id="electronic-vector"
@@ -317,7 +317,7 @@
             </p>
           </div>
         </div>
-        <div class="interest-row">
+        <div class="interest-row fade-in">
           <div class="interest-row-illustration">
             <svg
               id="science-vector"
@@ -438,7 +438,7 @@
             </p>
           </div>
         </div>
-        <div class="interest-row">
+        <div class="interest-row fade-in">
           <div class="interest-row-illustration">
             <svg
               id="sport-vector"
