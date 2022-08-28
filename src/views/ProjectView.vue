@@ -21,7 +21,7 @@
         <div class="section-title centered">
           <h2>
             <span class="section-title-number">01.</span>
-            Info
+            {{ $t("sections.info") }}
           </h2>
           <hr />
         </div>
@@ -66,13 +66,13 @@
     <section id="image">
       <img v-bind:src="project.header" alt="" />
     </section>
-    <div class="section-background-wrapper">
+    <div class="section-background-wrapper" v-if="project.links.length > 0">
       <section id="links">
         <div class="container">
           <div class="section-title centered">
             <h2>
               <span class="section-title-number">02.</span>
-              Links
+              {{ $t("sections.links") }}
             </h2>
             <hr />
           </div>
@@ -80,7 +80,7 @@
             <li class="link-item" v-for="link in project.links" :key="link">
               <a class="link-item-anchor" :href="link.url" target="_blank">
                 <img class="link-item-vector" :src="link.icon" alt="icon" />
-                <p class="link-item-text">{{ link.name }}</p>
+                <p class="link-item-text" v-html="link.name"></p>
               </a>
             </li>
           </ul>
@@ -92,7 +92,7 @@
         <div class="section-title centered">
           <h2>
             <span class="section-title-number">03.</span>
-            Présentation
+            {{ $t("sections.presentation") }}
           </h2>
           <hr />
         </div>
@@ -238,9 +238,12 @@ section#info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     li.technology-item {
       margin: 1rem;
+      max-width: 300px;
+      width: 100%;
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -255,6 +258,7 @@ section#info {
         color: var(--comment-color);
       }
       .technology-item-vector {
+        flex: 1;
         max-height: 60px;
         max-width: 60px;
         margin-bottom: 1rem;
@@ -268,9 +272,10 @@ section#info {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     li.team-item {
       margin: 0.5rem 0;
+      text-align: center;
       .team-item-name {
         font-size: 1.25rem;
         font-weight: 600;
@@ -304,9 +309,12 @@ section#links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     li.link-item {
       margin: 1rem;
+      max-width: 300px;
+      width: 100%;
+      text-align: center;
       a.link-item-anchor {
         display: flex;
         flex-direction: column;
