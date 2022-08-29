@@ -4,11 +4,19 @@
 		"sections": {"info": "Info", "links": "Links", "video": "Video", "presentation": "Presentation", "galery": "Galery"},
 		"dates": "Dates",
 		"status": "Status",
+		"nav": {
+			"last": "Last",
+			"next": "Next",
+		}
 	},
 	"fr": {
 		"sections": {"info": "Info", "links": "Liens", "video": "Vidéo", "presentation": "Présentation", "galery": "Galerie"},
 		"dates": "Dates",
 		"status": "Statut",
+		"nav": {
+			"last": "Précédent",
+			"next": "Suivant",
+		}
 	}
 }
 </i18n>
@@ -115,13 +123,13 @@
     <section id="project-navigation">
       <div class="container">
         <UnderlinedButton
-          text="Précédent"
+          :text="$t('nav.last')"
           :href="`/project/${id - 1}`"
           arrowPosition="left"
           :disabled="id === 1"
         />
         <UnderlinedButton
-          text="Suivant"
+          :text="$t('nav.next')"
           :href="`/project/${id + 1}`"
           arrowPosition="right"
           :disabled="id === maxId"
