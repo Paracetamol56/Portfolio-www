@@ -150,7 +150,6 @@ export default {
     },
 
     setLocale: function (locale) {
-      console.log(locale);
       // Validate locale
       if (!this.$i18n.availableLocales.includes(locale)) {
         return;

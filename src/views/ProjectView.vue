@@ -162,6 +162,25 @@ export default {
         }
       }
     },
+    loadProject: function () {
+      axios.get(`/data/${this.$i18n.locale}_projects.json`).then((response) => {
+        if (response.status !== 200) {
+          console.error("Error while getting the project");
+          this.$router.push("404");
+          return;
+        }
+
+        response.data.find((project) => {
+          if (project.id == this.id) {
+            this.project = project;
+          }
+        });
+        if (!this.project) {
+          this.$router.push("404");
+          return;
+        }
+      });
+    },
   },
   created: function () {
     // Get the project id from the path
@@ -174,22 +193,12 @@ export default {
       return;
     }
 
-    axios.get("/data/fr_projects.json").then((response) => {
-      if (response.status !== 200) {
-        console.error("Error while getting the project");
-        this.$router.push("404");
-        return;
-      }
+    // Load the project
+    this.loadProject();
 
-      response.data.find((project) => {
-        if (project.id == this.id) {
-          this.project = project;
-        }
-      });
-      if (!this.project) {
-        this.$router.push("404");
-        return;
-      }
+    // Watch this.$i18n.locale to update the project
+    this.$watch("$i18n.locale", () => {
+      this.loadProject();
     });
   },
   mounted: function () {

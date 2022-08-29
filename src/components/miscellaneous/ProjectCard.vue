@@ -41,7 +41,7 @@ export default {
   },
   props: {
     project: {
-      type: Array,
+      type: Object,
       required: true,
     },
   },

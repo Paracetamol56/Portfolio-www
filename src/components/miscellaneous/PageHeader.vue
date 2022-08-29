@@ -23,7 +23,7 @@
       </h2>
     </div>
 
-    <div v-if="sectionLink !== ''" class="downButton" @click="scrollToMain()">
+    <div class="downButton" @click="scrollToMain()">
       {{ $t("see-more") }}<br />
       <svg
         xmlns="http://www.w3.org/2000/svg"

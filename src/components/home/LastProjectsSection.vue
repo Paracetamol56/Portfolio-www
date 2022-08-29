@@ -83,16 +83,27 @@ export default {
       projects: [],
     };
   },
+  methods: {
+    loadProjects: function () {
+      axios
+        .get(`/data/${this.$i18n.locale}_projects.json`)
+        .then((response) => {
+          this.projects = response.data.reverse();
+          this.projects = this.projects.slice(0, 4);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+  },
   created: function () {
-    axios
-      .get("/data/fr_projects.json")
-      .then((response) => {
-        this.projects = response.data.reverse();
-        this.projects = this.projects.slice(0, 4);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // Load projects
+    this.loadProjects();
+
+    // Watch this.$i18n.locale to update the project
+    this.$watch("$i18n.locale", () => {
+      this.loadProjects();
+    });
   },
 };
 </script>
