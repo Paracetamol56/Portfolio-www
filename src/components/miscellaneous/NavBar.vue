@@ -19,7 +19,10 @@
   <nav id="navbar" class="translucent">
     <div class="nav-container container">
       <div class="nav-logo">
-        <a class="nav-logo-link coloredOnHover" href="/">
+        <a
+          class="nav-logo-link coloredOnHover"
+          :href="`/?lang=${$i18n.locale}`"
+        >
           <svg
             class="nav-logo-svg"
             xmlns="http://www.w3.org/2000/svg"

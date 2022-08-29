@@ -331,7 +331,7 @@
 				"icon": "/data/img/links/github.svg"
 			},
 			{
-				"name": "Vidéo",
+				"name": "Vidéo (Français)",
 				"url": "https://youtu.be/4oiyqYrfFlw",
 				"icon": "/data/img/links/youtube.svg"
 			},
@@ -411,7 +411,7 @@
 				"icon": "/data/img/links/github.svg"
 			},
 			{
-				"name": "Vidéo",
+				"name": "Vidéo (Français)",
 				"url": "https://youtu.be/e9vWimMTtRI",
 				"icon": "/data/img/links/youtube.svg"
 			}
@@ -471,7 +471,7 @@
 				"icon": "/data/img/links/github.svg"
 			},
 			{
-				"name": "Vidéo (Francais)",
+				"name": "Vidéo (Français)",
 				"url": "https://youtu.be/L8SqIz3clD0",
 				"icon": "/data/img/links/youtube.svg"
 			}

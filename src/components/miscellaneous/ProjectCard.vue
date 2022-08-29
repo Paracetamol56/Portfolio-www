@@ -24,7 +24,7 @@
       </p>
       <UnderlinedButton
         text="See more"
-        :href="`/project/${project.id}`"
+        :href="`/project/${project.id}?lang=${$i18n.locale}`"
         target="_self"
       />
     </div>

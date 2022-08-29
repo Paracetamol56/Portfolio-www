@@ -183,7 +183,6 @@
 				"icon": "/data/img/links/itch-io.svg"
 			}
 		],
-		"video": "https://www.youtube.com/embed/wKwoBudYIiI",
 		"description": {
 			"Introduction": "E428 is a 2D pixel art platformer developed on Unity in which the player takes on the character of Glucose, a slime made from corn syrup that escaped from its production line in a food factory. On his journey to get out of the factory and maybe regain his freedom, glucose will encounter all kinds of creatures and machines that he will have to fight or that will help him learn more about the factory and its the events that take place within.",
 			"Timeline": "My role in the project was to create the environment assets and the level design.<br>In the game, the character evolves through 4 levels each with a particular atmosphere (colors, lights, objects, etc. …) I therefore made 4 different sets of assets for each level.<br>Then came the time to integrate these assets into the game engine. As I was dealing with “static” environment assets, I used Unity's tilesheet system to make the level design work much easier. Some assets are purely decorative but others are physical and therefore require the use of collars.<br>Finally, I loaded myself the level design of 2 of the 4 levels of the game in accordance with the decisions of the team to best reflect the atmosphere that we wanted to give to the game.<br>At the same time, I was in charge of project management , especially with git so that all members of the group can have the project in its most recent version and be able to modify his game.",
@@ -331,7 +330,7 @@
 				"icon": "/data/img/links/github.svg"
 			},
 			{
-				"name": "Video",
+				"name": "Video (French)",
 				"url": "https://youtu.be/4oiyqYrfFlw",
 				"icon": "/data/img/links/youtube.svg"
 			},
@@ -471,7 +470,7 @@
 				"icon": "/data/img/links/github.svg"
 			},
 			{
-				"name": "Video (English)",
+				"name": "Video (French)",
 				"url": "https://youtu.be/L8SqIz3clD0",
 				"icon": "/data/img/links/youtube.svg"
 			}

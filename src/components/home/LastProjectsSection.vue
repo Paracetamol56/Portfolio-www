@@ -46,7 +46,7 @@
       <BoxButton
         :text="$t('button')"
         icon='<i class="fa-solid fa-grid-2"></i>'
-        href="/projects"
+        :href="`/projects?lang=${$i18n.locale}`"
       />
     </div>
   </section>

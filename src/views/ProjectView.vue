@@ -124,13 +124,13 @@
       <div class="container">
         <UnderlinedButton
           :text="$t('nav.last')"
-          :href="`/project/${id - 1}`"
+          :href="`/project/${id - 1}?lang=${$i18n.locale}`"
           arrowPosition="left"
           :disabled="id === 1"
         />
         <UnderlinedButton
           :text="$t('nav.next')"
-          :href="`/project/${id + 1}`"
+          :href="`/project/${id + 1}?lang=${$i18n.locale}`"
           arrowPosition="right"
           :disabled="id === maxId"
         />
