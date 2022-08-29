@@ -119,7 +119,7 @@
         </div>
       </div>
     </section>
-    <section id="galery"></section>
+    <section id="galery" v-if="project.images.length < 0"></section>
     <section id="project-navigation">
       <div class="container">
         <UnderlinedButton
@@ -428,6 +428,7 @@ section#presentation {
   }
 }
 section#project-navigation {
+  margin: 0 0 2rem 0;
   height: 2rem;
   .container {
     display: flex;
