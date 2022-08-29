@@ -1,6 +1,6 @@
 <template>
   <div class="project-card">
-    <img class="project-card-image" :src="project.header" alt="header" />
+    <img class="project-card-image" :src="project.thumbnail" />
     <div class="project-card-text">
       <p class="project-card-text-date">
         {{

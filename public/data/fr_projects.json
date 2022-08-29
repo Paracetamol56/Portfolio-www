@@ -3,8 +3,8 @@
 		"id": "1",
 		"title": "L'ISS en 3D",
 		"subtitle": "Visionneuse interactive de l'ISS",
-		"thumbnail": "",
-		"header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/1/header.png",
+		"thumbnail": "/data/img/projects/1/thumbnail.jpg",
+		"header": "/data/img/projects/1/header.jpg",
 		"dates": {
 			"start": "11-07-2019",
 			"end": "∞"
@@ -46,8 +46,8 @@
 		"id": "2",
 		"title": "That level again Unity",
 		"subtitle": "Jeu 2D de platforme avec de la logic et de la strategie",
-		"thumbnail": "",
-		"header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/0/header.png",
+		"thumbnail": "/data/img/projects/2/thumbnail.jpg",
+		"header": "/data/img/projects/2/header.jpg",
 		"dates": {
 			"start": "18-02-2021",
 			"end": "19-03-2021"
@@ -116,8 +116,8 @@
 		"id": "3",
 		"title": "E428",
 		"subtitle": "Jeu de platforme 2D en pixel art",
-		"thumbnail": "",
-		"header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/2/header.png",
+		"thumbnail": "/data/img/projects/3/thumbnail.jpg",
+		"header": "/data/img/projects/3/header.jpg",
 		"dates": {
 			"start": "26-03-2021",
 			"end": "13-06-2021"
@@ -190,20 +190,14 @@
 			"Level up": "<ul><li>Création d’assets en pixel art</li><li>Maitrise des tilesheets dans Unity</li><li>Level design</li><li>Travail en équipe</li></ul>",
 			"Conclusion": "Même si je ne me suis pas trop occupé de la partie développement, j’ai néanmoins beaucoup appris sur la création de jeu vidéo et j’ai pu progresser sur des aspects complémentaires au code."
 		},
-		"images": [
-			"https: //raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/2/1.png",
-			"https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/2/2.png",
-			"https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/2/3.png",
-			"https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/2/4.png",
-			"https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/2/5.png"
-		]
+		"images": []
 	},
 	{
 		"id": "4",
 		"title": "L’Observeur 2",
 		"subtitle": "Catalogue d'objets astronomiques pour amateurs",
-		"thumbnail": "",
-		"header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/3/header.png",
+		"thumbnail": "/data/img/projects/4/thumbnail.jpg",
+		"header": "/data/img/projects/4/header.jpg",
 		"dates": {
 			"start": "30-07-2021",
 			"end": "11-03-2021"
@@ -264,8 +258,8 @@
 		"id": "5",
 		"title": "SkyAirlineCorporation",
 		"subtitle": "Jeu de simulation d'avion",
-		"thumbnail": "",
-		"header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/4/header.png",
+		"thumbnail": "/data/img/projects/5/thumbnail.jpg",
+		"header": "/data/img/projects/5/header.jpg",
 		"dates": {
 			"start": "26-09-2021",
 			"end": "17-03-2022"
@@ -364,8 +358,8 @@
 		"id": "6",
 		"title": "SportSpots",
 		"subtitle": "Application mobile pour amateurs de sports en plein air",
-		"thumbnail": "",
-		"header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/5/header.png",
+		"thumbnail": "/data/img/projects/6/thumbnail.jpg",
+		"header": "/data/img/projects/6/header.jpg",
 		"dates": {
 			"start": "10-11-2021",
 			"end": "21-12-2021"
@@ -432,8 +426,8 @@
 		"id": "7",
 		"title": "Darwin’s battle royale",
 		"subtitle": "Intelligence artificielle par renforcement en Unity",
-		"thumbnail": "",
-		"header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/6/header.png",
+		"thumbnail": "/data/img/projects/7/thumbnail.jpg",
+		"header": "/data/img/projects/7/header.jpg",
 		"dates": {
 			"start": "16-01-2022",
 			"end": "10-04-2022"
@@ -442,6 +436,7 @@
 			"Unity",
 			"C#",
 			"3DGame",
+			"MLAgent",
 			"AI",
 			"MachineLearning"
 		],
@@ -491,8 +486,8 @@
 		"id": "8",
 		"title": "VR Escape Game",
 		"subtitle": "Escape Game en VR dans les sous sols du Cégep de Matane",
-		"thumbnail": "",
-		"header": "https://raw.githubusercontent.com/Paracetamol56/Portfolio/master/public/images/projects/7/header.png",
+		"thumbnail": "/data/img/projects/8/thumbnail.jpg",
+		"header": "/data/img/projects/8/header.jpg",
 		"dates": {
 			"start": "07-02-2022",
 			"end": "03-04-2022"

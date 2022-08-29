@@ -64,7 +64,7 @@
       </div>
     </section>
     <section id="image">
-      <img v-bind:src="project.header" alt="" />
+      <img id="header-image" v-bind:src="project.header" alt="" />
     </section>
     <div class="section-background-wrapper" v-if="project.links.length > 0">
       <section id="links">
@@ -193,6 +193,16 @@ export default {
     });
   },
   mounted: function () {
+    // Header paralax
+    /*
+		let imageParalax = document.getElementById("header-image");
+    let imagePosition = imageParalax.getBoundingClientRect().top;
+    window.addEventListener("scroll", () => {
+      imageParalax.style.transform =
+        "translateY(" + (window.scrollY - imagePosition) / 4 + "px)";
+      console.log(window.scrollY - imagePosition);
+    });
+		*/
     this.updateFadeInElements();
   },
 };
@@ -287,6 +297,14 @@ section#info {
         margin: 0;
       }
     }
+  }
+}
+section#image {
+  overflow: hidden;
+  width: 100%;
+  img#header-image {
+    width: 100%;
+    object-fit: cover;
   }
 }
 .section-background-wrapper {
