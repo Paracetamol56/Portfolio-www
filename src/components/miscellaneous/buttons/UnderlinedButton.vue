@@ -3,6 +3,7 @@
     :class="{
       left: arrowPosition === 'left',
       right: arrowPosition === 'right',
+      disabled: disabled,
     }"
     class="button"
     :href="href"
@@ -58,6 +59,10 @@ export default {
       type: String,
       default: "_self",
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
     arrowPosition: {
       type: String,
       validator: (value) => {
@@ -79,6 +84,10 @@ a.button {
   text-decoration: none;
   background-image: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 100%);
   background-clip: text;
+  &.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
   &::before {
     content: "";
     position: absolute;

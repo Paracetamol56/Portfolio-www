@@ -118,11 +118,13 @@
           text="Précédent"
           :href="`/project/${id - 1}`"
           arrowPosition="left"
+          :disabled="id === 1"
         />
         <UnderlinedButton
           text="Suivant"
           :href="`/project/${id + 1}`"
           arrowPosition="right"
+          :disabled="id === maxId"
         />
       </div>
     </section>
@@ -145,6 +147,7 @@ export default {
     return {
       id: 0,
       project: {},
+      maxId: 0,
     };
   },
   methods: {
@@ -185,6 +188,8 @@ export default {
           this.$router.push("404");
           return;
         }
+
+        this.maxId = response.data.length;
 
         response.data.find((project) => {
           if (project.id == this.id) {
