@@ -1,0 +1,554 @@
+[
+	{
+		"id": "1",
+		"title": "The ISS in 3D",
+		"subtitle": "ISS Interactive Viewer",
+		"thumbnail": "/data/img/projects/1/thumbnail.jpg",
+		"header": "/data/img/projects/1/header.jpg",
+		"dates": {
+			"start": "11-07-2019",
+			"end": "∞"
+		},
+		"tags": [
+			"Blender",
+			"3D",
+			"UnrealEngine",
+			"ISS"
+		],
+		"technologies": [
+			{
+				"name": "Blender",
+				"description": "3D modeling software",
+				"icon": "/data/img/technologies/blender.svg"
+			},
+			{
+				"name": "UnrealEngine",
+				"description": "Game engine",
+				"icon": "/data/img/technologies/unreal-engine.svg"
+			}
+		],
+		"status": "Standby",
+		"team": [
+			{
+				"name": "Me",
+				"role": "Modeler, Developer, Designer"
+			}
+		],
+		"links": [],
+		"description": {
+			"Introduction": "The objective is to create an interactive visualization software of the international space station. The software is under development but in the long term it will be able to be used to visit the ISS and to have information on each module.",
+			"Level up": "<ul><li>3D Modeling</li><li>Using Unreal Engine</li></ul>",
+			"Progress": "It's a long project and it uses a lot of my free time, for now the part that requires the most investment is the 3D modeling, after getting a free model from NASA, I I had to redo all the textures and make the model decoupled module by module and also rig the model for the animations."
+		},
+		"images": []
+	},
+	{
+		"id": "2",
+		"title": "That level again Unity",
+		"subtitle": "2D platform game with logic and strategy",
+		"thumbnail": "/data/img/projects/2/thumbnail.jpg",
+		"header": "/data/img/projects/2/header.jpg",
+		"dates": {
+			"start": "18-02-2021",
+			"end": "19-03-2021"
+		},
+		"tags": [
+			"Unity",
+			"C#",
+			"2DGame",
+			"Platformer"
+		],
+		"technologies": [
+			{
+				"name": "Unity",
+				"description": "Game engine",
+				"icon": "/data/img/technologies/unity.svg"
+			},
+			{
+				"name": "C#",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/c-sharp.svg"
+			},
+			{
+				"name": "PhotoShop",
+				"description": "Drawing software",
+				"icon": "/data/img/technologies/photoshop.svg"
+			},
+			{
+				"name": "Git",
+				"description": "Version manager",
+				"icon": "/data/img/technologies/git.svg"
+			}
+		],
+		"status": "Completed",
+		"team": [
+			{
+				"name": "Me",
+				"role": "Developer, Designer, Writer"
+			}
+		],
+		"links": [
+			{
+				"name": "Github",
+				"url": "https://github.com/Paracetamol56/That-level-again-unity",
+				"icon": "/data/img/links/github.svg"
+			},
+			{
+				"name": "Download (<i class='fab fa-windows'></i> <i class='fab fa-apple'></i> <i class='fab fa-linux'></ i>)",
+				"url": "https://github.com/Paracetamol56/That-level-again-unity/releases/tag/v.1.2",
+				"icon": "/data/img/links/download.svg"
+			},
+			{
+				"name": "Itch.io",
+				"url": "https://paracetamol56.itch.io/that-level-again",
+				"icon": "/data/img/links/itch-io.svg"
+			}
+		],
+		"description": {
+			"Context": "That level again is a mobile game whose first opus was released in 2016 on Android and iOS. The game is seemingly simple: platforms, a door and a button but it is better not to trust appearances Indeed, the game will use your logic to pass the same level in an increasingly improbable way.<br/>For my first 2D game in Unity, I have therefore decided to recreate 12 of the 96 original levels.",
+			"Timeline": "The first step was of course the creation of assets. From the animation of the stickman character to the user interfaces and the backgrounds, all the assets were recreated by me with some freedom from the game original.<br/>I then had to design the basic mechanics: the control of the character, the different necklaces, etc. Child's play with the Unity interface and the different models that already exist.<br/> Finally, the part that required me the most patience: programming the behavior of the different elements according to the level. As there are 12 levels, and none are identical, you have to recode for each level the interactions between the player, the button, the door and sometimes even the decor.",
+			"Level up": "<ul><li>Creating assets</li><li>Basic knowledge of Unity 2D (Character, scenery, level system)</li><li>Editing scripts in C# in the Unity environment</li></ul>",
+			"Conclusion": "I am finally very proud of the result for a first game. I find the game enjoyable despite some remaining bugs."
+		},
+		"images": []
+	},
+	{
+		"id": "3",
+		"title": "E428",
+		"subtitle": "2D platformer in pixel art",
+		"thumbnail": "/data/img/projects/3/thumbnail.jpg",
+		"header": "/data/img/projects/3/header.jpg",
+		"dates": {
+			"start": "26-03-2021",
+			"end": "13-06-2021"
+		},
+		"tags": [
+			"Unity",
+			"C#",
+			"2DGame",
+			"PixelArt",
+			"Platformer"
+		],
+		"technologies": [
+			{
+				"name": "Unity",
+				"description": "Game engine",
+				"icon": "/data/img/technologies/unity.svg"
+			},
+			{
+				"name": "C#",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/c-sharp.svg"
+			},
+			{
+				"name": "PhotoShop",
+				"description": "Drawing software",
+				"icon": "/data/img/technologies/photoshop.svg"
+			},
+			{
+				"name": "Git",
+				"description": "Version manager",
+				"icon": "/data/img/technologies/git.svg"
+			}
+		],
+		"status": "Completed",
+		"team": [
+			{
+				"name": "AJTheEnder",
+				"role": "Organic designer, Level designer, Scenario writer"
+			},
+			{
+				"name": "JameFLC",
+				"role": "Unity developer"
+			},
+			{
+				"name": "Me",
+				"role": "Environment designer, Level designer, Project manager"
+			}
+		],
+		"links": [
+			{
+				"name": "Github",
+				"url": "https://github.com/Paracetamol56/E428",
+				"icon": "/data/img/links/github.svg"
+			},
+			{
+				"name": "Download (<i class='fab fa-windows'></i> <i class='fab fa-linux'></i>)",
+				"url": "https://github.com/Paracetamol56/E428/releases/tag/1.0",
+				"icon": "/data/img/links/download.svg"
+			},
+			{
+				"name": "Itch.io",
+				"url": "https://jameflc.itch.io/e428",
+				"icon": "/data/img/links/itch-io.svg"
+			}
+		],
+		"video": "https://www.youtube.com/embed/wKwoBudYIiI",
+		"description": {
+			"Introduction": "E428 is a 2D pixel art platformer developed on Unity in which the player takes on the character of Glucose, a slime made from corn syrup that escaped from its production line in a food factory. On his journey to get out of the factory and maybe regain his freedom, glucose will encounter all kinds of creatures and machines that he will have to fight or that will help him learn more about the factory and its the events that take place within.",
+			"Timeline": "My role in the project was to create the environment assets and the level design.<br>In the game, the character evolves through 4 levels each with a particular atmosphere (colors, lights, objects, etc. …) I therefore made 4 different sets of assets for each level.<br>Then came the time to integrate these assets into the game engine. As I was dealing with “static” environment assets, I used Unity's tilesheet system to make the level design work much easier. Some assets are purely decorative but others are physical and therefore require the use of collars.<br>Finally, I loaded myself the level design of 2 of the 4 levels of the game in accordance with the decisions of the team to best reflect the atmosphere that we wanted to give to the game.<br>At the same time, I was in charge of project management , especially with git so that all members of the group can have the project in its most recent version and be able to modify his game.",
+			"Level up": "<ul><li>Creating assets in pixel art</li><li>Mastering tilesheets in Unity</li><li>Level design</li><li>Teamwork </li></ul>",
+			"Conclusion": "Even if I didn't take too much care of the development part, I nevertheless learned a lot about the creation of video games and I was able to progress on aspects complementary to the code."
+		},
+		"images": []
+	},
+	{
+		"id": "4",
+		"title": "The Observer 2",
+		"subtitle": "Catalogue of astronomical objects for amateurs",
+		"thumbnail": "/data/img/projects/4/thumbnail.jpg",
+		"header": "/data/img/projects/4/header.jpg",
+		"dates": {
+			"start": "30-07-2021",
+			"end": "11-03-2021"
+		},
+		"tags": [
+			"QT",
+			"C++",
+			"Astronomy",
+			"database",
+			"SQLite"
+		],
+		"technologies": [
+			{
+				"name": "QT",
+				"description": "Graphical user interface framework",
+				"icon": "/data/img/technologies/qt.svg"
+			},
+			{
+				"name": "C++",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/c-plus-plus.svg"
+			},
+			{
+				"name": "SQLite",
+				"description": "Database",
+				"icon": "/data/img/technologies/sqlite.svg"
+			}
+		],
+		"status": "Completed",
+		"team": [
+			{
+				"name": "Me",
+				"role": "Developer"
+			}
+		],
+		"links": [
+			{
+				"name": "Github",
+				"url": "https://github.com/Paracetamol56/Observeur2",
+				"icon": "/data/img/links/github.svg"
+			},
+			{
+				"name": "Download (<i class='fab fa-windows'></i>)",
+				"url": "https://github.com/Paracetamol56/Observeur2/releases/tag/alpha-0.2.0",
+				"icon": "/data/img/links/download.svg"
+			}
+		],
+		"description": {
+			"Problem": "There are several catalogs of deep sky objects (Messier, NGC, Herschel, IC, etc…). However, these catalogs are often huge and difficult to sort according to the time of year, the instruments at disposition or even the preferences of each.",
+			"Features": "The Observeur2 should be a simple interface to view, modify or create a personalized database for each astronomer. However, this database should be sufficiently complete to meet practical needs. For example, visibility objects in relation to the seasons. The software must also know the position of the observer to adapt the content.",
+			"Sharing": "The database must be contained in an unencrypted file to allow sharing between several people easily.",
+			"Level up": "<ul><li>Mastery of the QT Framework</li><li>Use of local SQLite databases</li><li>Development of complex astronomical algorithms</li></ ul>",
+			"Conclusion": "I am very satisfied with the functionalities offered by the software even if there is still a lot to do before it can be distributed.<br/>A version for the web could be an option for the future."
+		},
+		"images": []
+	},
+	{
+		"id": "5",
+		"title": "SkyAirlineCorporation",
+		"subtitle": "Airplane simulation game",
+		"thumbnail": "/data/img/projects/5/thumbnail.jpg",
+		"header": "/data/img/projects/5/header.jpg",
+		"dates": {
+			"start": "26-09-2021",
+			"end": "17-03-2022"
+		},
+		"tags": [
+			"Unity",
+			"C#",
+			"3DGame",
+			"Simulation",
+			"Airplane"
+		],
+		"technologies": [
+			{
+				"name": "Unity",
+				"description": "Game engine",
+				"icon": "/data/img/technologies/unity.svg"
+			},
+			{
+				"name": "C#",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/c-sharp.svg"
+			},
+			{
+				"name": "Blender",
+				"description": "3D modeling software",
+				"icon": "/data/img/technologies/blender.svg"
+			},
+			{
+				"name": "Git",
+				"description": "Version Manager",
+				"icon": "/data/img/technologies/git.svg"
+			}
+		],
+		"status": "Completed",
+		"team": [
+			{
+				"name": "CreatibOfficiel",
+				"role": "Unity developer, Gameplay developer and Product Owner"
+			},
+			{
+				"name": "Darvasse",
+				"role": "Unity developer and responsible for the procedural generation of the terrain"
+			},
+			{
+				"name": "Lechiffre4",
+				"role": "Unity developer, Gameplay developer and Scrum master"
+			},
+			{
+				"name": "liliangst",
+				"role": "Unity developer and GUI Manager"
+			},
+			{
+				"name": "Me",
+				"role": "Unity developer, Physics simulation lead and Development lead"
+			},
+			{
+				"name": "OmegaProd",
+				"role": "3D modeler and Unity developer"
+			},
+			{
+				"name": "qpYliqp",
+				"role": "Unity developer, responsible for organizing assets"
+			}
+		],
+		"links": [
+			{
+				"name": "Github",
+				"url": "https://github.com/Paracetamol56/Observeur2",
+				"icon": "/data/img/links/github.svg"
+			},
+			{
+				"name": "Video",
+				"url": "https://youtu.be/4oiyqYrfFlw",
+				"icon": "/data/img/links/youtube.svg"
+			},
+			{
+				"name": "Download (<i class='fab fa-windows'></i> <i class='fab fa-linux'></i>)",
+				"url": "https://github.com/Paracetamol56/Observeur2/releases/tag/alpha-0.2.0",
+				"icon": "/data/img/links/download.svg"
+			},
+			{
+				"name": "Itch.io",
+				"url": "https://paracetamol56.itch.io/skyairlinecorporation",
+				"icon": "/data/img/links/itch-io.svg"
+			}
+		],
+		"description": {
+			"Presentation": "This project is an airplane game similar to Flight Simulator. The plane is quite realistic without being too difficult to handle.<br/>The map is generated procedurally, so that that the landscapes are not always the same.<br/>For the gameplay, the game offers 3 game modes:<ul><li>Free mode: the player can explore the map as much as he wishes</li ><li>Delivery mode: the player must transport goods and deliver them from the air to a set target</li><li>Canadair mode: the player must drop water to put out fires</li>< /ul><br/>My role in the team was responsible for the development, I was responsible for ensuring that the code generated by the team members was uniform and organized, I also supervised the use from git.",
+			"Timeline": "For this project, we used the agile method and we divided our 2 months of development into 3 sprints.<br/>First, I was in charge of implementing the flight controller so that the planes are functional. It was a central feature of the project on which all other parts of the development relied.<br/>Then I continued to implement features to my controller to respect all the behaviors of a real plane.<br/>Finally, I participated in the programming of the gameplay with the canadair game mode.",
+			"Level up": "<ul><li>Mastery of Unity 3D</li><li>Teamwork with the agile method</li></ul>",
+			"Conclusion": "I really liked the simulation aspect of this project, in addition, working with a team of this size was a new experience for me and I am very happy with the organization and the atmosphere of work that we have managed to establish."
+		},
+		"images": []
+	},
+	{
+		"id": "6",
+		"title": "SportSpots",
+		"subtitle": "Mobile application for outdoor sports enthusiasts",
+		"thumbnail": "/data/img/projects/6/thumbnail.jpg",
+		"header": "/data/img/projects/6/header.jpg",
+		"dates": {
+			"start": "10-11-2021",
+			"end": "21-12-2021"
+		},
+		"tags": [
+			"Mobile",
+			"Application",
+			"TypeScript",
+			"ReactNative",
+			"firebase",
+			"Sport"
+		],
+		"technologies": [
+			{
+				"name": "ReactNative",
+				"description": "Front-end web framework",
+				"icon": "/data/img/technologies/react-native.svg"
+			},
+			{
+				"name": "TypeScript",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/type-script.svg"
+			},
+			{
+				"name": "Firebase",
+				"description": "Non-relational database manager",
+				"icon": "/data/img/technologies/firebase.svg"
+			}
+		],
+		"status": "Alpha version finished",
+		"team": [
+			{
+				"name": "CreatibOfficiel",
+				"role": "React Native Developer and Product Owner"
+			},
+			{
+				"name": "Lechiffre4",
+				"role": "React Native Developer and Database Administrator"
+			},
+			{
+				"name": "Me",
+				"role": "React Native Developer"
+			}
+		],
+		"links": [
+			{
+				"name": "Github",
+				"url": "https://github.com/SportSpotsApp/SportSpots",
+				"icon": "/data/img/links/github.svg"
+			},
+			{
+				"name": "Video",
+				"url": "https://youtu.be/e9vWimMTtRI",
+				"icon": "/data/img/links/youtube.svg"
+			}
+		],
+		"description": {
+			"Presentation": "The SportSpots mobile application aims to make it easier for outdoor sports enthusiasts to find “spots” adapted to their favorite sports via a google map. The application is community-based because users who have created an account can add, check, rate and comment on spots.",
+			"Level up": "<ul><li>Using React native framework</li><li>Firebase non-relational database</li></ul>"
+		},
+		"images": []
+	},
+	{
+		"id": "7",
+		"title": "Darwin's battle royale",
+		"subtitle": "Artificial intelligence by reinforcement in Unity",
+		"thumbnail": "/data/img/projects/7/thumbnail.jpg",
+		"header": "/data/img/projects/7/header.jpg",
+		"dates": {
+			"start": "16-01-2022",
+			"end": "10-04-2022"
+		},
+		"tags": [
+			"Unity",
+			"C#",
+			"3DGame",
+			"MLAgent",
+			"HAVE",
+			"MachineLearning"
+		],
+		"technologies": [
+			{
+				"name": "Unity",
+				"description": "Game Engine",
+				"icon": "/data/img/technologies/unity.svg"
+			},
+			{
+				"name": "C#",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/c-sharp.svg"
+			},
+			{
+				"name": "PyTorch",
+				"description": "Machine Learning Framework",
+				"icon": "/data/img/technologies/pytorch.svg"
+			}
+		],
+		"status": "completed",
+		"team": [
+			{
+				"name": "Me",
+				"role": "Unity and Artificial Intelligence Developer"
+			}
+		],
+		"links": [
+			{
+				"name": "Github",
+				"url": "https://github.com/cegepmatane/projet-specialise-2022-Matheo-Galuba",
+				"icon": "/data/img/links/github.svg"
+			},
+			{
+				"name": "Video (English)",
+				"url": "https://youtu.be/L8SqIz3clD0",
+				"icon": "/data/img/links/youtube.svg"
+			}
+		],
+		"description": {
+			"Presentation": "This project is a \"zero player game\" or \"self played game\" (like Conway's game), i.e. the player only selects the initial situation. t is an evolutionary artificial intelligence project: the experience is repeated over several generations and each generation takes advantage of the previous one with certain possible mutations.<br/>It is a 3D environment in which creatures evolve. Each creature's goal is to kill the others through hand-to-hand combat and the creature that is last to remain wins.",
+			"Level up": "<ul><li>Introduction to Artificial Intelligence and Reinforcement Learning</li><li>AI-Driven Video Game Development</li><li>Solo Project Management (Daily scrums, feature writing, written record of work, etc…)</li></ul>"
+		},
+		"images": []
+	},
+	{
+		"id": "8",
+		"title": "VR Escape Game",
+		"subtitle": "Escape Game in VR in the basement of Cégep de Matane",
+		"thumbnail": "/data/img/projects/8/thumbnail.jpg",
+		"header": "/data/img/projects/8/header.jpg",
+		"dates": {
+			"start": "07-02-2022",
+			"end": "03-04-2022"
+		},
+		"tags": [
+			"Unity",
+			"C#",
+			"3DGame",
+			"VirtualReality",
+			"OpenXR"
+		],
+		"technologies": [
+			{
+				"name": "Blender",
+				"description": "3D Modeling Software",
+				"icon": "/data/img/technologies/blender.svg"
+			},
+			{
+				"name": "Unity",
+				"description": "Game Engine",
+				"icon": "/data/img/technologies/unity.svg"
+			},
+			{
+				"name": "C#",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/c-sharp.svg"
+			},
+			{
+				"name": "OpenXR",
+				"description": "Hardware Interaction Framework for VR",
+				"icon": "/data/img/technologies/open-xr.svg"
+			}
+		],
+		"status": "completed",
+		"team": [
+			{
+				"name": "Aled-picksel",
+				"role": "Unity VR Developer"
+			},
+			{
+				"name": "CreatibOfficiel",
+				"role": "Unity VR Developer"
+			},
+			{
+				"name": "Me",
+				"role": "Unity VR Developer and 3D Modeler"
+			}
+		],
+		"links": [
+			{
+				"name": "Itch.io",
+				"url": "https://paracetamol56.itch.io/escape-game-au-cgep-de-matane",
+				"icon": "/data/img/links/itch-io.svg"
+			}
+		],
+		"description": {
+			"Presentation": "The game is a VR Escape Game made in a team of 3 as part of my last semester of IUT in Canada.<br/>The story takes place in the basements of the Cégep de Matane or the The player finds himself stuck in a heavy and dark atmosphere. To get out, he must solve several puzzles in order to restore the power to operate the freight elevator, an iconic artifact of the Cégep residence and well known to students.",
+			"Timeline": "To start, we gathered a large amount of assets to allow us to quickly create the 3D environment of our game.<br/>I was then responsible for integrating these assets into Unity so that it is compatible with the engine and easily usable.<br/>There was also quite a lot of 3D modeling work, especially on the level of the lift, which had to be reproduced as faithfully as possible. I used photogrammetry techniques to \"scan\" the real lift and reproduce it in 3D using a smartphone and a computer.<br/>Then, we integrated VR mechanisms such as teleportation, hands or even the physical interactions between objects.<br/>Finally, we added the gameplay elements and puzzles to make the game playable.We still used a little 3D modeling for custom assets and a lot of work to make the features work ments of the objects of the puzzles.",
+			"Level up": "<ul><li>Developing VR games with Unity and open XR</li><li>Strengthening my knowledge of Unity 3D</li><li>Project management, version management and workflow with lots of high definition assets</li></ul>",
+			"Conclusion": "Within the time limit and the significant material constraints, we did not go as far as we would have liked for this project. Despite everything, I am very satisfied with the result, the teamwork and our determination to solve problems."
+		},
+		"images": []
+	}
+]
