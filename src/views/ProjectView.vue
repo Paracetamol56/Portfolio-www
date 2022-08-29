@@ -112,11 +112,26 @@
       </div>
     </section>
     <section id="galery"></section>
+    <section id="project-navigation">
+      <div class="container">
+        <UnderlinedButton
+          text="Précédent"
+          :href="`/project/${id - 1}`"
+          arrowPosition="left"
+        />
+        <UnderlinedButton
+          text="Suivant"
+          :href="`/project/${id + 1}`"
+          arrowPosition="right"
+        />
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
 import PageHeader from "@/components/miscellaneous/PageHeader.vue";
+import UnderlinedButton from "@/components/miscellaneous/buttons/UnderlinedButton.vue";
 
 import axios from "axios";
 
@@ -124,6 +139,7 @@ export default {
   name: "NavBar",
   components: {
     PageHeader,
+    UnderlinedButton,
   },
   data: function () {
     return {
@@ -396,6 +412,15 @@ section#presentation {
     p.presentation-content-block-paragraph {
       text-align: justify;
     }
+  }
+}
+section#project-navigation {
+  height: 2rem;
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 </style>
