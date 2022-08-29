@@ -1,13 +1,25 @@
 <template>
-  <a class="button" :href="href" :target="target">
-    {{ text
-    }}<svg
+  <a
+    :class="{
+      left: arrowPosition === 'left',
+      right: arrowPosition === 'right',
+    }"
+    class="button"
+    :href="href"
+    :target="target"
+  >
+    <span v-if="arrowPosition === 'right'">{{ text }}</span>
+    <svg
+      :class="{
+        left: arrowPosition === 'left',
+        right: arrowPosition === 'right',
+      }"
+      class="octicon octicon-chevrow"
       width="16"
       height="16"
       viewBox="0 0 16 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      class="octicon octicon-chevrow"
       data-v-411b7433=""
       data-v-2b4f4d1e=""
     >
@@ -26,6 +38,7 @@
         data-v-411b7433=""
       ></path>
     </svg>
+    <span v-if="arrowPosition === 'left'">{{ text }}</span>
   </a>
 </template>
 
@@ -45,6 +58,13 @@ export default {
       type: String,
       default: "_self",
     },
+    arrowPosition: {
+      type: String,
+      validator: (value) => {
+        return ["left", "right"].includes(value);
+      },
+      default: "right",
+    },
   },
 };
 </script>
@@ -63,15 +83,27 @@ a.button {
     content: "";
     position: absolute;
     bottom: -2px;
-    left: 0;
     width: calc(100% - 16px);
     height: 2px;
     background-image: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 100%);
     transition: transform 0.25s var(--easing);
     transform: scaleX(0%);
+  }
+  &.left::before {
+    right: 0;
+    transform-origin: left;
+  }
+  &.right::before {
+    left: 0;
     transform-origin: right;
   }
   svg.octicon {
+    &.left {
+      transform: scaleX(-1);
+    }
+    &.right {
+      transform: scaleX(1);
+    }
     position: relative;
     top: 3px;
     width: 16px;
@@ -87,13 +119,23 @@ a.button {
   }
   &:hover {
     svg.octicon {
-      transform: translateX(4px);
+      &.left {
+        transform: scaleX(-1) translateX(4px);
+      }
+      &.right {
+        transform: scaleX(1) translateX(4px);
+      }
       path.octicon-chevrow-stem {
         stroke-dashoffset: 20;
       }
     }
     &::before {
       transform: scaleX(100%);
+    }
+    &.left::before {
+      transform-origin: right;
+    }
+    &.right::before {
       transform-origin: left;
     }
   }
