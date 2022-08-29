@@ -26,27 +26,27 @@
     ],
     "skills": [
       {
-        "title": "Software programming",
+        "name": "Software programming",
         "description": "Partly self-taught and partly at school, I learned over the years to design and create computer programs.",
       },
       {
-        "title": "Algorithm",
+        "name": "Algorithm",
         "description": "With my Cartesian mind, I love designing algorithms that I use in my projects. Curious, I also like to understand the mathematics behind the technologies I use every day.",
       },
       {
-        "title": "Problems solving",
+        "name": "Problems solving",
         "description": "I often define my job as a series of problems to be solved. It is extremely important for me to know how to define, analyze and propose a solution to these problems."
       },
       {
-        "title": "Project management",
+        "name": "Project management",
         "description": "Around me, I am recognized for my skills in this area. Both technically with Git versioning and humanly with the distribution of tasks and Agile or Scrum methods.",
       },
       {
-        "title": "Video game development",
+        "name": "Video game development",
         "description": "During my training, I learned to use a game engine such as Unity or Unreal Engine in 2D as well as 3D or even in virtual reality.",
       },
       {
-        "title": "Server management",
+        "name": "Server management",
         "description": "As a great self-hosting enthusiast, I learned to deploy, maintain and administer server-based services mainly on my own.",
       },
     ],
@@ -116,69 +116,69 @@
     ],
     "skills": [
       {
-        "title": "Programation logicielle",
+        "name": "Programation logicielle",
         "description": "En partie en autodidacte et en partie avec ma formation, j’ai appris au fil des années à concevoir et à réaliser des programmes informatiques.",
       },
       {
-        "title": "Algorithmie",
+        "name": "Algorithmie",
         "description": "Avec mon esprit cartésien, j’adore concevoir des algorithmes que j’utilise dans mes projets. Curieux, j’aime aussi comprendre les mathématiques derrière les technologies que j’utilise tous les jours.",
       },
       {
-        "title": "Résolution de problèmes",
+        "name": "Résolution de problèmes",
         "description": "Je définis souvent mon métier comme une suite de problèmes à résoudre. C’est pour moi extrêmement important de savoir définir, analyser et proposer une solution à ces problèmes.",
       },
       {
-        "title": "Gestion de projet",
+        "name": "Gestion de projet",
         "description": "Autour de moi, je suis reconnu pour mes compétences dans ce domaine. Aussi bien techniquement avec le versionnage Git qu’humainement avec la répartition des tâches et les méthodes Agile ou Scrum.",
       },
       {
-        "title": "Développement de jeux vidéo",
+        "name": "Développement de jeux vidéo",
         "description": "Au cours de ma formation, j'ai appris à me servir de moteur de jeu tel que Unity ou Unreal Engine aussi bien en 2D que 3D ou même en réalité virtuelle.",
       },
       {
-        "title": "Gestion de serveurs",
+        "name": "Gestion de serveurs",
         "description": "Grand enthousiaste de l’auto-hébergement, j’ai appris à déployer, maintenir et administrer des services sur serveur principalement en autodidacte.",
       },
     ],
     "technologies": [
       {
-        "title": "C++",
+        "name": "C++",
         "description": "Application haute performance avec un niveau d’abstraction élevé et multithreading, interface graphique (avec QT et WXWidget), développement de jeux.",
       },
       {
-        "title": "Python",
+        "name": "Python",
         "description": "Algorithmes de synthèse d’images, intelligence artificielle (avec TensorFlow, PyTorch et Scikit Learn), vision numérique (avec OpenCV), visualisation de données (avec Matplotlib).",
       },
       {
-        "title": "Git",
+        "name": "Git",
         "description": "Versionnage, gestion de projet, révision de code (avec Github et Gitlab)",
       },
       {
-        "title": "Unity",
+        "name": "Unity",
         "description": "Développement de jeux 2D, 3D et VR",
       },
       {
-        "title": "Bases de données relationnelles",
+        "name": "Bases de données relationnelles",
         "description": "MySQL, PostgreSQL, SQLite",
       },
       {
-        "title": "Bases de données non-relationnelles",
+        "name": "Bases de données non-relationnelles",
         "description": "Firebase",
       },
       {
-        "title": "Web frontend",
+        "name": "Web frontend",
         "description": "HTML, CSS, JavaScript, VueJS et React",
       },
       {
-        "title": "Web backend",
+        "name": "Web backend",
         "description": "NodeJS, ExpressJS",
       },
       {
-        "title": "Modélisation 3D",
+        "name": "Modélisation 3D",
         "description": "Blender et 3DSMax",
       },
       {
-        "title": "Suites Adobe",
+        "name": "Suites Adobe",
         "description": "Photoshop, Illustrator, After Effects et Premiere Pro",
       }
     ]
@@ -242,8 +242,8 @@
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-laptop-code"></i>
-                <h4 class="skill-item-title">
-                  {{ $t("skills.0.title") }}
+                <h4 class="skill-item-name">
+                  {{ $t("skills.0.name") }}
                 </h4>
               </div>
               <div class="skill-item-content-invisible">
@@ -257,8 +257,8 @@
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-cogs"></i>
-                <h4 class="skill-item-title">
-                  {{ $t("skills.1.title") }}
+                <h4 class="skill-item-name">
+                  {{ $t("skills.1.name") }}
                 </h4>
               </div>
               <div class="skill-item-content-invisible">
@@ -272,8 +272,8 @@
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-brain"></i>
-                <h4 class="skill-item-title">
-                  {{ $t("skills.2.title") }}
+                <h4 class="skill-item-name">
+                  {{ $t("skills.2.name") }}
                 </h4>
               </div>
               <div class="skill-item-content-invisible">
@@ -287,8 +287,8 @@
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-tasks"></i>
-                <h4 class="skill-item-title">
-                  {{ $t("skills.3.title") }}
+                <h4 class="skill-item-name">
+                  {{ $t("skills.3.name") }}
                 </h4>
               </div>
               <div class="skill-item-content-invisible">
@@ -302,8 +302,8 @@
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-gamepad"></i>
-                <h4 class="skill-item-title">
-                  {{ $t("skills.4.title") }}
+                <h4 class="skill-item-name">
+                  {{ $t("skills.4.name") }}
                 </h4>
               </div>
               <div class="skill-item-content-invisible">
@@ -317,8 +317,8 @@
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
                 <i class="fas fa-server"></i>
-                <h4 class="skill-item-title">
-                  {{ $t("skills.5.title") }}
+                <h4 class="skill-item-name">
+                  {{ $t("skills.5.name") }}
                 </h4>
               </div>
               <div class="skill-item-content-invisible">
@@ -477,7 +477,7 @@ export default {
   name: "AboutSection",
   props: {
     number: {
-      type: Number,
+      type: String,
       required: true,
     },
   },

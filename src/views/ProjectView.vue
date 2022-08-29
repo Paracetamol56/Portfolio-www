@@ -2,8 +2,10 @@
 {
 	"en": {
 		"sections": {"info": "Info", "links": "Links", "video": "Video", "presentation": "Presentation", "galery": "Galery"},
-		"dates": "Dates",
 		"status": "Status",
+		"dates": "Dates",
+		"technologies": "Technologies",
+		"team": "Team",
 		"nav": {
 			"last": "Last",
 			"next": "Next",
@@ -11,8 +13,10 @@
 	},
 	"fr": {
 		"sections": {"info": "Info", "links": "Liens", "video": "Vidéo", "presentation": "Présentation", "galery": "Galerie"},
-		"dates": "Dates",
 		"status": "Statut",
+		"dates": "Dates",
+		"technologies": "Technologies",
+		"team": "Equipe",
 		"nav": {
 			"last": "Précédent",
 			"next": "Suivant",
@@ -44,7 +48,7 @@
             {{ project.dates.end.replaceAll("-", "/") }}
           </p>
         </div>
-        <h3 class="fillTextWithgradient">Technologies</h3>
+        <h3 class="fillTextWithgradient">{{ $t("technologies") }}</h3>
         <ul class="technology-list">
           <li
             class="technology-item"
@@ -62,7 +66,7 @@
             </p>
           </li>
         </ul>
-        <h3 class="fillTextWithgradient">Team</h3>
+        <h3 class="fillTextWithgradient">{{ $t("team") }}</h3>
         <ul class="team-list">
           <li class="team-item" v-for="member in project.team" :key="member">
             <p class="team-item-name">{{ member.name }}</p>

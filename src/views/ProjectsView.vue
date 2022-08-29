@@ -1,8 +1,18 @@
+<i18n>
+{
+	"en": {
+		"title": "Projects",
+		"subtitle": "Here are some of my projects",
+	},
+	"fr": {
+		"title": "Projets",
+		"subtitle": "Voici quelques-uns de mes projets",
+	}
+}
+</i18n>
+
 <template>
-  <PageHeader
-    title="Mathéo's portfolio"
-    subtitle="Bienvenue dans mon univers"
-  />
+  <PageHeader :title="$t('title')" :subtitle="$t('subtitle')" />
   <ProjectListSection />
 </template>
 

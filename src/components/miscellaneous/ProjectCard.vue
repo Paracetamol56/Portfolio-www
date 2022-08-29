@@ -1,3 +1,14 @@
+<i18n>
+{
+	"en": {
+		"more": "See more"
+	},
+	"fr": {
+		"more": "Voir plus"
+	}
+}
+</i18n>
+
 <template>
   <div class="project-card">
     <img class="project-card-image" :src="project.thumbnail" />
@@ -23,7 +34,7 @@
         ><br />*/
       </p>
       <UnderlinedButton
-        text="See more"
+        :text="$t('more')"
         :href="`/project/${project.id}?lang=${$i18n.locale}`"
         target="_self"
       />

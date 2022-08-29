@@ -30,7 +30,7 @@
 			},
 			{
 				"title": "Electronique",
-				"description": "Initier par mon père, j’aime aussi créer mes propres circuits électroniques, en particulier avec l’aide de cartes Arduino ou de Raspberry Pi. C’est pour moi une application concrète de l’informatique de, je trouve motivante et formatrice."
+				"description": "Initier par mon père, j’aime aussi créer mes propres circuits électroniques, en particulier avec l’aide de cartes Arduino ou de Raspberry Pi. C’est pour moi une application concrète de l’informatique que je trouve motivante et formatrice."
 			},
 			{
 				"title": "Science",
