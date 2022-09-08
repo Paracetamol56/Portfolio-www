@@ -57,36 +57,36 @@
           v-bind:class="{ 'nav-active': navActive }"
         >
           <li class="nav-menu-list-element">
-            <a href="/">
+            <router-link to="/">
               <span>
                 {{ $t("home") }}
               </span>
               <div></div>
-            </a>
+            </router-link>
           </li>
           <li class="nav-menu-list-element">
-            <a href="/about">
+            <router-link to="/about">
               <span>
                 {{ $t("about") }}
               </span>
               <div></div>
-            </a>
+            </router-link>
           </li>
           <li class="nav-menu-list-element">
-            <a href="/projects">
+            <router-link to="/projects">
               <span>
                 {{ $t("projects") }}
               </span>
               <div></div>
-            </a>
+            </router-link>
           </li>
           <li class="nav-menu-list-element">
-            <a href="/contact">
+            <router-link to="/contact">
               <span>
                 {{ $t("contact") }}
               </span>
               <div></div>
-            </a>
+            </router-link>
           </li>
 
           <select
@@ -169,22 +169,6 @@ export default {
   mounted: function () {
     this.linkList = document.querySelectorAll(".nav-menu-list-element a");
     this.updateActive(window.location.href);
-
-    // For each a tag in the menu list
-    this.linkList.forEach((link) => {
-      // Add an event listener to use Vue router instead of defult link behavior
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        // If middle click is pressed, open the link in a new tab
-        if (event.which === 2) {
-          window.open(link.href, "_blank");
-        } else if (event.which === 1) {
-          this.updateActive(link.href);
-          this.$router.push(link.pathname);
-        }
-      });
-    });
 
     // Add an event listner when scrolling and get the scroll position
     window.addEventListener("scroll", () => {
@@ -312,7 +296,7 @@ nav {
             height: 100%;
             transition: all var(--easing) 0.5s;
 
-            &.active > span {
+            &.router-link-active > span {
               color: #8251e9;
             }
 

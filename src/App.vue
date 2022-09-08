@@ -1,7 +1,11 @@
 <template>
   <LoaderAnimation ref="loader" />
   <NavBar />
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition name="fade">
+      <component :is="Component" />
+    </transition>
+  </router-view>
   <PageFooter />
 </template>
 
@@ -220,160 +224,30 @@ section {
   background: var(--primary-color) !important;
 }
 
-.loader-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: var(--background-gradient) !important;
-  z-index: 99;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  .loader-logo {
-    width: 100px;
-    filter: drop-shadow(0 0 5px var(--shadow-color));
-    animation: 2s var(--easing) 0s normal forwards 1 loader-fade-in;
-
-    .cls-1 {
-      fill: #8251e9;
-    }
-
-    .cls-2 {
-      fill: #5f3cab;
-    }
-  }
-
-  .loader-animation {
-    width: 100px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    animation: 2s var(--easing) 0s normal forwards 1 loader-fade-in;
-
-    span {
-      float: left;
-      width: 8px;
-      height: 8px;
-      background: var(--primary-color);
-      filter: drop-shadow(0 0 5px var(--shadow-color));
-      border-radius: 50%;
-
-      &:nth-child(1) {
-        animation: dot-1 2s infinite;
-      }
-
-      &:nth-child(2) {
-        animation: dot-2 2s infinite;
-      }
-
-      &:nth-child(3) {
-        animation: dot-3 2s infinite;
-      }
-
-      &:nth-child(4) {
-        animation: dot-4 2s infinite;
-      }
-
-      &:nth-child(5) {
-        animation: dot-5 2s infinite;
-      }
-    }
-
-    @keyframes dot-1 {
-      0% {
-        transform: translateY(0);
-      }
-
-      10% {
-        transform: translateY(-5px);
-      }
-
-      20% {
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes dot-2 {
-      10% {
-        transform: translateY(0);
-      }
-
-      20% {
-        transform: translateY(-5px);
-      }
-
-      30% {
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes dot-3 {
-      20% {
-        transform: translateY(0);
-      }
-
-      30% {
-        transform: translateY(-5px);
-      }
-
-      40% {
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes dot-4 {
-      30% {
-        transform: translateY(0);
-      }
-
-      40% {
-        transform: translateY(-5px);
-      }
-
-      50% {
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes dot-5 {
-      40% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(-5px);
-      }
-
-      60% {
-        transform: translateY(0);
-      }
-    }
-  }
-
-  @keyframes loader-fade-in {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
+// Router view transition
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 10s var(--easing);
+}
+
+// Element fade in
 .fade-in {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.5s var(--easing), transform 0.5s var(--easing);
 }
+
 .fade-in.appear {
   opacity: 1;
   transform: scale(1);
 }
+
+// Scrollbar
 -webkit-scrollbar {
   width: 10px;
 }
