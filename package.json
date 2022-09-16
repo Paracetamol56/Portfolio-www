@@ -15,7 +15,8 @@
     "swiper": "^8.4.2",
     "vue": "^3.2.39",
     "vue-i18n": "^9.2.2",
-    "vue-router": "^4.1.5"
+    "vue-router": "^4.1.5",
+    "vue-ua": "^1.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
