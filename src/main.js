@@ -1,17 +1,17 @@
 import { createApp } from 'vue';
 import { createI18n } from 'vue-i18n';
-import VueAnalytics from 'vue-ua'
+// import VueAnalytics from 'vue-ua'
 import VueGoogleMaps from '@fawmi/vue-google-maps';
 import App from './App.vue';
 import router from './router';
 
 document.title = "Portfolio - Mathéo"
 
-const analytics = VueAnalytics.create({
-	appName: 'Portfolio',
-	appVersion: '1.0.0',
-	trackingId: 'G-72DYF50WJC',
-});
+// const analytics = VueAnalytics.create({
+// 	appName: 'Portfolio',
+// 	appVersion: '1.0.0',
+// 	trackingId: 'G-72DYF50WJC',
+// });
 
 const i18n = createI18n({
 	availableLocales: ['en', 'fr'],
@@ -43,7 +43,7 @@ router.beforeEach((to, from, next) => {
 
 const app = createApp(App);
 app.use(router);
-app.use(analytics);
+// app.use(analytics);
 app.use(i18n);
 app.use(VueGoogleMaps, {
 	load: {
