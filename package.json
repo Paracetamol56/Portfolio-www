@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@fawmi/vue-google-maps": "^0.9.79",
-    "axios": "^0.27.2",
+    "axios": "^1.0.0",
     "core-js": "^3.25.3",
     "globe.gl": "^2.26.6",
     "swiper": "^8.4.2",
