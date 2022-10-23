@@ -553,7 +553,7 @@
 	},
 	{
 		"id": "9",
-		"title": "Longue vue",
+		"title": "Longue-vue",
 		"subtitle": "Site web pour aider les élèves du secondaire dans leur orientation",
 		"thumbnail": "/data/img/projects/9/thumbnail.jpg",
 		"header": "/data/img/projects/9/header.jpg",
@@ -600,11 +600,11 @@
 		],
 		"description": {
 			"Présentation": "Longue-vue est une application web que j'ai réalisée dans le cadre de mon stage de fin de DUT. Son objectif est d'offrir un support pour aider les élèves de secondaire dans leur choix d'orientation.",
-			"Le stage": "J'ai réalisé mon stage dans l'entreprise québécoise Cosmoss La Matanie qui s'est donné la mission d'accompagner les enfants de la petite enfance jusqu'à l'insertion professionnelle.<br/>J'étais le seul développeur sur le projet, c'était donc à moi d'organiser les idées et les besoins de l'entreprise et de les implémenter ensuite dans le produit finale.",
-			"Timeline": "J'ai commencé par réfléchir à la structure de l'application. Comme il s'agit d'un concentrateur d'activité et de ressources, il était important de bien s'organiser pour l'expérience utilisateur. D'après les clients, des sections se sont très vite dessinée. Ensuite, j'ai donc commencé à designer l'interface et à intégrer des composants de base (textes, boutons, interface de connexion, etc.) tout en apprenant la philosophie du framework Vue.js. Très vite, j'ai eu besoin de m'attaquer au backend. L'entreprise m'a fortement conseiller d'utiliser Firebase pour les couts réduits (à petite échelle) et pour la rapidité de développement. J'ai continué à travailler tout le long du stage avec la méthode agile sur le back et le frontend en parallèles.",
-			"Continuation du projet": "Il était prévu que le projet n'allait pas être finalisé en temps et en heure, mais l'objectif était de fournir une base fonctionnelle.<br/>Le projet a été remis entre les mains d'une entreprise spécialisée pour continuer le travail commencé. L'application aspire à être utilisé dans plusieurs écoles au Québec.",
+			"Le stage": "J'ai réalisé mon stage dans l'entreprise québécoise Cosmoss La Matanie qui s'est donnée la mission d'accompagner les enfants de la petite enfance jusqu'à l'insertion professionnelle.<br/>J'étais le seul développeur sur le projet, c'était donc à moi d'organiser les idées et les besoins de l'entreprise et de les implémenter ensuite dans le produit final.",
+			"Timeline": "J'ai commencé par réfléchir à la structure de l'application. Comme il s'agit d'un concentrateur d'activités et de ressources, il était important de bien s'organiser pour l'expérience utilisateur. D'après les clients, des sections se sont très vite dessinées. Ensuite, j'ai donc commencé à designer l'interface et à intégrer des composants de base (textes, boutons, interface de connexion, etc.) tout en apprenant la philosophie du framework Vue.js. Très vite, j'ai eu besoin de m'attaquer au backend. L'entreprise m'a fortement conseillé d'utiliser Firebase pour les coûts réduits (à petite échelle) et pour la rapidité de développement. J'ai continué à travailler tout le long du stage avec la méthode agile sur le back et le frontend en parallèle.",
+			"Continuation du projet": "Il était prévu que le projet n'allait pas être finalisé en temps et en heure, mais l'objectif était de fournir une base fonctionnelle.<br/>Le projet a été remis entre les mains d'une entreprise spécialisée pour continuer le travail commencé. L'application aspire à être utilisée dans plusieurs écoles au Québec.",
 			"Level up": "<ul><li>Développement web avec le framework Vue.js</li><li>Gestion de base de données NoSQL</li><li>Gestion de projet, communication avec les clients</li><ul>",
-			"Conclusion": "Ce projet était très riche en apprentissage dans le domaine du web que je ne connaissais pas suffisamment avant mon stage. Au final, je suis très fier du résultat et c'est vraiment motivant de se dire que cette application va être poursuivie et utiliser pour aider des élèves."
+			"Conclusion": "Ce projet était très riche en apprentissage dans le domaine du web que je ne connaissais pas suffisamment avant mon stage. Au final, je suis très fier du résultat et c'est vraiment motivant de se dire que cette application va être poursuivie et utilisée pour aider des élèves."
 		},
 		"images": []
 	}
