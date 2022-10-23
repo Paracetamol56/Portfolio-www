@@ -53,8 +53,12 @@
     "technologies": [
       {
         "name": "C++",
-        "description": "High perfomance application with a good level of abstraction and multithreading, GUI (with QT and WXWidget), game development.",
+        "description": "High perfomance applications with a good level of abstraction and multithreading, GUI (with QT and WXWidget), image rendering algorithms, game development.",
       },
+			{
+				"name": "Rust",
+				"description": "High speed web backends, artificial Intelligence, concurent low level programming.",
+			},
       {
         "name": "Python",
         "description": "Image rendering algorithms, artificial intelligence (with TensorFlow, PyTorch and Scikit Learn), computer vision (with OpenCV), data visualization (with Matplotlib).",
@@ -143,8 +147,12 @@
     "technologies": [
       {
         "name": "C++",
-        "description": "Application haute performance avec un niveau d’abstraction élevé et multithreading, interface graphique (avec QT et WXWidget), développement de jeux.",
+        "description": "Applications haute performance avec un niveau d’abstraction élevé et multithreading, interfaces graphiques (avec QT et WXWidget), algorithmes de synthèse d’images, développement de jeux.",
       },
+			{
+				"name": "Rust",
+				"description": "Backends web haute performance, intelligence artificielle, programmation concurrente bas niveau.",
+			},
       {
         "name": "Python",
         "description": "Algorithmes de synthèse d’images, intelligence artificielle (avec TensorFlow, PyTorch et Scikit Learn), vision numérique (avec OpenCV), visualisation de données (avec Matplotlib).",
@@ -390,6 +398,7 @@
 				</h3>
 
 				<ul class="tech-list">
+					<!-- C++ -->
 					<li class="tech-item fade-in">
 						<img
 							class="tech-item-icon"
@@ -403,10 +412,11 @@
 							<br />*/
 						</p>
 					</li>
+					<!-- Rust -->
 					<li class="tech-item fade-in">
 						<img
 							class="tech-item-icon"
-							src="@/assets/img/technologies/Python.svg"
+							src="@/assets/img/technologies/Rust.svg"
 							alt="-icon"
 						/>
 						<p class="tech-item-name" v-html="$t('technologies.1.name')"></p>
@@ -416,10 +426,11 @@
 							<br />*/
 						</p>
 					</li>
+					<!-- Python -->
 					<li class="tech-item fade-in">
 						<img
 							class="tech-item-icon"
-							src="@/assets/img/technologies/Git.svg"
+							src="@/assets/img/technologies/Python.svg"
 							alt="-icon"
 						/>
 						<p class="tech-item-name" v-html="$t('technologies.2.name')"></p>
@@ -429,10 +440,11 @@
 							<br />*/
 						</p>
 					</li>
+					<!-- Git -->
 					<li class="tech-item fade-in">
 						<img
 							class="tech-item-icon"
-							src="@/assets/img/technologies/Unity.svg"
+							src="@/assets/img/technologies/Git.svg"
 							alt="-icon"
 						/>
 						<p class="tech-item-name" v-html="$t('technologies.3.name')"></p>
@@ -442,10 +454,11 @@
 							<br />*/
 						</p>
 					</li>
+					<!-- Unity -->
 					<li class="tech-item fade-in">
 						<img
 							class="tech-item-icon"
-							src="@/assets/img/technologies/SQL.svg"
+							src="@/assets/img/technologies/Unity.svg"
 							alt="-icon"
 						/>
 						<p class="tech-item-name" v-html="$t('technologies.4.name')"></p>
@@ -455,10 +468,11 @@
 							<br />*/
 						</p>
 					</li>
+					<!-- SQL -->
 					<li class="tech-item fade-in">
 						<img
 							class="tech-item-icon"
-							src="@/assets/img/technologies/Firebase.svg"
+							src="@/assets/img/technologies/SQL.svg"
 							alt="-icon"
 						/>
 						<p class="tech-item-name" v-html="$t('technologies.5.name')"></p>
@@ -468,10 +482,11 @@
 							<br />*/
 						</p>
 					</li>
+					<!-- Firebase -->
 					<li class="tech-item fade-in">
 						<img
 							class="tech-item-icon"
-							src="@/assets/img/technologies/Frontend.svg"
+							src="@/assets/img/technologies/Firebase.svg"
 							alt="-icon"
 						/>
 						<p class="tech-item-name" v-html="$t('technologies.6.name')"></p>
@@ -481,10 +496,11 @@
 							<br />*/
 						</p>
 					</li>
+					<!-- Frontend -->
 					<li class="tech-item fade-in">
 						<img
 							class="tech-item-icon"
-							src="@/assets/img/technologies/Nodejs.svg"
+							src="@/assets/img/technologies/Frontend.svg"
 							alt="-icon"
 						/>
 						<p class="tech-item-name" v-html="$t('technologies.7.name')"></p>
@@ -494,10 +510,11 @@
 							<br />*/
 						</p>
 					</li>
+					<!-- Backend -->
 					<li class="tech-item fade-in">
 						<img
 							class="tech-item-icon"
-							src="@/assets/img/technologies/Blender.svg"
+							src="@/assets/img/technologies/Nodejs.svg"
 							alt="-icon"
 						/>
 						<p class="tech-item-name" v-html="$t('technologies.8.name')"></p>
@@ -507,16 +524,31 @@
 							<br />*/
 						</p>
 					</li>
+					<!-- Blender -->
 					<li class="tech-item fade-in">
 						<img
 							class="tech-item-icon"
-							src="@/assets/img/technologies/Adobe.svg"
+							src="@/assets/img/technologies/Blender.svg"
 							alt="-icon"
 						/>
 						<p class="tech-item-name" v-html="$t('technologies.9.name')"></p>
 						<p class="tech-item-description">
 							/*<br />
 							<span v-html="$t('technologies.9.description')"></span>
+							<br />*/
+						</p>
+					</li>
+					<!-- Adobe -->
+					<li class="tech-item fade-in">
+						<img
+							class="tech-item-icon"
+							src="@/assets/img/technologies/Adobe.svg"
+							alt="-icon"
+						/>
+						<p class="tech-item-name" v-html="$t('technologies.10.name')"></p>
+						<p class="tech-item-description">
+							/*<br />
+							<span v-html="$t('technologies.10.description')"></span>
 							<br />*/
 						</p>
 					</li>
