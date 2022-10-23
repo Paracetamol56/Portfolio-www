@@ -12,12 +12,12 @@
 </i18n>
 
 <template>
-  <PageHeader :title="$t('title')" :subtitle="$t('subtitle')" />
-  <main>
-    <AboutSection number="01" />
-    <LastProjectsSection number="02" />
-    <!-- <TravelSection /> -->
-  </main>
+	<PageHeader :title="$t('title')" :subtitle="$t('subtitle')" />
+	<main>
+		<AboutSection number="01" />
+		<LastProjectsSection number="03" />
+		<!-- <TravelSection /> -->
+	</main>
 </template>
 
 <script>
@@ -27,47 +27,47 @@ import LastProjectsSection from "@/components/home/LastProjectsSection.vue";
 // import TravelSection from "@/components/home/TravelSection.vue";
 
 export default {
-  name: "HomeView",
-  components: {
-    PageHeader,
-    LastProjectsSection,
-    AboutSection,
-    // TravelSection,
-  },
-  methods: {
-    updateFadeInElements: function () {
-      const fadeInElements = document.getElementsByClassName("fade-in");
-      // Enter in viewport observer
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("appear");
-            }
-          });
-        },
-        {
-          threshold: 0.5,
-        }
-      );
+	name: "HomeView",
+	components: {
+		PageHeader,
+		AboutSection,
+		LastProjectsSection,
+		// TravelSection,
+	},
+	methods: {
+		updateFadeInElements: function () {
+			const fadeInElements = document.getElementsByClassName("fade-in");
+			// Enter in viewport observer
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("appear");
+						}
+					});
+				},
+				{
+					threshold: 0.5,
+				}
+			);
 
-      // For each element
-      for (let i = 0; i < fadeInElements.length; i++) {
-        // If element is already in viewport
-        if (
-          fadeInElements[i].getBoundingClientRect().top < window.innerHeight
-        ) {
-          // Add class "appear"
-          fadeInElements[i].classList.add("appear");
-        } else {
-          // Add observer
-          observer.observe(fadeInElements[i]);
-        }
-      }
-    },
-  },
-  mounted: function () {
-    this.updateFadeInElements();
-  },
+			// For each element
+			for (let i = 0; i < fadeInElements.length; i++) {
+				// If element is already in viewport
+				if (
+					fadeInElements[i].getBoundingClientRect().top < window.innerHeight
+				) {
+					// Add class "appear"
+					fadeInElements[i].classList.add("appear");
+				} else {
+					// Add observer
+					observer.observe(fadeInElements[i]);
+				}
+			}
+		},
+	},
+	mounted: function () {
+		this.updateFadeInElements();
+	},
 };
 </script>
