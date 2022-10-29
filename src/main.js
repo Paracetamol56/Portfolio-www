@@ -1,21 +1,15 @@
 import { createApp } from 'vue';
 import { createI18n } from 'vue-i18n';
-// import VueAnalytics from 'vue-ua'
 import VueGoogleMaps from '@fawmi/vue-google-maps';
 import App from './App.vue';
 import router from './router';
 
-document.title = "Portfolio - Mathéo"
-
-// const analytics = VueAnalytics.create({
-// 	appName: 'Portfolio',
-// 	appVersion: '1.0.0',
-// 	trackingId: 'G-72DYF50WJC',
-// });
+document.title = "Portfolio - Mathéo";
 
 const i18n = createI18n({
 	availableLocales: ['en', 'fr'],
-	locale: 'en',
+	// get locale from the browser
+	locale: navigator.language,
 	fallbackLocale: 'en'
 });
 
