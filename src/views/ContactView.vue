@@ -12,21 +12,23 @@
 </i18n>
 
 <template>
-  <PageHeader :title="$t('title')" subtitle="" />
-  <LocationSection />
-  <ContactForm />
+  <main>
+    <PageHeader :title="$t('title')" subtitle="" />
+    <!-- <LocationSection /> -->
+    <ContactForm />
+  </main>
 </template>
 
 <script>
 import PageHeader from "@/components/miscellaneous/PageHeader.vue";
-import LocationSection from "@/components/contact/LocationSection.vue";
+// import LocationSection from "@/components/contact/LocationSection.vue";
 import ContactForm from "@/components/contact/ContactForm.vue";
 
 export default {
   name: "ContactView",
   components: {
     PageHeader,
-    LocationSection,
+    // LocationSection,
     ContactForm,
   },
   methods: {

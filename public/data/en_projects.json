@@ -38,7 +38,7 @@
 		"description": {
 			"Introduction": "The objective is to create an interactive visualization software of the international space station. The software is under development but in the long term it will be able to be used to visit the ISS and to have information on each module.",
 			"Level up": "<ul><li>3D Modeling</li><li>Using Unreal Engine</li></ul>",
-			"Progress": "It's a long project and it uses a lot of my free time, for now the part that requires the most investment is the 3D modeling, after getting a free model from NASA, I I had to redo all the textures and make the model decoupled module by module and also rig the model for the animations."
+			"Progress": "It's a long term project that takes a lot of my free time. For now, the part that requires the most investment is the 3D modeling. After getting a free model from the NASA website, I had to redo all the textures and make the model decoupled module by module, and I also rigged the model ready for animations."
 		},
 		"images": []
 	},
