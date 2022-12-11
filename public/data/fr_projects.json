@@ -94,7 +94,7 @@
 				"icon": "/data/img/links/github.svg"
 			},
 			{
-				"name": "Téléchargement (<i class='fab fa-windows'></i> <i class='fab fa-apple'></i> <i class='fab fa-linux'></i>)",
+				"name": "Téléchargement",
 				"url": "https://github.com/Paracetamol56/That-level-again-unity/releases/tag/v.1.2",
 				"icon": "/data/img/links/download.svg"
 			},
@@ -173,7 +173,7 @@
 				"icon": "/data/img/links/github.svg"
 			},
 			{
-				"name": "Téléchargement (<i class='fab fa-windows'></i> <i class='fab fa-linux'></i>)",
+				"name": "Téléchargement",
 				"url": "https://github.com/Paracetamol56/E428/releases/tag/1.0",
 				"icon": "/data/img/links/download.svg"
 			},
@@ -240,7 +240,7 @@
 				"icon": "/data/img/links/github.svg"
 			},
 			{
-				"name": "Téléchargement (<i class='fab fa-windows'></i>)",
+				"name": "Téléchargement",
 				"url": "https://github.com/Paracetamol56/Observeur2/releases/tag/alpha-0.2.0",
 				"icon": "/data/img/links/download.svg"
 			}
@@ -336,7 +336,7 @@
 				"icon": "/data/img/links/youtube.svg"
 			},
 			{
-				"name": "Téléchargement (<i class='fab fa-windows'></i> <i class='fab fa-linux'></i>)",
+				"name": "Téléchargement",
 				"url": "https://github.com/Paracetamol56/Observeur2/releases/tag/alpha-0.2.0",
 				"icon": "/data/img/links/download.svg"
 			},

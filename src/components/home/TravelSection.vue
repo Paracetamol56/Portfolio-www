@@ -6,182 +6,147 @@
         <hr />
       </div>
     </div>
-    <div
-      class="map-container"
-      ref="mapContainer"
-      @mousedown="touchStart"
-      @touchstart="touchStart"
-    >
-      <div class="map-overlay"></div>
+    <div class="map-container">
+      <div
+        class="map"
+        ref="map"
+        @mousedown="touchStart"
+        @touchstart="touchStart"
+      >
+        <!-- The globe goes here -->
+      </div>
+      <Swiper
+        class="travel-slider"
+        :slides-per-view="1.1"
+        :space-between="20"
+        :navigation="true"
+        :pagination="{ clickable: true }"
+        :loop="false"
+        :grab-cursor="true"
+        :centeredSlides="true"
+        :breakpoints="{
+          576: {
+            slidesPerView: 1.2,
+            spaceBetween: 40,
+          },
+          768: {
+            slidesPerView: 1.4,
+            spaceBetween: 60,
+          },
+          992: {
+            slidesPerView: 1.6,
+            spaceBetween: 80,
+          },
+          1200: {
+            slidesPerView: 1.8,
+            spaceBetween: 100,
+          },
+          1400: {
+            slidesPerView: 2.2,
+            spaceBetween: 100,
+          },
+        }"
+        :modules="modules"
+      >
+        <SwiperSlide
+          class="project-slider-item"
+          v-for="travel in travels"
+          :key="travel"
+        >
+          <TravelCard :travel="travel" />
+        </SwiperSlide>
+      </Swiper>
     </div>
+
   </section>
 </template>
 
 <script>
+import TravelCard from "@/components/miscellaneous/TravelCard.vue";
+
+import axios from "axios";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper";
+
 import Globe from "globe.gl";
 
 export default {
   name: "TravelSection",
-  data: function () {
-    return {
-      locations: [
-        {
-          name: "Paris",
-          lat: 48.856614,
-          lng: 2.352222,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "New York",
-          lat: 40.73061,
-          lng: -73.935242,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Tokyo",
-          lat: 35.6895,
-          lng: 139.6917,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Sydney",
-          lat: -33.86882,
-          lng: 151.20929,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "London",
-          lat: 51.507351,
-          lng: -0.127758,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Rio de Janeiro",
-          lat: -22.90683,
-          lng: -43.17285,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Barcelona",
-          lat: 41.38504,
-          lng: 2.173404,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Madrid",
-          lat: 40.416775,
-          lng: -3.70379,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Rome",
-          lat: 41.90278,
-          lng: 12.496366,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Berlin",
-          lat: 52.520007,
-          lng: 13.404954,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Amsterdam",
-          lat: 52.373801,
-          lng: 4.89105,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Barcelona",
-          lat: 41.38504,
-          lng: 2.173404,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Madrid",
-          lat: 40.416775,
-          lng: -3.70379,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Rome",
-          lat: 41.90278,
-          lng: 12.496366,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-        {
-          name: "Berlin",
-          lat: 52.520007,
-          lng: 13.404954,
-          arcOriginLat: 45.5475,
-          arcOriginLng: 2.867389,
-        },
-      ],
-    };
+  components: {
+    TravelCard,
+    Swiper,
+    SwiperSlide,
   },
-  mounted: function () {
-    document.querySelectorAll(".map-spot").forEach((spot) => {
-      // Extract the property data-coordinates
-      let coordinates = spot.dataset.coordinates.split(",");
-      let x = (coordinates[1] / 360) * 85;
-      let y = (coordinates[0] / 180) * 123;
+  props: {
+    number: {
+      type: String,
+      required: true,
+    },
+  },
+  data: function () {
+		return {
+			modules: [Navigation, Pagination],
+			travels: [],
+		};
+	},
+  methods: {
+    loadTravels: async function () {
+			await axios
+				.get(`/data/${this.$i18n.locale}_travels.json`)
+				.then((response) => {
+					this.travels = response.data.reverse();
+        })
+				.catch((error) => {
+					console.log(error);
+				});
+    },
+    displayGlobe: function () {
+      const globe = Globe();
 
-      x = x + 50;
-      y = -y + 50;
+      globe
+        // Initialize the globe
+        .width(this.$refs.map.clientWidth)
+        .height(this.$refs.map.clientHeight)
+        .backgroundColor("#00000000")
+        .globeImageUrl(window.location.origin + "/8k_earth_colormap.png")
+        .atmosphereColor("#b4e2f9")
+        .atmosphereAltitude(0.1)
+        // Custom HTML elements
+        .labelsData(this.travels)
+        .labelLat((d) => d.location.end[0])
+        .labelLng((d) => d.location.end[1])
+        .labelText(() => "")
+        .labelColor(() => "#b4e2f9")
+        .labelSize(1)
+        .labelDotRadius(0.4)
+        // Arcs
+        .arcsData(this.travels)
+        .arcStartLat((d) => d.location.start[0])
+        .arcStartLng((d) => d.location.start[1])
+        .arcEndLat((d) => d.location.end[0])
+        .arcEndLng((d) => d.location.end[1])
+        .arcLabel((d) => d.title)
+        .arcColor(() => "#b4e2f9")
+        .arcAltitudeAutoScale(0.25)
+        .arcStroke(0.25);
 
-      console.log(x, y);
+      globe(this.$refs.map);
 
-      spot.style.left = `${x}%`;
-      spot.style.top = `${y}%`;
+      globe.controls().enableZoom = false;
+      const distance = Math.min(
+        this.$refs.map.clientWidth / 3,
+        this.$refs.map.clientHeight / 3
+      );
+      globe.camera().position.set(0, 0, distance);
+    }
+  },
+  mounted() {
+    this.loadTravels().then(() => {
+      this.displayGlobe();
     });
-
-    const globe = Globe();
-
-    globe
-      // Initialize the globe
-      .width(1000)
-      .height(1000)
-      .backgroundColor("#0c0816")
-      .globeImageUrl(window.location.origin + "/8k_earth_colormap.png")
-      .atmosphereColor("#b4e2f9")
-      .atmosphereAltitude(0.1)
-      // Custom HTML elements
-      .labelsData(this.locations)
-      .labelLat((d) => d.lat)
-      .labelLng((d) => d.lng)
-      .labelText(() => "")
-      .labelColor(() => "#b4e2f9")
-      .labelSize(1)
-      .labelDotRadius(0.25)
-      // Arcs
-      .arcsData(this.locations)
-      .arcStartLat((d) => d.arcOriginLat)
-      .arcStartLng((d) => d.arcOriginLng)
-      .arcEndLat((d) => d.lat)
-      .arcEndLng((d) => d.lng)
-      .arcLabel((d) => d.name)
-      .arcColor(() => "#b4e2f9")
-      .arcAltitudeAutoScale(0.25)
-      .arcStroke(0.25);
-    // .arcDashLength(() => Math.random())
-    // .arcDashGap(() => Math.random())
-    // .arcDashAnimateTime(() => 1000);
-
-    globe(this.$refs.mapContainer);
   },
 };
 </script>
@@ -189,59 +154,21 @@ export default {
 <style scoped lang="scss">
 section#travels {
   .map-container {
-    width: 100vw;
-    height: 100vh;
-    margin: 1rem 0;
     position: relative;
-    overflow: hidden;
     .map {
+      width: 100vw;
+      height: 100vh;
+      margin: 1rem 0;
       position: relative;
-      height: 100%;
-      aspect-ratio: 2.33371055495;
-      margin: 0;
-      padding: 0;
-      svg.map-vector {
-        height: 100%;
-        aspect-ratio: 2.33371055495;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        path {
-          stroke: #3f4950;
-          stroke-width: 0.25;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-          fill: #171a1d;
-          transition: fill 0.25s var(--easing);
-          &:hover {
-            fill: #3f4950;
-          }
-        }
-      }
-      .map-spot {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        transform: translate(-16px, 65px);
-        border-radius: 50%;
-        background: var(--primary-color);
-        z-index: 1;
-      }
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
     }
-    .map-overlay {
+    .travel-slider {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
-      background-image: linear-gradient(
-        var(--background-color) 0%,
-        #00000000 15%,
-        #00000000 85%,
-        var(--background-color) 100%
-      );
-      pointer-events: none;
+      bottom: 0;
+      left: 0;
     }
   }
 }
