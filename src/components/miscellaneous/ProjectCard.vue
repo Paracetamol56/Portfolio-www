@@ -11,7 +11,7 @@
 
 <template>
 	<div class="project-card">
-		<img class="project-card-image" :src="project.thumbnail" />
+		<img class="project-card-image" alt="Project {{ project.id }} thumbnail" :src="project.thumbnail" />
 		<div class="project-card-text">
 			<p class="project-card-text-date">
 				{{
@@ -36,6 +36,7 @@
 			<UnderlinedButton
 				:text="$t('more')"
 				:href="`/project/${project.id}?lang=${$i18n.locale}`"
+				:name="`project-${project.id}`"
 				target="_self"
 			/>
 		</div>

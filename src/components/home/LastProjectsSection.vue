@@ -69,6 +69,7 @@
 			<BoxButton
 				:text="$t('button')"
 				:href="`/projects?lang=${$i18n.locale}`"
+				name="projects page"
 			/>
 		</div>
 	</section>

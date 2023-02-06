@@ -89,20 +89,20 @@
 						</router-link>
 					</li>
 
-					<p
+					<li
 						class="nav-lang-button"
 						v-if="$i18n.locale == 'fr'"
 						@click="setLocale('en')"
 					>
 						EN
-					</p>
-					<p
-            class="nav-lang-button"
-            v-else
-            @click="setLocale('fr')"
-          >
-            FR
-          </p>
+					</li>
+					<li
+						class="nav-lang-button"
+						v-else
+						@click="setLocale('fr')"
+					>
+						FR
+					</li>
 				</ul>
 
 				<input
@@ -388,7 +388,7 @@ nav {
 		}
 	}
 
-  p.nav-lang-button {
+  li.nav-lang-button {
     position: absolute;
     right: 20px;
     height: 20px;
@@ -449,7 +449,7 @@ nav {
 			}
 		}
 
-		p.nav-lang-button {
+		li.nav-lang-button {
 			position: relative;
       right: 0;
 			margin-top: auto;

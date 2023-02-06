@@ -34,6 +34,10 @@ router.beforeEach((to, from, next) => {
 	return;
 });
 
+router.afterEach(() => {
+	document.documentElement.lang = i18n.global.locale;
+});
+
 const app = createApp(App);
 app.use(router);
 app.use(i18n);
