@@ -35,18 +35,17 @@
     </div>
     <div class="map-container" style="height: 40rem;">
       <l-map
-        v-model="zoom"
+        ref="map"
         v-model:zoom="zoom"
         :center="[center.lat, center.lng]"
       >
         <l-tile-layer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          layer-type="base"
+          name="OpenStreetMap"
         ></l-tile-layer>
 
-        <l-marker :lat-lng="[center.lat, center.lng]" draggable @moveend="log('moveend')">
-          <l-popup>
-            lol
-          </l-popup>
+        <l-marker :lat-lng="[center.lat, center.lng]" draggable>
         </l-marker>
       </l-map>
       <div class="location-infos">
@@ -95,7 +94,7 @@ export default {
   },
   data: function () {
     return {
-      zoom: 5,
+      zoom: 6,
       iconWidth: 25,
       iconHeight: 40,
       center: {
@@ -187,6 +186,7 @@ export default {
     position: relative;
     width: 100%;
     .location-infos {
+      z-index: 401;
       position: absolute;
       right: 5%;
       top: 50%;
