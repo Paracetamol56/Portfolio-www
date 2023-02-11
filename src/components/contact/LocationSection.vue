@@ -33,21 +33,7 @@
         </p>
       </div>
     </div>
-    <div class="map-container" style="height: 40rem;">
-      <l-map
-        ref="map"
-        v-model:zoom="zoom"
-        :center="[center.lat, center.lng]"
-      >
-        <l-tile-layer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          layer-type="base"
-          name="OpenStreetMap"
-        ></l-tile-layer>
-
-        <l-marker :lat-lng="[center.lat, center.lng]" draggable>
-        </l-marker>
-      </l-map>
+    <div id="map-container" style="height: 40rem;">
       <div class="location-infos">
         <p class="location-infos-text">
           <span class="type-write">
@@ -78,25 +64,14 @@
 </template>
 
 <script>
-import {
-  LMap,
-  LTileLayer,
-  LMarker,
-} from "@vue-leaflet/vue-leaflet";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 export default {
   name: "LocationSection",
-  components: {
-    LMap,
-    LTileLayer,
-    LMarker,
-  },
   data: function () {
     return {
       zoom: 6,
-      iconWidth: 25,
-      iconHeight: 40,
       center: {
         lat: 45.90089632660961,
         lng: 6.128813463775949,
@@ -117,14 +92,6 @@ export default {
       },
     };
   },
-  computed: {
-    iconUrl() {
-      return `https://placekitten.com/${this.iconWidth}/${this.iconHeight}`;
-    },
-    iconSize() {
-      return [this.iconWidth, this.iconHeight];
-    },
-  },
   methods: {
     log(a) {
       console.log(a);
@@ -135,6 +102,34 @@ export default {
         this.iconWidth = Math.floor(this.iconHeight / 2);
       }
     },
+    setupLeafletMap() {
+      const map = L.map("map-container",
+        {
+          scrollWheelZoom: false
+        }
+      ).setView(this.center, this.zoom);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+          attribution:
+            'Map data (c) <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
+          maxZoom: 18,
+          id: "mapbox/streets-v11",
+        }
+      ).addTo(map);
+
+    const markerIcon = L.icon({
+    iconUrl: require("@/assets/img/location-pin.svg"),
+    iconSize: [25, 35],
+    iconAnchor: [12, 35],
+});
+
+    L.marker(this.center,
+      {
+        icon: markerIcon
+      }
+    ).addTo(map)
+    }
   },
   mounted: function () {
     // Compute the center coordinates in the human readable format
@@ -176,16 +171,19 @@ export default {
         ).toFixed(2),
       },
     };
+
+    this.setupLeafletMap();
   },
 };
 </script>
 
 <style lang="scss" scoped>
 #location {
-  .map-container {
+  #map-container {
     position: relative;
     width: 100%;
     .location-infos {
+      font-family: "Fira Code", monospace;
       z-index: 401;
       position: absolute;
       right: 5%;
