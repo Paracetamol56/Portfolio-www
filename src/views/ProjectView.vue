@@ -78,27 +78,25 @@
     <section id="image">
       <img id="header-image" v-bind:src="project.header" alt="" />
     </section>
-    <div class="section-background-wrapper" v-if="project.links.length > 0">
-      <section id="links">
-        <div class="container">
-          <div class="section-title centered">
-            <h2>
-              <span class="section-title-number">02.</span>
-              {{ $t("sections.links") }}
-            </h2>
-            <hr />
-          </div>
-          <ul class="link-list">
-            <li class="link-item" v-for="link in project.links" :key="link">
-              <a class="link-item-anchor" :href="link.url" target="_blank">
-                <img class="link-item-vector" :src="link.icon" alt="icon" />
-                <p class="link-item-text" v-html="link.name"></p>
-              </a>
-            </li>
-          </ul>
+    <section id="links">
+      <div class="container">
+        <div class="section-title centered">
+          <h2>
+            <span class="section-title-number">02.</span>
+            {{ $t("sections.links") }}
+          </h2>
+          <hr />
         </div>
-      </section>
-    </div>
+        <ul class="link-list">
+          <li class="link-item" v-for="link in project.links" :key="link">
+            <a class="link-item-anchor" :href="link.url" target="_blank">
+              <img class="link-item-vector" :src="link.icon" alt="icon" />
+              <p class="link-item-text" v-html="link.name"></p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
     <section id="presentation">
       <div class="container">
         <div class="section-title centered">
@@ -349,18 +347,8 @@ section#image {
     object-fit: cover;
   }
 }
-.section-background-wrapper {
-  background-image: url("@/assets/img/BluryBackground.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  margin: 0;
-  padding: 3rem 0;
-}
 section#links {
-  background-color: var(--background-color);
-  margin: 5rem 0;
-  padding: 3rem 0;
+  background-color: #0c081693;
   ul.link-list {
     list-style: none;
     width: 100%;
