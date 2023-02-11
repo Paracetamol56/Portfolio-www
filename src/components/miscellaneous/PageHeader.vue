@@ -68,6 +68,9 @@ export default {
         codeBlocksBackground.children[
           Math.floor(Math.random() * codeBlocksBackground.children.length)
         ];
+      if (randomChild.classList.contains("light")) {
+        return;
+      }
       randomChild.classList.add("light");
       this.writeContent(randomChild, this.generateBlockContent());
       setTimeout(function () {
@@ -83,7 +86,7 @@ export default {
       this.$refs.backgroundGradient.style.left = -x / 5 + "px";
     },
     generateBlockContent: function () {
-      let randomCharacters = "-_+=*&^%$#@!~`<>?:;.,|\\/{}[]()\"'";
+      let randomCharacters = "-_+=*&^%$#@!~`<>?:;.,|/{}[]()\"'";
 
       let randomContent = "";
       // generate a random content in a list of random types

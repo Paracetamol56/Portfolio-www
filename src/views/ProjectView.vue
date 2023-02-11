@@ -78,7 +78,7 @@
     <section id="image">
       <img id="header-image" v-bind:src="project.header" alt="" />
     </section>
-    <section id="links">
+    <section id="links" v-if="project.links.length">
       <div class="container">
         <div class="section-title centered">
           <h2>
