@@ -14,25 +14,25 @@
 <template>
   <PageHeader :title="$t('title')" :subtitle="$t('subtitle')" />
   <main>
-    <FormationSection number="01" />
-    <SkillSection number="02" />
-    <InterestSection number="03" />
+    <SkillSection number="01" />
+    <InterestSection number="02" />
+    <FormationSection number="03" />
   </main>
 </template>
 
 <script>
 import PageHeader from "@/components/miscellaneous/PageHeader.vue";
-import FormationSection from "@/components/about/FormationSection.vue";
 import SkillSection from "@/components/about/SkillSection.vue";
 import InterestSection from "@/components/about/InterestSection.vue";
+import FormationSection from "@/components/about/FormationSection.vue";
 
 export default {
   name: "AboutView",
   components: {
     PageHeader,
-    FormationSection,
     SkillSection,
     InterestSection,
+    FormationSection,
   },
   methods: {
     updateFadeInElements: function () {
