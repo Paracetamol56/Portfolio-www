@@ -59,6 +59,7 @@
         method="POST"
         data-netlify="true"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <div class="concat-form-horizontal-wrapper">
           <input
             type="text"
