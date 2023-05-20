@@ -56,7 +56,7 @@
         id="contact-form"
         class="contact-form"
         role="form"
-        action="https://formsubmit.co/f56d1dfa92f74b144fde232317962208"
+        data-netlify="true"
         method="POST"
       >
         <div class="concat-form-horizontal-wrapper">
@@ -81,7 +81,7 @@
         </div>
         <select
           class="contact-form-select"
-          name="_subject"
+          name="subject[]"
           id="subject"
           required
         >
@@ -116,7 +116,7 @@
           value="Your message has been sent. I will get back to you as soon as possible."
         />
         <input type="hidden" name="_template" value="basic" />
-        <button id="contact-form-submit" type="submit" value="SEND">
+        <button id="contact-form-submit" type="submit">
           <span>
             <svg
               width="14"
