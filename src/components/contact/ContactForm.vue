@@ -55,9 +55,9 @@
       <form
         id="contact-form"
         class="contact-form"
-        role="form"
-        data-netlify="true"
+        name="contact"
         method="POST"
+        netlify
       >
         <div class="concat-form-horizontal-wrapper">
           <input
