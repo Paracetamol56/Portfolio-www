@@ -4,7 +4,12 @@
 		"title": "L'ISS en 3D",
 		"subtitle": "Visionneuse interactive de l'ISS",
 		"thumbnail": "/data/img/projects/1/thumbnail.jpg",
-		"header": "/data/img/projects/1/header.jpg",
+		"images": [
+			"/data/img/projects/1/0.jpg",
+			"/data/img/projects/1/1.jpg",
+			"/data/img/projects/1/2.jpg",
+			"/data/img/projects/1/3.jpg"
+		],
 		"dates": {
 			"start": "11-07-2019",
 			"end": "∞"
@@ -39,15 +44,16 @@
 			"Introduction": "L’objectif est de créer un logiciel de visualisation interactive de la station spatiale internationale. Le logiciel est en cours de développement mais à terme il pourra servir à visiter l’ISS et à avoir des informations sur chaque module.",
 			"Level up": "<ul><li>Modélisation 3D</li><li>Utilisation du moteur de jeu Unreal Engine</li></ul>",
 			"Avancement": "C’est un projet long et qui utilise beaucoup de mon temps libre, pour l’instant la partie qui demande le plus d’investissement est la modélisation 3D, après avoir récupérer un modèle gratuit de la NASA, j’ai dû refaire toutes les textures et rendre le modèle découplable module par module et aussi rigger le modèle pour les animations."
-		},
-		"images": []
+		}
 	},
 	{
 		"id": "2",
 		"title": "That level again Unity",
 		"subtitle": "Jeu 2D de platforme avec de la logic et de la strategie",
 		"thumbnail": "/data/img/projects/2/thumbnail.jpg",
-		"header": "/data/img/projects/2/header.jpg",
+		"images": [
+			"/data/img/projects/2/header.jpg"
+		],
 		"dates": {
 			"start": "18-02-2021",
 			"end": "19-03-2021"
@@ -109,15 +115,19 @@
 			"Timeline": "La première étape a bien sûr été la création d’assets. De l’animation du personnage stickman aux interfaces utilisateurs en passant par les décors, tous les assets ont été recréer par mes soins avec quelques libertés par rapport au jeu original.<br/>J’ai ensuite dû concevoir les mécaniques de base : le control du personnage, les différents colliers, etc. Un jeu d’enfant avec l’interface de Unity et les différents modèles déjà existant.<br/>Enfin, la partie qui m’a demandé le plus de patience : la programmation des comportements des différents éléments selon le niveau. Comme il y a 12 niveaux, et qu’aucun n’est identique, il faut recoder pour chaque niveau les interactions entre le joueur, le bouton, la porte et même parfois le décor.",
 			"Level up": "<ul><li>Création d’assets</li><li>Maitrise basic de Unity 2D (Personnage, décors, système de niveaux)</li><li>Edition de scripts en C# dans l’environnement Unity</li></ul>",
 			"Conclusion": "Je suis finalement très fier du résultat pour un premier jeu. Je trouve le jeu agréable malgré quelques bugs qui subsistes."
-		},
-		"images": []
+		}
 	},
 	{
 		"id": "3",
 		"title": "E428",
 		"subtitle": "Jeu de platforme 2D en pixel art",
 		"thumbnail": "/data/img/projects/3/thumbnail.jpg",
-		"header": "/data/img/projects/3/header.jpg",
+		"images": [
+			"/data/img/projects/3/0.jpg",
+			"/data/img/projects/3/1.jpg",
+			"/data/img/projects/3/2.jpg",
+			"/data/img/projects/3/3.jpg"
+		],
 		"dates": {
 			"start": "26-03-2021",
 			"end": "13-06-2021"
@@ -189,15 +199,16 @@
 			"Timeline": "Mon rôle dans le projet était de réaliser les assets d’environnement et le level design.<br>Dans le jeu, le personnage évolue à travers 4 niveaux chacun avec une ambiance particulière (couleurs, lumières, objets, etc…) j’ai donc réalisé 4 différents jeux d’assets pour chacun des niveaux.<br>Vient ensuite le temps d’intégrer ces assets dans le moteur de jeu. Comme je m’occupait des assets “statiques” d’environnement, j’ai utilisé le système de tilesheet de Unity pour rendre le travail de level design beaucoup plus simple. Certains asset sons purement décoratifs mais d’autres sont physiques et nécessites donc l’utilisation de colliers.<br>Enfin, je me suis chargé du level design de 2 des 4 niveaux du jeu en accord avec les décisions de l’équipe pour refléter au mieux l’ambiance que l’on voulait donner au jeu.<br>En parallèle, je me suis chargé de la gestion de projet, notamment avec git pour que tous les membre du groupe puisse avoir le projet dans sa version la plus récente et pouvoir modifier sa partie.",
 			"Level up": "<ul><li>Création d’assets en pixel art</li><li>Maitrise des tilesheets dans Unity</li><li>Level design</li><li>Travail en équipe</li></ul>",
 			"Conclusion": "Même si je ne me suis pas trop occupé de la partie développement, j’ai néanmoins beaucoup appris sur la création de jeu vidéo et j’ai pu progresser sur des aspects complémentaires au code."
-		},
-		"images": []
+		}
 	},
 	{
 		"id": "4",
 		"title": "L’Observeur 2",
 		"subtitle": "Catalogue d'objets astronomiques pour amateurs",
 		"thumbnail": "/data/img/projects/4/thumbnail.jpg",
-		"header": "/data/img/projects/4/header.jpg",
+		"images": [
+			"/data/img/projects/4/header.jpg"
+		],
 		"dates": {
 			"start": "30-07-2021",
 			"end": "11-03-2021"
@@ -251,15 +262,16 @@
 			"Partage": "La base de données doit être contenue dans un fichier non chiffré pour permettre le partage entre plusieurs personnes facilement.",
 			"Level up": "<ul><li>Maitrise du Framework QT</li><li>Utilisation de bases de données SQLite en local</li><li>Développement d’algorithmes astronomiques complexes</li></ul>",
 			"Conclusion": "Je suis très satisfait des fonctionnalités offertes par le logiciel même s’il reste encore beaucoup à faire avant de pouvoir le distribuer.<br/>Une version pour le web pourrait être une option envisageable pour le futur."
-		},
-		"images": []
+		}
 	},
 	{
 		"id": "5",
 		"title": "SkyAirlineCorporation",
 		"subtitle": "Jeu de simulation d'avion",
 		"thumbnail": "/data/img/projects/5/thumbnail.jpg",
-		"header": "/data/img/projects/5/header.jpg",
+		"images": [
+			"/data/img/projects/5/header.jpg"
+		],
 		"dates": {
 			"start": "26-09-2021",
 			"end": "17-03-2022"
@@ -351,15 +363,16 @@
 			"Timeline": "Pour ce projet, nous avons utilisé la méthode agile et nous avons découpé nos 2 mois de développement en 3 sprints.<br/>D’abord, j’étais chargé d’implémenter le contrôleur de vols pour que les avions soient fonctionnels. C’était une fonctionnalité centrale du projet sur laquelle toutes les autres parties du développement reposaient.<br/>Ensuite, j’ai continué d’implémenter des fonctionnalités à mon contrôleur pour respecter un maximum tous les comportements d’un vrai avion.<br/>Enfin, j’ai participé à la programmation du gameplay avec le mode de jeu canadair.",
 			"Level up": "<ul><li>Maîtrise de Unity 3D</li><li>Travail en équipe avec la méthode agile</li></ul>",
 			"Conclusion": "L’aspect simulation de ce projet m’a vraiment plu, en plus, le travail avec une équipe de cette taille a été une nouvelle expérience pour moi et je suis très content de l’organisation et de l’ambiance de travail que nous avons réussies à établir."
-		},
-		"images": []
+		}
 	},
 	{
 		"id": "6",
 		"title": "SportSpots",
 		"subtitle": "Application mobile pour amateurs de sports en plein air",
 		"thumbnail": "/data/img/projects/6/thumbnail.jpg",
-		"header": "/data/img/projects/6/header.jpg",
+		"images": [
+			"/data/img/projects/6/header.jpg"
+		],
 		"dates": {
 			"start": "10-11-2021",
 			"end": "21-12-2021"
@@ -419,15 +432,16 @@
 		"description": {
 			"Présentation": "L’application mobile SportSpots a pour but de permettre aux amateurs de sports en plein air de trouver plus facilement des “spots” adaptés à leurs sports favoris via une google map. L’application est communautaire car les utilisateurs ayant créé un compte peuvent ajouter, vérifier, noter et commenter des spots.",
 			"Level up": "<ul><li>Utilisation du framework React native</li><li>Base de données non relationnelle Firebase</li></ul>"
-		},
-		"images": []
+		}
 	},
 	{
 		"id": "7",
 		"title": "Darwin’s battle royale",
 		"subtitle": "Intelligence artificielle par renforcement en Unity",
 		"thumbnail": "/data/img/projects/7/thumbnail.jpg",
-		"header": "/data/img/projects/7/header.jpg",
+		"images": [
+			"/data/img/projects/7/header.jpg"
+		],
 		"dates": {
 			"start": "16-01-2022",
 			"end": "10-04-2022"
@@ -479,15 +493,16 @@
 		"description": {
 			"Présentation": "Ce projet est un un \"zéro player game\" ou \"self played game\" (comme le jeu de Conway), c'est-à-dire que le joueur sélectionne uniquement la situation initiale. C’est un projet d’intelligence artificielle évolutionniste : on réitère l'expérience sur plusieurs générations et chaque génération tire parti de la précédente avec certaines mutations possibles.<br/>Il s’agit d’un environnement 3D dans lequel évolue des créatures. Le but de chaque créature est de tuer les autres grâce au combat de corp à corp et la créature qui est la dernière à rester remporte la victoire.",
 			"Level up": "<ul><li>Introduction à l’intelligence artificiel et à l’apprentissage par renforcement</li><li>Développement de jeux vidéo orienté en IA</li><li>Gestion de projet solo (Mêlés quotidiennes, rédaction des fonctionnalité, trace écrite du travail, etc…)</li></ul>"
-		},
-		"images": []
+		}
 	},
 	{
 		"id": "8",
 		"title": "VR Escape Game",
 		"subtitle": "Escape Game en VR dans les sous sols du Cégep de Matane",
 		"thumbnail": "/data/img/projects/8/thumbnail.jpg",
-		"header": "/data/img/projects/8/header.jpg",
+		"images": [
+			"/data/img/projects/8/header.jpg"
+		],
 		"dates": {
 			"start": "07-02-2022",
 			"end": "03-04-2022"
@@ -548,15 +563,16 @@
 			"Timeline": "Pour commencer, nous avons rassemblé une quantité importante d’assets pour nous permettre de créer rapidement l’environnement 3D de notre jeu.<br/>C’est moi qui me suis ensuite chargé d’intégrer ces assets dans Unity de sorte à ce qu’il soit compatible avec le moteur et facilement utilisable.<br/>Il y a aussi eu un assez gros travail de modélisation 3D notamment au niveau du monte-charge qui devait être reproduit aussi fidèlement que possible. J’ai utilisé des techniques de photogrammétrie pour \"scanner\" l’ascenseur réel et le reproduire en 3D grâce à un smartphone et un ordinateur.<br/>Ensuite, nous avons intégré des mécanismes VR tels que la téléportation, les mains ou encore les interactions physiques entre les objets.<br/>Enfin, nous avons ajouté les éléments de gameplay et les énigmes pour rendre le jeu jouable. Nous avons encore eu recours à un peu de modélisation 3D pour ce qui est des assets personnalisés et beaucoup de travail pour faire fonctionner les comportements des objets des énigmes.",
 			"Level up": "<ul><li>Développement de jeux en VR avec Unity et open XR</li><li>Renforcement de mes connaissances en Unity 3D</li><li>Gestion de projets, gestion de version et workflow avec des beaucoup d’assets haute définition</li></ul>",
 			"Conclusion": "Dans la limite de temps et les contraintes matérielles importantes, nous ne sommes pas allées aussi loin que nous aurions voulu pour ce projet. Je suis malgré tout très satisfait du résultat, du travail d’équipe et de notre détermination à résoudre des problèmes."
-		},
-		"images": []
+		}
 	},
 	{
 		"id": "9",
 		"title": "Longue-vue",
 		"subtitle": "Site web pour aider les élèves du secondaire dans leur orientation",
 		"thumbnail": "/data/img/projects/9/thumbnail.jpg",
-		"header": "/data/img/projects/9/header.jpg",
+		"images": [
+			"/data/img/projects/9/header.jpg"
+		],
 		"dates": {
 			"start": "04-04-2022",
 			"end": "29-07-2022"
@@ -605,7 +621,6 @@
 			"Continuation du projet": "Il était prévu que le projet n'allait pas être finalisé en temps et en heure, mais l'objectif était de fournir une base fonctionnelle.<br/>Le projet a été remis entre les mains d'une entreprise spécialisée pour continuer le travail commencé. L'application aspire à être utilisée dans plusieurs écoles au Québec.",
 			"Level up": "<ul><li>Développement web avec le framework Vue.js</li><li>Gestion de base de données NoSQL</li><li>Gestion de projet, communication avec les clients</li><ul>",
 			"Conclusion": "Ce projet était très riche en apprentissage dans le domaine du web que je ne connaissais pas suffisamment avant mon stage. Au final, je suis très fier du résultat et c'est vraiment motivant de se dire que cette application va être poursuivie et utilisée pour aider des élèves."
-		},
-		"images": []
+		}
 	}
 ]

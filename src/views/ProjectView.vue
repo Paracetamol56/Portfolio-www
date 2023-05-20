@@ -76,7 +76,27 @@
       </div>
     </section>
     <section id="image">
-      <img id="header-image" v-bind:src="project.header" alt="" />
+      <Swiper
+        v-if="project.images.length > 1"
+        class="project-slider"
+        :slides-per-view="1"
+        :space-between="20"
+        :navigation="true"
+        :pagination="{ clickable: true }"
+        :loop="false"
+        :grab-cursor="true"
+        :centeredSlides="true"
+        :modules="modules"
+      >
+        <SwiperSlide
+          class="project-slider-item"
+          v-for="image in project.images"
+          :key="image"
+        >
+          <img v-bind:src="image" alt="" />
+        </SwiperSlide>
+      </Swiper>
+      <img v-else id="header-image" v-bind:src="project.images[0]" alt="" />
     </section>
     <section id="links" v-if="project.links.length">
       <div class="container">
@@ -146,16 +166,24 @@ import PageHeader from "@/components/miscellaneous/PageHeader.vue";
 import UnderlinedButton from "@/components/miscellaneous/buttons/UnderlinedButton.vue";
 
 import axios from "axios";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper";
 
 export default {
   name: "NavBar",
   components: {
     PageHeader,
+    Swiper,
+		SwiperSlide,
     UnderlinedButton,
   },
   data: function () {
     return {
       id: 0,
+      modules: [Navigation, Pagination],
       project: {},
       maxId: 0,
     };
