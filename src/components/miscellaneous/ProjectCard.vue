@@ -35,8 +35,8 @@
 			</p>
 			<UnderlinedButton
 				:text="$t('more')"
-				:href="`/project/${project.id}?lang=${$i18n.locale}`"
-				:name="`project-${project.id}`"
+				:href="`/project/${slug}?lang=${$i18n.locale}`"
+				:name="`Project ${project.id} - ${project.title}`"
 				target="_self"
 			/>
 		</div>
@@ -45,6 +45,8 @@
 
 <script>
 import UnderlinedButton from "@/components/miscellaneous/buttons/UnderlinedButton.vue";
+
+import slugify from "slugify";
 
 export default {
 	name: "ProjectCard",
@@ -56,6 +58,14 @@ export default {
 			type: Object,
 			required: true,
 		},
+	},
+	data: function () {
+		return {
+			slug: `${this.project.id}-${slugify(this.project.title, {
+				lower: true,
+				strict: true,
+			})}`,
+		};
 	},
 	methods: {
 		updateFadeInElements: function () {

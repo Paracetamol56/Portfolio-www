@@ -34,6 +34,7 @@
 				<li class="footer-logo-item">
 					<a
 						href="https://github.com/Paracetamol56"
+						name="GitHub"
 						target="_blank"
 						class="footer-logo-link"
 					>
@@ -51,6 +52,7 @@
 				<li class="footer-logo-item">
 					<a
 						href="https://www.linkedin.com/in/matheogaluba/"
+						name="Linkedin"
 						target="_blank"
 						class="footer-logo-link"
 					>
@@ -69,6 +71,7 @@
 				<li class="footer-logo-item">
 					<a
 						href="mailto:matheo.galu56@gmail.com"
+						name="Mail"
 						target="_blank"
 						class="footer-logo-link"
 					>
@@ -87,6 +90,7 @@
 				<li class="footer-logo-item">
 					<a
 						href="https://t.me/paracetamol_56"
+						name="Telegram"
 						target="_blank"
 						class="footer-logo-link"
 					>
@@ -104,6 +108,7 @@
 				<li class="footer-logo-item">
 					<a
 						href="https://discordapp.com/users/609748578004500517/"
+						name="Discord"
 						target="_blank"
 						class="footer-logo-link"
 					>
