@@ -9,26 +9,26 @@
   },
   "dependencies": {
     "axios": "^1.4.0",
-    "core-js": "^3.30.1",
+    "core-js": "^3.30.2",
     "globe.gl": "^2.28.4",
-    "swiper": "^9.2.4",
-    "vue": "^3.2.47",
+    "swiper": "^9.3.2",
+    "vue": "^3.3.4",
     "vue-i18n": "^9.2.2",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.4",
-    "@babel/eslint-parser": "^7.21.3",
+    "@babel/core": "^7.21.8",
+    "@babel/eslint-parser": "^7.21.8",
     "@intlify/vue-i18n-loader": "^4.2.0",
     "@vue/cli-plugin-babel": "~5.0.8",
     "@vue/cli-plugin-eslint": "~5.0.8",
     "@vue/cli-plugin-router": "~5.0.7",
     "@vue/cli-service": "~5.0.8",
-    "eslint": "^8.40.0",
-    "eslint-plugin-vue": "^9.13.0",
-    "leaflet": "^1.9.3",
-    "sass": "^1.62.0",
-    "sass-loader": "^13.2.2",
+    "eslint": "^8.41.0",
+    "eslint-plugin-vue": "^9.14.0",
+    "leaflet": "^1.9.4",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.3.0",
     "vue-loader": "^17.1.1"
   }
 }
