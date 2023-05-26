@@ -48,6 +48,26 @@
 	</noscript>
 	<div id="app"></div>
 	<!-- built files will be auto injected -->
+
+	<form name="contact" method="POST" data-netlify="true" hidden>
+		<input type="hidden" name="form-name" value="contact" />
+		<input type="text" name="name" required />
+		<input type="email" name="email" required />
+		</div>
+		<select name="subject" required>
+			<option class="contact-form-select-option" value="" selected disabled>
+			</option>
+			<option class="contact-form-select-option" value="help">
+			</option>
+			<option class="contact-form-select-option" value="work">
+			</option>
+			<option class="contact-form-select-option" value="discuss">
+			</option>
+			<option class="contact-form-select-option" value="hello">
+			</option>
+		</select>
+		<textarea name="message" required></textarea>
+	</form>
 </body>
 
 </html>
