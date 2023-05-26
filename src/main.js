@@ -8,7 +8,7 @@ document.title = "Portfolio - Mathéo";
 const i18n = createI18n({
 	availableLocales: ['en', 'fr'],
 	// get locale from the browser
-	locale: navigator.language,
+	locale: navigator.language.split('-')[0],
 	fallbackLocale: 'en'
 });
 
