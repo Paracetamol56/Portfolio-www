@@ -146,15 +146,15 @@
       <div class="container">
         <UnderlinedButton
           :text="$t('nav.last')"
-          :href="`/project/${id - 1}?lang=${$i18n.locale}`"
+          :href="`/project/${lastProjectSlug}?lang=${$i18n.locale}`"
           arrowPosition="left"
-          :disabled="id === 1"
+          :disabled="lastProjectSlug === ''"
         />
         <UnderlinedButton
           :text="$t('nav.next')"
-          :href="`/project/${id + 1}?lang=${$i18n.locale}`"
+          :href="`/project/${nextProjectSlug}?lang=${$i18n.locale}`"
           arrowPosition="right"
-          :disabled="id === maxId"
+          :disabled="nextProjectSlug === ''"
         />
       </div>
     </section>
@@ -166,6 +166,7 @@ import PageHeader from "@/components/miscellaneous/PageHeader.vue";
 import UnderlinedButton from "@/components/miscellaneous/buttons/UnderlinedButton.vue";
 
 import axios from "axios";
+import slugify from "slugify";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -185,7 +186,8 @@ export default {
       id: 0,
       modules: [Navigation, Pagination],
       project: {},
-      maxId: 0,
+      lastProjectSlug: "",
+      nextProjectSlug: "",
     };
   },
   methods: {
@@ -227,8 +229,6 @@ export default {
           return;
         }
 
-        this.maxId = response.data.length;
-
         response.data.find((project) => {
           if (project.id == this.id) {
             this.project = project;
@@ -238,12 +238,37 @@ export default {
           this.$router.push("404");
           return;
         }
+
+        // Compute the last and next project slug
+        if (this.id > 1) {
+          // Get the last project
+          response.data.find((project) => {
+            if (project.id == this.id - 1) {
+              this.lastProjectSlug = `${project.id}-${slugify(
+                project.title,
+                { lower: true, strict: true }
+              )}`;
+            }
+          });
+        }
+        if (this.id < response.data.length) {
+          // Get the next project
+          response.data.find((project) => {
+            if (project.id == this.id + 1) {
+              this.nextProjectSlug = `${project.id}-${slugify(
+                project.title,
+                { lower: true, strict: true }
+              )}`;
+            }
+          });
+        }
       });
     },
   },
   created: function () {
     // Get the project id from the path
-    this.id = parseInt(this.$router.currentRoute.value.path.split("/")[2]);
+    const path = this.$router.currentRoute.value.path;
+    this.id = parseInt(path.split("/")[2].split("-")[0]);
 
     // Check if the id is a integer greater than 0
     if (!Number.isInteger(this.id) || this.id < 1) {
