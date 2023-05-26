@@ -26,15 +26,15 @@
 			</h3>
 			<p class="travel-card-text-description">
 				/*<br />
-          {{ locationHumanReadable.lat.deg }}<span class="colored">°</span>
-          {{ locationHumanReadable.lat.min }}<span class="colored">'</span>
-          {{ locationHumanReadable.lat.sec
-          }}<span class="colored">" {{ locationHumanReadable.lat.dir }}</span>
-          <br />
-          {{ locationHumanReadable.lng.deg }}<span class="colored">°</span>
-          {{ locationHumanReadable.lng.min }}<span class="colored">'</span>
-          {{ locationHumanReadable.lng.sec
-          }}<span class="colored">" {{ locationHumanReadable.lng.dir }}</span>
+					{{ locationHumanReadable.lat.deg }}<span class="colored">°</span>
+					{{ locationHumanReadable.lat.min }}<span class="colored">'</span>
+					{{ locationHumanReadable.lat.sec
+					}}<span class="colored">" {{ locationHumanReadable.lat.dir }}</span>
+					<br />
+					{{ locationHumanReadable.lng.deg }}<span class="colored">°</span>
+					{{ locationHumanReadable.lng.min }}<span class="colored">'</span>
+					{{ locationHumanReadable.lng.sec
+					}}<span class="colored">" {{ locationHumanReadable.lng.dir }}</span>
 				<br />*/
 			</p>
 		</div>
@@ -54,17 +54,17 @@ export default {
 		return {
 			locationHumanReadable: {
 				lat: {
-          dir: "",
-          deg: 0,
-          min: 0,
-          sec: 0,
-        },
-        lng: {
-          dir: "",
-          deg: 0,
-          min: 0,
-          sec: 0,
-        },
+					dir: "",
+					deg: 0,
+					min: 0,
+					sec: 0,
+				},
+				lng: {
+					dir: "",
+					deg: 0,
+					min: 0,
+					sec: 0,
+				},
 			}
 		};
 	},
@@ -102,44 +102,44 @@ export default {
 	},
 	mounted: function () {
 		// Compute the center coordinates in the human readable format
-    this.locationHumanReadable = {
-      lat: {
-        dir: this.travel.location.end[0] < 0 ? "S" : "N",
-        deg: Math.floor(Math.abs(this.travel.location.end[0])),
-        min: Math.floor(
-          (Math.abs(this.travel.location.end[0]) - Math.floor(Math.abs(this.travel.location.end[0]))) *
-            60
-        ),
-        sec: (
-          (Math.abs(this.travel.location.end[0]) - Math.floor(Math.abs(this.travel.location.end[0]))) *
-            3600 -
-          Math.floor(
-            (Math.abs(this.travel.location.end[0]) -
-              Math.floor(Math.abs(this.travel.location.end[0]))) *
-              60
-          ) *
-            60
-        ).toFixed(2),
-      },
-      lng: {
-        dir: this.travel.location.end[1] < 0 ? "W" : "E",
-        deg: Math.floor(Math.abs(this.travel.location.end[1])),
-        min: Math.floor(
-          (Math.abs(this.travel.location.end[1]) - Math.floor(Math.abs(this.travel.location.end[1]))) *
-            60
-        ),
-        sec: (
-          (Math.abs(this.travel.location.end[1]) - Math.floor(Math.abs(this.travel.location.end[1]))) *
-            3600 -
-          Math.floor(
-            (Math.abs(this.travel.location.end[1]) -
-              Math.floor(Math.abs(this.travel.location.end[1]))) *
-              60
-          ) *
-            60
-        ).toFixed(2),
-      },
-    };
+		this.locationHumanReadable = {
+			lat: {
+				dir: this.travel.location.end[0] < 0 ? "S" : "N",
+				deg: Math.floor(Math.abs(this.travel.location.end[0])),
+				min: Math.floor(
+					(Math.abs(this.travel.location.end[0]) - Math.floor(Math.abs(this.travel.location.end[0]))) *
+						60
+				),
+				sec: (
+					(Math.abs(this.travel.location.end[0]) - Math.floor(Math.abs(this.travel.location.end[0]))) *
+						3600 -
+					Math.floor(
+						(Math.abs(this.travel.location.end[0]) -
+							Math.floor(Math.abs(this.travel.location.end[0]))) *
+							60
+					) *
+						60
+				).toFixed(2),
+			},
+			lng: {
+				dir: this.travel.location.end[1] < 0 ? "W" : "E",
+				deg: Math.floor(Math.abs(this.travel.location.end[1])),
+				min: Math.floor(
+					(Math.abs(this.travel.location.end[1]) - Math.floor(Math.abs(this.travel.location.end[1]))) *
+						60
+				),
+				sec: (
+					(Math.abs(this.travel.location.end[1]) - Math.floor(Math.abs(this.travel.location.end[1]))) *
+						3600 -
+					Math.floor(
+						(Math.abs(this.travel.location.end[1]) -
+							Math.floor(Math.abs(this.travel.location.end[1]))) *
+							60
+					) *
+						60
+				).toFixed(2),
+			},
+		};
 		this.updateFadeInElements();
 	},
 };
