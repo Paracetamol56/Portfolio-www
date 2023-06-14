@@ -28,7 +28,7 @@
     "eslint": "^8.42.0",
     "eslint-plugin-vue": "^9.14.1",
     "leaflet": "^1.9.4",
-    "sass": "^1.62.1",
+    "sass": "^1.63.4",
     "sass-loader": "^13.3.1",
     "vue-loader": "^17.2.2"
   }
