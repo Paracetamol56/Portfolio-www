@@ -165,7 +165,7 @@ export default {
 		.project-card-text-description {
 			font-size: 1rem;
 			font-weight: 300;
-			margin: 0 0 1rem 0;
+			margin: 0 0 1rem;
 			@media (max-width: 768px) {
 				font-size: 0.8rem;
 			}
