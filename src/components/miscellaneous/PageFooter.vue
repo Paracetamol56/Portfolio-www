@@ -200,7 +200,7 @@ footer {
 		justify-content: space-evenly;
 		align-items: center;
 		width: 60%;
-		margin: 0 auto 20px auto;
+		margin: 0 auto 20px;
 		padding: 0;
 		list-style: none;
 		.footer-logo-item {
