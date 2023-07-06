@@ -621,5 +621,175 @@
 			"Level up": "<ul><li>Web development with the Vue.js framework</li><li>NoSQL database management</li><li>Project management, communication with clients</li></ul>",
 			"Conclusion": "This project was very rich in learning in the web domain that I didn't know enough before my internship. In the end, I am very proud of the result and it is really motivating to think that this application will be continued and used to help students."
 		}
+	},
+	{
+		"id": "10",
+		"title": "Solar system simulation",
+		"subtitle": "Python-based 2D physics simulation of celestial bodies",
+		"thumbnail": "/data/img/projects/10/thumbnail.jpg",
+		"images": [
+			"/data/img/projects/10/header.jpg"
+		],
+		"dates": {
+			"start": "15-10-2022",
+			"end": "01-11-2022"
+		},
+		"tags": [
+			"Python",
+			"Physics",
+			"Simulation",
+			"2D"
+		],
+		"technologies": [
+			{
+				"name": "Python",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/python.svg"
+			}
+		],
+		"status": "Completed",
+		"team": [
+			{
+				"name": "Me",
+				"role": "Developer"
+			}
+		],
+		"links": [
+			{
+				"name": "Github",
+				"url": "https://github.com/Paracetamol56/Solar-system-python",
+				"icon": "/data/img/links/github.svg"
+			}
+		],
+		"description": {
+			"Context": "The Solar System Simulation project is a Python-based homework assignment focused on simulating the physics of celestial bodies within our solar system. The project aims to create an accurate simulation using real data and employs various libraries such as PyImGUI, PyOpenGL, and GLFW.",
+			"Presentation": "The Solar System Simulation project provides an interactive visualization of the solar system. The application allows users to configure various settings related to the system, animation, and rendering. The simulation accurately represents the planets' positions, sizes, and colors based on real data obtained from the NASA website. Users can zoom in and out, change the radius scale, and customize the appearance of each celestial body. Additionally, a performance profiler is included to monitor the rendering and physics engines' performance.",
+			"Level up": "<ul><li>Application of physics principles in a real-world scenario</li><li>GUI development using PyImGUI</li><li>Implementation of a performance profiler to monitor a rendering system</li></ul>",
+			"Conclusion": "The Solar System Simulation project successfully accomplishes its objective of providing an interactive and educational experience. By utilizing real data and physics principles, the simulation offers a realistic representation of the solar system's dynamics. The interactive GUI empowers users to explore and modify various parameters, enhancing their understanding of celestial bodies and their interactions. The Solar System Simulation project stands as a testament to my passion for both programming and astronomy, demonstrating my ability to merge these interests into a captivating educational tool."
+		}
+	},
+	{
+		"id": "11",
+		"title": "Ce-que-vous-voulez",
+		"subtitle": "iOS mobile application to browse movies",
+		"thumbnail": "/data/img/projects/11/thumbnail.jpg",
+		"images": [
+			"/data/img/projects/11/header.jpg"
+		],
+		"dates": {
+			"start": "09-05-2023",
+			"end": "07-06-2023"
+		},
+		"tags": [
+			"Mobile",
+			"Application",
+			"Swift",
+			"iOS"
+		],
+		"technologies": [
+			{
+				"name": "Swift",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/swift.svg"
+			}
+		],
+		"status": "Completed",
+		"team": [
+			{
+				"name": "Me",
+				"role": "Developer"
+			}
+		],
+		"links": [
+			{
+				"name": "Github",
+				"url": "https://github.com/Paracetamol56/Ce-que-vous-voulez",
+				"icon": "/data/img/links/github.svg"
+			}
+		],
+		"description": {
+			"Context": "Ce-que-vous-voulez is an iOS mobile application that I developed in Swift. This project was created during my time in school and serves as a showcase of my skills and knowledge. It is important to note that Ce-que-vous-voulez is not intended for production use, but rather as a demonstration of my ability to leverage APIs and create functional mobile applications (even if I don't want to do it professionally, it's just for fun).",
+			"Presentation": "Ce-que-vous-voulez offers a range of features designed to enhance the user's movie-watching experience. The home screen provides a curated list of the most popular and highly rated movies of the moment, allowing users to stay up-to-date with the latest trends. The category list enables users to explore different movie genres and navigate through pages of each category effortlessly. Additionally, users can access detailed information about movies, including posters, titles, subtitles, ratings, release dates, running times, genres, and synopses. The application also allows users to watch movie trailers and conveniently search for specific movies. Lastly, Ce-que-vous-voulez includes a cinema map feature, which displays a map of nearby theaters, enabling users to locate their preferred cinema easily.",
+			"Level up": "<ul><li>Proficiently developed an iOS mobile application using Swift</li><li>Demonstrated proficiency in integrating external APIs</li><li>Implemented a user-friendly interface with multiple screens, incorporating features such as movie search, category browsing, and video playback</li></ul>",
+			"Conclusion": "Overall, I liked the Swift language, some features are similar to other modern languages like Rust, which I really like. However, I had trouble dealing with the Apple ecosystem. Xcode offers some good features, but I was disappointed that the environment is so closed and proprietary, and that you can't benefit from third-party tools. In a nutshell, I was happy to discover this language and build this mobile application. But as a daily Linux user and open source enthusiast, I didn't like the environment at all."
+		}
+	},
+	{
+		"id": "12",
+		"title": "Artista",
+		"subtitle": "Social network for artists and art lovers",
+		"thumbnail": "/data/img/projects/12/thumbnail.jpg",
+		"images": [
+			"/data/img/projects/12/header.jpg"
+		],
+		"dates": {
+			"start": "15-09-2022",
+			"end": "02-07-2023"
+		},
+		"tags": [
+			"Mobile",
+			"Application",
+			"Flutter",
+			"TypeScript",
+			"Dart"
+		],
+		"technologies": [
+			{
+				"name": "Flutter",
+				"description": "Mobile application framework",
+				"icon": "/data/img/technologies/flutter.svg"
+			},
+			{
+				"name": "Dart",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/dart.svg"
+			}, 
+			{
+				"name": "TypeScript",
+				"description": "Programming language",
+				"icon": "/data/img/technologies/type-script.svg"
+			},
+			{
+				"name": "Nest.js",
+				"description": "Backend framework",
+				"icon": "/data/img/technologies/nestjs.svg"
+			},
+			{
+				"name": "PostgreSQL",
+				"description": "Relational database",
+				"icon": "/data/img/technologies/postgresql.svg"
+			}
+		],
+		"status": "Completed",
+		"team": [
+			{
+				"name": "Océane Bonnet",
+				"role": "Communication manager"
+			},
+			{
+				"name": "Me",
+				"role": "Quality manager"
+			},
+			{
+				"name": "Theo Gillet",
+				"role": "UI/UX designer"
+			},
+			{
+				"name": "Quentin Mortier",
+				"role": "Technical lead"
+			},
+			{
+				"name": "Clément Turlure",
+				"role": "Backend developer"
+			}
+		],
+		"links": [],
+		"description": {
+			"Context": "As part of my training, I had the opportunity to work on a concrete project for the Waves association. Waves is an association that aims to combine art and humanitarianism. Its founder had an idea for a mobile application that was close to his heart, and he asked us to help him realize his project. Over the year, we worked as a group on the conception, design and realization of his project: Artista",
+			"Presentation": "The project consisted in designing and developing a social network for artists, where they can publish their works and projects. The social network consists of two types of accounts: artists and travelers. Artists can share their creations, while travelers can discover and comment on the works. The aim was to create a friendly, caring platform that would showcase artists and encourage positive interactions.",
+			"Timeline": "The project was carried out over a period of 10 months, with various key phases. We began with the design phase, where we drew up the specifications and then created the mockup on Figma. The design and preparation phase of the project (backend, frontend, server deployment) took up almost half of our time. Finally, we developed the application by separating the tasks and using the SCRUM method to make iterative progress",
+			"Level up": "<ul><li>I acquired solid project management skills, respecting deadlines and managing priorities.</li><li>I actively participated in the application design phase, defining features and creating the wireframe and mockup.</li><li>I extended my skills in mobile application development by using the appropriate languages and tools to create a cross-platform solution.</li></ul>",
+			"Conclusion": "This project was a rewarding experience that enabled me to apply my technical skills and develop new skills in project management and customer collaboration. Although mobile development and more generally application development are not for me, I'm still proud to have taken part in this project."
+		}
 	}
 ]
