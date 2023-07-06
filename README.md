@@ -2,6 +2,7 @@
 
 ![](https://img.shields.io/website?style=flat&url=https%3A%2F%2Fmatheo-galuba.com)
 [![](https://api.netlify.com/api/v1/badges/a8b6457c-6d99-49ee-8846-cc029b4a1f0e/deploy-status)](https://app.netlify.com/sites/portfolio-matheo-galuba/deploys)
+[![](https://www.codefactor.io/repository/github/paracetamol56/portfolio-www/badge)](https://www.codefactor.io/repository/github/paracetamol56/portfolio-www)
 ![](https://img.shields.io/github/license/Paracetamol56/Portfolio)
 
 Repository for my portfolio website.
