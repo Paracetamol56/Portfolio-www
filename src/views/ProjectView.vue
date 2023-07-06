@@ -473,7 +473,7 @@ section#presentation {
   }
 }
 section#project-navigation {
-  margin: 0 0 2rem 0;
+  margin: 0 0 2rem;
   height: 2rem;
   .container {
     display: flex;
