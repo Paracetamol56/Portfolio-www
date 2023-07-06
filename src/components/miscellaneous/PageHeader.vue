@@ -305,14 +305,13 @@ header {
 		left: 50%;
 		transform: translate(-50%, 0);
 		text-align: center;
-		cursor: default;
+		cursor: pointer;
 		text-decoration: none;
 		font-family: "Fira Code", monospace;
 		color: #ffffff;
 		fill: #ffffff;
 		font-size: 1rem;
 		font-weight: 500;
-		cursor: pointer;
 		transition: transform 0.5s var(--easing);
 
 		&:hover {
