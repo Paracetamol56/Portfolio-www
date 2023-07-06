@@ -576,7 +576,7 @@ export default {
 section#interest {
   overflow: hidden;
   .interest-wrapper {
-    margin: 5rem 0 7rem 0;
+    margin: 5rem 0 7rem;
     .interest-row {
       margin: 3rem 0;
       display: flex;
