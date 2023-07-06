@@ -152,7 +152,7 @@ section {
       white-space: wrap;
       margin: 0;
       @media (max-width: 768px) {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
       span.section-title-number {
         font-weight: 700;
@@ -177,13 +177,20 @@ section {
     }
     &.centered {
       text-align: center;
-
       h2 {
         position: relative;
         span.section-title-number {
           position: absolute;
           top: 0;
           left: 0;
+        }
+      }
+      @media (max-width: 768px) {
+        text-align: left;
+        h2 {
+          span.section-title-number {
+            position: relative;
+          }
         }
       }
     }

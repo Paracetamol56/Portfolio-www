@@ -281,7 +281,7 @@ header {
 	div.titles {
 		width: fit-content;
 		z-index: 2;
-		margin: auto;
+		margin: auto 1rem;
 		text-align: center;
 		pointer-events: none;
 		transform: translateY(-50%), translateZ(200px);
@@ -290,12 +290,17 @@ header {
 		h1 {
 			font-size: 4rem;
 			margin: 0;
+			@media (max-width: 768px) {
+				font-size: 2.5rem;
+			}
 		}
-
 		h2 {
 			font-size: 2.5rem;
 			margin-top: 10px;
 			margin-bottom: 0;
+			@media (max-width: 768px) {
+				font-size: 1.5rem;
+			}
 		}
 	}
 

@@ -6,10 +6,14 @@
 		"dates": "Dates",
 		"technologies": "Technologies",
 		"team": "Team",
+    "noLinks": {
+      "first": "Sorry,",
+      "second": "there is no links for this project :(",
+    },
 		"nav": {
 			"last": "Last",
 			"next": "Next",
-		}
+		},
 	},
 	"fr": {
 		"sections": {"info": "Info", "links": "Liens", "video": "Vidéo", "presentation": "Présentation", "galery": "Galerie"},
@@ -17,10 +21,14 @@
 		"dates": "Dates",
 		"technologies": "Technologies",
 		"team": "Equipe",
+    "noLinks": {
+      "first": "Désolé,",
+      "second": "il n'y a pas de liens pour ce projet :(",
+    },
 		"nav": {
 			"last": "Précédent",
 			"next": "Suivant",
-		}
+		},
 	}
 }
 </i18n>
@@ -98,7 +106,7 @@
       </Swiper>
       <img v-else id="header-image" v-bind:src="project.images[0]" alt="" />
     </section>
-    <section id="links" v-if="project.links.length">
+    <section id="links">
       <div class="container">
         <div class="section-title centered">
           <h2>
@@ -107,7 +115,7 @@
           </h2>
           <hr />
         </div>
-        <ul class="link-list">
+        <ul class="link-list" v-if="project.links.length > 0">
           <li class="link-item" v-for="link in project.links" :key="link">
             <a class="link-item-anchor" :href="link.url" target="_blank">
               <img class="link-item-vector" :src="link.icon" alt="icon" />
@@ -115,6 +123,14 @@
             </a>
           </li>
         </ul>
+        <div class="link-empty" v-else>
+          <p class="link-empty-text">
+            /*<br />
+            &nbsp;* {{ $t("noLinks.first") }}<br />
+            &nbsp;* {{ $t("noLinks.second") }}<br />
+            &nbsp;*/
+          </p>
+        </div>
       </div>
     </section>
     <section id="presentation">
@@ -332,6 +348,9 @@ section#info {
     font-weight: bold;
     margin-bottom: 1rem;
     text-align: center;
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
   }
   ul.technology-list {
     list-style: none;
@@ -459,6 +478,14 @@ section#links {
       }
     }
   }
+  .link-empty {
+    display: grid;
+    place-items: center;
+    p.link-empty-text {
+      color: var(--comment-color);
+      margin: 0;
+    }
+  }
 }
 section#presentation {
   .presentation-content-block {
@@ -466,6 +493,9 @@ section#presentation {
       font-size: 2rem;
       font-weight: bold;
       margin-bottom: 1rem;
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+      }
     }
     p.presentation-content-block-paragraph {
       text-align: justify;
