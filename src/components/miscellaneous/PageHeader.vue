@@ -306,7 +306,6 @@ header {
 		transform: translate(-50%, 0);
 		text-align: center;
 		cursor: default;
-		transition: all 0.1s ease-in;
 		text-decoration: none;
 		font-family: "Fira Code", monospace;
 		color: #ffffff;
@@ -318,7 +317,7 @@ header {
 
 		&:hover {
 			transform: translate(-50%, 5px);
-			transition: transform 0.1s ease-in;
+			transition: transform 0.2s var(--easing);
 		}
 	}
 }
