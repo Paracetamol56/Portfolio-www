@@ -628,7 +628,10 @@
 		"subtitle": "Python-based 2D physics simulation of celestial bodies",
 		"thumbnail": "/data/img/projects/10/thumbnail.jpg",
 		"images": [
-			"/data/img/projects/10/header.jpg"
+			"/data/img/projects/10/1.jpg",
+			"/data/img/projects/10/2.jpg",
+			"/data/img/projects/10/3.jpg",
+			"/data/img/projects/10/4.jpg"
 		],
 		"dates": {
 			"start": "15-10-2022",
