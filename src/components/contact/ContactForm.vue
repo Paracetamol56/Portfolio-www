@@ -247,7 +247,7 @@ export default {
             align-items: center;
             justify-content: center;
             height: 46px;
-            margin: 32px 0 72px 0;
+            margin: 32px 0 72px;
             padding: 0 18px 0 20px;
             color: var(--primary-color);
             font-family: "Fira Code", monospace;
