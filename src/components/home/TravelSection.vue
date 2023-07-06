@@ -17,6 +17,7 @@
       </div>
       <Swiper
         class="travel-slider"
+        @swiper="onSwiper"
         :slides-per-view="1.1"
         :space-between="20"
         :navigation="true"
@@ -90,6 +91,7 @@ export default {
 		return {
 			modules: [Navigation, Pagination],
 			travels: [],
+      swiper: null
 		};
 	},
   methods: {
@@ -131,17 +133,34 @@ export default {
         .arcLabel((d) => d.title)
         .arcColor(() => "#b4e2f9")
         .arcAltitudeAutoScale(0.25)
-        .arcStroke(0.25);
+        .arcStroke(0.25)
+        // Actions
+        .onLabelClick((label) => {
+          this.slideToId(label.id);
+        })
+        .onArcClick((arc) => {
+          this.slideToId(arc.id);
+        })
+        ;
 
       globe(this.$refs.map);
 
       globe.controls().enableZoom = false;
-      const distance = Math.min(
-        this.$refs.map.clientWidth / 3,
-        this.$refs.map.clientHeight / 3
+      // relation between canevas size and camera distance : f(x) = -0.2x + 500
+      const distance = Math.max(
+        -0.2 * this.$refs.map.clientWidth + 500,
+        -0.2 * this.$refs.map.clientHeight + 500
       );
       globe.camera().position.set(0, 0, distance);
-    }
+      globe.pointOfView({ lat: 20, lng: 0 }, distance);
+    },
+    onSwiper: function (swiper) {
+      this.swiper = swiper;
+    },
+    slideToId: function (id) {
+      const index = this.travels.length - id;
+      this.swiper.slideTo(index);
+    },
   },
   mounted() {
     this.loadTravels().then(() => {
@@ -158,6 +177,7 @@ section#travels {
     .map {
       width: 100vw;
       height: 100vh;
+      max-height: 120vw;
       margin: 1rem 0;
       position: relative;
       overflow: hidden;

@@ -11,7 +11,7 @@
 
 <template>
 	<div class="travel-card">
-		<img class="travel-card-image" />
+		<img class="travel-card-image" :src="travel.thumbnail" />
 		<div class="travel-card-text">
 			<p class="travel-card-text-date">
 				{{

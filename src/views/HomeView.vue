@@ -16,7 +16,7 @@
 	<main>
 		<AboutSection number="01" />
 		<LastProjectsSection number="02" />
-		<!-- <TravelSection number="03"/> -->
+		<TravelSection number="03"/>
 	</main>
 </template>
 
@@ -24,7 +24,7 @@
 import PageHeader from "@/components/miscellaneous/PageHeader.vue";
 import AboutSection from "@/components/home/AboutSection.vue";
 import LastProjectsSection from "@/components/home/LastProjectsSection.vue";
-// import TravelSection from "@/components/home/TravelSection.vue";
+import TravelSection from "@/components/home/TravelSection.vue";
 
 export default {
 	name: "HomeView",
@@ -32,7 +32,7 @@ export default {
 		PageHeader,
 		AboutSection,
 		LastProjectsSection,
-		// TravelSection,
+		TravelSection,
 	},
 	methods: {
 		updateFadeInElements: function () {
