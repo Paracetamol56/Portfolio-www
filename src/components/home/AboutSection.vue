@@ -107,6 +107,10 @@ section#about {
 	.about-introduction {
 		font-size: 1.25rem;
 		text-align: justify;
+		@media (max-width: 768px) {
+			font-size: 1rem;
+			text-align: left;
+		}
 	}
 
 	.about-occupation {

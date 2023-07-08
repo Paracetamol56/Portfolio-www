@@ -1,8 +1,22 @@
+<i18n>
+{
+  "en": {
+    "title": "My travels",
+  },
+  "fr": {
+    "title": "Mes voyages",
+  },
+}
+</i18n>
+
 <template>
   <section id="travels" class="fade-in">
     <div class="container">
       <div class="section-title">
-        <h2><span class="section-title-number">02.</span> Mes voyages</h2>
+        <h2>
+          <span class="section-title-number">02.</span>
+          {{ $t("title") }}
+        </h2>
         <hr />
       </div>
     </div>
@@ -18,6 +32,7 @@
       <Swiper
         class="travel-slider"
         @swiper="onSwiper"
+        @slideChange="slideChange"
         :slides-per-view="1.1"
         :space-between="20"
         :navigation="true"
@@ -91,6 +106,7 @@ export default {
 		return {
 			modules: [Navigation, Pagination],
 			travels: [],
+      globe: Globe(),
       swiper: null
 		};
 	},
@@ -106,9 +122,7 @@ export default {
 				});
     },
     displayGlobe: function () {
-      const globe = Globe();
-
-      globe
+      this.globe
         // Initialize the globe
         .width(this.$refs.map.clientWidth)
         .height(this.$refs.map.clientHeight)
@@ -116,6 +130,7 @@ export default {
         .globeImageUrl(window.location.origin + "/8k_earth_colormap.png")
         .atmosphereColor("#b4e2f9")
         .atmosphereAltitude(0.1)
+        .lineHoverPrecision(2)
         // Custom HTML elements
         .labelsData(this.travels)
         .labelLat((d) => d.location.end[0])
@@ -130,7 +145,7 @@ export default {
         .arcStartLng((d) => d.location.start[1])
         .arcEndLat((d) => d.location.end[0])
         .arcEndLng((d) => d.location.end[1])
-        .arcLabel((d) => d.title)
+        .arcLabel(() => "")
         .arcColor(() => "#b4e2f9")
         .arcAltitudeAutoScale(0.25)
         .arcStroke(0.25)
@@ -143,16 +158,16 @@ export default {
         })
         ;
 
-      globe(this.$refs.map);
+      this.globe(this.$refs.map);
 
-      globe.controls().enableZoom = false;
-      // relation between canevas size and camera distance : f(x) = -0.2x + 500
+      this.globe.controls().enableZoom = false;
+      // Relation between canevas size and camera distance : f(x) = -0.11x + 350
       const distance = Math.max(
-        -0.2 * this.$refs.map.clientWidth + 500,
-        -0.2 * this.$refs.map.clientHeight + 500
+        -0.11 * this.$refs.map.clientWidth + 350,
+        -0.11 * this.$refs.map.clientHeight + 350
       );
-      globe.camera().position.set(0, 0, distance);
-      globe.pointOfView({ lat: 20, lng: 0 }, distance);
+      this.globe.camera().position.set(0, 0, distance);
+      this.globe.pointOfView({ lat: 20, lng: 0 }, 0);
     },
     onSwiper: function (swiper) {
       this.swiper = swiper;
@@ -161,11 +176,26 @@ export default {
       const index = this.travels.length - id;
       this.swiper.slideTo(index);
     },
+    slideChange: function (e) {
+      // Change the globe point of view
+      this.globe.pointOfView(
+        {
+          lat: Math.max(this.travels[e.activeIndex].location.end[0] - 25, -90),
+          lng: this.travels[e.activeIndex].location.end[1],
+        },
+        1000
+      );
+    },
   },
   mounted() {
     this.loadTravels().then(() => {
       this.displayGlobe();
     });
+
+    // Watch this.$i18n.locale to update the project
+		this.$watch("$i18n.locale", () => {
+			this.loadTravels();
+		});
   },
 };
 </script>

@@ -89,6 +89,9 @@ a.button {
   text-decoration: none;
   background-image: linear-gradient(90deg, #b4e2f9 0%, #5f78ef 100%);
   background-clip: text;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
   &.disabled {
     opacity: 0.5;
     pointer-events: none;

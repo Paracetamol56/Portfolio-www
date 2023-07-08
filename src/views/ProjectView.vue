@@ -101,7 +101,7 @@
           v-for="image in project.images"
           :key="image"
         >
-          <img v-bind:src="image" alt="" />
+          <img v-bind:src="image" alt=""/>
         </SwiperSlide>
       </Swiper>
       <img v-else id="header-image" v-bind:src="project.images[0]" alt="" />
@@ -161,16 +161,16 @@
     <section id="project-navigation">
       <div class="container">
         <UnderlinedButton
-          :text="$t('nav.last')"
-          :href="`/project/${lastProjectSlug}?lang=${$i18n.locale}`"
-          arrowPosition="left"
-          :disabled="lastProjectSlug === ''"
-        />
-        <UnderlinedButton
           :text="$t('nav.next')"
           :href="`/project/${nextProjectSlug}?lang=${$i18n.locale}`"
-          arrowPosition="right"
+          arrowPosition="left"
           :disabled="nextProjectSlug === ''"
+        />
+        <UnderlinedButton
+          :text="$t('nav.last')"
+          :href="`/project/${lastProjectSlug}?lang=${$i18n.locale}`"
+          arrowPosition="right"
+          :disabled="lastProjectSlug === ''"
         />
       </div>
     </section>
@@ -414,6 +414,17 @@ section#info {
 section#image {
   overflow: hidden;
   width: 100%;
+  .project-slider {
+    .project-slider-item {
+      width: 100%;
+      aspect-ratio: 16/9;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
   img#header-image {
     width: 100%;
     object-fit: cover;
@@ -498,7 +509,12 @@ section#presentation {
       }
     }
     p.presentation-content-block-paragraph {
+      font-size: 1.25rem;
       text-align: justify;
+      @media screen and (max-width: 768px) {
+        font-size: 1rem;
+        text-align: left;
+      }
     }
   }
 }
