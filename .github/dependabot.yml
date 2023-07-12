@@ -16,3 +16,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+
+ignore:
+  - package-name: "swiper"
