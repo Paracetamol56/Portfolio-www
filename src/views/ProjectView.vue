@@ -8,7 +8,7 @@
 		"team": "Team",
     "noLinks": {
       "first": "Sorry,",
-      "second": "there is no links for this project :(",
+      "second": "there are no links for this project :(",
     },
 		"nav": {
 			"last": "Last",

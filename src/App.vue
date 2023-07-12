@@ -2,7 +2,7 @@
   <LoaderAnimation ref="loader" />
   <NavBar />
   <router-view v-slot="{ Component }">
-    <component :is="Component" />
+    <component :is="Component" :key="$route.fullPath" />
   </router-view>
   <PageFooter />
 </template>

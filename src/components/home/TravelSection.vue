@@ -145,7 +145,7 @@ export default {
         .arcStartLng((d) => d.location.start[1])
         .arcEndLat((d) => d.location.end[0])
         .arcEndLng((d) => d.location.end[1])
-        .arcLabel(() => "")
+        .arcLabel((d) => d.title)
         .arcColor(() => "#b4e2f9")
         .arcAltitudeAutoScale(0.25)
         .arcStroke(0.25)
