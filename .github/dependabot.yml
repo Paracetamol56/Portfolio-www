@@ -18,6 +18,3 @@ updates:
       interval: "weekly"
     ignore:
       - dependency-name: "swiper"
-
-ignore:
-  - package-name: "swiper"
