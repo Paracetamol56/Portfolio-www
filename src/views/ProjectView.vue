@@ -11,7 +11,7 @@
       "second": "there are no links for this project :(",
     },
 		"nav": {
-			"last": "Last",
+			"last": "Previous",
 			"next": "Next",
 		},
 	},
