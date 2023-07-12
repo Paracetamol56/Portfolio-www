@@ -8,6 +8,7 @@
     class="button"
     :href="href"
     :name="name"
+    :title="name"
     :target="target"
   >
     <span v-if="arrowPosition === 'right'">{{ text }}</span>
@@ -52,6 +53,7 @@ export default {
       type: String,
       default: "Button",
     },
+
     href: {
       type: String,
       default: "#",
