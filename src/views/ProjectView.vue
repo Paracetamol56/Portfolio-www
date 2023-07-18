@@ -20,7 +20,7 @@
 		"status": "Statut",
 		"dates": "Dates",
 		"technologies": "Technologies",
-		"team": "Equipe",
+		"team": "Équipe",
     "noLinks": {
       "first": "Désolé,",
       "second": "il n'y a pas de liens pour ce projet :(",
