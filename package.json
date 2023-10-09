@@ -30,6 +30,6 @@
     "leaflet": "^1.9.4",
     "sass": "^1.68.0",
     "sass-loader": "^13.3.2",
-    "vue-loader": "^17.2.2"
+    "vue-loader": "^17.3.0"
   }
 }
