@@ -197,7 +197,7 @@ nav {
 	transition: background-color 0.25s var(--easing);
 	&.translucent {
 		background-color: #00000080;
-		ul.nav-menu-list {
+		ul.nav-menu-list.nav-active {
 			background-color: #00000080 !important;
 		}
 	}

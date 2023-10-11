@@ -127,7 +127,8 @@ export default {
         .width(this.$refs.map.clientWidth)
         .height(this.$refs.map.clientHeight)
         .backgroundColor("#00000000")
-        .globeImageUrl(window.location.origin + "/8k_earth_colormap.png")
+        .globeImageUrl(window.location.origin + "/earth-dark.jpg")
+        .bumpImageUrl(window.location.origin + "/earth-topology.png")
         .atmosphereColor("#b4e2f9")
         .atmosphereAltitude(0.1)
         .lineHoverPrecision(2)
@@ -163,8 +164,8 @@ export default {
       this.globe.controls().enableZoom = false;
       // Relation between canevas size and camera distance : f(x) = -0.11x + 350
       const distance = Math.max(
-        -0.11 * this.$refs.map.clientWidth + 350,
-        -0.11 * this.$refs.map.clientHeight + 350
+        -0.11 * this.$refs.map.clientWidth + 375,
+        -0.11 * this.$refs.map.clientHeight + 375
       );
       this.globe.camera().position.set(0, 0, distance);
       this.globe.pointOfView({ lat: 20, lng: 0 }, 0);
