@@ -52,22 +52,14 @@
           </p>
           <p class="info-dates">
             <span class="colored">{{ $t("dates") }}:</span>
-            {{ project.dates.start.replaceAll("-", "/") }} -
-            {{ project.dates.end.replaceAll("-", "/") }}
+            {{ project.dates?.start.replaceAll("-", "/") }} -
+            {{ project.dates?.end.replaceAll("-", "/") }}
           </p>
         </div>
         <h3 class="fillTextWithgradient">{{ $t("technologies") }}</h3>
         <ul class="technology-list">
-          <li
-            class="technology-item"
-            v-for="technology in project.technologies"
-            :key="technology"
-          >
-            <img
-              class="technology-item-vector"
-              :src="technology.icon"
-              alt="icon"
-            />
+          <li class="technology-item" v-for="technology in project.technologies" :key="technology">
+            <img class="technology-item-vector" :src="technology.icon" alt="icon" />
             <p class="technology-item-name">{{ technology.name }}</p>
             <p class="technology-item-description">
               // {{ technology.description }}
@@ -84,27 +76,14 @@
       </div>
     </section>
     <section id="image">
-      <Swiper
-        v-if="project.images.length > 1"
-        class="project-slider"
-        :slides-per-view="1"
-        :space-between="20"
-        :navigation="true"
-        :pagination="{ clickable: true }"
-        :loop="false"
-        :grab-cursor="true"
-        :centeredSlides="true"
-        :modules="modules"
-      >
-        <SwiperSlide
-          class="project-slider-item"
-          v-for="image in project.images"
-          :key="image"
-        >
-          <img v-bind:src="image" alt=""/>
+      <Swiper v-if="project.images?.length > 1" class="project-slider" :slides-per-view="1" :space-between="20"
+        :navigation="true" :pagination="{ clickable: true }" :loop="false" :grab-cursor="true" :centeredSlides="true"
+        :modules="modules">
+        <SwiperSlide class="project-slider-item" v-for="image in project.images" :key="image">
+          <img v-bind:src="image" alt="" />
         </SwiperSlide>
       </Swiper>
-      <img v-else id="header-image" v-bind:src="project.images[0]" alt="" />
+      <img v-else-if="project.images" id="header-image" v-bind:src="project.images[0]" alt="" />
     </section>
     <section id="links">
       <div class="container">
@@ -115,7 +94,7 @@
           </h2>
           <hr />
         </div>
-        <ul class="link-list" v-if="project.links.length > 0">
+        <ul class="link-list" v-if="project.links?.length > 0">
           <li class="link-item" v-for="link in project.links" :key="link">
             <a class="link-item-anchor" :href="link.url" target="_blank">
               <img class="link-item-vector" :src="link.icon" alt="icon" />
@@ -142,36 +121,21 @@
           </h2>
           <hr />
         </div>
-        <div
-          class="presentation-content-block"
-          v-for="(contentBlock, key) in project.description"
-          :key="key"
-        >
+        <div class="presentation-content-block" v-for="(contentBlock, key) in project.description" :key="key">
           <h3 class="presentation-content-block-title fillTextWithgradient">
             {{ key }}
           </h3>
-          <p
-            class="presentation-content-block-paragraph"
-            v-html="contentBlock"
-          ></p>
+          <p class="presentation-content-block-paragraph" v-html="contentBlock"></p>
         </div>
       </div>
     </section>
-    <section id="galery" v-if="project.images.length < 0"></section>
+    <section id="galery" v-if="project.images?.length < 0"></section>
     <section id="project-navigation">
       <div class="container">
-        <UnderlinedButton
-          :text="$t('nav.next')"
-          :href="`/project/${nextProjectSlug}?lang=${$i18n.locale}`"
-          arrowPosition="left"
-          :disabled="nextProjectSlug === ''"
-        />
-        <UnderlinedButton
-          :text="$t('nav.last')"
-          :href="`/project/${lastProjectSlug}?lang=${$i18n.locale}`"
-          arrowPosition="right"
-          :disabled="lastProjectSlug === ''"
-        />
+        <UnderlinedButton :text="$t('nav.next')" :href="`/project/${nextProjectSlug}?lang=${$i18n.locale}`"
+          arrowPosition="left" :disabled="nextProjectSlug === ''" />
+        <UnderlinedButton :text="$t('nav.last')" :href="`/project/${lastProjectSlug}?lang=${$i18n.locale}`"
+          arrowPosition="right" :disabled="lastProjectSlug === ''" />
       </div>
     </section>
   </main>
