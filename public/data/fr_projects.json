@@ -795,5 +795,54 @@
 			"Level up": "<ul><li>J'ai acquis de solides compétences en gestion de projet en respectant les délais et en gérant les priorités.</li><li>J'ai participé activement à la phase de conception de l'application, en définissant les fonctionnalités et en créant le wireframe et la maquette.</li><li>J'ai étendu mes compétences en développement d'applications mobiles en utilisant les langages et les outils appropriés pour créer une solution cross-plateforme.</li></ul>",
 			"Conclusion": "Ce projet a été une expérience enrichissante qui m'a permis d'appliquer mes connaissances techniques et de développer de nouvelles compétences en gestion de projet et en collaboration client. Bien que le développement mobile et plus généralement applicatif ne me conviennent pas, je suis quand même fièr d'avoir participé à ce projet."
 		}
+	},
+	{
+		"id": "13",
+		"title": "Aminophenol Game Engine",
+		"subtitle": "Moteur de jeu 3D en C++",
+		"thumbnail": "/data/img/projects/13/thumbnail.jpg",
+		"images": [
+			"/data/img/projects/13/0.jpg",
+			"/data/img/projects/13/1.gif"
+		],
+		"dates": {
+			"start": "26-11-2022",
+			"end": "∞"
+		},
+		"tags": [
+			"C++",
+			"Vulkan",
+			"GameEngine"
+		],
+		"technologies": [
+			{
+				"name": "C++",
+				"description": "Langage de programmation",
+				"icon": "/data/img/technologies/c-plus-plus.svg"
+			},
+			{
+				"name": "Vulkan",
+				"description": "API graphique",
+				"icon": "/data/img/technologies/vulkan.svg"
+			}
+		],
+		"status": "WIP",
+		"team": [
+			{
+				"name": "Me",
+				"role": "Tout"
+			}
+		],
+		"links": [
+			{
+				"name": "Github",
+				"url": "https://github.com/Paracetamol56/Aminophenol-Game-engine",
+				"icon": "/data/img/links/github.svg"
+			}
+		],
+		"description": {
+			"Presentation": "Aminophenol est un moteur de jeu 3D ecrit en C++17 avec l'API graphique Vulkan. Le but de ce projet est de me familiariser avec les concepts de base d'un moteur de jeu et de me permettre de mieux comprendre le fonctionnement des moteurs de jeu modernes. Le moteur est actuellement en cours de developpement et n'est pas encore utilisable. A terme, ce moteur pourra servir de base pour des projets 3D temps réel, mais le principale objectif est plutot d'ordre éducatif.",
+			"Level up": "<ul><li>Apprentissage de l'API graphique Vulkan</li><li>Apprentissage des concepts de base d'un moteur de jeu</li><li>C++ moderne</li></ul>"
+		}
 	}
 ]

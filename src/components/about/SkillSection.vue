@@ -31,7 +31,7 @@
       },
       {
         "name": "Algorithm",
-        "description": "With my Cartesian mind, I love designing algorithms that I use in my projects. Curious, I also like to understand the mathematics behind the technologies I use every day.",
+        "description": "With my cartesian mind, I love designing algorithms that I use in my projects. Curious, I also like to understand the mathematics behind the technologies I use every day.",
       },
       {
         "name": "Problems solving",

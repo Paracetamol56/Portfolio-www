@@ -45,7 +45,7 @@
 			<div class="about-introduction fade-in">
 				<p v-html="$t('main-paragraph')"></p>
 			</div>
-			<div class="about-occupation fade-in">
+			<!--<div class="about-occupation fade-in">
 				<p>
 					<b>
 						<svg
@@ -85,7 +85,7 @@
 						{{ $t("occupations.2.normal") }}
 					</a>
 				</p>
-			</div>
+			</div>-->
 		</div>
 	</section>
 </template>

@@ -3,13 +3,21 @@
 	"en": {
 		"title": "Formation",
 		"formations": [
+			{
+				"start": "2023",
+				"end": "2023",
+				"title": "Professional certification in artificial intelligence CS50 AI (online)",
+				"school": "Harvard University, Cambridge, MA, USA",
+				"description": "<b>Skills acquired:</b><ul style='list-style: none;'><li>Machine learning</li><li>Optimization</li><li>Logic</li><li>Probabilities</li><li>Python</li><li>Scikit-learn</li><li>TensorFlow</li></ul>",
+				"link": "https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python"
+			},
       {
         "start": "2022",
 				"end": "2023",
 				"title": "Professional bachelor's degree in multiplatform computer development",
 				"school": "Université Savoie Mont Blanc & L'école by CCI, Annecy, France",
 				"description": "<b>Skills acquired:</b><ul style='list-style: none;'><li>Programmation (Java, C, JavaScript, PHP et C#)</li><li>Database (MySQL and Postgres)</li><li>Mobile devices (Swift, Java for Android and cross platform technologies)</li><li>Algorithmic methodology, UML modeling, design pattern</li><li>Security, testing and validation</li><li>Communication (writing specifications or documentation, law and intellectual property)</li><li>Project management (methodology, modeling and production planning)</li><li>Technical and professional English</li><li>Introduction to connected objects</li><li>End of year collective project in competition</li></ul>",
-				"link": "https://formations-iuta.univ-smb.fr/fr/toute-l-offre-de-formation/licence-professionnelle-DP/sciences-technologies-sante-STS/licence-professionnelle-metiers-de-l-informatique-conception-developpement-et-test-logiciels-I2WYFB5X//lp-developpeur-informatique-multi-supports-alternance-I2WYLMKA.html?search-keywords=LP,D%C3%A9veloppeur,informatique,multi,supports,en,apprentissage"
+				"link": "https://formations-iuta.univ-smb.fr/fr/rechercher-une-formation.html"
       },
 			{
 				"start": "2022",
@@ -41,13 +49,21 @@
 	"fr": {
 		"title": "Formation",
 		"formations": [
+			{
+				"start": "2023",
+				"end": "2023",
+				"title": "Certification professionnelle en intelligence artificielle CS50 AI (en ligne)",
+				"school": "Harvard University, Cambridge, MA, USA",
+				"description": "<b>Compétences acquises :</b><ul style='list-style: none;'><li>Apprentissage automatique (machine learning)</li><li>Optimisation</li><li>Logique</li><li>Probabilités</li><li>Python</li><li>Scikit-learn</li><li>TensorFlow</li></ul>",
+				"link": "https://pll.harvard.edu/course/cs50s-introduction-artificial-intelligence-python"
+			},
       {
         "start": "2022",
 				"end": "2023",
 				"title": "Licence professionnelle en développement informatique multisupport",
 				"school": "Université Savoie Mont Blanc & L'école by CCI, Annecy, France",
 				"description": "<b>Compétences acquises :</b><ul style='list-style: none;'><li>Programmation (Java, C, JavaScript, PHP et C#)</li><li>Base de données (MySQL et Postgres)</li><li>Supports mobiles (Swift, Java pour Android et technologies cross plateformes)</li><li>Méthodologie algorithmique, modélisation UML, design pattern</li><li>Sécurité, test et validation</li><li>Communication (rédiger les cahiers des charges, les documentations et spécifications techniques, droit et propriété intellectuelle)</li><li>Gestion de projet (méthodologie, modélisation et planning de production)</li><li>Anglais technique et professionnel</li><li>Introduction aux objets connectés</li><li>Projet collectif de fin d'année en mode compétition</li></ul>",
-				"link": "https://formations-iuta.univ-smb.fr/fr/toute-l-offre-de-formation/licence-professionnelle-DP/sciences-technologies-sante-STS/licence-professionnelle-metiers-de-l-informatique-conception-developpement-et-test-logiciels-I2WYFB5X//lp-developpeur-informatique-multi-supports-alternance-I2WYLMKA.html?search-keywords=LP,D%C3%A9veloppeur,informatique,multi,supports,en,apprentissage"
+				"link": "https://formations-iuta.univ-smb.fr/fr/rechercher-une-formation.html"
       },
 			{
 				"start": "2022",
