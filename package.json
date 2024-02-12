@@ -29,7 +29,7 @@
     "eslint-plugin-vue": "^9.20.1",
     "leaflet": "^1.9.4",
     "sass": "^1.70.0",
-    "sass-loader": "^13.3.2",
+    "sass-loader": "^14.1.0",
     "vue-loader": "^17.4.2"
   }
 }
