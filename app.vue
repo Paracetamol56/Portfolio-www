@@ -39,7 +39,7 @@ export function updateFadeInElements() {
 </script>
 
 <template>
-  <!--<LoaderAnimation ref="loader" />-->
+  <LoaderAnimation ref="loader" />
   <NavBar />
   <NuxtPage />
   <Footer />

@@ -16,7 +16,9 @@ onMounted(() => {
     <main>
       <AboutSection number="01" />
       <LastProjectsSection number="02" />
-      <TravelSection number="03"/>
+      <ClientOnly>
+        <TravelSection number="03"/>
+      </ClientOnly>
     </main>
   </div>
 </template>
