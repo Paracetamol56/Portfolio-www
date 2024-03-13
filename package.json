@@ -1,35 +1,28 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
+  "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build && cp dist_config/_redirects dist/_redirects",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "axios": "^1.6.7",
-    "core-js": "^3.36.0",
-    "globe.gl": "^2.32.2",
-    "slugify": "^1.6.6",
-    "swiper": "9.4.1",
-    "vue": "^3.4.21",
-    "vue-i18n": "^9.10.1",
-    "vue-router": "^4.2.5"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/eslint-parser": "^7.23.10",
-    "@intlify/vue-i18n-loader": "^4.2.0",
-    "@vue/cli-plugin-babel": "~5.0.8",
-    "@vue/cli-plugin-eslint": "~5.0.8",
-    "@vue/cli-plugin-router": "~5.0.7",
-    "@vue/cli-service": "~5.0.8",
+    "@nuxt/content": "^2.11.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/i18n": "^8.0.0",
     "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.22.0",
     "leaflet": "^1.9.4",
+    "lucide-vue-next": "^0.354.0",
+    "nuxt": "^3.9.3",
+    "nuxt3-leaflet": "^1.0.12",
     "sass": "^1.71.1",
-    "sass-loader": "^14.1.1",
-    "vue-loader": "^17.4.2"
+    "vue": "^3.4.14",
+    "vue-router": "^4.2.5",
+    "@types/leaflet": "^1.9.8",
+    "globe.gl": "^2.32.2",
+    "swiper": "^11.0.7"
   }
 }
