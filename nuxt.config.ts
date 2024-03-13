@@ -52,7 +52,10 @@ export default defineNuxtConfig({
           content:
             "Mathéo Galuba's portfolio, showcasing his work as a software engineer and developer.",
         },
-        { property: "og:image", content: "https://matheo-galuba.com/og-image.png" },
+        {
+          property: "og:image",
+          content: "https://matheo-galuba.com/og-image.png",
+        },
 
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "Portfolio - Mathéo Galuba" },
@@ -61,7 +64,18 @@ export default defineNuxtConfig({
           content:
             "Mathéo Galuba's portfolio, showcasing his work as a software engineer and developer.",
         },
-        { name: "twitter:image", content: "https://matheo-galuba.com/og-image.png" },
+        {
+          name: "twitter:image",
+          content: "https://matheo-galuba.com/og-image.png",
+        },
+      ],
+      script: [
+        {
+          src: "https://analytics.matheo-galuba.com/script.js",
+          defer: true,
+          async: true,
+          "data-website-id": "f0cfd44e-8247-4f6b-9ee2-0f8bf949a1ae",
+        },
       ],
     },
   },
