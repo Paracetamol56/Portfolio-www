@@ -1,20 +1,14 @@
-
 <script lang="ts" setup>
 import LoaderAnimation from "~/components/LoaderAnimation.vue";
 import NavBar from "~/components/NavBar.vue";
-import { ref, onMounted } from "vue";
 
-interface LoaderAnimationRef {
-  disapear: () => void;
-}
-const loader: Ref<LoaderAnimationRef | null> = ref(null);
-
-onMounted(() => {
-  document.onreadystatechange = () => {
-    if (document.readyState === "complete") {
-      loader.value?.disapear();
-    }
-  };
+const nuxtApp = useNuxtApp();
+const loading = ref(false);
+nuxtApp.hook("page:start", () => {
+  loading.value = true;
+});
+nuxtApp.hook("page:finish", () => {
+  loading.value = false;
 });
 </script>
 
@@ -39,7 +33,7 @@ export function updateFadeInElements() {
 </script>
 
 <template>
-  <LoaderAnimation ref="loader" />
+  <!--LoaderAnimation v-if="loading" />-->
   <NavBar />
   <NuxtPage />
   <Footer />
