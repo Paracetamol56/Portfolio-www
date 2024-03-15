@@ -338,10 +338,10 @@ section#info {
 }
 section#image {
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
   .project-slider {
     .project-slider-item {
-      width: 100%;
+      width: 100vw;
       aspect-ratio: 16/9;
       img {
         width: 100%;

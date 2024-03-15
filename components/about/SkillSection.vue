@@ -61,11 +61,11 @@ const props = defineProps({
 				<h3 class="fillTextWithgradient fade-in">
 					{{ $t("about.skills.keywords") }}
 				</h3>
-				<ul class="skill-list">
-					<li class="skill-item fade-in">
+				<ul class="skill-list fade-in">
+					<li class="skill-item">
 						<div class="skill-item-content">
 							<div class="skill-item-content-visible">
-								<Code color="var(--secondary-color)" size="64" />
+								<Code color="var(--secondary-color)" :size="64" />
 								<h4 class="skill-item-name">
 									{{ $t("about.skills.keywords.1.name") }}
 								</h4>
@@ -77,10 +77,10 @@ const props = defineProps({
 							</div>
 						</div>
 					</li>
-					<li class="skill-item fade-in">
+					<li class="skill-item">
 						<div class="skill-item-content">
 							<div class="skill-item-content-visible">
-								<Cog color="var(--secondary-color)" size="64" />
+								<Cog color="var(--secondary-color)" :size="64" />
 								<h4 class="skill-item-name">
 									{{ $t("about.skills.keywords.2.name") }}
 								</h4>
@@ -92,10 +92,10 @@ const props = defineProps({
 							</div>
 						</div>
 					</li>
-					<li class="skill-item fade-in">
+					<li class="skill-item">
 						<div class="skill-item-content">
 							<div class="skill-item-content-visible">
-								<Brain color="var(--secondary-color)" size="64" />
+								<Brain color="var(--secondary-color)" :size="64" />
 								<h4 class="skill-item-name">
 									{{ $t("about.skills.keywords.3.name") }}
 								</h4>
@@ -107,10 +107,10 @@ const props = defineProps({
 							</div>
 						</div>
 					</li>
-					<li class="skill-item fade-in">
+					<li class="skill-item">
 						<div class="skill-item-content">
 							<div class="skill-item-content-visible">
-								<ListTodo color="var(--secondary-color)" size="64" />
+								<ListTodo color="var(--secondary-color)" :size="64" />
 								<h4 class="skill-item-name">
 									{{ $t("about.skills.keywords.4.name") }}
 								</h4>
@@ -122,10 +122,10 @@ const props = defineProps({
 							</div>
 						</div>
 					</li>
-					<li class="skill-item fade-in">
+					<li class="skill-item">
 						<div class="skill-item-content">
 							<div class="skill-item-content-visible">
-								<Gamepad2 color="var(--secondary-color)" size="64" />
+								<Gamepad2 color="var(--secondary-color)" :size="64" />
 								<h4 class="skill-item-name">
 									{{ $t("about.skills.keywords.5.name") }}
 								</h4>
@@ -137,10 +137,10 @@ const props = defineProps({
 							</div>
 						</div>
 					</li>
-					<li class="skill-item fade-in">
+					<li class="skill-item">
 						<div class="skill-item-content">
 							<div class="skill-item-content-visible">
-								<ServerCog color="var(--secondary-color)" size="64" />
+								<ServerCog color="var(--secondary-color)" :size="64" />
 								<h4 class="skill-item-name">
 									{{ $t("about.skills.keywords.6.name") }}
 								</h4>
