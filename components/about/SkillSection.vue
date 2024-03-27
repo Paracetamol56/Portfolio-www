@@ -188,6 +188,20 @@ const props = defineProps({
 							<br />*/
 						</p>
 					</li>
+					<!-- Go -->
+					<li class="tech-item fade-in">
+						<img
+							class="tech-item-icon"
+							src="https://cdn.simpleicons.org/go/f5f3fa"
+							alt="-icon"
+						/>
+						<p class="tech-item-name" v-html="$t('about.skills.technologies.3.name')"></p>
+						<p class="tech-item-description">
+							/*<br />
+							<span v-html="$t('about.skills.technologies.3.description')"></span>
+							<br />*/
+						</p>
+					</li>
 					<!-- Python -->
 					<li class="tech-item fade-in">
 						<img
@@ -195,10 +209,10 @@ const props = defineProps({
 							src="https://cdn.simpleicons.org/python/f5f3fa"
 							alt="-icon"
 						/>
-						<p class="tech-item-name" v-html="$t('about.skills.technologies.3.name')"></p>
+						<p class="tech-item-name" v-html="$t('about.skills.technologies.4.name')"></p>
 						<p class="tech-item-description">
 							/*<br />
-							<span v-html="$t('about.skills.technologies.3.description')"></span>
+							<span v-html="$t('about.skills.technologies.4.description')"></span>
 							<br />*/
 						</p>
 					</li>
@@ -209,10 +223,10 @@ const props = defineProps({
 							src="https://cdn.simpleicons.org/git/f5f3fa"
 							alt="-icon"
 						/>
-						<p class="tech-item-name" v-html="$t('about.skills.technologies.4.name')"></p>
+						<p class="tech-item-name" v-html="$t('about.skills.technologies.5.name')"></p>
 						<p class="tech-item-description">
 							/*<br />
-							<span v-html="$t('about.skills.technologies.4.description')"></span>
+							<span v-html="$t('about.skills.technologies.5.description')"></span>
 							<br />*/
 						</p>
 					</li>
@@ -223,10 +237,10 @@ const props = defineProps({
 							src="https://cdn.simpleicons.org/unity/f5f3fa"
 							alt="-icon"
 						/>
-						<p class="tech-item-name" v-html="$t('about.skills.technologies.5.name')"></p>
+						<p class="tech-item-name" v-html="$t('about.skills.technologies.6.name')"></p>
 						<p class="tech-item-description">
 							/*<br />
-							<span v-html="$t('about.skills.technologies.5.description')"></span>
+							<span v-html="$t('about.skills.technologies.6.description')"></span>
 							<br />*/
 						</p>
 					</li>
@@ -237,10 +251,10 @@ const props = defineProps({
 							src="https://cdn.simpleicons.org/postgresql/f5f3fa"
 							alt="-icon"
 						/>
-						<p class="tech-item-name" v-html="$t('about.skills.technologies.6.name')"></p>
+						<p class="tech-item-name" v-html="$t('about.skills.technologies.7.name')"></p>
 						<p class="tech-item-description">
 							/*<br />
-							<span v-html="$t('about.skills.technologies.6.description')"></span>
+							<span v-html="$t('about.skills.technologies.7.description')"></span>
 							<br />*/
 						</p>
 					</li>
@@ -251,10 +265,10 @@ const props = defineProps({
 							src="https://cdn.simpleicons.org/mongodb/f5f3fa"
 							alt="-icon"
 						/>
-						<p class="tech-item-name" v-html="$t('about.skills.technologies.7.name')"></p>
+						<p class="tech-item-name" v-html="$t('about.skills.technologies.8.name')"></p>
 						<p class="tech-item-description">
 							/*<br />
-							<span v-html="$t('about.skills.technologies.7.description')"></span>
+							<span v-html="$t('about.skills.technologies.8.description')"></span>
 							<br />*/
 						</p>
 					</li>
@@ -265,10 +279,10 @@ const props = defineProps({
 							src="https://cdn.simpleicons.org/html5/f5f3fa"
 							alt="-icon"
 						/>
-						<p class="tech-item-name" v-html="$t('about.skills.technologies.8.name')"></p>
+						<p class="tech-item-name" v-html="$t('about.skills.technologies.9.name')"></p>
 						<p class="tech-item-description">
 							/*<br />
-							<span v-html="$t('about.skills.technologies.8.description')"></span>
+							<span v-html="$t('about.skills.technologies.9.description')"></span>
 							<br />*/
 						</p>
 					</li>
@@ -279,10 +293,10 @@ const props = defineProps({
 							src="https://cdn.simpleicons.org/nodedotjs/f5f3fa"
 							alt="-icon"
 						/>
-						<p class="tech-item-name" v-html="$t('about.skills.technologies.9.name')"></p>
+						<p class="tech-item-name" v-html="$t('about.skills.technologies.10.name')"></p>
 						<p class="tech-item-description">
 							/*<br />
-							<span v-html="$t('about.skills.technologies.9.description')"></span>
+							<span v-html="$t('about.skills.technologies.10.description')"></span>
 							<br />*/
 						</p>
 					</li>
@@ -293,10 +307,10 @@ const props = defineProps({
 							src="https://cdn.simpleicons.org/blender/f5f3fa"
 							alt="-icon"
 						/>
-						<p class="tech-item-name" v-html="$t('about.skills.technologies.10.name')"></p>
+						<p class="tech-item-name" v-html="$t('about.skills.technologies.11.name')"></p>
 						<p class="tech-item-description">
 							/*<br />
-							<span v-html="$t('about.skills.technologies.10.description')"></span>
+							<span v-html="$t('about.skills.technologies.11.description')"></span>
 							<br />*/
 						</p>
 					</li>
@@ -307,10 +321,10 @@ const props = defineProps({
 							src="https://cdn.simpleicons.org/adobe/f5f3fa"
 							alt="-icon"
 						/>
-						<p class="tech-item-name" v-html="$t('about.skills.technologies.11.name')"></p>
+						<p class="tech-item-name" v-html="$t('about.skills.technologies.12.name')"></p>
 						<p class="tech-item-description">
 							/*<br />
-							<span v-html="$t('about.skills.technologies.11.description')"></span>
+							<span v-html="$t('about.skills.technologies.12.description')"></span>
 							<br />*/
 						</p>
 					</li>
