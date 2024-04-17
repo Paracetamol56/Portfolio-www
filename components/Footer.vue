@@ -47,6 +47,34 @@
 				</li>
 				<li class="footer-logo-item">
 					<a
+						href="https://paracetamol56.itch.io"
+						name="Itch.io"
+						target="_blank"
+						class="footer-logo-link"
+					>
+						<img
+							class="footer-logo-image"
+							src="https://cdn.simpleicons.org/itchdotio/f5f3fa"
+							alt="Itch.io"
+						/>
+					</a>
+				</li>
+				<li class="footer-logo-item">
+					<a
+						href="https://www.printables.com/@MatheoGaluba_1537385"
+						name="Printables"
+						target="_blank"
+						class="footer-logo-link"
+					>
+						<img
+							class="footer-logo-image"
+							src="https://cdn.simpleicons.org/printables/f5f3fa"
+							alt="Printables"
+						/>
+					</a>
+				</li>
+				<li class="footer-logo-item">
+					<a
 						href="https://t.me/paracetamol_56"
 						name="Telegram"
 						target="_blank"
