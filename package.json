@@ -18,7 +18,7 @@
     "lucide-vue-next": "^0.364.0",
     "nuxt": "^3.11.1",
     "nuxt3-leaflet": "^1.0.12",
-    "sass": "^1.72.0",
+    "sass": "^1.75.0",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5",
     "@types/leaflet": "^1.9.8",
