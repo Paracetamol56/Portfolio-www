@@ -13,7 +13,7 @@
     "@nuxt/content": "^2.11.0",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/i18n": "^8.2.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "leaflet": "^1.9.4",
     "lucide-vue-next": "^0.364.0",
     "nuxt": "^3.11.1",
