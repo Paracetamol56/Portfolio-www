@@ -21,7 +21,7 @@
     "sass": "^1.75.0",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5",
-    "@types/leaflet": "^1.9.8",
+    "@types/leaflet": "^1.9.11",
     "globe.gl": "^2.32.3",
     "swiper": "^11.0.7"
   }
