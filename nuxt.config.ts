@@ -79,7 +79,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@nuxt/content", "@nuxtjs/i18n", "nuxt3-leaflet"],
+  modules: ["@nuxt/content", "@nuxtjs/i18n", 'nuxt-mapbox'],
   content: {
     // ... options
   },
@@ -104,5 +104,8 @@ export default defineNuxtConfig({
       },
     ],
     langDir: "locales/",
+  },
+  mapbox: {
+    accessToken: 'pk.eyJ1IjoibWF0aGVvLWdhbHViYSIsImEiOiJjbHVmZmhobWQwcmFnMmpvY2tpNW8yY2RkIn0.iGen_1CAveoAE9xFSNJZJQ'
   },
 });

@@ -1,38 +1,33 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
-import L from 'leaflet';
-import iconSVG from '@/assets/img/location-pin.svg';
+import { ref } from 'vue';
+import mapboxgl from 'mapbox-gl';
 
-const zoom = ref(6);
 const center = ref({ lat: 45.0414734104549, lng: 3.8838424153521593 });
 const centerHumanReadable = ref({
   lat: { dir: '', deg: 0, min: 0, sec: 0 },
   lng: { dir: '', deg: 0, min: 0, sec: 0 }
 });
 
-/*const markerIcon = ref(new L.Icon<L.IconOptions>({
-  iconUrl: require('@/assets/img/location-pin.svg'),
-  iconSize: [25, 35],
-  iconAnchor: [12, 35],
-}));*/
+// Compute the center coordinates in the human readable format
+centerHumanReadable.value = {
+  lat: {
+    dir: center.value.lat < 0 ? 'S' : 'N',
+    deg: Math.floor(Math.abs(center.value.lat)),
+    min: Math.floor((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 60),
+    sec: ((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 3600 - Math.floor((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 60) * 60).toFixed(2)
+  },
+  lng: {
+    dir: center.value.lng < 0 ? 'W' : 'E',
+    deg: Math.floor(Math.abs(center.value.lng)),
+    min: Math.floor((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 60),
+    sec: ((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 3600 - Math.floor((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 60) * 60).toFixed(2)
+  }
+};
 
-onMounted(() => {
-  // Compute the center coordinates in the human readable format
-  centerHumanReadable.value = {
-    lat: {
-      dir: center.value.lat < 0 ? 'S' : 'N',
-      deg: Math.floor(Math.abs(center.value.lat)),
-      min: Math.floor((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 60),
-      sec: ((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 3600 - Math.floor((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 60) * 60).toFixed(2)
-    },
-    lng: {
-      dir: center.value.lng < 0 ? 'W' : 'E',
-      deg: Math.floor(Math.abs(center.value.lng)),
-      min: Math.floor((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 60),
-      sec: ((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 3600 - Math.floor((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 60) * 60).toFixed(2)
-    }
-  };
-});
+useMapbox("map", (map) => {
+  map.scrollZoom.disable();
+  map.addControl(new mapboxgl.NavigationControl(), 'top-left');
+})
 </script>
 
 <template>
@@ -50,22 +45,20 @@ onMounted(() => {
       </div>
     </div>
     <div id="map-container" style="height: 40rem">
-      <LMap
-        :zoom="zoom"
-        :center="[center.lat, center.lng]"
-        :options="{scrollWheelZoom: false}"
+      <MapboxMap
+        map-id="map"
+        :options="{
+          style: 'mapbox://styles/mapbox/standard',
+          center: [center.lng, center.lat],
+          zoom: 5,
+        }"
       >
-        <LTileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution="&amp;copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
-          layer-type="base"
-          name="OpenStreetMap"
+        <MapboxDefaultMarker 
+          marker-id="marker"
+          :options="{}"
+          :lnglat="[center.lng, center.lat]"
         />
-        <LMarker
-          :lat-lng="[center.lat, center.lng]"
-          :icon="L.icon({ iconUrl: iconSVG, iconSize: [25, 35], iconAnchor: [12, 35] })"
-        />
-      </LMap>
+      </MapboxMap>
       <div class="location-infos">
         <p class="location-infos-text">
           <span class="type-write">
