@@ -55,7 +55,7 @@ useMapbox("map", (map) => {
       >
         <MapboxDefaultMarker 
           marker-id="marker"
-          :options="{}"
+          :options="{color: '#0c0816'}"
           :lnglat="[center.lng, center.lat]"
         />
       </MapboxMap>
