@@ -221,6 +221,7 @@ defineProps({
 
 onMounted(() => {
   displayGlobe();
+  window.addEventListener("resize", resizeGlobe);
 });
 
 function displayGlobe() {
@@ -274,6 +275,12 @@ function displayGlobe() {
   }
 }
 
+function resizeGlobe() {
+  globe
+    .width(map.value?.clientWidth ?? 0)
+    .height(map.value?.clientHeight ?? 0);
+}
+
 function onSwiper(s: any) {
   swiper.value = s;
 }
@@ -294,6 +301,8 @@ function slideChange(e: any) {
   );
 }
 </script>
+
+
 
 <template>
   <section id="travels" class="fade-in">

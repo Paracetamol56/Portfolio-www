@@ -63,6 +63,7 @@ const props = defineProps({
 					</a>
 				</p>
 			</div>-->
+			<SocialList />
     </div>
   </section>
 </template>
