@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { updateFadeInElements } from "~/app.vue";
-import { FileDown } from "lucide-vue-next";
+import { ExternalLink, FileDown } from "lucide-vue-next";
 
 const modules = [Navigation, Pagination];
 const { locale } = useI18n();
@@ -185,6 +185,9 @@ onMounted(() => {
               <a class="link-item-anchor" :href="link.url" target="_blank">
                 <div v-if="link.icon == 'download'" class="link-item-vector">
                   <FileDown :size="60" color="#f5f3fa" />
+                </div>
+                <div v-if="link.icon == 'web'" class="link-item-vector">
+                  <ExternalLink :size="60" color="#f5f3fa" />
                 </div>
                 <img
                   v-else
