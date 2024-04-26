@@ -86,11 +86,11 @@ export default defineNuxtConfig({
   i18n: {
     strategy: "prefix_except_default",
     defaultLocale: "en",
-    detectBrowserLanguage: {
+    detectBrowserLanguage: false, /*{
       useCookie: true,
       cookieKey: "i18n_redirected",
       redirectOn: "root", // recommended
-    },
+    },*/
     locales: [
       {
         code: "en",

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import LoaderAnimation from "~/components/LoaderAnimation.vue";
 import NavBar from "~/components/NavBar.vue";
 
 const nuxtApp = useNuxtApp();
