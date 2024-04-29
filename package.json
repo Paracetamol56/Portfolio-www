@@ -15,7 +15,7 @@
     "@nuxtjs/i18n": "^8.3.0",
     "eslint": "^9.1.0",
     "globe.gl": "^2.32.4",
-    "lucide-vue-next": "^0.372.0",
+    "lucide-vue-next": "^0.376.0",
     "mapbox-gl": "^3.3.0",
     "nuxt": "^3.11.1",
     "nuxt-mapbox": "^1.5.9",
