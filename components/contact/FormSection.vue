@@ -1,21 +1,6 @@
 <script lang="ts" setup>
 import BoxButton from "@/components/BoxButton.vue";
 import { Send } from "lucide-vue-next";
-
-const handleSubmit = (e: Event) => {
-  e.preventDefault();
-
-  const form = e.target as HTMLFormElement;
-  const formData = new FormData(form);
-  
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => console.log("Form successfully submitted"))
-    .catch((error) => alert(error));
-};
 </script>
 
 <template>
@@ -39,7 +24,7 @@ const handleSubmit = (e: Event) => {
         name="contact"
         method="POST"
         data-netlify="true"
-        @submit="handleSubmit"
+        data-netlify-honeypot="bot-field"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div class="concat-form-horizontal-wrapper">
