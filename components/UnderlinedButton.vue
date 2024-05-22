@@ -35,7 +35,7 @@ defineProps({
       disabled: disabled,
     }"
     class="button"
-    :to="localePath(href)"
+    :to="href"
     :target="target"
   >
     <span v-if="arrowPosition === 'right'">
