@@ -7,6 +7,8 @@ import "swiper/css/pagination";
 import { updateFadeInElements } from "~/app.vue";
 import { ExternalLink, FileDown } from "lucide-vue-next";
 
+const localePath = useLocalePath()
+
 const modules = [Navigation, Pagination];
 const { locale } = useI18n();
 const route = useRoute();
@@ -47,9 +49,22 @@ const { data }: { data: Ref<Data> } = await useAsyncData("page", async () => {
     queryContent(`${locale.value}/${slug}`).findOne(),
     queryContent().only("_path").findSurround(`/${locale.value}/${slug}`),
   ]);
+
+  const surroundResult: (string | undefined)[] = [];
+  console.log(surround.map((s: any) => s?._path)); // [ "/en/13-aminophenol-game-engine", "/fr/1-liss-en-3d" ]
+  // Make undefined if the locale is not the same in the surround
+  for (let i = 0; i < surround.length; ++i) {
+    console.log(surround[i]?._path?.split("/")[1]);
+    if (surround[i]?._path?.split("/")[1] !== locale.value) {
+      surroundResult.push(undefined);
+    } else {
+      surroundResult.push(surround[i]?._path?.split("/").pop());
+    }
+  }
+  
   return {
     content,
-    surround: surround.map((s: any) => s?._path.split("/").pop()),
+    surround: surroundResult
   };
 });
 
@@ -226,14 +241,14 @@ onMounted(() => {
       <section id="project-navigation">
         <div class="container fade-in">
           <UnderlinedButton
-            :href="`/project/${data.surround[1]}`"
+            :href="data.surround[1] === undefined ? '#' : localePath(`/project/${data.surround[1]}`)"
             arrowPosition="left"
             :disabled="data.surround[1] === undefined"
           >
             {{ $t("project.nav.next") }}
           </UnderlinedButton>
           <UnderlinedButton
-            :href="`/project/${data.surround[0]}`"
+            :href="data.surround[0] === undefined ? '#' : localePath(`/project/${data.surround[0]}`)"
             arrowPosition="right"
             :disabled="data.surround[0] === undefined"
           >

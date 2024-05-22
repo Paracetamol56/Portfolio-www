@@ -27,7 +27,7 @@
         ><br />*/
       </p>
       <UnderlinedButton
-        :href="`/project/${slug}`"
+        :href="localePath(`/project/${slug}`)"
         >{{ $t("see-more") }}
       </UnderlinedButton>
     </div>
