@@ -1,5 +1,7 @@
 <script lang="ts" setup>
+import { Sparkles } from "lucide-vue-next";
 import { defineProps } from "vue";
+import UnderlinedButton from "../UnderlinedButton.vue";
 
 const props = defineProps({
   number: {
@@ -63,7 +65,77 @@ const props = defineProps({
 					</a>
 				</p>
 			</div>-->
-			<SocialList />
+      <SocialList />
+      <div class="about-spotlight">
+        <div class="about-spotlight fade-in">
+          <h3 class="about-spotlight-title"><Sparkles />Spotlight</h3>
+          <ul class="about-spotlight-list">
+            <li class="about-spotlight-item">
+              <h4 class="about-spotlight-subtitle">Dev website</h4>
+              <div class="about-spotlight-item-content">
+                <img
+                  class="about-spotlight-logo"
+                  src="/img/spotlights/dev.png"
+                  alt="Dev website"
+                />
+                <div>
+                  <p class="about-spotlight-description">
+                    A blog to share my knowledge and my projects.
+                  </p>
+                  <UnderlinedButton
+                    href="https://dev.matheo-galuba.com"
+                    target="_blank"
+                  >
+                    Go
+                  </UnderlinedButton>
+                </div>
+              </div>
+            </li>
+            <li class="about-spotlight-item">
+              <h4 class="about-spotlight-subtitle">Ticketing</h4>
+              <div class="about-spotlight-item-content">
+                <img
+                  class="about-spotlight-logo"
+                  src="/img/spotlights/ticket.png"
+                  alt="Ticketing"
+                />
+                <div>
+                  <p class="about-spotlight-description">
+                    A personal ticketing system.
+                  </p>
+                  <UnderlinedButton
+                    href="https://ticket.matheo-galuba.com"
+                    target="_blank"
+                  >
+                    Go
+                  </UnderlinedButton>
+                </div>
+              </div>
+            </li>
+            <li class="about-spotlight-item">
+              <h4 class="about-spotlight-subtitle">Les actus de Bob</h4>
+              <div class="about-spotlight-item-content">
+                <img
+                  class="about-spotlight-logo"
+                  src="/img/spotlights/actus-de-bob.png"
+                  alt="Les actus de Bob"
+                />
+                <div>
+                  <p class="about-spotlight-description">
+                    A blog about useless facts.
+                  </p>
+                  <UnderlinedButton
+                    href="https://actus-de-bob.fun"
+                    target="_blank"
+                  >
+                    Go
+                  </UnderlinedButton>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -85,6 +157,52 @@ section#about {
     margin: 16px 0;
     svg.about-occupation-vector {
       height: 1rem;
+    }
+  }
+
+  .about-spotlight {
+    margin-top: 32px;
+    .about-spotlight-title {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+			display: flex;
+			align-items: center;
+			gap: 4px;
+    }
+
+    .about-spotlight-list {
+      display: grid;
+      list-style: none;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+			padding: 0;
+      .about-spotlight-item {
+        .about-spotlight-subtitle {
+          font-size: 1.25rem;
+          margin-bottom: 12px;
+        }
+        .about-spotlight-item-content {
+          display: flex;
+					align-items: center;
+          gap: 16px;
+          .about-spotlight-logo {
+            height: 75px;
+          }
+          .about-spotlight-description {
+            font-size: 1rem;
+						margin-top: 0;
+            margin-bottom: 8px;
+          }
+          .about-spotlight-link {
+            font-size: 1rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
     }
   }
 }
