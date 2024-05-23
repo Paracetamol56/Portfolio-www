@@ -9,6 +9,12 @@ nuxtApp.hook("page:start", () => {
 nuxtApp.hook("page:finish", () => {
   loading.value = false;
 });
+
+useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true
+});
 </script>
 
 <script lang="ts">
