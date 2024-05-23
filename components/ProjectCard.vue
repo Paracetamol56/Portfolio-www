@@ -1,9 +1,14 @@
 <template>
   <div class="project-card">
-    <img
-      class="project-card-image"
-      alt="Project {{ project.id }} thumbnail"
+    <NuxtImg
       :src="project.thumbnail"
+      format="webp, avif, jpg"
+      placeholder
+      quality="85"
+      loading="lazy"
+      densities="x1 x2"
+      alt="Project {{ project.id }} thumbnail"
+      class="project-card-image"
     />
     <div class="project-card-text">
       <p class="project-card-text-date">

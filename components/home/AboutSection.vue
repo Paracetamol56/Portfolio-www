@@ -73,10 +73,14 @@ const props = defineProps({
             <li class="about-spotlight-item">
               <h4 class="about-spotlight-subtitle">Dev website</h4>
               <div class="about-spotlight-item-content">
-                <img
-                  class="about-spotlight-logo"
+                <NuxtImg
                   src="/img/spotlights/dev.png"
+                  format="webp"
+                  placeholder
+                  loading="lazy"
+                  quality="50"
                   alt="Dev website"
+                  class="about-spotlight-logo"
                 />
                 <div>
                   <p class="about-spotlight-description">
@@ -94,10 +98,14 @@ const props = defineProps({
             <li class="about-spotlight-item">
               <h4 class="about-spotlight-subtitle">Ticketing</h4>
               <div class="about-spotlight-item-content">
-                <img
-                  class="about-spotlight-logo"
+                <NuxtImg
                   src="/img/spotlights/ticket.png"
+                  format="webp"
+                  placeholder
+                  loading="lazy"
+                  quality="50"
                   alt="Ticketing"
+                  class="about-spotlight-logo"
                 />
                 <div>
                   <p class="about-spotlight-description">
@@ -115,10 +123,14 @@ const props = defineProps({
             <li class="about-spotlight-item">
               <h4 class="about-spotlight-subtitle">Les actus de Bob</h4>
               <div class="about-spotlight-item-content">
-                <img
-                  class="about-spotlight-logo"
+                <NuxtImg
                   src="/img/spotlights/actus-de-bob.png"
+                  format="webp"
+                  placeholder
+                  loading="lazy"
+                  quality="50"
                   alt="Les actus de Bob"
+                  class="about-spotlight-logo"
                 />
                 <div>
                   <p class="about-spotlight-description">

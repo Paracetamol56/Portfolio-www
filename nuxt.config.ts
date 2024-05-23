@@ -79,7 +79,11 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@nuxt/content", "@nuxtjs/i18n", 'nuxt-mapbox'],
+  sourcemap: {
+    server: true,
+    client: true
+  },
+  modules: ["@nuxt/content", "@nuxtjs/i18n", 'nuxt-mapbox', "@nuxt/image"],
   content: {
     // ... options
   },

@@ -11,10 +11,15 @@
 
 <template>
 	<div class="travel-card">
-		<img
-			class="travel-card-image"
-			alt="Travel {{ travel.id }} thumbnail"
+		<NuxtImg
 			:src="travel.thumbnail"
+			format="webp, avif, jpg"
+			placeholder
+			quality="85"
+			loading="lazy"
+			densities="x1 x2"
+			alt="Travel {{ travel.id }} thumbnail"
+			class="travel-card-image"
 		/>
 		<div class="travel-card-text">
 			<p class="travel-card-text-date">
