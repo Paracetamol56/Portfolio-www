@@ -51,10 +51,7 @@ const { data }: { data: Ref<Data> } = await useAsyncData("page", async () => {
   ]);
 
   const surroundResult: (string | undefined)[] = [];
-  console.log(surround.map((s: any) => s?._path)); // [ "/en/13-aminophenol-game-engine", "/fr/1-liss-en-3d" ]
-  // Make undefined if the locale is not the same in the surround
   for (let i = 0; i < surround.length; ++i) {
-    console.log(surround[i]?._path?.split("/")[1]);
     if (surround[i]?._path?.split("/")[1] !== locale.value) {
       surroundResult.push(undefined);
     } else {
