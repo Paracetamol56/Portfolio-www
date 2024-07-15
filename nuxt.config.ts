@@ -74,7 +74,7 @@ export default defineNuxtConfig({
           src: "https://analytics.matheo-galuba.com/script.js",
           defer: true,
           async: true,
-          "data-website-id": "f0cfd44e-8247-4f6b-9ee2-0f8bf949a1ae",
+          "data-website-id": "a0c61e3e-7dda-4e4d-9c5a-d376a12f9280",
         },
       ],
     },
