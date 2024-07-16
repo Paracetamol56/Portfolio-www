@@ -11,7 +11,7 @@
 
 <template>
 	<div class="travel-card">
-		<NuxtImg
+		<NuxtPicture
 			:src="travel.thumbnail"
 			format="webp, avif, jpg"
 			placeholder

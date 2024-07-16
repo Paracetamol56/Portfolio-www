@@ -1,6 +1,6 @@
 <template>
   <div class="project-card">
-    <NuxtImg
+    <NuxtPicture
       :src="project.thumbnail"
       format="webp, avif, jpg"
       placeholder
