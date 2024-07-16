@@ -1,6 +1,6 @@
 <template>
   <div class="project-card">
-    <NuxtPicture
+    <img
       :src="project.thumbnail"
       alt="Project {{ project.id }} thumbnail"
       class="project-card-image"
