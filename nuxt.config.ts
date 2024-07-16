@@ -112,4 +112,7 @@ export default defineNuxtConfig({
   mapbox: {
     accessToken: 'pk.eyJ1IjoibWF0aGVvLWdhbHViYSIsImEiOiJjbHVmZmhobWQwcmFnMmpvY2tpNW8yY2RkIn0.iGen_1CAveoAE9xFSNJZJQ'
   },
+  image: {
+    provider: 'netlify',
+  }
 });
