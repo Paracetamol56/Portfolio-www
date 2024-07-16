@@ -2,11 +2,6 @@
   <div class="project-card">
     <NuxtPicture
       :src="project.thumbnail"
-      format="webp, avif, jpg"
-      placeholder
-      quality="85"
-      loading="lazy"
-      densities="x1 x2"
       alt="Project {{ project.id }} thumbnail"
       class="project-card-image"
     />

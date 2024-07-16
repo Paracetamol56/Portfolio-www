@@ -11,13 +11,8 @@
 
 <template>
 	<div class="travel-card">
-		<NuxtPicture
+		<img
 			:src="travel.thumbnail"
-			format="webp, avif, jpg"
-			placeholder
-			quality="85"
-			loading="lazy"
-			densities="x1 x2"
 			alt="Travel {{ travel.id }} thumbnail"
 			class="travel-card-image"
 		/>
