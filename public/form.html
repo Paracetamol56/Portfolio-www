@@ -1,0 +1,43 @@
+<body>
+  <form
+    id="contact-form"
+    class="contact-form"
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+  >
+    <input type="hidden" name="form-name" value="contact" />
+    <div class="concat-form-horizontal-wrapper">
+      <input type="text" id="name" name="name" value="" required />
+      <input type="email" id="email" name="email" value="" required />
+    </div>
+    <select class="contact-form-select" name="subject" id="subject" required>
+      <option class="contact-form-select-option" value="" selected disabled>
+        Select
+      </option>
+      <option class="contact-form-select-option" value="help">
+        Need help on a project
+      </option>
+      <option class="contact-form-select-option" value="work">
+        Work with me for the long term
+      </option>
+      <option class="contact-form-select-option" value="discuss">
+        Discuss about technology, or something else
+      </option>
+      <option class="contact-form-select-option" value="hello">
+        Just say hello to me
+      </option>
+    </select>
+    <textarea id="message" rows="10" name="message" required></textarea>
+    <input type="hidden" name="_captcha" value="false" />
+    <input
+      type="hidden"
+      name="_autoresponse"
+      value="Your message has been sent. I will get back to you as soon as possible."
+    />
+    <input type="hidden" name="_template" value="basic" />
+    <button id="contact-form-submit" type="submit">Submit</button>
+    <p class="contact-form-state" id="state-feedback"></p>
+  </form>
+</body>
