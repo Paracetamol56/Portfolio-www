@@ -78,7 +78,8 @@ const props = defineProps({
                   format="webp"
                   placeholder
                   loading="lazy"
-                  quality="50"
+                  quality="20"
+                  sizes="(max-width: 720px) 100vw 50vw"
                   alt="Dev website"
                   class="about-spotlight-logo"
                 />
@@ -103,7 +104,8 @@ const props = defineProps({
                   format="webp"
                   placeholder
                   loading="lazy"
-                  quality="50"
+                  quality="20"
+                  sizes="(max-width: 720px) 100vw 50vw"
                   alt="Ticketing"
                   class="about-spotlight-logo"
                 />
@@ -128,7 +130,8 @@ const props = defineProps({
                   format="webp"
                   placeholder
                   loading="lazy"
-                  quality="50"
+                  quality="20"
+                  sizes="(max-width: 720px) 100vw 50vw"
                   alt="Les actus de Bob"
                   class="about-spotlight-logo"
                 />
@@ -177,9 +180,9 @@ section#about {
     .about-spotlight-title {
       font-size: 1.5rem;
       margin-bottom: 16px;
-			display: flex;
-			align-items: center;
-			gap: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
     .about-spotlight-list {
@@ -187,7 +190,7 @@ section#about {
       list-style: none;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 16px;
-			padding: 0;
+      padding: 0;
       .about-spotlight-item {
         .about-spotlight-subtitle {
           font-size: 1.25rem;
@@ -195,14 +198,14 @@ section#about {
         }
         .about-spotlight-item-content {
           display: flex;
-					align-items: center;
+          align-items: center;
           gap: 16px;
           .about-spotlight-logo {
             height: 75px;
           }
           .about-spotlight-description {
             font-size: 1rem;
-						margin-top: 0;
+            margin-top: 0;
             margin-bottom: 8px;
           }
           .about-spotlight-link {
