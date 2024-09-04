@@ -103,12 +103,12 @@ export default defineNuxtConfig({
     locales: [
       {
         code: "en",
-        language: "en-US",
+        iso: "en-US",
         file: "en-US.json",
       },
       {
         code: "fr",
-        language: "fr-FR",
+        iso: "fr-FR",
         file: "fr-FR.json",
       },
     ],

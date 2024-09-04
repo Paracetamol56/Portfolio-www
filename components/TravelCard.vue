@@ -16,8 +16,7 @@
 			format="webp"
 			placeholder
 			loading="lazy"
-			quality="20"
-			sizes="(max-width: 720px) 100vw 50vw"
+			quality="50"
 			alt="Travel {{ travel.id }} thumbnail"
 			class="travel-card-image"
 		/>

@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { updateFadeInElements } from "~/app.vue";
 import { ExternalLink, FileDown } from "lucide-vue-next";
 
-const localePath = useLocalePath();
+const localePath = useLocalePath()
 
 const modules = [Navigation, Pagination];
 const { locale } = useI18n();
@@ -58,10 +58,10 @@ const { data }: { data: Ref<Data> } = await useAsyncData("page", async () => {
       surroundResult.push(surround[i]?._path?.split("/").pop());
     }
   }
-
+  
   return {
     content,
-    surround: surroundResult,
+    surround: surroundResult
   };
 });
 
@@ -175,7 +175,6 @@ onMounted(() => {
               placeholder
               loading="lazy"
               quality="50"
-              sizes="(max-width: 720px) 100vw 50vw"
               alt="Project {{ data.content?.title }}"
             />
           </SwiperSlide>
@@ -187,7 +186,6 @@ onMounted(() => {
           placeholder
           loading="lazy"
           quality="50"
-          sizes="(max-width: 720px) 100vw 50vw"
           id="header-image"
           alt="Project {{ data.content?.title }}"
         />
@@ -251,22 +249,14 @@ onMounted(() => {
       <section id="project-navigation">
         <div class="container fade-in">
           <UnderlinedButton
-            :href="
-              data.surround[1] === undefined
-                ? '#'
-                : localePath(`/project/${data.surround[1]}`)
-            "
+            :href="data.surround[1] === undefined ? '#' : localePath(`/project/${data.surround[1]}`)"
             arrowPosition="left"
             :disabled="data.surround[1] === undefined"
           >
             {{ $t("project.nav.next") }}
           </UnderlinedButton>
           <UnderlinedButton
-            :href="
-              data.surround[0] === undefined
-                ? '#'
-                : localePath(`/project/${data.surround[0]}`)
-            "
+            :href="data.surround[0] === undefined ? '#' : localePath(`/project/${data.surround[0]}`)"
             arrowPosition="right"
             :disabled="data.surround[0] === undefined"
           >
