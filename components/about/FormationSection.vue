@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import { ExternalLink } from "lucide-vue-next";
-import { defineProps } from "vue";
-
 const props = defineProps({
 	number: {
 		type: String,
@@ -30,16 +27,17 @@ const props = defineProps({
 					<div class="formatioon-item-content">
 						<h3 class="formation-title">{{ $t(`about.formation.${num}.title`) }}</h3>
 						<p class="formation-school">{{ $t(`about.formation.${num}.school`) }}</p>
-						<p class="formation-description">
-							/*<br />
-							<b>Skills acquired:</b>
+						<div class="formation-description">
+							<p>
+								<br />
+								<b>Skills acquired:</b>
+							</p>
 							<ul style="list-style: none;">
 								<li v-for="(skill, index) in $t(`about.formation.${num}.description`).split(';')" :key="index">
 									{{ skill }}
 								</li>
 							</ul>
-							*/
-						</p>
+						</div>
 						<a
 							class="formation-link"
 							:href="$t(`about.formation.${num}.link`)"

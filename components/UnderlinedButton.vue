@@ -113,12 +113,6 @@ a.button {
     transform-origin: right;
   }
   svg.octicon {
-    &.left {
-      transform: scaleX(-1);
-    }
-    &.right {
-      transform: scaleX(1);
-    }
     position: relative;
     top: 3px;
     width: 16px;
@@ -126,6 +120,12 @@ a.button {
     color: #5f78ef;
     transform: translateX(0);
     transition: transform 0.25s var(--easing);
+    &.left {
+      transform: scaleX(-1);
+    }
+    &.right {
+      transform: scaleX(1);
+    }
     path.octicon-chevrow-stem {
       stroke-dasharray: 10;
       stroke-dashoffset: 10;

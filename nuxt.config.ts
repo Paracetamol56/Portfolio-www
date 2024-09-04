@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
+
   app: {
     pageTransition: { name: "fade", mode: "out-in" },
     head: {
@@ -79,14 +80,18 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   sourcemap: {
     server: true,
     client: true
   },
+
   modules: ["@nuxt/content", "@nuxtjs/i18n", 'nuxt-mapbox', "@nuxt/image"],
+
   content: {
     // ... options
   },
+
   i18n: {
     strategy: "prefix_except_default",
     defaultLocale: "en",
@@ -109,10 +114,14 @@ export default defineNuxtConfig({
     ],
     langDir: "locales/",
   },
+
   mapbox: {
     accessToken: 'pk.eyJ1IjoibWF0aGVvLWdhbHViYSIsImEiOiJjbHVmZmhobWQwcmFnMmpvY2tpNW8yY2RkIn0.iGen_1CAveoAE9xFSNJZJQ'
   },
+
   image: {
     provider: 'netlify',
-  }
+  },
+
+  compatibilityDate: "2024-09-04"
 });

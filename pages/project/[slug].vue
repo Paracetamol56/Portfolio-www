@@ -169,14 +169,25 @@ onMounted(() => {
             v-for="image in data.content?.images"
             :key="image"
           >
-            <img v-bind:src="image" alt="" />
+            <NuxtImg
+              :src="image"
+              format="webp"
+              placeholder
+              loading="lazy"
+              quality="50"
+              alt="Project {{ data.content?.title }}"
+            />
           </SwiperSlide>
         </Swiper>
-        <img
+        <NuxtImg
           v-else-if="data.content?.images"
+          :src="data.content?.images[0]"
+          format="webp"
+          placeholder
+          loading="lazy"
+          quality="50"
           id="header-image"
-          v-bind:src="data.content?.images[0]"
-          alt=""
+          alt="Project {{ data.content?.title }}"
         />
       </section>
       <section id="links">
