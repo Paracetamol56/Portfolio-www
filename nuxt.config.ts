@@ -94,6 +94,7 @@ export default defineNuxtConfig({
 
   i18n: {
     strategy: "prefix_except_default",
+    baseUrl: "https://matheo-galuba.com",
     defaultLocale: "en",
     detectBrowserLanguage: false, /*{
       useCookie: true,

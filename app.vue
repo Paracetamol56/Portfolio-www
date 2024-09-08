@@ -10,7 +10,7 @@ nuxtApp.hook("page:finish", () => {
   loading.value = false;
 });
 
-useLocaleHead({
+const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true
@@ -38,10 +38,12 @@ export function updateFadeInElements() {
 </script>
 
 <template>
-  <!--LoaderAnimation v-if="loading" />-->
-  <NavBar />
-  <NuxtPage />
-  <Footer />
+  <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
+    <!--LoaderAnimation v-if="loading" />-->
+    <NavBar />
+    <NuxtPage />
+    <Footer />
+  </Html>
 </template>
 
 <style lang="scss">
