@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { ExternalLink } from 'lucide-vue-next';
+
 const props = defineProps({
 	number: {
 		type: String,
@@ -18,7 +20,7 @@ const props = defineProps({
 				<hr />
 			</div>
 			<ul class="formation-list">
-				<li class="formation-item fade-in" v-for="(num, index) in 5" :key="index">
+				<li class="formation-item fade-in" v-for="(num, index) in 6" :key="index">
 					<div class="formation-item-timeline">
 						<p class="formation-start-date">{{ $t(`about.formation.${num}.end`) }}</p>
 						<span class="formation-start-date-separator"></span>
