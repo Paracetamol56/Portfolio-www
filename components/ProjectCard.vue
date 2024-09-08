@@ -1,7 +1,11 @@
 <template>
   <div class="project-card">
-    <img
+    <NuxtImg
       :src="project.thumbnail"
+      format="webp"
+      placeholder
+      loading="lazy"
+      quality="50"
       alt="Project {{ project.id }} thumbnail"
       class="project-card-image"
     />
