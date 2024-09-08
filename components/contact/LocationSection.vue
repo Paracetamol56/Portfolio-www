@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import mapboxgl from 'mapbox-gl';
 
-const center = ref({ lat: 45.0414734104549, lng: 3.8838424153521593 });
+const center = ref({ lat: 45.78710146863226, lng: 3.0714223231138087 });
 const centerHumanReadable = ref({
   lat: { dir: '', deg: 0, min: 0, sec: 0 },
   lng: { dir: '', deg: 0, min: 0, sec: 0 }
