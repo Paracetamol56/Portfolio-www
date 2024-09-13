@@ -23,9 +23,16 @@ import { Send } from "lucide-vue-next";
         class="contact-form"
         name="contact"
         method="POST"
+        data-netlify-recaptcha="true"
         data-netlify="true"
         action="/form.html"
+        netlify-honeypot="bot-field"
       >
+<p class="hidden"></p>
+      <label>
+        Don’t fill this out if you’re human: <input name="bot-field" />
+      </label>
+    </p>
         <input type="hidden" name="form-name" value="contact" />
         <div class="concat-form-horizontal-wrapper">
           <input
@@ -77,12 +84,7 @@ import { Send } from "lucide-vue-next";
           name="message"
           required
         ></textarea>
-        <input type="hidden" name="_captcha" value="false" />
-        <input
-          type="hidden"
-          name="_autoresponse"
-          value="Your message has been sent. I will get back to you as soon as possible."
-        />
+<div data-netlify-recaptcha="true"></div>
         <input type="hidden" name="_template" value="basic" />
         <button id="contact-form-submit" type="submit">
           <Send :size="18" stroke-width="3" />
