@@ -23,12 +23,11 @@ import { Send } from "lucide-vue-next";
         class="contact-form"
         name="contact"
         method="POST"
-        data-netlify-recaptcha="true"
         data-netlify="true"
         action="/form.html"
         netlify-honeypot="bot-field"
       >
-        <p class="hidden">
+        <p class="contact-form-hidden">
           <label>
             Don’t fill this out if you’re human: <input name="bot-field" />
           </label>
@@ -84,8 +83,6 @@ import { Send } from "lucide-vue-next";
           name="message"
           required
         ></textarea>
-        <div data-netlify-recaptcha="true"></div>
-        <input type="hidden" name="_template" value="basic" />
         <button id="contact-form-submit" type="submit">
           <Send :size="18" stroke-width="3" />
           <span>&nbsp;Send</span>
@@ -135,6 +132,10 @@ import { Send } from "lucide-vue-next";
     align-items: center;
     width: 100%;
     margin: 0;
+
+    .contact-form-hidden {
+      display: none;
+    }
 
     .concat-form-horizontal-wrapper {
       display: flex;
