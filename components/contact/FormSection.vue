@@ -28,11 +28,11 @@ import { Send } from "lucide-vue-next";
         action="/form.html"
         netlify-honeypot="bot-field"
       >
-<p class="hidden"></p>
-      <label>
-        Don’t fill this out if you’re human: <input name="bot-field" />
-      </label>
-    </p>
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+        </p>
         <input type="hidden" name="form-name" value="contact" />
         <div class="concat-form-horizontal-wrapper">
           <input
@@ -84,7 +84,7 @@ import { Send } from "lucide-vue-next";
           name="message"
           required
         ></textarea>
-<div data-netlify-recaptcha="true"></div>
+        <div data-netlify-recaptcha="true"></div>
         <input type="hidden" name="_template" value="basic" />
         <button id="contact-form-submit" type="submit">
           <Send :size="18" stroke-width="3" />
@@ -127,6 +127,7 @@ import { Send } from "lucide-vue-next";
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
   .contact-form {
     display: flex;
     flex-direction: column;
@@ -134,6 +135,7 @@ import { Send } from "lucide-vue-next";
     align-items: center;
     width: 100%;
     margin: 0;
+
     .concat-form-horizontal-wrapper {
       display: flex;
       flex-direction: row;
@@ -141,13 +143,16 @@ import { Send } from "lucide-vue-next";
       align-items: center;
       width: 100%;
       margin: 0;
+
       .contact-form-input {
         margin-right: 10px;
+
         &:last-child {
           margin-right: 0;
         }
       }
     }
+
     .contact-form-input {
       width: 100%;
       margin: 10px 0;
@@ -168,6 +173,7 @@ import { Send } from "lucide-vue-next";
         transition: all 0.5s var(--easing);
       }
     }
+
     .contact-form-select {
       width: 100%;
       margin: 10px 0;
@@ -180,24 +186,28 @@ import { Send } from "lucide-vue-next";
       font-family: "Fira Code", monospace;
       font-weight: 500;
       transition: all 0.5s var(--easing);
+
       &:focus {
         outline: none;
         border-bottom: var(--primary-color) 2px solid;
         color: var(--primary-color);
         transition: all 0.5s var(--easing);
       }
+
       .contact-form-select-option {
         font-size: 1rem;
         font-family: "Fira Code", monospace;
         font-weight: 500;
       }
     }
+
     textarea.contact-form-input {
       resize: vertical;
       min-height: 200px;
       max-height: 400px;
       overflow: auto;
     }
+
     #contact-form-submit {
       display: flex;
       align-items: center;
@@ -216,32 +226,38 @@ import { Send } from "lucide-vue-next";
       border: none;
       cursor: pointer;
       transition: all 0.25s var(--easing);
+
       svg.octicon {
         position: relative;
         width: 16px;
         height: 16px;
         transform: translateX(0);
         transition: transform 0.25s var(--easing);
+
         path.octicon-chevrow-stem {
           stroke-dasharray: 10;
           stroke-dashoffset: 10;
           transition: stroke-dashoffset 0.25s var(--easing);
         }
       }
+
       &:hover {
         color: var(--secondary-color);
         box-shadow: 0 4px 7px #00000080, 0 100px 80px #b4e2f904,
           0 41.7776px 33.4221px #b4e2f906, 0 22.3363px 17.869px #b4e2f907,
           0 12.5216px 10.0172px #b4e2f909, 0 6.6501px 5.32008px #b4e2f90b,
           0 2.76726px 2.21381px #b4e2f912;
+
         svg.octicon {
           transform: translateX(4px);
+
           path.octicon-chevrow-stem {
             stroke-dashoffset: 20;
           }
         }
       }
     }
+
     .contact-form-state {
       font-size: 1rem;
       color: #b4e2f9;
