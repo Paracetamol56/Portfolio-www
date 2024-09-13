@@ -24,7 +24,7 @@ import { Send } from "lucide-vue-next";
         name="contact"
         method="POST"
         data-netlify="true"
-        action="/success.html"
+        action="/form.html"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div class="concat-form-horizontal-wrapper">
