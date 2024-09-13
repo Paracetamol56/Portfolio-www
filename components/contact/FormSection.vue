@@ -24,7 +24,7 @@ import { Send } from "lucide-vue-next";
         name="contact"
         method="POST"
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        @submit.prevent="submitForm"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div class="concat-form-horizontal-wrapper">
