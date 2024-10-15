@@ -151,7 +151,7 @@ onMounted(() => {
           </ul>
         </div>
       </section>
-      <section id="image fade-in">
+      <section id="image" class="fade-in">
         <Swiper
           v-if="data.content?.images?.length > 1"
           class="project-slider"
