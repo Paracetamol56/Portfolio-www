@@ -11,6 +11,7 @@ defineProps({
   },
 });
 
+const { isDesktop } = useDevice();
 let interval: any;
 const background: Ref<HTMLElement | null> = ref(null);
 const backgroundGradient: Ref<HTMLElement | null> = ref(null);
@@ -20,7 +21,10 @@ function triggerHover() {
   let randomChild =
     codeBlocksBackground.value?.children[
       Math.floor(Math.random() * codeBlocksBackground.value.children.length)
-    ]!;
+    ];
+  if (!randomChild) {
+    return;
+  }
   if (randomChild.classList.contains("light")) {
     return;
   }
@@ -32,17 +36,20 @@ function triggerHover() {
 }
 
 function mouseMove(event: MouseEvent) {
+  if (!isDesktop) {
+    return;
+  }
   // Get the mouse position
   let x = event.clientX - window.innerWidth / 2;
   let y = event.clientY - window.innerHeight / 2;
 
   if (backgroundGradient.value) {
-    backgroundGradient.value.style.top = -y / 5 + "px";
-    backgroundGradient.value.style.left = -x / 5 + "px";
+    backgroundGradient.value.style.top = `calc(50% + ${-y / 5}px)`;
+    backgroundGradient.value.style.left = `calc(50% + ${-x / 5}px)`;
   }
 }
 
-function generateBlockContent() {
+async function generateBlockContent() {
   let randomCharacters: string[] = [..."_=*^#@<>:;.,"]; // [..."-_+=*&^%$#@!~<>?:;.,|/{}[]()"];
 
   let randomContent = "";
@@ -76,13 +83,19 @@ function generateBlockContent() {
   return randomContent;
 }
 
-async function writeContent(element: Element, content: string) {
+async function writeContent(element: Element, content: Promise<string>) {
+  let contentString: string = await content;
   element.innerHTML = "";
+  // If on non-desktop, bypass the character by character writing
+  if (!isDesktop) {
+    element.innerHTML = contentString;
+    return;
+  }
   // write content in element character by character
   let i = 0;
   let characterInterval = setInterval(function () {
-    if (i < content.length) {
-      element.innerHTML += content[i];
+    if (i < contentString.length) {
+      element.innerHTML += contentString[i];
       i++;
     } else {
       clearInterval(characterInterval);
@@ -246,11 +259,11 @@ header {
 
   div.background-gradient {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     transform: translate(
-      calc(-1 * max(25vh, 25vw)),
-      calc(-1 * max(50vh, 50vw))
+      calc(-1 * max(75vh, 75vw)),
+      calc(-1 * max(75vh, 75vw))
     );
     filter: blur(50px);
     width: calc(max(100vh, 100vw) * 1.5);
