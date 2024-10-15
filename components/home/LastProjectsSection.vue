@@ -18,8 +18,9 @@ defineProps({
 	},
 });
 
-const { data } = await useAsyncData("projects", () =>
-  queryContent(locale.value).sort({ id: -1, $numeric: true }).limit(4).find()
+const { data } = await useAsyncData(
+	"projects-limit-4",
+	() => queryContent(locale.value).sort({ id: -1, $numeric: true }).limit(4).find()
 );
 </script>
 
