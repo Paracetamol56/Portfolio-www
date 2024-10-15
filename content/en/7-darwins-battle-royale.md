@@ -39,8 +39,12 @@ links:
 ---
 
 # Presentation
-This project is a "zero player game" or "self played game" (like Conway's game), i.e. the player only selects the initial situation. t is an evolutionary artificial intelligence project: the experience is repeated over several generations and each generation takes advantage of the previous one with certain possible mutations.<br/>It is a 3D environment in which creatures evolve. Each creature's goal is to kill the others through hand-to-hand combat and the creature that is last to remain wins.
+
+This project is a "zero player game" or "self played game" (like Conway's game), the player only selects the initial situation. It is an evolutionary artificial intelligence project: the experience is repeated over several generations, and each generation takes advantage of the previous one with certain possible mutations.
+It is a 3D environment in which creatures evolve. Each creature's goal is to kill the others through hand-to-hand combat, and the creature that is last to remain wins.
 
 # Level up
-<ul><li>Introduction to Artificial Intelligence and Reinforcement Learning</li><li>AI-Driven Video Game Development</li><li>Solo Project Management (Daily scrums, feature writing, written record of work, etc…)</li></ul>
 
+- Introduction to Artificial Intelligence and Reinforcement Learning
+- AI-Driven Video Game Development
+- Solo Project Management (Daily scrums, feature writing, written notes, etc…)

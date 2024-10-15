@@ -42,15 +42,15 @@ links:
     icon: "itchdotio"
 ---
 
-# Context
-That level again is a mobile game whose first opus was released in 2016 on Android and iOS. The game is seemingly simple: platforms, a door and a button but it is better not to trust appearances Indeed, the game will use your logic to pass the same level in an increasingly improbable way.<br/>For my first 2D game in Unity, I have therefore decided to recreate 12 of the 96 original levels.
+# Introduction
 
-# Timeline
-The first step was of course the creation of assets. From the animation of the stickman character to the user interfaces and the backgrounds, all the assets were recreated by me with some freedom from the game original.<br/>I then had to design the basic mechanics: the control of the character, the different necklaces, etc. Child's play with the Unity interface and the different models that already exist.<br/> Finally, the part that required me the most patience: programming the behavior of the different elements according to the level. As there are 12 levels, and none are identical, you have to recode for each level the interactions between the player, the button, the door and sometimes even the decor.
+The objective is to create an interactive visualization software of the International Space Station. The software is under development but in the long term it will be able to be used to visit the ISS and to have information on each module.
 
 # Level up
-<ul><li>Creating assets</li><li>Basic knowledge of Unity 2D (Character, scenery, level system)</li><li>Editing scripts in C# in the Unity environment</li></ul>
 
-# Conclusion
-I am finally very proud of the result for a first game. I find the game enjoyable despite some remaining bugs.
+- 3D Modeling
+- Using Unreal Engine
 
+# Progress
+
+It's a long term project that takes a lot of my free time. For now, the part that requires the most investment is the 3D modeling. After getting a free model from the NASA website, I had to redo all the textures and make the model decoupled module by module, and I also rigged the model ready for animations.

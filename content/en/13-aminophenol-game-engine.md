@@ -31,8 +31,12 @@ links:
 ---
 
 # Presentation
-Aminophenol is a 3D game engine written in C++17 with the Vulkan graphics API. The aim of this project is to familiarize myself with the basic concepts of a game engine and to give me a better understanding of how modern game engines work. The engine is currently under development and not yet ready for use. Eventually, this engine could be used as a basis for real-time 3D projects, but the main objective is educational.
+
+Aminophenol is a 3D game engine written in C++17 with the Vulkan graphics API. The aim of this project is to familiarize myself with the basic concepts of a game engine and to give me a better understanding of how modern game engines work. The engine is currently under development and not yet ready for use. Eventually, this engine could be used as a canvas for real-time 3D projects, but the main objective is educational.
 
 # Level up
-<ul><li>Learn about the Vulkan graphics API</li><li>Learn the basic concepts of a game engine</li><li>Modern C++</li></ul>
+
+- Learn about the Vulkan graphics API
+- Learn the basic concepts of a game engine
+- Modern C++
 

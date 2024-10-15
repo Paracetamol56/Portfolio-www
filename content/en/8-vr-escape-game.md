@@ -42,14 +42,26 @@ links:
 ---
 
 # Presentation
-The game is a VR Escape Game made in a team of 3 as part of my last semester of IUT in Canada.<br/>The story takes place in the basements of the Cégep de Matane or the The player finds himself stuck in a heavy and dark atmosphere. To get out, he must solve several puzzles in order to restore the power to operate the freight elevator, an iconic artifact of the Cégep residence and well known to students.
+
+The game is a VR Escape Game made in a team of 3 as part of my last semester of DUT in Canada.
+The story takes place in the basement of the Cégep de Matane, where the player finds himself trapped in a heavy, dark atmosphere. To get out, he has to solve several riddles in order to restore power to the freight elevator, an iconic artifact of the Cégep residence and well known to students.
 
 # Timeline
-To start, we gathered a large amount of assets to allow us to quickly create the 3D environment of our game.<br/>I was then responsible for integrating these assets into Unity so that it is compatible with the engine and easily usable.<br/>There was also quite a lot of 3D modeling work, especially on the level of the lift, which had to be reproduced as faithfully as possible. I used photogrammetry techniques to "scan" the real lift and reproduce it in 3D using a smartphone and a computer.<br/>Then, we integrated VR mechanisms such as teleportation, hands or even the physical interactions between objects.<br/>Finally, we added the gameplay elements and puzzles to make the game playable.We still used a little 3D modeling for custom assets and a lot of work to make the features work ments of the objects of the puzzles.
 
-# Level up
-<ul><li>Developing VR games with Unity and open XR</li><li>Strengthening my knowledge of Unity 3D</li><li>Project management, version management and workflow with lots of high definition assets</li></ul>
+To begin with, we gathered a large quantity of assets to enable us to quickly create the 3D environment of our game.
+I was then responsible for integrating these assets into Unity so that they would be compatible with the engine and easy to use.
+There was also a fair amount of 3D modeling work, particularly on the freight elevator, which had to be reproduced as faithfully as possible. I used photogrammetry techniques to “scan” the actual elevator and reproduce it in 3D using a smartphone and a computer.
+Next, we integrated VR mechanisms such as teleportation, hands and physical interactions between objects.
+Finally, we added gameplay elements and puzzles to make the game playable. We used a bit of 3D modeling for the custom assets, and a lot of work to make the puzzle object behaviors work.
+
+Level up
+
+- VR game development with Unity and Open XR
+- Reinforced my knowledge of Unity 3D
+- Project management, versioning and workflow with lots of high-definition assets
+
 
 # Conclusion
-Within the time limit and the significant material constraints, we did not go as far as we would have liked for this project. Despite everything, I am very satisfied with the result, the teamwork and our determination to solve problems.
+
+We didn't get as far as we would have liked with this project, given the time and hardware constraints. Nevertheless, I'm very satisfied with the result, the teamwork and our determination to solve problems.
 
