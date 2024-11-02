@@ -21,11 +21,9 @@
   "home.projects.button": "Voir tous les projets",
   "home.about.title": "Présentation",
   "home.about.main-paragraph": "Les nouvelles technologies prennent une place croissante dans nos vies. C'est pourquoi j'étudie actuellement l'informatique, un domaine que je souhaite appliquer à des causes concrètes. Curieux et ayant la volonté d'apprendre, j'aime découvrir et m'impliquer dans de nouveaux domaines de la technologie : imagerie numérique, intelligence artificielle, web, systèmes embarqués, etc. Mon ambition à long terme est de travailler dans un secteur qui me tient particulièrement à cœur : l'aérospatiale. En effet, ayant toujours été passionné par les étoiles, je souhaite participer au développement de l'humanité dans l'espace.",
-  "home.about.occupation.1.strong": "Etudiant en informatique ",
-  "home.about.occupation.1.normal": "en licence professionnelle de développement informatique multisupport à Annecy (France)",
-  "home.about.occupation.2.strong": "Contrat en alternance dans le développement web et l'infrastructure informatique ",
-  "home.about.occupation.2.normal": "chez Hunimalis à Annecy (France))",
-  
+  "home.about.occupation.title": "Activité",
+  "home.about.occupation.1.strong": "Etudiant en master d'informatique",
+  "home.about.occupation.1.normal": " à l'ISIMA (Institut Supérieur d'Informatique, de Modélisation et de leurs Applications)",
   "home.travels.title": "Mes voyages",
 
   "about.title": "À propos",
