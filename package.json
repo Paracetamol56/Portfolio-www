@@ -18,7 +18,7 @@
     "eslint": "^9.3.0",
     "globe.gl": "^2.33.1",
     "lucide-vue-next": "^0.451.0",
-    "mapbox-gl": "^3.6.0",
+    "mapbox-gl": "^3.9.4",
     "nuxt": "^3.11.1",
     "nuxt-mapbox": "^1.6.0",
     "sass": "^1.80.6",
