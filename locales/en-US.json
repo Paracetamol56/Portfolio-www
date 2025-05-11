@@ -1,12 +1,10 @@
 {
   "welcome": "Welcome",
   "see-more": "See more",
-
   "nav.home": "Home",
   "nav.about": "About",
   "nav.projects": "Projects",
   "nav.contact": "Contact",
-
   "footer.made.with": "Made with",
   "footer.made.by": "by {0}",
   "footer.made.under": "Under",
@@ -14,7 +12,6 @@
   "footer.tech.with": "Made with",
   "footer.tech.and": "and hosted on",
   "footer.tech.source": "Source code available on",
-
   "home.title": "Home",
   "home.subtitle": "Welcome to my universe",
   "home.projects.title": "My projects",
@@ -24,8 +21,9 @@
   "home.about.occupation.title": "Occupation",
   "home.about.occupation.1.strong": "Master's student in computer science",
   "home.about.occupation.1.normal": " at ISIMA (Institut Supérieur d'Informatique, de Modélisation et de leurs Applications)",
+  "home.about.occupation.2.strong": "Research internship on the environmental impact of artificial intelligence in medical imaging",
+  "home.about.occupation.2.normal": " at the Institut Pascal (France)",
   "home.travels.title": "My travels",
-
   "about.title": "About",
   "about.subtitle": "Let me introduce myself",
   "about.skills.title": "Skills and technologies",
@@ -182,10 +180,8 @@
   "about.formation.6.description": "",
   "about.formation.6.skills": [],
   "about.formation.6.link": "https://sites.google.com/a/sjc43.fr/sjc43/",
-
   "projects.title": "Projects",
   "projects.subtitle": "Here are some of my projects",
-
   "project.sections.info": "Info",
   "project.sections.links": "Links",
   "project.sections.video": "Video",
@@ -199,7 +195,6 @@
   "project.nolinks.2": "there are no links for this project :(",
   "project.nav.last": "Previous",
   "project.nav.next": "Next",
-
   "contact.title": "Contact",
   "contact.subtitle": "Let's make things happen",
   "contact.map.title": "Location",
@@ -220,7 +215,6 @@
   "contact.form.subject-option.4": "Just say hello to me",
   "contact.form.message": "Message",
   "contact.form.send": "Send",
-
   "error.error": "Error",
   "error.fallback": "An error occurred.",
   "error.home": "Back to home"

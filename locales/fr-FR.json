@@ -1,12 +1,10 @@
 {
   "welcome": "Bienvenue",
   "see-more": "Voir plus",
-
   "nav.home": "Accueil",
   "nav.about": "A propos",
   "nav.projects": "Projets",
   "nav.contact": "Contact",
-
   "footer.made.with": "Fait avec",
   "footer.made.by": "par {0}",
   "footer.made.under": "Sous",
@@ -14,7 +12,6 @@
   "footer.tech.with": "Fait avec",
   "footer.tech.and": "et hébergé par",
   "footer.tech.source": "Code source disponible sur",
-
   "home.title": "Accueil",
   "home.subtitle": "Bienvenue dans mon univers",
   "home.projects.title": "Derniers projets",
@@ -24,8 +21,9 @@
   "home.about.occupation.title": "Activité",
   "home.about.occupation.1.strong": "Etudiant en master d'informatique",
   "home.about.occupation.1.normal": " à l'ISIMA (Institut Supérieur d'Informatique, de Modélisation et de leurs Applications)",
+  "home.about.occupation.2.strong": "Stage de recherche sur l'impact environnemental de l'intelligence artificielle en imagerie médicale",
+  "home.about.occupation.2.normal": " à l'Institut Pascal (France)",
   "home.travels.title": "Mes voyages",
-
   "about.title": "À propos",
   "about.subtitle": "Permettez-moi de me présenter",
   "about.resume.title": "Resume",
@@ -184,10 +182,8 @@
   "about.formation.6.description": "",
   "about.formation.6.skills": [],
   "about.formation.6.link": "https://sites.google.com/a/sjc43.fr/sjc43/",
-
   "projects.title": "Projets",
   "projects.subtitle": "Voici quelques-uns de mes projets",
-
   "project.sections.info": "Info",
   "project.sections.links": "Liens",
   "project.sections.video": "Vidéo",
@@ -201,7 +197,6 @@
   "project.nolinks.2": "il n'y a pas de liens pour ce projet :(",
   "project.nav.last": "Précédent",
   "project.nav.next": "Suivant",
-
   "contact.title": "Contact",
   "contact.subtitle": "Faisons connaissance",
   "contact.map.title": "Emplacement",
@@ -221,7 +216,6 @@
   "contact.form.subject-option.4": "Simplement me dire bonjour",
   "contact.form.message": "Message",
   "contact.form.send": "Envoyer",
-
   "error.error": "Erreur",
   "error.fallback": "Une erreur est survenue.",
   "error.home": "Retour à l'accueil"

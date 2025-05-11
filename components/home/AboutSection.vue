@@ -32,6 +32,10 @@ const props = defineProps({
             <strong>{{ $t("home.about.occupation.1.strong") }}</strong>
             {{ $t("home.about.occupation.1.normal") }}
           </p>
+          <p class="about-spotlight-subtitle">
+            <strong>{{ $t("home.about.occupation.2.strong") }}</strong>
+            {{ $t("home.about.occupation.2.normal") }}
+          </p>
         </div>
       </div>
       <div class="about-spotlight">
