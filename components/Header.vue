@@ -20,7 +20,7 @@ const codeBlocksBackground: Ref<HTMLElement | null> = ref(null);
 function triggerHover() {
   let randomChild =
     codeBlocksBackground.value?.children[
-      Math.floor(Math.random() * codeBlocksBackground.value.children.length)
+    Math.floor(Math.random() * codeBlocksBackground.value.children.length)
     ];
   if (!randomChild) {
     return;
@@ -171,11 +171,7 @@ onBeforeUnmount(() => {
 <template>
   <header ref="background" @mousemove="mouseMove">
     <div class="background-gradient" ref="backgroundGradient"></div>
-    <div
-      class="background"
-      ref="codeBlocksBackground"
-      id="codeBlocksBackground"
-    ></div>
+    <div class="background" ref="codeBlocksBackground" id="codeBlocksBackground"></div>
 
     <div class="titles" id="titles">
       <h1 class="fillTextWithgradient type-write" key="title">
@@ -188,16 +184,10 @@ onBeforeUnmount(() => {
 
     <div class="downButton" @click="scrollToMain()">
       {{ $t("see-more") }}<br />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        width="24"
-        height="24"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"
-        ></path>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill-rule="evenodd"
+          d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
+        </path>
       </svg>
     </div>
   </header>
@@ -261,19 +251,15 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(
-      calc(-1 * max(75vh, 75vw)),
-      calc(-1 * max(75vh, 75vw))
-    );
+    transform: translate(calc(-1 * max(75vh, 75vw)),
+        calc(-1 * max(75vh, 75vw)));
     filter: blur(50px);
     width: calc(max(100vh, 100vw) * 1.5);
     height: calc(max(100vh, 100vw) * 1.5);
     z-index: -1;
-    background-image: radial-gradient(
-      circle,
-      #2c1b4fff 0%,
-      #11141600 50%
-    ) !important;
+    background-image: radial-gradient(circle,
+        #2c1b4fff 0%,
+        #11141600 50%) !important;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -287,17 +273,21 @@ header {
     transform: translateY(-50%), translateZ(200px);
     font-family: "Fira Code", monospace;
     font-weight: 300;
+
     h1 {
       font-size: 4rem;
       margin: 0;
+
       @media (max-width: 768px) {
         font-size: 2.5rem;
       }
     }
+
     h2 {
       font-size: 2.5rem;
       margin-top: 10px;
       margin-bottom: 0;
+
       @media (max-width: 768px) {
         font-size: 1.5rem;
       }

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { defineProps } from "vue";
 import { Code, Cog, Brain, ListTodo, Gamepad2, ServerCog } from "lucide-vue-next";
 
 const props = defineProps({
