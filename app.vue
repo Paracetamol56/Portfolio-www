@@ -39,7 +39,7 @@ export function updateFadeInElements() {
 
 <template>
   <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
-    <!--LoaderAnimation v-if="loading" />-->
+    <Loader />
     <NavBar />
     <NuxtPage />
     <Footer />

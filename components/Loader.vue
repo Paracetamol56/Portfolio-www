@@ -1,31 +1,6 @@
 <template>
   <!-- Loader -->
-  <div id="loader" class="loader-wrapper">
-    <!-- <svg
-      id="Calque_2"
-      class="loader-logo"
-      data-name="Calque 2"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1080 900"
-    >
-      <polygon
-        class="cls-1"
-        points="346.07 287.66 512.15 0 1080 0 1080 180 616.07 180 450 467.66 346.07 287.66"
-      />
-      <polygon
-        class="cls-1"
-        points="450 647.56 180 180 0 180 180 540 346.07 827.65 450 647.56"
-      />
-      <polygon
-        class="cls-1"
-        points="1080 269.9 1080 900 630 900 720 720 900 720 900 449.9 771.91 450 875.86 269.95 1080 269.9"
-      />
-      <polygon
-        class="cls-2"
-        points="667.98 270 346.07 827.65 387.85 900 512.1 900 875.86 269.95 667.98 270"
-      />
-      <polygon class="cls-2" points="0 900 180 900 180 540 0 180 0 900" />
-    </svg> -->
+  <div v-if="isLoading" id="loader" class="loader-wrapper">
     <svg
       class="loader-logo"
       xmlns:cc="http://creativecommons.org/ns#"
@@ -333,18 +308,49 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "LoaderAnimation",
-  methods: {
-    disapear() {
-      document.getElementById("loader").classList.add("disapear");
-      setTimeout(() => {
-        document.getElementById("loader").remove();
-      }, 500);
-    },
+<script lang="ts" setup>
+const props = defineProps({
+  throttle: {
+    type: Number,
+    default: 200,
   },
-};
+  duration: {
+    type: Number,
+    default: 2000,
+  },
+  hideDelay: {
+    type: Number,
+    default: 500,
+  },
+  resetDelay: {
+    type: Number,
+    default: 400,
+  },
+  height: {
+    type: Number,
+    default: 3,
+  },
+  color: {
+    type: [String, Boolean],
+    default: 'repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#0047e1 100%)',
+  },
+  errorColor: {
+    type: String,
+    default: 'repeating-linear-gradient(to right,#f87171 0%,#ef4444 100%)',
+  },
+  estimatedProgress: {
+    type: Function as unknown as () => (duration: number, elapsed: number) => number,
+    required: false,
+  },
+});
+
+const { progress, isLoading, error, start, finish, clear } = useLoadingIndicator({
+  duration: props.duration,
+  throttle: props.throttle,
+  hideDelay: props.hideDelay,
+  resetDelay: props.resetDelay,
+  estimatedProgress: props.estimatedProgress,
+})
 </script>
 
 <style scoped lang="scss">
