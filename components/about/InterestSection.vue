@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Atom, Bike, Cpu, Telescope } from "lucide-vue-next";
+import { FlaskConical, Bike, CircuitBoard, Telescope } from "lucide-vue-next";
 
 const props = defineProps({
   number: {
@@ -22,7 +22,7 @@ const props = defineProps({
       <div class="interest-wrapper">
         <div class="interest-row fade-in">
           <div class="interest-row-illustration">
-            <Telescope size="256" stroke-width="1" color="var(--primary-color)" />
+            <Telescope size="128" stroke-width="2" color="var(--primary-color)" />
             <svg id="astronomy-vector" class="interest-row-illustration-vector" data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
               <defs>
@@ -63,7 +63,7 @@ const props = defineProps({
         </div>
         <div class="interest-row fade-in">
           <div class="interest-row-illustration">
-            <Cpu size="256" stroke-width="1" color="var(--primary-color)" />
+            <CircuitBoard size="128" stroke-width="2" color="var(--primary-color)" />
             <svg id="electronic-vector" class="interest-row-illustration-vector" data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
               <defs>
@@ -101,7 +101,7 @@ const props = defineProps({
         </div>
         <div class="interest-row fade-in">
           <div class="interest-row-illustration">
-            <Atom size="256" stroke-width="1" color="var(--primary-color)" />
+            <FlaskConical size="128" stroke-width="2" color="var(--primary-color)" />
             <svg id="science-vector" class="interest-row-illustration-vector" data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 479">
               <defs>
@@ -142,7 +142,7 @@ const props = defineProps({
         </div>
         <div class="interest-row fade-in">
           <div class="interest-row-illustration">
-            <Bike size="256" stroke-width="1" color="var(--primary-color)" />
+            <Bike size="128" stroke-width="2" color="var(--primary-color)" />
             <svg id="sport-vector" class="interest-row-illustration-vector" data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 481.72 480">
               <defs>
