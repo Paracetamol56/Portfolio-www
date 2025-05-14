@@ -86,11 +86,7 @@ export default defineNuxtConfig({
     client: true
   },
 
-  modules: ["@nuxt/content", "@nuxtjs/i18n", 'nuxt-mapbox', "@nuxt/image", "@nuxtjs/device"],
-
-  content: {
-    // ... options
-  },
+  modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxt/image", "@nuxtjs/device", "nuxt-mapbox"],
 
   i18n: {
     strategy: "prefix_except_default",
