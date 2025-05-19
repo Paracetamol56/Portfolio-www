@@ -19,7 +19,7 @@
     "globe.gl": "^2.33.1",
     "lucide-vue-next": "^0.475.0",
     "mapbox-gl": "^3.12.0",
-    "nuxt": "^3.11.1",
+    "nuxt": "^3.17.3",
     "nuxt-mapbox": "^1.6.3",
     "sass": "^1.80.6",
     "swiper": "^11.0.7",
