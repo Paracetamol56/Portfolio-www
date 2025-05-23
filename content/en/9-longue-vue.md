@@ -1,5 +1,5 @@
 ---
-id: "9"
+number: 9
 title: "Longue-vue"
 subtitle: "Website to help high school students in their orientation"
 thumbnail: "/img/projects/9/thumbnail.jpg"
@@ -57,4 +57,3 @@ It was expected that the project would not be finalized in time, but the goal wa
 # Conclusion
 
 This project was very rich in learning in the web domain that I didn't know enough before my internship. In the end, I am very proud of the result and it is really motivating to think that this application will be continued and used to help students.
-

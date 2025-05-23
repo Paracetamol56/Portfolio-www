@@ -1,5 +1,5 @@
 ---
-id: "14"
+number: 14
 title: "ICAY"
 subtitle: "Site web pour l'ICAY"
 thumbnail: "/img/projects/14/thumbnail.jpg"

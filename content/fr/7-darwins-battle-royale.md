@@ -1,5 +1,5 @@
 ---
-id: "7"
+number: 7
 title: "Darwin’s battle royale"
 subtitle: "Intelligence artificielle par renforcement en Unity"
 thumbnail: "/img/projects/7/thumbnail.jpg"
@@ -39,8 +39,9 @@ links:
 ---
 
 # Présentation
+
 Ce projet est un un "zéro player game" ou "self played game" (comme le jeu de Conway), c'est-à-dire que le joueur sélectionne uniquement la situation initiale. C’est un projet d’intelligence artificielle évolutionniste : on réitère l'expérience sur plusieurs générations et chaque génération tire parti de la précédente avec certaines mutations possibles.<br/>Il s’agit d’un environnement 3D dans lequel évolue des créatures. Le but de chaque créature est de tuer les autres grâce au combat de corp à corp et la créature qui est la dernière à rester remporte la victoire.
 
 # Level up
-<ul><li>Introduction à l’intelligence artificiel et à l’apprentissage par renforcement</li><li>Développement de jeux vidéo orienté en IA</li><li>Gestion de projet solo (Mêlés quotidiennes, rédaction des fonctionnalité, trace écrite du travail, etc…)</li></ul>
 
+<ul><li>Introduction à l’intelligence artificiel et à l’apprentissage par renforcement</li><li>Développement de jeux vidéo orienté en IA</li><li>Gestion de projet solo (Mêlés quotidiennes, rédaction des fonctionnalité, trace écrite du travail, etc…)</li></ul>

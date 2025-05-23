@@ -1,5 +1,5 @@
 ---
-id: "12"
+number: 12
 title: "Artista"
 subtitle: "Social network for artists and art lovers"
 thumbnail: "/img/projects/12/thumbnail.jpg"
@@ -66,4 +66,3 @@ The project was carried out over a period of 10 months, with various key milesto
 # Conclusion
 
 This project was a rewarding experience that enabled me to apply my technical skills and develop new ones in project management and customer collaboration. Although mobile development and more generally application development are not for me, I'm still proud to have taken part in this project.
-

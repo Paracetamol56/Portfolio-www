@@ -1,5 +1,5 @@
 ---
-id: "8"
+number: 8
 title: "VR Escape Game"
 subtitle: "Escape Game in VR in the basement of Cégep de Matane"
 thumbnail: "/img/projects/8/thumbnail.jpg"
@@ -60,8 +60,6 @@ Level up
 - Reinforced my knowledge of Unity 3D
 - Project management, versioning and workflow with lots of high-definition assets
 
-
 # Conclusion
 
 We didn't get as far as we would have liked with this project, given the time and hardware constraints. Nevertheless, I'm very satisfied with the result, the teamwork and our determination to solve problems.
-

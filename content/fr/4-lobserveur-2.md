@@ -1,5 +1,5 @@
 ---
-id: "4"
+number: 4
 title: "L’Observeur 2"
 subtitle: "Catalogue d'objets astronomiques pour amateurs"
 thumbnail: "/img/projects/4/thumbnail.jpg"
@@ -38,17 +38,21 @@ links:
 ---
 
 # Problématique
+
 Il existe plusieurs catalogues d'objets du ciel profond (Messier, NGC, Herschel, IC, etc…). Cependant, ces catalogues sont souvent immenses et difficiles à trier selon la période de l'année, les instruments à disposition ou même les préférences de chacun.
 
 # Fonctionnalités
+
 L'Observeur2 doit être une interface simple pour visualiser, modifier ou créer une base de données personnalisées pour chaque astronome. Toutefois, cette base de données doit être suffisamment complète pour répondre à des besoins pratiques. Par exemple, la visibilité des objets par rapport aux saisons. Le logiciel doit aussi connaitre la position de l'observateur pour adapter le contenu.
 
 # Partage
+
 La base de données doit être contenue dans un fichier non chiffré pour permettre le partage entre plusieurs personnes facilement.
 
 # Level up
+
 <ul><li>Maitrise du Framework QT</li><li>Utilisation de bases de données SQLite en local</li><li>Développement d’algorithmes astronomiques complexes</li></ul>
 
 # Conclusion
-Je suis très satisfait des fonctionnalités offertes par le logiciel même s’il reste encore beaucoup à faire avant de pouvoir le distribuer.<br/>Une version pour le web pourrait être une option envisageable pour le futur.
 
+Je suis très satisfait des fonctionnalités offertes par le logiciel même s’il reste encore beaucoup à faire avant de pouvoir le distribuer.<br/>Une version pour le web pourrait être une option envisageable pour le futur.

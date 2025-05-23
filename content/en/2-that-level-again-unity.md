@@ -1,5 +1,5 @@
 ---
-id: "2"
+number: 2
 title: "That level again Unity"
 subtitle: "2D platform game with logic and strategy"
 thumbnail: "/img/projects/2/thumbnail.jpg"
@@ -54,3 +54,4 @@ The objective is to create an interactive visualization software of the Internat
 # Progress
 
 It's a long term project that takes a lot of my free time. For now, the part that requires the most investment is the 3D modeling. After getting a free model from the NASA website, I had to redo all the textures and make the model decoupled module by module, and I also rigged the model ready for animations.
+

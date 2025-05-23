@@ -1,5 +1,5 @@
 ---
-id: "13"
+number: 13
 title: "Aminophenol Game Engine"
 subtitle: "WIP Game Engine in C++ and Vulkan"
 thumbnail: "/img/projects/13/thumbnail.jpg"
@@ -39,4 +39,3 @@ Aminophenol is a 3D game engine written in C++17 with the Vulkan graphics API. T
 - Learn about the Vulkan graphics API
 - Learn the basic concepts of a game engine
 - Modern C++
-

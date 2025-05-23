@@ -1,5 +1,5 @@
 ---
-id: "10"
+number: 10
 title: "Solar system simulation"
 subtitle: "Python-based 2D physics simulation of celestial bodies"
 thumbnail: "/img/projects/10/thumbnail.jpg"
@@ -47,4 +47,3 @@ The Solar System Simulation project provides an interactive visualization of the
 # Conclusion
 
 The Solar System Simulation project successfully accomplishes its objective of providing an interactive and educational experience. By utilizing real data and physics principles, the simulation offers a realistic representation of the solar system's dynamics. The interactive GUI empowers users to explore and modify various parameters, enhancing their understanding of celestial bodies and their interactions. The Solar System Simulation project stands as a testament to my passion for both programming and astronomy, demonstrating my ability to merge these interests into a captivating educational tool.
-

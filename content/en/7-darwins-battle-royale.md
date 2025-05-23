@@ -1,5 +1,5 @@
 ---
-id: "7"
+number: 7
 title: "Darwin's battle royale"
 subtitle: "Artificial intelligence by reinforcement in Unity"
 thumbnail: "/img/projects/7/thumbnail.jpg"

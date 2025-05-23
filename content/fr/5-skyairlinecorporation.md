@@ -1,5 +1,5 @@
 ---
-id: "5"
+number: 5
 title: "SkyAirlineCorporation"
 subtitle: "Jeu de simulation d'avion"
 thumbnail: "/img/projects/5/thumbnail.jpg"
@@ -59,14 +59,17 @@ links:
 ---
 
 # Présentation
+
 Ce projet est un jeu d’avion semblable à Flight Simulator. L’avion se veut assez réaliste sans pour autant être trop difficile à prendre en main.<br/>La map est générée procéduralement, de sorte à ce que les paysages ne soient pas toujours les mêmes.<br/>Pour le gameplay, le jeu propose 3 modes de jeux :<ul><li>Mode libre : le joueur peut explorer la carte autant qu’il le souhaite</li><li>Mode livraison : le joueur doit transporter des marchandises et les livrer depuis les airs sur une cible imposée</li><li>Mode canadair : le joueur doit larguer de l’eau pour éteindre des incendies</li></ul><br/>Mon rôle dans l’équipe était responsable du développement. J’étais chargé de faire en sorte que le code généré par les membres de l’équipe soit uniforme et organisé. J’ai aussi supervisé l’utilisation de git.
 
 # Timeline
+
 Pour ce projet, nous avons utilisé la méthode agile et nous avons découpé nos 2 mois de développement en 3 sprints.<br/>D’abord, j’étais chargé d’implémenter le contrôleur de vols pour que les avions soient fonctionnels. C’était une fonctionnalité centrale du projet sur laquelle toutes les autres parties du développement reposaient.<br/>Ensuite, j’ai continué d’implémenter des fonctionnalités à mon contrôleur pour respecter un maximum tous les comportements d’un vrai avion.<br/>Enfin, j’ai participé à la programmation du gameplay avec le mode de jeu canadair.
 
 # Level up
+
 <ul><li>Maîtrise de Unity 3D</li><li>Travail en équipe avec la méthode agile</li></ul>
 
 # Conclusion
-L’aspect simulation de ce projet m’a vraiment plu, en plus, le travail avec une équipe de cette taille a été une nouvelle expérience pour moi et je suis très content de l’organisation et de l’ambiance de travail que nous avons réussies à établir.
 
+L’aspect simulation de ce projet m’a vraiment plu, en plus, le travail avec une équipe de cette taille a été une nouvelle expérience pour moi et je suis très content de l’organisation et de l’ambiance de travail que nous avons réussies à établir.

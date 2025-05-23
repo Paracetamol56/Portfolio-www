@@ -1,5 +1,5 @@
 ---
-id: "5"
+number: 5
 title: "SkyAirlineCorporation"
 subtitle: "Airplane simulation game"
 thumbnail: "/img/projects/5/thumbnail.jpg"

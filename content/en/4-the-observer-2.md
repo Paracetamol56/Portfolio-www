@@ -1,5 +1,5 @@
 ---
-id: "4"
+number: 4
 title: "The Observer 2"
 subtitle: "Catalogue of astronomical objects for amateurs"
 thumbnail: "/img/projects/4/thumbnail.jpg"
@@ -59,4 +59,3 @@ The database must be contained in an unencrypted file to allow sharing between s
 
 I am very satisfied with the functionalities offered by the software even if there is still a lot to do before it can be distributed.
 A version for the web could be an option for the future.
-

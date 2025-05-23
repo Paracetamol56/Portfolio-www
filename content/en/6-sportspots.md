@@ -1,5 +1,5 @@
 ---
-id: "6"
+number: 6
 title: "SportSpots"
 subtitle: "Mobile application for outdoor sports enthusiasts"
 thumbnail: "/img/projects/6/thumbnail.jpg"

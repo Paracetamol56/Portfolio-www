@@ -1,5 +1,5 @@
 ---
-id: "6"
+number: 6
 title: "SportSpots"
 subtitle: "Application mobile pour amateurs de sports en plein air"
 thumbnail: "/img/projects/6/thumbnail.jpg"
@@ -43,8 +43,9 @@ links:
 ---
 
 # Présentation
+
 L’application mobile SportSpots a pour but de permettre aux amateurs de sports en plein air de trouver plus facilement des “spots” adaptés à leurs sports favoris via une google map. L’application est communautaire car les utilisateurs ayant créé un compte peuvent ajouter, vérifier, noter et commenter des spots.
 
 # Level up
-<ul><li>Utilisation du framework React native</li><li>Base de données non relationnelle Firebase</li></ul>
 
+<ul><li>Utilisation du framework React native</li><li>Base de données non relationnelle Firebase</li></ul>

@@ -1,5 +1,5 @@
 ---
-id: "11"
+number: 11
 title: "Ce-que-vous-voulez"
 subtitle: "iOS mobile application to browse movies"
 thumbnail: "/img/projects/11/thumbnail.jpg"
@@ -44,5 +44,3 @@ Ce-que-vous-voulez offers a range of features designed to enhance the user's mov
 # Conclusion
 
 Overall, I liked the Swift language, some features are similar to other modern languages like Rust, which I really like. However, I had trouble dealing with the Apple ecosystem. Xcode offers some good features, but I was disappointed that the environment is so closed and proprietary, and that you can't benefit from third-party tools. In a nutshell, I was happy to discover this language and build this mobile application. But as a daily Linux user and open source enthusiast, I didn't like the environment at all.
-
-
