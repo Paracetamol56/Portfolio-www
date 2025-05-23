@@ -41,31 +41,27 @@ type Data = {
       icon: string;
     }[];
   };
-  surround: [string, string];
+  surround: { path: string, stem: string, title: string }[];
 };
 
 const { data }: { data: Ref<Data> } = await useAsyncData("page", async () => {
   const [content, surround] = await Promise.all([
-    queryContent(`${locale.value}/${slug}`).findOne(),
-    queryContent().only("_path").findSurround(`/${locale.value}/${slug}`),
+    queryCollection(locale.value)
+      .path(`/${locale.value}/${slug}`)
+      .first(),
+    queryCollectionItemSurroundings(locale.value, `/${locale.value}/${slug}`)
+      .order('number', 'DESC')
   ]);
 
-  const surroundResult: (string | undefined)[] = [];
-  for (let i = 0; i < surround.length; ++i) {
-    if (surround[i]?._path?.split("/")[1] !== locale.value) {
-      surroundResult.push(undefined);
-    } else {
-      surroundResult.push(surround[i]?._path?.split("/").pop());
-    }
-  }
-  
+  console.log(surround)
+
   return {
     content,
-    surround: surroundResult
+    surround,
   };
 });
 
-if (!data.value) {
+if (!data.value.content) {
   const route = useRoute();
   throw createError({
     statusCode: 404,
@@ -93,10 +89,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <Header
-      :title="data.content?.title ?? ''"
-      :subtitle="data.content?.subtitle"
-    />
+    <Header :title="data.content?.title ?? ''" :subtitle="data.content?.subtitle" />
     <main>
       <section id="info">
         <div class="container">
@@ -122,16 +115,9 @@ onMounted(() => {
             {{ $t("project.technologies") }}
           </h3>
           <ul class="technology-list">
-            <li
-              class="technology-item fade-in"
-              v-for="technology in data.content?.technologies"
-              :key="technology.name"
-            >
-              <img
-                class="technology-item-vector"
-                :src="`https://cdn.simpleicons.org/${technology.icon}/f5f3fa`"
-                alt="icon"
-              />
+            <li class="technology-item fade-in" v-for="technology in data.content?.technologies" :key="technology.name">
+              <img class="technology-item-vector" :src="`https://cdn.simpleicons.org/${technology.icon}/f5f3fa`"
+                alt="icon" />
               <p class="technology-item-name">{{ technology.name }}</p>
               <p class="technology-item-description">
                 // {{ technology.description }}
@@ -140,11 +126,7 @@ onMounted(() => {
           </ul>
           <h3 class="fillTextWithgradient fade-in">{{ $t("project.team") }}</h3>
           <ul class="team-list">
-            <li
-              class="team-item fade-in"
-              v-for="member in data.content?.team"
-              :key="member.name"
-            >
+            <li class="team-item fade-in" v-for="member in data.content?.team" :key="member.name">
               <p class="team-item-name">{{ member.name }}</p>
               <p class="team-item-role">// {{ member.role }}</p>
             </li>
@@ -152,43 +134,16 @@ onMounted(() => {
         </div>
       </section>
       <section id="image" class="fade-in">
-        <Swiper
-          v-if="data.content?.images?.length > 1"
-          class="project-slider"
-          :slides-per-view="1"
-          :space-between="20"
-          :navigation="true"
-          :pagination="{ clickable: true }"
-          :loop="false"
-          :grab-cursor="true"
-          :centeredSlides="true"
-          :modules="modules"
-        >
-          <SwiperSlide
-            class="project-slider-item"
-            v-for="image in data.content?.images"
-            :key="image"
-          >
-            <NuxtImg
-              :src="image"
-              format="webp"
-              placeholder
-              loading="lazy"
-              quality="50"
-              alt="Project {{ data.content?.title }}"
-            />
+        <Swiper v-if="data.content?.images?.length > 1" class="project-slider" :slides-per-view="1" :space-between="20"
+          :navigation="true" :pagination="{ clickable: true }" :loop="false" :grab-cursor="true" :centeredSlides="true"
+          :modules="modules">
+          <SwiperSlide class="project-slider-item" v-for="image in data.content?.images" :key="image">
+            <NuxtImg :src="image" format="webp" placeholder loading="lazy" quality="50"
+              alt="Project {{ data.content?.title }}" />
           </SwiperSlide>
         </Swiper>
-        <NuxtImg
-          v-else-if="data.content?.images"
-          :src="data.content?.images[0]"
-          format="webp"
-          placeholder
-          loading="lazy"
-          quality="50"
-          id="header-image"
-          alt="Project {{ data.content?.title }}"
-        />
+        <NuxtImg v-else-if="data.content?.images" :src="data.content?.images[0]" format="webp" placeholder
+          loading="lazy" quality="50" id="header-image" alt="Project {{ data.content?.title }}" />
       </section>
       <section id="links">
         <div class="container">
@@ -200,11 +155,7 @@ onMounted(() => {
             <hr />
           </div>
           <ul class="link-list" v-if="data.content?.links?.length > 0">
-            <li
-              class="link-item fade-in"
-              v-for="link in data.content?.links"
-              :key="link.name"
-            >
+            <li class="link-item fade-in" v-for="link in data.content?.links" :key="link.name">
               <a class="link-item-anchor" :href="link.url" target="_blank">
                 <div v-if="link.icon == 'download'" class="link-item-vector">
                   <FileDown :size="60" color="#f5f3fa" />
@@ -212,12 +163,8 @@ onMounted(() => {
                 <div v-if="link.icon == 'web'" class="link-item-vector">
                   <ExternalLink :size="60" color="#f5f3fa" />
                 </div>
-                <img
-                  v-else
-                  class="link-item-vector"
-                  :src="`https://cdn.simpleicons.org/${link.icon}/f5f3fa`"
-                  alt="icon"
-                />
+                <img v-else class="link-item-vector" :src="`https://cdn.simpleicons.org/${link.icon}/f5f3fa`"
+                  alt="icon" />
                 <p class="link-item-text" v-html="link.name"></p>
               </a>
             </li>
@@ -249,17 +196,13 @@ onMounted(() => {
       <section id="project-navigation">
         <div class="container fade-in">
           <UnderlinedButton
-            :href="data.surround[1] === undefined ? '#' : localePath(`/project/${data.surround[1]}`)"
-            arrowPosition="left"
-            :disabled="data.surround[1] === undefined"
-          >
+            :href="data.surround[0] === null ? '#' : localePath(`/project/${data.surround[0].path.split('/').pop()}`)"
+            arrowPosition="left" :disabled="data.surround[0] === null">
             {{ $t("project.nav.next") }}
           </UnderlinedButton>
           <UnderlinedButton
-            :href="data.surround[0] === undefined ? '#' : localePath(`/project/${data.surround[0]}`)"
-            arrowPosition="right"
-            :disabled="data.surround[0] === undefined"
-          >
+            :href="data.surround[1] === null ? '#' : localePath(`/project/${data.surround[1].path.split('/').pop()}`)"
+            arrowPosition="right" :disabled="data.surround[1] === null">
             {{ $t("project.nav.last") }}
           </UnderlinedButton>
         </div>
@@ -276,17 +219,21 @@ section#info {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+
     p {
       width: calc(50% - 0.5rem);
       margin: 8px 0;
       font-size: 1.5rem;
       line-height: 1.5rem;
+
       .colored {
         color: var(--secondary-color);
       }
     }
+
     @media (max-width: 768px) {
       flex-direction: column;
+
       p {
         width: 100%;
         font-size: 1.2rem;
@@ -294,15 +241,18 @@ section#info {
       }
     }
   }
+
   h3 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
     text-align: center;
+
     @media screen and (max-width: 768px) {
       font-size: 1.5rem;
     }
   }
+
   ul.technology-list {
     list-style: none;
     width: 100%;
@@ -312,6 +262,7 @@ section#info {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
+
     li.technology-item {
       margin: 1rem;
       max-width: 300px;
@@ -321,15 +272,18 @@ section#info {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+
       .technology-item-name {
         font-size: 1.25rem;
         font-weight: 600;
         color: var(--text-color);
         margin: 0;
       }
+
       .technology-item-description {
         color: var(--comment-color);
       }
+
       .technology-item-vector {
         flex: 1;
         max-height: 60px;
@@ -338,6 +292,7 @@ section#info {
       }
     }
   }
+
   ul.team-list {
     list-style: none;
     width: 100%;
@@ -346,15 +301,18 @@ section#info {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     li.team-item {
       margin: 0.5rem 0;
       text-align: center;
+
       .team-item-name {
         font-size: 1.25rem;
         font-weight: 600;
         color: var(--text-color);
         margin: 0;
       }
+
       .team-item-role {
         color: var(--comment-color);
         margin: 0;
@@ -362,13 +320,16 @@ section#info {
     }
   }
 }
+
 section#image {
   overflow: hidden;
   width: 100vw;
+
   .project-slider {
     .project-slider-item {
       width: 100vw;
       aspect-ratio: 16/9;
+
       img {
         width: 100%;
         height: 100%;
@@ -376,13 +337,16 @@ section#image {
       }
     }
   }
+
   img#header-image {
     width: 100%;
     object-fit: cover;
   }
 }
+
 section#links {
   background-color: #0c081693;
+
   ul.link-list {
     list-style: none;
     width: 100%;
@@ -392,11 +356,13 @@ section#links {
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
+
     li.link-item {
       margin: 1rem;
       max-width: 300px;
       width: 100%;
       text-align: center;
+
       a.link-item-anchor {
         display: flex;
         flex-direction: column;
@@ -404,12 +370,14 @@ section#links {
         justify-content: center;
         text-decoration: none;
         cursor: pointer;
+
         .link-item-vector {
           max-height: 60px;
           max-width: 60px;
           margin-bottom: 1rem;
         }
       }
+
       p.link-item-text {
         position: relative;
         width: fit-content;
@@ -417,6 +385,7 @@ section#links {
         font-weight: 600;
         color: var(--text-color);
         margin: 0;
+
         &::before {
           content: "";
           position: absolute;
@@ -430,6 +399,7 @@ section#links {
           transition: transform 0.25s var(--easing);
         }
       }
+
       &:hover {
         p.link-item-text {
           &::before {
@@ -440,17 +410,21 @@ section#links {
       }
     }
   }
+
   .link-empty {
     display: grid;
     place-items: center;
+
     p.link-empty-text {
       color: var(--comment-color);
       margin: 0;
     }
   }
 }
+
 section#presentation {
   .presentation-content-block {
+
     h1,
     h2,
     h3,
@@ -460,13 +434,16 @@ section#presentation {
       font-size: 2rem;
       font-weight: bold;
       margin-bottom: 1rem;
+
       @media screen and (max-width: 768px) {
         font-size: 1.5rem;
       }
     }
+
     p {
       font-size: 1.25rem;
       text-align: justify;
+
       @media screen and (max-width: 768px) {
         font-size: 1rem;
         text-align: left;
@@ -474,9 +451,11 @@ section#presentation {
     }
   }
 }
+
 section#project-navigation {
   margin: 0 0 2rem;
   height: 2rem;
+
   .container {
     display: flex;
     flex-flow: row nowrap;

@@ -2,10 +2,11 @@
 import ProjectCard from "@/components/ProjectCard.vue";
 
 const { locale } = useI18n();
-const { data } = await useAsyncData("projects", () =>
-  queryContent(locale.value)
-    .without("body")
-    .sort({ id: -1, $numeric: true }).find()
+const { data } = await useAsyncData(() =>
+  queryCollection(locale.value)
+    .select('number', 'title', 'subtitle', 'thumbnail', 'dates', 'tags', 'status')
+    .order('number', 'DESC')
+    .all()
 );
 </script>
 
@@ -13,11 +14,7 @@ const { data } = await useAsyncData("projects", () =>
   <section id="projects">
     <div class="container">
       <div class="projet-list">
-        <ProjectCard
-          v-for="project in data"
-          :key="project.id"
-          :project="project"
-        />
+        <ProjectCard v-for="project in data" :key="project.number" :project="project" />
       </div>
     </div>
   </section>
@@ -33,10 +30,12 @@ section#projects {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    > * {
+
+    >* {
       margin-bottom: 1rem;
     }
-    > *:last-child {
+
+    >*:last-child {
       margin-bottom: 0;
     }
   }
