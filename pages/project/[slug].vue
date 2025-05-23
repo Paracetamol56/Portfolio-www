@@ -12,9 +12,6 @@ const localePath = useLocalePath()
 const modules = [Navigation, Pagination];
 const { locale } = useI18n();
 const route = useRoute();
-const slug = Array.isArray(route.params.slug)
-  ? route.params.slug[0]
-  : route.params.slug;
 
 type Data = {
   content: {
@@ -44,22 +41,25 @@ type Data = {
   surround: { path: string, stem: string, title: string }[];
 };
 
-const { data }: { data: Ref<Data> } = await useAsyncData("page", async () => {
-  const [content, surround] = await Promise.all([
-    queryCollection(locale.value)
-      .path(`/${locale.value}/${slug}`)
-      .first(),
-    queryCollectionItemSurroundings(locale.value, `/${locale.value}/${slug}`)
-      .order('number', 'DESC')
-  ]);
+const slug = computed(() => route.params.slug as string);
 
-  console.log(surround)
+const { data }: { data: Ref<Data> } = await useAsyncData(
+  `page-${locale.value}-${slug.value}`, async () => {
+    const [content, surround] = await Promise.all([
+      queryCollection(locale.value)
+        .path(`/${locale.value}/${slug.value}`)
+        .first(),
+      queryCollectionItemSurroundings(locale.value, `/${locale.value}/${slug.value}`)
+        .order('number', 'DESC')
+    ]);
 
-  return {
-    content,
-    surround,
-  };
-});
+    return {
+      content,
+      surround,
+    };
+  },
+  { watch: [locale, slug] }
+);
 
 if (!data.value.content) {
   const route = useRoute();
@@ -139,7 +139,7 @@ onMounted(() => {
           :modules="modules">
           <SwiperSlide class="project-slider-item" v-for="image in data.content?.images" :key="image">
             <NuxtImg :src="image" format="webp" placeholder loading="lazy" quality="50"
-              alt="Project {{ data.content?.title }}" />
+              :alt="`Project ${data.content?.title}`" />
           </SwiperSlide>
         </Swiper>
         <NuxtImg v-else-if="data.content?.images" :src="data.content?.images[0]" format="webp" placeholder

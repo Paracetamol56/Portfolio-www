@@ -10,6 +10,7 @@ export default defineContentConfig({
         title: z.string(),
         subtitle: z.string(),
         thumbnail: z.string(),
+        images: z.array(z.string()),
         dates: z.object({
           start: z.string(),
           end: z.string(),
