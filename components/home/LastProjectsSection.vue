@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const route = useRoute();
 const { locale } = useI18n();
 const localePath = useLocalePath();
 const modules = [Navigation, Pagination];
@@ -19,7 +20,7 @@ defineProps({
 });
 
 const { data } = await useAsyncData(
-  "projects-limit-4",
+  route.path,
   () => queryCollection(locale.value)
     .select('number', 'title', 'subtitle', 'thumbnail', 'dates', 'tags', 'status')
     .order('number', 'DESC')
