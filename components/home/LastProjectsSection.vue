@@ -64,7 +64,7 @@ const { data } = await useAsyncData(
           spaceBetween: 100,
         },
       }" :modules="modules">
-      <SwiperSlide class="project-slider-item" v-for="project in data" :key="project.id">
+      <SwiperSlide class="project-slider-item" v-for="project in data" :key="project.number">
         <ProjectCard :project="project" />
       </SwiperSlide>
     </Swiper>
