@@ -20,7 +20,7 @@ defineProps({
 });
 
 const { data } = await useAsyncData(
-  route.path,
+  `projects-${locale.value}-limit4`,
   () => queryCollection(locale.value)
     .select('number', 'title', 'subtitle', 'thumbnail', 'dates', 'tags', 'status')
     .order('number', 'DESC')
