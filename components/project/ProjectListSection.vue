@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import ProjectCard from "@/components/ProjectCard.vue";
 
-const route = useRoute();
 const { locale } = useI18n();
 const { data } = await useAsyncData(
   `projects-${locale.value}`,
-  () => queryCollection(locale.value)
+  () => queryCollection(locale.value.slice(0, 2))
     .select('number', 'title', 'subtitle', 'thumbnail', 'dates', 'tags', 'status')
     .order('number', 'DESC')
     .all()
