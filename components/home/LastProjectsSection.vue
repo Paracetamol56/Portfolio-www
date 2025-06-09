@@ -17,10 +17,10 @@ defineProps({
     required: true,
   },
 });
-
+console.log(locale.value);
 const { data } = await useAsyncData(
   `projects-${locale.value}-limit4`,
-  () => queryCollection(locale.value.slice(0, 2))
+  () => queryCollection(locale.value)
     .select('number', 'title', 'subtitle', 'thumbnail', 'dates', 'tags', 'status')
     .order('number', 'DESC')
     .limit(4)
