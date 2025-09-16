@@ -103,7 +103,32 @@ const travels_en = [
     description: "",
     images: [],
   },
+  {
+    id: "9",
+    title: "Leeds",
+    location: {
+      start: ["45.5475", "2.867389"],
+      end: ["53.8007", "-1.5490"],
+    },
+    thumbnail: "/img/travels/9.jpg",
+    date: "2025",
+    description: "",
+    images: [],
+  },
+  {
+    id: "10",
+    title: "Réunion",
+    location: {
+      start: ["45.5475", "2.867389"],
+      end: ["-21.121662515393947", "55.538169870606005"],
+    },
+    thumbnail: "/img/travels/10.jpg",
+    date: "2025",
+    description: "",
+    images: [],
+  }
 ];
+
 const travels_fr = [
   {
     "id": "1",
@@ -190,16 +215,40 @@ const travels_fr = [
     "images": []
   },
   {
-    "id": "8",
-    "title": "Montréal",
-    "location": {
-      "start": ["48.845", "-67.5228"],
-      "end": ["45.5475", "-73.5878"]
+    id: "8",
+    title: "Montréal",
+    location: {
+      start: ["48.845", "-67.5228"],
+      end: ["45.5475", "-73.5878"]
     },
-    "thumbnail": "/img/travels/8.jpg",
-    "date": "2018",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
-    "images": []
+    thumbnail: "/img/travels/8.jpg",
+    date: "2018",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
+    images: []
+  },
+  {
+    id: "9",
+    title: "Leeds",
+    location: {
+      start: ["45.5475", "2.867389"],
+      end: ["53.8007", "-1.5490"],
+    },
+    thumbnail: "/img/travels/9.jpg",
+    date: "2025",
+    description: "",
+    images: [],
+  },
+  {
+    id: "10",
+    title: "Réunion",
+    location: {
+      start: ["45.5475", "2.867389"],
+      end: ["-21.121662515393947", "55.538169870606005"],
+    },
+    thumbnail: "/img/travels/10.jpg",
+    date: "2025",
+    description: "",
+    images: [],
   }
 ];
 

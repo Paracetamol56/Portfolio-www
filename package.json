@@ -25,5 +25,8 @@
     "swiper": "^11.0.7",
     "vue": "^3.5.16",
     "vue-router": "^4.4.5"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0"
   }
 }

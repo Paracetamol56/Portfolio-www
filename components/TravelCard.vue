@@ -12,7 +12,7 @@
 <template>
   <div class="travel-card">
     <NuxtImg :src="travel.thumbnail" format="webp" placeholder loading="lazy" quality="50"
-      sizes="100vw sm:50vw md:400px" alt="Travel {{ travel.id }} thumbnail" class="travel-card-image" />
+      sizes="100vw sm:50vw md:400px" :alt="`Travel ${travel.id} thumbnail`" class="travel-card-image" />
     <div class="travel-card-text">
       <p class="travel-card-text-date">
         {{
