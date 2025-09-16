@@ -1,6 +1,6 @@
 <template>
   <div class="project-card">
-    <NuxtImg :src="project.thumbnail" format="webp" placeholder loading="lazy" quality="50"
+    <NuxtImg :src="project.thumbnail" format="webp" placeholder quality="70"
       alt="Project {{ project.id }} thumbnail" class="project-card-image" />
     <div class="project-card-text">
       <p class="project-card-text-date">
