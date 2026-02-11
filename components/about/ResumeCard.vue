@@ -48,8 +48,8 @@ function resetRotation() {
 
 <template>
   <div class="resume">
-    <a class="resume-thumbnail-container" ref="resume" :href="`/CV_${locale}_2024.pdf`" download>
-      <NuxtImg src="/img/CV_en_2024.jpg" format="webp" placeholder loading="lazy" quality="50" alt="Resume Thumbnail"
+    <a class="resume-thumbnail-container" ref="resume" :href="`/cv_${locale}_2026.pdf`" download>
+      <NuxtImg src="`/img/CV_${locale}_2026.jpg`" format="webp" placeholder loading="lazy" quality="50" alt="Resume Thumbnail"
         class="resume-thumbnail" @mouseenter="getBounds" @mousemove="rotateToMouse" @mouseleave="resetRotation" />
       <div class="resume-thumbnail-glow" ref="glow" />
     </a>
