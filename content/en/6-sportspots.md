@@ -44,9 +44,9 @@ links:
 
 # Presentation
 
-The SportSpots mobile application aims to make it easier for outdoor sports enthusiasts to find “spots” adapted to their favorite sports via a  map. The application is community-based because users who have created an account can add, check, rate and comment on spots.
+The SportSpots mobile application aims to make it easier for outdoor sports enthusiasts to find “spots” adapted to their favorite sports via a map. The application is community-based because users who have created an account can add, check, rate and comment on spots.
 
-# evel up
+# Level up
 
 - Using React Native framework
 - Firebase non-relational database
