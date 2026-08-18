@@ -30,6 +30,13 @@ export default defineContentConfig({
             role: z.string(),
           })
         ),
+        links: z.array(
+          z.object({
+            name: z.string(),
+            url: z.string(),
+            icon: z.string(),
+          })
+        ),
       })
     }),
     fr: defineCollection({
@@ -57,6 +64,13 @@ export default defineContentConfig({
           z.object({
             name: z.string(),
             role: z.string(),
+          })
+        ),
+        links: z.array(
+          z.object({
+            name: z.string(),
+            url: z.string(),
+            icon: z.string(),
           })
         ),
       })
