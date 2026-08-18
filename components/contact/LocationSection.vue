@@ -1,8 +1,11 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
-import mapboxgl from 'mapbox-gl';
+import { LMap, LTileLayer, LMarker, LControlZoom } from '@vue-leaflet/vue-leaflet';
+import 'leaflet/dist/leaflet.css';
 
 const center = ref({ lat: 45.78710146863226, lng: 3.0714223231138087 });
+const zoom = ref(5);
+
 const centerHumanReadable = ref({
   lat: { dir: '', deg: 0, min: 0, sec: 0 },
   lng: { dir: '', deg: 0, min: 0, sec: 0 }
@@ -23,11 +26,6 @@ centerHumanReadable.value = {
     sec: ((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 3600 - Math.floor((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 60) * 60).toFixed(2)
   }
 };
-
-useMapbox("map", (map) => {
-  map.scrollZoom.disable();
-  map.addControl(new mapboxgl.NavigationControl(), 'top-left');
-})
 </script>
 
 <template>
@@ -45,20 +43,20 @@ useMapbox("map", (map) => {
       </div>
     </div>
     <div id="map-container" style="height: 40rem">
-      <MapboxMap
-        map-id="map"
-        :options="{
-          style: 'mapbox://styles/mapbox/standard',
-          center: [center.lng, center.lat],
-          zoom: 5,
-        }"
+      <LMap
+        :zoom="zoom"
+        :center="[center.lat, center.lng]"
+        :use-global-leaflet="false"
+        :options="{ scrollWheelZoom: false }"
       >
-        <MapboxDefaultMarker 
-          marker-id="marker"
-          :options="{color: '#0c0816'}"
-          :lnglat="[center.lng, center.lat]"
+        <LTileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution="&amp;copy; <a href=&quot;https://www.openstreetmap.org/copyright&quot;>OpenStreetMap</a> contributors"
+          layer-type="base"
+          name="OpenStreetMap"
         />
-      </MapboxMap>
+        <LMarker :lat-lng="[center.lat, center.lng]" />
+      </LMap>
       <div class="location-infos">
         <p class="location-infos-text">
           <span class="type-write">
