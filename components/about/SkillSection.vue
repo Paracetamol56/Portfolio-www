@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Code, Cog, Brain, ListTodo, Gamepad2, ServerCog } from "lucide-vue-next";
+import { Code, Cog, Brain, ListTodo, Bot, ServerCog } from "lucide-vue-next";
 
 const props = defineProps({
   number: {
@@ -87,7 +87,7 @@ const props = defineProps({
           <li class="skill-item">
             <div class="skill-item-content">
               <div class="skill-item-content-visible">
-                <Gamepad2 color="var(--secondary-color)" :size="64" />
+                <Bot color="var(--secondary-color)" :size="64" />
                 <h4 class="skill-item-name">
                   {{ $t("about.skills.keywords.5.name") }}
                 </h4>

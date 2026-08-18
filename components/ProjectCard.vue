@@ -97,7 +97,6 @@ onMounted(() => {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    // make the image 80% transparent
     opacity: 0.5;
   }
 
@@ -105,13 +104,24 @@ onMounted(() => {
     width: 100%;
     height: 100%;
     padding: 1.5rem;
-    background-image: linear-gradient(135deg, #2c1b4fa0 70%, #111416a0 100%);
-    background-size: 400%;
-    background-position: 100%;
-    transition: background-position 1s var(--easing);
+    position: relative;
+    z-index: 1;
 
-    &:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-image: linear-gradient(135deg, #2c1b4fa0 70%, #111416a0 100%);
+      background-size: 400%;
+      background-position: 100%;
+      opacity: 0.5;
+      transition: background-position 1s var(--easing), opacity 1s var(--easing);
+    }
+
+    &:hover::before {
       background-position: 0%;
+      opacity: 1;
     }
 
     .colored {
