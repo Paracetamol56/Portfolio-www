@@ -10,28 +10,25 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/content": "^3.6.1",
-    "@nuxt/image": "^1.8.1",
+    "@nuxt/content": "^3.15.2",
+    "@nuxt/eslint": "^1.17.0",
+    "@nuxt/image": "^1.11.0",
     "@nuxtjs/device": "^3.2.4",
-    "@nuxtjs/eslint-module": "^4.1.0",
-    "@nuxtjs/i18n": "^9.5.5",
-    "eslint": "^9.28.0",
-    "globe.gl": "^2.41.6",
+    "@nuxtjs/i18n": "^9.5.6",
+    "eslint": "^9.39.5",
+    "globe.gl": "^2.46.1",
     "lucide-vue-next": "^0.522.0",
-    "mapbox-gl": "^3.12.0",
-    "nuxt": "^3.17.5",
-    "nuxt-mapbox": "^1.6.3",
-    "sass": "^1.89.2",
-    "swiper": "^11.0.7",
-    "vue": "^3.5.16",
-    "vue-router": "^4.4.5"
-  },
-  "dependencies": {
+    "mapbox-gl": "^3.28.1",
+    "nuxt": "^3.21.11",
+    "sass": "^1.102.0",
+    "swiper": "^14.1.0",
     "@vue-leaflet/vue-leaflet": "^0.10.1",
-    "better-sqlite3": "^12.2.0",
     "leaflet": "^1.9.4"
   },
   "allowScripts": {
     "better-sqlite3@12.11.1": true
+  },
+  "overrides": {
+    "sharp": "^0.35.3"
   }
 }

@@ -2,6 +2,13 @@
 export default defineNuxtConfig({
   ssr: true,
 
+  nitro: {
+    prerender: {
+      failOnError: false,
+      concurrency: 2
+    }
+  },
+
   app: {
     pageTransition: { name: "fade", mode: "out-in" },
     head: {
@@ -86,7 +93,7 @@ export default defineNuxtConfig({
     client: true
   },
 
-  modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxt/image", "@nuxtjs/device", "nuxt-mapbox"],
+  modules: ["@nuxt/content", "@nuxtjs/i18n", "@nuxt/image", "@nuxtjs/device", "@nuxt/eslint"],
 
   i18n: {
     strategy: "prefix_except_default",
@@ -97,6 +104,9 @@ export default defineNuxtConfig({
       cookieKey: "i18n_redirected",
       redirectOn: "root", // recommended
     },*/
+    bundle: {
+      optimizeTranslationDirective: false
+    },
     locales: [
       {
         code: "en",
@@ -112,8 +122,10 @@ export default defineNuxtConfig({
     langDir: "locales/",
   },
 
-  mapbox: {
-    accessToken: 'pk.eyJ1IjoibWF0aGVvLWdhbHViYSIsImEiOiJjbHVmZmhobWQwcmFnMmpvY2tpNW8yY2RkIn0.iGen_1CAveoAE9xFSNJZJQ'
+  eslint: {
+    config: {
+      stylistic: true
+    }
   },
 
   image: {
