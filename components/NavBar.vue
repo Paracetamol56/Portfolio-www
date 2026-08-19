@@ -9,11 +9,6 @@ const route = useRoute();
 const availableLocales = computed(() => {
   return locales.value.filter((i) => i.code !== locale.value);
 });
-async function changeLocale(locale: string) {
-  // setLocale(locale);
-	console.log(switchLocalePath(locale));
-  // await navigateTo(localePath(useRoute().path));
-}
 
 const navActive = ref(false);
 const linkList = ref<NodeListOf<HTMLAnchorElement>>();

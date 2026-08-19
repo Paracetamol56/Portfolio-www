@@ -2,7 +2,7 @@
 import ProjectCard from "@/components/ProjectCard.vue";
 
 const { locale } = useI18n();
-console.log(locale.value);
+
 const { data } = await useAsyncData(
   `projects-${locale.value}`,
   () => queryCollection(locale.value)

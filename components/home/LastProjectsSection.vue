@@ -17,7 +17,7 @@ defineProps({
     required: true,
   },
 });
-console.log(locale.value);
+
 const { data } = await useAsyncData(
   `projects-${locale.value}-limit4`,
   () => queryCollection(locale.value)
