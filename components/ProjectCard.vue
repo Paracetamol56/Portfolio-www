@@ -1,13 +1,19 @@
 <template>
   <div class="project-card">
-    <NuxtImg :src="project.thumbnail" format="webp" placeholder quality="70"
-      alt="Project {{ project.id }} thumbnail" class="project-card-image" />
+    <NuxtImg
+      :src="project.thumbnail"
+      format="webp"
+      placeholder
+      quality="70"
+      alt="Project {{ project.id }} thumbnail"
+      class="project-card-image"
+    />
     <div class="project-card-text">
       <p class="project-card-text-date">
         {{
           `${project.dates.start.replaceAll(
             "-",
-            "/"
+            "/",
           )} - ${project.dates.end.replaceAll("-", "/")}`
         }}
       </p>
@@ -18,61 +24,66 @@
         {{ project.title }}
       </h3>
       <p class="project-card-text-description">
-        /*<br />{{ project.subtitle }}<br />Tags :
-        <span v-for="tag in project.tags" :key="tag">
-          <span class="colored"> #</span>{{ tag }}</span><br />*/
+        /*<br>{{ project.subtitle }}<br>Tags :
+        <span
+          v-for="tag in project.tags"
+          :key="tag"
+        >
+          <span class="colored"> #</span>{{ tag }}</span><br>*/
       </p>
-      <UnderlinedButton :href="localePath(`/project/${slug}`)">{{ $t("see-more") }}
+      <UnderlinedButton :href="localePath(`/project/${slug}`)">
+        {{ $t("see-more") }}
       </UnderlinedButton>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, computed } from "vue";
-import slugify from "slugify";
+import { onMounted, computed } from 'vue'
+import slugify from 'slugify'
 
-type Project = Pick<ContentCollectionItem, "number" | "title" | "subtitle" | "thumbnail" | "dates" | "tags" | "status">;
+type Project = Pick<ContentCollectionItem, 'number' | 'title' | 'subtitle' | 'thumbnail' | 'dates' | 'tags' | 'status'>
 
-const localePath = useLocalePath();
+const localePath = useLocalePath()
 
-const props = defineProps<{ project: Project }>();
+const props = defineProps<{ project: Project }>()
 
 const slug = computed(() =>
   `${props.project.number}-${slugify(props.project.title, {
     lower: true,
     strict: true,
-  })}`
-);
+  })}`,
+)
 
 const updateFadeInElements = () => {
-  const fadeInElements = document.getElementsByClassName("fade-in");
+  const fadeInElements = document.getElementsByClassName('fade-in')
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("appear");
+          entry.target.classList.add('appear')
         }
-      });
+      })
     },
     {
       threshold: 0.5,
-    }
-  );
+    },
+  )
 
   for (let i = 0; i < fadeInElements.length; i++) {
     if (fadeInElements[i].getBoundingClientRect().top < window.innerHeight) {
-      fadeInElements[i].classList.add("appear");
-    } else {
-      observer.observe(fadeInElements[i]);
+      fadeInElements[i].classList.add('appear')
+    }
+    else {
+      observer.observe(fadeInElements[i])
     }
   }
-};
+}
 
 onMounted(() => {
-  updateFadeInElements();
-});
+  updateFadeInElements()
+})
 </script>
 
 <style lang="scss" scoped>

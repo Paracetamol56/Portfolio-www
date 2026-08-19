@@ -7,123 +7,127 @@ defineProps({
   subtitle: {
     type: String,
     required: false,
-    default: "",
+    default: '',
   },
-});
+})
 
-const { isDesktop } = useDevice();
-let interval: any;
-const background: Ref<HTMLElement | null> = ref(null);
-const backgroundGradient: Ref<HTMLElement | null> = ref(null);
-const codeBlocksBackground: Ref<HTMLElement | null> = ref(null);
+const { isDesktop } = useDevice()
+let interval: any
+const background: Ref<HTMLElement | null> = ref(null)
+const backgroundGradient: Ref<HTMLElement | null> = ref(null)
+const codeBlocksBackground: Ref<HTMLElement | null> = ref(null)
 
 function triggerHover() {
-  let randomChild =
-    codeBlocksBackground.value?.children[
-    Math.floor(Math.random() * codeBlocksBackground.value.children.length)
-    ];
+  const randomChild
+    = codeBlocksBackground.value?.children[
+      Math.floor(Math.random() * codeBlocksBackground.value.children.length)
+    ]
   if (!randomChild) {
-    return;
+    return
   }
-  if (randomChild.classList.contains("light")) {
-    return;
+  if (randomChild.classList.contains('light')) {
+    return
   }
-  randomChild.classList.add("light");
-  writeContent(randomChild, generateBlockContent());
+  randomChild.classList.add('light')
+  writeContent(randomChild, generateBlockContent())
   setTimeout(function () {
-    randomChild.classList.remove("light");
-  }, 400);
+    randomChild.classList.remove('light')
+  }, 400)
 }
 
 function mouseMove(event: MouseEvent) {
   if (!isDesktop) {
-    return;
+    return
   }
   // Get the mouse position
-  let x = event.clientX - window.innerWidth / 2;
-  let y = event.clientY - window.innerHeight / 2;
+  const x = event.clientX - window.innerWidth / 2
+  const y = event.clientY - window.innerHeight / 2
 
   if (backgroundGradient.value) {
-    backgroundGradient.value.style.top = `calc(50% + ${-y / 5}px)`;
-    backgroundGradient.value.style.left = `calc(50% + ${-x / 5}px)`;
+    backgroundGradient.value.style.top = `calc(50% + ${-y / 5}px)`
+    backgroundGradient.value.style.left = `calc(50% + ${-x / 5}px)`
   }
 }
 
 async function generateBlockContent() {
-  let randomCharacters: string[] = [..."_=*^#@<>:;.,"]; // [..."-_+=*&^%$#@!~<>?:;.,|/{}[]()"];
+  const randomCharacters: string[] = [...'_=*^#@<>:;.,'] // [..."-_+=*&^%$#@!~<>?:;.,|/{}[]()"];
 
-  let randomContent = "";
+  let randomContent = ''
   // generate a random content in a list of random types
-  let randomNumber = Math.random();
+  let randomNumber = Math.random()
   if (randomNumber <= 0.25) {
     // generate 4 lines of 8 random characters in hexadecimal
     for (let k = 0; k < 4; k++) {
-      randomContent += Math.random().toString(16).substr(2, 8).toUpperCase();
-      randomContent += "\n";
+      randomContent += Math.random().toString(16).substr(2, 8).toUpperCase()
+      randomContent += '\n'
     }
-  } else if (randomNumber <= 0.5) {
+  }
+  else if (randomNumber <= 0.5) {
     // generate a random number of random characters in binary
-    randomNumber = Math.floor(Math.random() * 8) + 1;
+    randomNumber = Math.floor(Math.random() * 8) + 1
     for (let k = 0; k < 4; k++) {
-      randomContent += Math.random().toString(2).substr(2, 8).toUpperCase();
-      randomContent += "\n";
+      randomContent += Math.random().toString(2).substr(2, 8).toUpperCase()
+      randomContent += '\n'
     }
-  } else if (randomNumber <= 0.9) {
+  }
+  else if (randomNumber <= 0.9) {
     // generate a random character
     for (let k = 0; k < 4; k++) {
       for (let l = 0; l < 8; l++) {
-        randomContent +=
-          randomCharacters[Math.floor(Math.random() * randomCharacters.length)];
+        randomContent
+          += randomCharacters[Math.floor(Math.random() * randomCharacters.length)]
       }
-      randomContent += "\n";
+      randomContent += '\n'
     }
-  } else {
-    randomContent = "////////\n////////\n////////\n////////";
   }
-  return randomContent;
+  else {
+    randomContent = '////////\n////////\n////////\n////////'
+  }
+  return randomContent
 }
 
 async function writeContent(element: Element, content: Promise<string>) {
-  let contentString: string = await content;
-  element.innerHTML = "";
+  const contentString: string = await content
+  element.innerHTML = ''
   // If on non-desktop, bypass the character by character writing
   if (!isDesktop) {
-    element.innerHTML = contentString;
-    return;
+    element.innerHTML = contentString
+    return
   }
   // write content in element character by character
-  let i = 0;
-  let characterInterval = setInterval(function () {
+  let i = 0
+  const characterInterval = setInterval(function () {
     if (i < contentString.length) {
-      element.innerHTML += contentString[i];
-      i++;
-    } else {
-      clearInterval(characterInterval);
+      element.innerHTML += contentString[i]
+      i++
     }
-  }, 10);
+    else {
+      clearInterval(characterInterval)
+    }
+  }, 10)
 }
 
 function scrollToMain() {
-  window.scrollTo(0, window.innerHeight);
+  window.scrollTo(0, window.innerHeight)
 }
 
 onMounted(() => {
   // Header paralax
-  let titleParalax: HTMLElement = document.getElementById("titles")!;
-  window.addEventListener("scroll", function () {
-    codeBlocksBackground.value!.style.transform =
-      "translateY(" + window.pageYOffset / 2 + "px)";
-    titleParalax.style.transform =
-      "translateY(" + window.pageYOffset / 3 + "px)";
-  });
+  const titleParalax: HTMLElement = document.getElementById('titles')!
+  window.addEventListener('scroll', function () {
+    codeBlocksBackground.value!.style.transform
+      = 'translateY(' + window.pageYOffset / 2 + 'px)'
+    titleParalax.style.transform
+      = 'translateY(' + window.pageYOffset / 3 + 'px)'
+  })
 
   // get the grid size of the codeBlocksBackground
-  var gridSize = [window.innerWidth / 80, window.innerHeight / 80];
+  const gridSize = [window.innerWidth / 80, window.innerHeight / 80]
 
-  let grays = ["#343739", "#2d3032", "#26292b", "#1f2224", "#191c1e"];
+  const grays = ['#343739', '#2d3032', '#26292b', '#1f2224', '#191c1e']
 
   // list of predifined colors
-  let colors = ["#b4e2f9", "#5f78ef", "#8251e9", "#ad56e3", "#df7bf5"];
+  const colors = ['#b4e2f9', '#5f78ef', '#8251e9', '#ad56e3', '#df7bf5']
 
   // for each cell of the grid
   for (let i = 0; i < gridSize[0]; i++) {
@@ -131,63 +135,91 @@ onMounted(() => {
       // If the cell is lucky
       if (Math.random() <= 0.6) {
         // create a p element in this cell
-        let codeBlock = document.createElement("p");
-        codeBlock.classList.add("bgCodeBox");
+        const codeBlock = document.createElement('p')
+        codeBlock.classList.add('bgCodeBox')
 
-        writeContent(codeBlock, generateBlockContent());
+        writeContent(codeBlock, generateBlockContent())
 
         // random color from the list of grays
-        let randomColor = grays[Math.floor(Math.random() * grays.length)];
-        codeBlock.style.setProperty("--bgCodeBox-color", randomColor);
+        let randomColor = grays[Math.floor(Math.random() * grays.length)]
+        codeBlock.style.setProperty('--bgCodeBox-color', randomColor)
 
         // random color from the list of colors
-        randomColor = colors[Math.floor(Math.random() * colors.length)] + "50";
-        codeBlock.style.setProperty("--bgCodeBox-hover-color", randomColor);
+        randomColor = colors[Math.floor(Math.random() * colors.length)] + '50'
+        codeBlock.style.setProperty('--bgCodeBox-hover-color', randomColor)
 
-        codeBlock.style.gridColumn = (i + 1).toString();
-        codeBlock.style.gridRow = (j + 1).toString();
+        codeBlock.style.gridColumn = (i + 1).toString()
+        codeBlock.style.gridRow = (j + 1).toString()
 
         // append the codeBlock to the codeBlocksBackground
-        codeBlocksBackground.value?.appendChild(codeBlock);
+        codeBlocksBackground.value?.appendChild(codeBlock)
       }
     }
   }
 
   // Wait for 1000 ms and set an interval to trigger the hover effect
   setTimeout(() => {
-    interval = setInterval(triggerHover, Math.floor(Math.random() * 500));
-  }, 1000);
-});
+    interval = setInterval(triggerHover, Math.floor(Math.random() * 500))
+  }, 1000)
+})
 
 onBeforeRouteLeave(() => {
-  clearInterval(interval);
-});
+  clearInterval(interval)
+})
 
 onBeforeUnmount(() => {
-  clearInterval(interval);
-});
+  clearInterval(interval)
+})
 </script>
 
 <template>
-  <header ref="background" @mousemove="mouseMove">
-    <div class="background-gradient" ref="backgroundGradient"></div>
-    <div class="background" ref="codeBlocksBackground" id="codeBlocksBackground"></div>
+  <header
+    ref="background"
+    @mousemove="mouseMove"
+  >
+    <div
+      ref="backgroundGradient"
+      class="background-gradient"
+    />
+    <div
+      id="codeBlocksBackground"
+      ref="codeBlocksBackground"
+      class="background"
+    />
 
-    <div class="titles" id="titles">
-      <h1 class="fillTextWithgradient type-write" key="title">
+    <div
+      id="titles"
+      class="titles"
+    >
+      <h1
+        key="title"
+        class="fillTextWithgradient type-write"
+      >
         {{ title }}
       </h1>
-      <h2 class="fillTextWithgradient type-write" key="subtitle">
+      <h2
+        key="subtitle"
+        class="fillTextWithgradient type-write"
+      >
         {{ subtitle }}
       </h2>
     </div>
 
-    <div class="downButton" @click="scrollToMain()">
-      {{ $t("see-more") }}<br />
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-        <path fill-rule="evenodd"
-          d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z">
-        </path>
+    <div
+      class="downButton"
+      @click="scrollToMain()"
+    >
+      {{ $t("see-more") }}<br>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"
+        />
       </svg>
     </div>
   </header>

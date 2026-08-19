@@ -1,294 +1,293 @@
 <script lang="ts" setup>
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import Globe from "globe.gl";
+import { Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import Globe from 'globe.gl'
 
 const travels_en = [
   {
-    id: "1",
-    title: "London",
+    id: '1',
+    title: 'London',
     location: {
-      start: ["45.5475", "2.867389"],
-      end: ["51.507222", "-0.1275"],
+      start: ['45.5475', '2.867389'],
+      end: ['51.507222', '-0.1275'],
     },
-    thumbnail: "/img/travels/1.jpg",
-    date: "2012",
-    description: "",
+    thumbnail: '/img/travels/1.jpg',
+    date: '2012',
+    description: '',
     images: [],
   },
   {
-    id: "2",
-    title: "Roma",
+    id: '2',
+    title: 'Roma',
     location: {
-      start: ["45.5475", "2.867389"],
-      end: ["41.902782", "12.496366"],
+      start: ['45.5475', '2.867389'],
+      end: ['41.902782', '12.496366'],
     },
-    thumbnail: "/img/travels/2.jpg",
-    date: "2012",
-    description: "",
+    thumbnail: '/img/travels/2.jpg',
+    date: '2012',
+    description: '',
     images: [],
   },
   {
-    id: "3",
-    title: "Greece",
+    id: '3',
+    title: 'Greece',
     location: {
-      start: ["45.5475", "2.867389"],
-      end: ["37.983810", "23.727539"],
+      start: ['45.5475', '2.867389'],
+      end: ['37.983810', '23.727539'],
     },
-    thumbnail: "/img/travels/3.jpg",
-    date: "2015",
-    description: "",
+    thumbnail: '/img/travels/3.jpg',
+    date: '2015',
+    description: '',
     images: [],
   },
   {
-    id: "4",
-    title: "New York",
+    id: '4',
+    title: 'New York',
     location: {
-      start: ["45.5475", "2.867389"],
-      end: ["40.7127", "-74.0059"],
+      start: ['45.5475', '2.867389'],
+      end: ['40.7127', '-74.0059'],
     },
-    thumbnail: "/img/travels/4.jpg",
-    date: "2018",
-    description: "",
+    thumbnail: '/img/travels/4.jpg',
+    date: '2018',
+    description: '',
     images: [],
   },
   {
-    id: "5",
-    title: "Philadelphia",
+    id: '5',
+    title: 'Philadelphia',
     location: {
-      start: ["40.7127", "-74.0059"],
-      end: ["39.9526", "-75.1652"],
+      start: ['40.7127', '-74.0059'],
+      end: ['39.9526', '-75.1652'],
     },
-    thumbnail: "/img/travels/5.jpg",
-    date: "2018",
-    description: "",
+    thumbnail: '/img/travels/5.jpg',
+    date: '2018',
+    description: '',
     images: [],
   },
   {
-    id: "6",
-    title: "Matane",
+    id: '6',
+    title: 'Matane',
     location: {
-      start: ["45.5475", "2.867389"],
-      end: ["48.845", "-67.5228"],
+      start: ['45.5475', '2.867389'],
+      end: ['48.845', '-67.5228'],
     },
-    thumbnail: "/img/travels/6.jpg",
-    date: "2022",
-    description: "",
+    thumbnail: '/img/travels/6.jpg',
+    date: '2022',
+    description: '',
     images: [],
   },
   {
-    id: "7",
-    title: "Québec",
+    id: '7',
+    title: 'Québec',
     location: {
-      start: ["48.845", "-67.5228"],
-      end: ["46.8139", "-71.2080"],
+      start: ['48.845', '-67.5228'],
+      end: ['46.8139', '-71.2080'],
     },
-    thumbnail: "/img/travels/7.jpg",
-    date: "2022",
-    description: "",
+    thumbnail: '/img/travels/7.jpg',
+    date: '2022',
+    description: '',
     images: [],
   },
   {
-    id: "8",
-    title: "Montréal",
+    id: '8',
+    title: 'Montréal',
     location: {
-      start: ["48.845", "-67.5228"],
-      end: ["45.5475", "-73.5878"],
+      start: ['48.845', '-67.5228'],
+      end: ['45.5475', '-73.5878'],
     },
-    thumbnail: "/img/travels/8.jpg",
-    date: "2022",
-    description: "",
+    thumbnail: '/img/travels/8.jpg',
+    date: '2022',
+    description: '',
     images: [],
   },
   {
-    id: "9",
-    title: "Leeds",
+    id: '9',
+    title: 'Leeds',
     location: {
-      start: ["45.5475", "2.867389"],
-      end: ["53.8007", "-1.5490"],
+      start: ['45.5475', '2.867389'],
+      end: ['53.8007', '-1.5490'],
     },
-    thumbnail: "/img/travels/9.jpg",
-    date: "2025",
-    description: "",
+    thumbnail: '/img/travels/9.jpg',
+    date: '2025',
+    description: '',
     images: [],
   },
   {
-    id: "10",
-    title: "Réunion",
+    id: '10',
+    title: 'Réunion',
     location: {
-      start: ["45.5475", "2.867389"],
-      end: ["-21.121662515393947", "55.538169870606005"],
+      start: ['45.5475', '2.867389'],
+      end: ['-21.121662515393947', '55.538169870606005'],
     },
-    thumbnail: "/img/travels/10.jpg",
-    date: "2025",
-    description: "",
+    thumbnail: '/img/travels/10.jpg',
+    date: '2025',
+    description: '',
     images: [],
-  }
-];
+  },
+]
 
 const travels_fr = [
   {
-    "id": "1",
-    "title": "Londres",
-    "location": {
-      "start": ["45.5475", "2.867389"],
-      "end": ["51.507222", "-0.1275"]
-    },
-    "thumbnail": "/img/travels/1.jpg",
-    "date": "2012",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
-    "images": []
-  },
-  {
-    "id": "2",
-    "title": "Rome",
-    "location": {
-      "start": ["45.5475", "2.867389"],
-      "end": ["41.902782", "12.496366"]
-    },
-    "thumbnail": "/img/travels/2.jpg",
-    "date": "2012",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
-    "images": []
-  },
-  {
-    "id": "3",
-    "title": "Grèce",
-    "location": {
-      "start": ["45.5475", "2.867389"],
-      "end": ["37.983810", "23.727539"]
-    },
-    "thumbnail": "/img/travels/3.jpg",
-    "date": "2015",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
-    "images": []
-  },
-  {
-    "id": "4",
-    "title": "New York",
-    "location": {
-      "start": ["45.5475", "2.867389"],
-      "end": ["40.7127", "-74.0059"]
-    },
-    "thumbnail": "/img/travels/4.jpg",
-    "date": "2018",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
-    "images": []
-  },
-  {
-    "id": "5",
-    "title": "Philadelphie",
-    "location": {
-      "start": ["40.7127", "-74.0059"],
-      "end": ["39.9526", "-75.1652"]
-    },
-    "thumbnail": "/img/travels/5.jpg",
-    "date": "2018",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
-    "images": []
-  },
-  {
-    "id": "6",
-    "title": "Matane",
-    "location": {
-      "start": ["45.5475", "2.867389"],
-      "end": ["48.845", "-67.5228"]
-    },
-    "thumbnail": "/img/travels/6.jpg",
-    "date": "2018",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
-    "images": []
-  },
-  {
-    "id": "7",
-    "title": "Québec",
-    "location": {
-      "start": ["48.845", "-67.5228"],
-      "end": ["46.8139", "-71.2080"]
-    },
-    "thumbnail": "/img/travels/7.jpg",
-    "date": "2018",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
-    "images": []
-  },
-  {
-    id: "8",
-    title: "Montréal",
+    id: '1',
+    title: 'Londres',
     location: {
-      start: ["48.845", "-67.5228"],
-      end: ["45.5475", "-73.5878"]
+      start: ['45.5475', '2.867389'],
+      end: ['51.507222', '-0.1275'],
     },
-    thumbnail: "/img/travels/8.jpg",
-    date: "2018",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.",
-    images: []
-  },
-  {
-    id: "9",
-    title: "Leeds",
-    location: {
-      start: ["45.5475", "2.867389"],
-      end: ["53.8007", "-1.5490"],
-    },
-    thumbnail: "/img/travels/9.jpg",
-    date: "2025",
-    description: "",
+    thumbnail: '/img/travels/1.jpg',
+    date: '2012',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.',
     images: [],
   },
   {
-    id: "10",
-    title: "Réunion",
+    id: '2',
+    title: 'Rome',
     location: {
-      start: ["45.5475", "2.867389"],
-      end: ["-21.121662515393947", "55.538169870606005"],
+      start: ['45.5475', '2.867389'],
+      end: ['41.902782', '12.496366'],
     },
-    thumbnail: "/img/travels/10.jpg",
-    date: "2025",
-    description: "",
+    thumbnail: '/img/travels/2.jpg',
+    date: '2012',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.',
     images: [],
-  }
-];
+  },
+  {
+    id: '3',
+    title: 'Grèce',
+    location: {
+      start: ['45.5475', '2.867389'],
+      end: ['37.983810', '23.727539'],
+    },
+    thumbnail: '/img/travels/3.jpg',
+    date: '2015',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.',
+    images: [],
+  },
+  {
+    id: '4',
+    title: 'New York',
+    location: {
+      start: ['45.5475', '2.867389'],
+      end: ['40.7127', '-74.0059'],
+    },
+    thumbnail: '/img/travels/4.jpg',
+    date: '2018',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.',
+    images: [],
+  },
+  {
+    id: '5',
+    title: 'Philadelphie',
+    location: {
+      start: ['40.7127', '-74.0059'],
+      end: ['39.9526', '-75.1652'],
+    },
+    thumbnail: '/img/travels/5.jpg',
+    date: '2018',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.',
+    images: [],
+  },
+  {
+    id: '6',
+    title: 'Matane',
+    location: {
+      start: ['45.5475', '2.867389'],
+      end: ['48.845', '-67.5228'],
+    },
+    thumbnail: '/img/travels/6.jpg',
+    date: '2018',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.',
+    images: [],
+  },
+  {
+    id: '7',
+    title: 'Québec',
+    location: {
+      start: ['48.845', '-67.5228'],
+      end: ['46.8139', '-71.2080'],
+    },
+    thumbnail: '/img/travels/7.jpg',
+    date: '2018',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.',
+    images: [],
+  },
+  {
+    id: '8',
+    title: 'Montréal',
+    location: {
+      start: ['48.845', '-67.5228'],
+      end: ['45.5475', '-73.5878'],
+    },
+    thumbnail: '/img/travels/8.jpg',
+    date: '2018',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.',
+    images: [],
+  },
+  {
+    id: '9',
+    title: 'Leeds',
+    location: {
+      start: ['45.5475', '2.867389'],
+      end: ['53.8007', '-1.5490'],
+    },
+    thumbnail: '/img/travels/9.jpg',
+    date: '2025',
+    description: '',
+    images: [],
+  },
+  {
+    id: '10',
+    title: 'Réunion',
+    location: {
+      start: ['45.5475', '2.867389'],
+      end: ['-21.121662515393947', '55.538169870606005'],
+    },
+    thumbnail: '/img/travels/10.jpg',
+    date: '2025',
+    description: '',
+    images: [],
+  },
+]
 
-const { locale } = useI18n();
-const modules = [Navigation, Pagination];
-const globe = Globe();
-const map: Ref<HTMLElement | null> = ref(null);
-const swiper: Ref<any | null> = ref(null);
-const travels = ref((locale.value === "en" ? travels_en : travels_fr).reverse());
-
+const { locale } = useI18n()
+const modules = [Navigation, Pagination]
+const globe = Globe()
+const map: Ref<HTMLElement | null> = ref(null)
+const swiper: Ref<any | null> = ref(null)
+const travels = ref((locale.value === 'en' ? travels_en : travels_fr).reverse())
 
 defineProps({
   number: {
     type: String,
     required: true,
   },
-});
+})
 
 onMounted(() => {
-  displayGlobe();
-  window.addEventListener("resize", resizeGlobe);
-});
+  displayGlobe()
+  window.addEventListener('resize', resizeGlobe)
+})
 
 function displayGlobe() {
   globe
     // Initialize the globe
     .width(map.value?.clientWidth ?? 0)
     .height(map.value?.clientHeight ?? 0)
-    .backgroundColor("#00000000")
-    .globeImageUrl(window.location.origin + "/img/earth-dark.jpg")
-    .bumpImageUrl(window.location.origin + "/img/earth-topology.png")
-    .atmosphereColor("#b4e2f9")
+    .backgroundColor('#00000000')
+    .globeImageUrl(window.location.origin + '/img/earth-dark.jpg')
+    .bumpImageUrl(window.location.origin + '/img/earth-topology.png')
+    .atmosphereColor('#b4e2f9')
     .atmosphereAltitude(0.1)
     .lineHoverPrecision(2)
     // Custom HTML elements
     .labelsData(travels.value)
     .labelLat((d: any) => d.location.end[0])
     .labelLng((d: any) => d.location.end[1])
-    .labelText(() => "")
-    .labelColor(() => "#b4e2f9")
+    .labelText(() => '')
+    .labelColor(() => '#b4e2f9')
     .labelSize(1)
     .labelDotRadius(0.4)
     // Arcs
@@ -298,44 +297,44 @@ function displayGlobe() {
     .arcEndLat((d: any) => d.location.end[0])
     .arcEndLng((d: any) => d.location.end[1])
     .arcLabel((d: any) => d.title)
-    .arcColor(() => "#b4e2f9")
+    .arcColor(() => '#b4e2f9')
     .arcAltitudeAutoScale(0.25)
     .arcStroke(0.25)
     // Actions
     .onLabelClick((label: any) => {
-      slideToId(label.id);
+      slideToId(label.id)
     })
     .onArcClick((arc: any) => {
-      slideToId(arc.id);
-    });
+      slideToId(arc.id)
+    })
 
   if (map.value) {
-    globe(map.value);
+    globe(map.value)
 
-    globe.controls().enableZoom = false;
+    globe.controls().enableZoom = false
     // Relation between canevas size and camera distance : f(x) = -0.11x + 350
     const distance = Math.max(
       -0.11 * map.value.clientWidth + 375,
-      -0.11 * map.value.clientHeight + 375
-    );
-    globe.camera().position.set(0, 0, distance);
-    globe.pointOfView({ lat: 20, lng: 0 }, 0);
+      -0.11 * map.value.clientHeight + 375,
+    )
+    globe.camera().position.set(0, 0, distance)
+    globe.pointOfView({ lat: 20, lng: 0 }, 0)
   }
 }
 
 function resizeGlobe() {
   globe
     .width(map.value?.clientWidth ?? 0)
-    .height(map.value?.clientHeight ?? 0);
+    .height(map.value?.clientHeight ?? 0)
 }
 
 function onSwiper(s: any) {
-  swiper.value = s;
+  swiper.value = s
 }
 
 function slideToId(id: number) {
-  const index: number = travels.value.length - id;
-  swiper.value?.slideTo(index);
+  const index: number = travels.value.length - id
+  swiper.value?.slideTo(index)
 }
 
 function slideChange(e: any) {
@@ -345,34 +344,46 @@ function slideChange(e: any) {
       lat: Math.max(travels.value[e.activeIndex].location.end[0] - 25, -90),
       lng: travels.value[e.activeIndex].location.end[1],
     },
-    1000
-  );
+    1000,
+  )
 }
 </script>
 
-
-
 <template>
-  <section id="travels" class="fade-in">
+  <section
+    id="travels"
+    class="fade-in"
+  >
     <div class="container">
       <div class="section-title">
         <h2>
           <span class="section-title-number">02.</span>
           {{ $t("home.travels.title") }}
         </h2>
-        <hr />
+        <hr>
       </div>
     </div>
     <div class="map-container">
-      <div class="map" ref="map">
-        <!--@touchstart="touchStart"
-        @mousedown="touchStart"-->
+      <div
+        ref="map"
+        class="map"
+      >
+        <!-- @touchstart="touchStart"
+        @mousedown="touchStart" -->
         <!-- The globe goes here -->
       </div>
       <ClientOnly>
-        <Swiper class="travel-slider" @swiper="onSwiper" @slideChange="slideChange" :slides-per-view="1.1"
-          :space-between="20" :navigation="true" :pagination="{ clickable: true }" :loop="false" :grab-cursor="true"
-          :centeredSlides="true" :breakpoints="{
+        <Swiper
+          class="travel-slider"
+          :slides-per-view="1.1"
+          :space-between="20"
+          :navigation="true"
+          :pagination="{ clickable: true }"
+          :loop="false"
+          :grab-cursor="true"
+          @swiper="onSwiper"
+          :centered-slides="true"
+          :breakpoints="{
             576: {
               slidesPerView: 1.2,
               spaceBetween: 40,
@@ -393,8 +404,15 @@ function slideChange(e: any) {
               slidesPerView: 2.2,
               spaceBetween: 100,
             },
-          }" :modules="modules">
-          <SwiperSlide class="project-slider-item" v-for="travel in travels" :key="travel.id">
+          }"
+          :modules="modules"
+          @slide-change="slideChange"
+        >
+          <SwiperSlide
+            v-for="travel in travels"
+            :key="travel.id"
+            class="project-slider-item"
+          >
             <TravelCard :travel="travel" />
           </SwiperSlide>
         </Swiper>

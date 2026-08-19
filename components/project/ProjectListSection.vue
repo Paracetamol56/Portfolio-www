@@ -1,22 +1,26 @@
 <script lang="ts" setup>
-import ProjectCard from "@/components/ProjectCard.vue";
+import ProjectCard from '@/components/ProjectCard.vue'
 
-const { locale } = useI18n();
+const { locale } = useI18n()
 
 const { data } = await useAsyncData(
   `projects-${locale.value}`,
   () => queryCollection(locale.value)
     .select('number', 'title', 'subtitle', 'thumbnail', 'dates', 'tags', 'status')
     .order('number', 'DESC')
-    .all()
-);
+    .all(),
+)
 </script>
 
 <template>
   <section id="projects">
     <div class="container">
       <div class="projet-list">
-        <ProjectCard v-for="project in data" :key="project.number" :project="project" />
+        <ProjectCard
+          v-for="project in data"
+          :key="project.number"
+          :project="project"
+        />
       </div>
     </div>
   </section>

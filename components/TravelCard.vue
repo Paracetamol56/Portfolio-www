@@ -11,8 +11,15 @@
 
 <template>
   <div class="travel-card">
-    <NuxtImg :src="travel.thumbnail" format="webp" placeholder quality="70"
-      sizes="100vw sm:50vw md:400px" :alt="`Travel ${travel.id} thumbnail`" class="travel-card-image" />
+    <NuxtImg
+      :src="travel.thumbnail"
+      format="webp"
+      placeholder
+      quality="70"
+      sizes="100vw sm:50vw md:400px"
+      :alt="`Travel ${travel.id} thumbnail`"
+      class="travel-card-image"
+    />
     <div class="travel-card-text">
       <p class="travel-card-text-date">
         {{
@@ -26,17 +33,17 @@
         {{ travel.title }}
       </h3>
       <p class="travel-card-text-description">
-        /*<br />
+        /*<br>
         {{ locationHumanReadable.lat.deg }}<span class="colored">°</span>
         {{ locationHumanReadable.lat.min }}<span class="colored">'</span>
         {{ locationHumanReadable.lat.sec
         }}<span class="colored">" {{ locationHumanReadable.lat.dir }}</span>
-        <br />
+        <br>
         {{ locationHumanReadable.lng.deg }}<span class="colored">°</span>
         {{ locationHumanReadable.lng.min }}<span class="colored">'</span>
         {{ locationHumanReadable.lng.sec
         }}<span class="colored">" {{ locationHumanReadable.lng.dir }}</span>
-        <br />*/
+        <br>*/
       </p>
     </div>
   </div>
@@ -44,7 +51,7 @@
 
 <script>
 export default {
-  name: "TravelCard",
+  name: 'TravelCard',
   props: {
     travel: {
       type: Object,
@@ -55,36 +62,78 @@ export default {
     return {
       locationHumanReadable: {
         lat: {
-          dir: "",
+          dir: '',
           deg: 0,
           min: 0,
           sec: 0,
         },
         lng: {
-          dir: "",
+          dir: '',
           deg: 0,
           min: 0,
           sec: 0,
         },
-      }
-    };
+      },
+    }
+  },
+  mounted: function () {
+    // Compute the center coordinates in the human readable format
+    this.locationHumanReadable = {
+      lat: {
+        dir: this.travel.location.end[0] < 0 ? 'S' : 'N',
+        deg: Math.floor(Math.abs(this.travel.location.end[0])),
+        min: Math.floor(
+          (Math.abs(this.travel.location.end[0]) - Math.floor(Math.abs(this.travel.location.end[0])))
+          * 60,
+        ),
+        sec: (
+          (Math.abs(this.travel.location.end[0]) - Math.floor(Math.abs(this.travel.location.end[0])))
+          * 3600
+          - Math.floor(
+            (Math.abs(this.travel.location.end[0])
+              - Math.floor(Math.abs(this.travel.location.end[0])))
+            * 60,
+          )
+          * 60
+        ).toFixed(2),
+      },
+      lng: {
+        dir: this.travel.location.end[1] < 0 ? 'W' : 'E',
+        deg: Math.floor(Math.abs(this.travel.location.end[1])),
+        min: Math.floor(
+          (Math.abs(this.travel.location.end[1]) - Math.floor(Math.abs(this.travel.location.end[1])))
+          * 60,
+        ),
+        sec: (
+          (Math.abs(this.travel.location.end[1]) - Math.floor(Math.abs(this.travel.location.end[1])))
+          * 3600
+          - Math.floor(
+            (Math.abs(this.travel.location.end[1])
+              - Math.floor(Math.abs(this.travel.location.end[1])))
+            * 60,
+          )
+          * 60
+        ).toFixed(2),
+      },
+    }
+    this.updateFadeInElements()
   },
   methods: {
     updateFadeInElements: function () {
-      const fadeInElements = document.getElementsByClassName("fade-in");
+      const fadeInElements = document.getElementsByClassName('fade-in')
       // Enter in viewport observer
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add("appear");
+              entry.target.classList.add('appear')
             }
-          });
+          })
         },
         {
           threshold: 0.5,
-        }
-      );
+        },
+      )
 
       // For each element
       for (let i = 0; i < fadeInElements.length; i++) {
@@ -93,57 +142,16 @@ export default {
           fadeInElements[i].getBoundingClientRect().top < window.innerHeight
         ) {
           // Add class "appear"
-          fadeInElements[i].classList.add("appear");
-        } else {
+          fadeInElements[i].classList.add('appear')
+        }
+        else {
           // Add observer
-          observer.observe(fadeInElements[i]);
+          observer.observe(fadeInElements[i])
         }
       }
     },
   },
-  mounted: function () {
-    // Compute the center coordinates in the human readable format
-    this.locationHumanReadable = {
-      lat: {
-        dir: this.travel.location.end[0] < 0 ? "S" : "N",
-        deg: Math.floor(Math.abs(this.travel.location.end[0])),
-        min: Math.floor(
-          (Math.abs(this.travel.location.end[0]) - Math.floor(Math.abs(this.travel.location.end[0]))) *
-          60
-        ),
-        sec: (
-          (Math.abs(this.travel.location.end[0]) - Math.floor(Math.abs(this.travel.location.end[0]))) *
-          3600 -
-          Math.floor(
-            (Math.abs(this.travel.location.end[0]) -
-              Math.floor(Math.abs(this.travel.location.end[0]))) *
-            60
-          ) *
-          60
-        ).toFixed(2),
-      },
-      lng: {
-        dir: this.travel.location.end[1] < 0 ? "W" : "E",
-        deg: Math.floor(Math.abs(this.travel.location.end[1])),
-        min: Math.floor(
-          (Math.abs(this.travel.location.end[1]) - Math.floor(Math.abs(this.travel.location.end[1]))) *
-          60
-        ),
-        sec: (
-          (Math.abs(this.travel.location.end[1]) - Math.floor(Math.abs(this.travel.location.end[1]))) *
-          3600 -
-          Math.floor(
-            (Math.abs(this.travel.location.end[1]) -
-              Math.floor(Math.abs(this.travel.location.end[1]))) *
-            60
-          ) *
-          60
-        ).toFixed(2),
-      },
-    };
-    this.updateFadeInElements();
-  },
-};
+}
 </script>
 
 <style lang="scss" scoped>

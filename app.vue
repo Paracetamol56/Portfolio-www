@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import NavBar from "~/components/NavBar.vue";
+import NavBar from '~/components/NavBar.vue'
 
-const nuxtApp = useNuxtApp();
-const loading = ref(false);
-nuxtApp.hook("page:start", () => {
-  loading.value = true;
-});
-nuxtApp.hook("page:finish", () => {
-  loading.value = false;
-});
+const nuxtApp = useNuxtApp()
+const loading = ref(false)
+nuxtApp.hook('page:start', () => {
+  loading.value = true
+})
+nuxtApp.hook('page:finish', () => {
+  loading.value = false
+})
 
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
-  addSeoAttributes: true
-});
+  addSeoAttributes: true,
+})
 </script>
 
 <script lang="ts">
@@ -23,22 +23,25 @@ export function updateFadeInElements() {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("appear");
-          observer.unobserve(entry.target);
+          entry.target.classList.add('appear')
+          observer.unobserve(entry.target)
         }
-      });
+      })
     },
-    { threshold: 0.5 }
-  );
+    { threshold: 0.5 },
+  )
 
-  document.querySelectorAll(".fade-in").forEach((element) => {
-    observer.observe(element);
-  });
+  document.querySelectorAll('.fade-in').forEach((element) => {
+    observer.observe(element)
+  })
 }
 </script>
 
 <template>
-  <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
+  <Html
+    :lang="head.htmlAttrs.lang"
+    :dir="head.htmlAttrs.dir"
+  >
     <!-- <Loader /> -->
     <NavBar />
     <NuxtPage />

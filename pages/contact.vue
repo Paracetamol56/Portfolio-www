@@ -1,15 +1,18 @@
 <script setup>
-import { onMounted } from "vue";
-import { updateFadeInElements } from "~/app.vue";
+import { onMounted } from 'vue'
+import { updateFadeInElements } from '~/app.vue'
 
 onMounted(() => {
-  updateFadeInElements();
-});
+  updateFadeInElements()
+})
 </script>
 
 <template>
   <div>
-    <Header :title="$t('contact.title')" :subtitle="$t('contact.subtitle')" />
+    <Header
+      :title="$t('contact.title')"
+      :subtitle="$t('contact.subtitle')"
+    />
     <main>
       <ContactLocationSection />
       <ContactFormSection />

@@ -1,58 +1,73 @@
 <script lang="ts" setup>
-import { ExternalLink } from 'lucide-vue-next';
+import { ExternalLink } from 'lucide-vue-next'
 
 const props = defineProps({
-	number: {
-		type: String,
-		required: true,
-	},
-});
+  number: {
+    type: String,
+    required: true,
+  },
+})
 </script>
 
 <template>
-	<section id="formations">
-		<div class="container">
-			<div class="section-title fade-in">
-				<h2>
-					<span class="section-title-number">{{ number }}.</span>
-					{{ $t("about.formation.title") }}
-				</h2>
-				<hr />
-			</div>
-			<ul class="formation-list">
-				<li class="formation-item fade-in" v-for="(num, index) in 6" :key="index">
-					<div class="formation-item-timeline">
-						<p class="formation-start-date">{{ $t(`about.formation.${num}.end`) }}</p>
-						<span class="formation-start-date-separator"></span>
-						<p class="formation-end-date">{{ $t(`about.formation.${num}.start`) }}</p>
-					</div>
-					<div class="formatioon-item-content">
-						<h3 class="formation-title">{{ $t(`about.formation.${num}.title`) }}</h3>
-						<p class="formation-school">{{ $t(`about.formation.${num}.school`) }}</p>
-						<div class="formation-description">
-							<p>
-								<br />
-								<b>Skills acquired:</b>
-							</p>
-							<ul style="list-style: none;">
-								<li v-for="(skill, index) in $t(`about.formation.${num}.description`).split(';')" :key="index">
-									{{ skill }}
-								</li>
-							</ul>
-						</div>
-						<a
-							class="formation-link"
-							:href="$t(`about.formation.${num}.link`)"
-							target="_blank"
-						>
-							{{ $t("about.formation.school-button") }}
-							<ExternalLink size="16" />
-						</a>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</section>
+  <section id="formations">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>
+          <span class="section-title-number">{{ number }}.</span>
+          {{ $t("about.formation.title") }}
+        </h2>
+        <hr>
+      </div>
+      <ul class="formation-list">
+        <li
+          v-for="(num, index) in 6"
+          :key="index"
+          class="formation-item fade-in"
+        >
+          <div class="formation-item-timeline">
+            <p class="formation-start-date">
+              {{ $t(`about.formation.${num}.end`) }}
+            </p>
+            <span class="formation-start-date-separator" />
+            <p class="formation-end-date">
+              {{ $t(`about.formation.${num}.start`) }}
+            </p>
+          </div>
+          <div class="formatioon-item-content">
+            <h3 class="formation-title">
+              {{ $t(`about.formation.${num}.title`) }}
+            </h3>
+            <p class="formation-school">
+              {{ $t(`about.formation.${num}.school`) }}
+            </p>
+            <div class="formation-description">
+              <p>
+                <br>
+                <b>Skills acquired:</b>
+              </p>
+              <ul style="list-style: none;">
+                <li
+                  v-for="(skill, index) in $t(`about.formation.${num}.description`).split(';')"
+                  :key="index"
+                >
+                  {{ skill }}
+                </li>
+              </ul>
+            </div>
+            <a
+              class="formation-link"
+              :href="$t(`about.formation.${num}.link`)"
+              target="_blank"
+            >
+              {{ $t("about.formation.school-button") }}
+              <ExternalLink size="16" />
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

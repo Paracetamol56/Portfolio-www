@@ -21,23 +21,23 @@ export default defineContentConfig({
             name: z.string(),
             description: z.string(),
             icon: z.string(),
-          })
+          }),
         ),
         status: z.string(),
         team: z.array(
           z.object({
             name: z.string(),
             role: z.string(),
-          })
+          }),
         ),
         links: z.array(
           z.object({
             name: z.string(),
             url: z.string(),
             icon: z.string(),
-          })
+          }),
         ),
-      })
+      }),
     }),
     fr: defineCollection({
       type: 'page',
@@ -57,23 +57,23 @@ export default defineContentConfig({
             name: z.string(),
             description: z.string(),
             icon: z.string(),
-          })
+          }),
         ),
         status: z.string(),
         team: z.array(
           z.object({
             name: z.string(),
             role: z.string(),
-          })
+          }),
         ),
         links: z.array(
           z.object({
             name: z.string(),
             url: z.string(),
             icon: z.string(),
-          })
+          }),
         ),
-      })
-    })
-  }
+      }),
+    }),
+  },
 })

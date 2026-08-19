@@ -6,8 +6,8 @@ const localePath = useLocalePath()
 defineProps({
   error: {
     type: Object as () => NuxtError,
-    required: true
-  }
+    required: true,
+  },
 })
 
 const handleError = () => clearError({ redirect: '/' })
@@ -23,7 +23,10 @@ const handleError = () => clearError({ redirect: '/' })
       <h2 class="fillTextWithgradient">
         {{ error.statusCode ? `${$t('error.error')} ${error.statusCode}` : $t('error.fallback') }}
       </h2>
-      <UnderlinedButton arrow-position="left" @click="clearError({ redirect: localePath('/') })">
+      <UnderlinedButton
+        arrow-position="left"
+        @click="clearError({ redirect: localePath('/') })"
+      >
         {{ $t('error.home') }}
       </UnderlinedButton>
     </section>

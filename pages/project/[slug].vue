@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import { updateFadeInElements } from "~/app.vue";
+import { updateFadeInElements } from '~/app.vue'
 
-const localePath = useLocalePath();
-const { locale } = useI18n();
-const route = useRoute();
-const setI18nParams = useSetI18nParams();
+const localePath = useLocalePath()
+const { locale } = useI18n()
+const route = useRoute()
+const setI18nParams = useSetI18nParams()
 
 type Data = {
-  content: any;
-  surround: any[];
-};
+  content: any
+  surround: any[]
+}
 
-const slug = computed(() => route.params.slug as string);
+const slug = computed(() => route.params.slug as string)
 
 const { data, error } = await useAsyncData(
   `page-${locale.value}-${slug.value}`,
@@ -20,30 +20,31 @@ const { data, error } = await useAsyncData(
       // 1. Try querying the content collection matching current locale
       let content = await queryCollection(locale.value as any)
         .path(`/${locale.value}/${slug.value}`)
-        .first();
+        .first()
 
       // Fallback: try without the leading locale prefix
       if (!content) {
         content = await queryCollection(locale.value as any)
           .path(`/${slug.value}`)
-          .first();
+          .first()
       }
 
-      if (!content) return null;
+      if (!content) return null
 
       // 2. Safely load surrounding links (previous / next projects)
       const surround = await queryCollectionItemSurroundings(
         locale.value as any,
-        `/${locale.value}/${slug.value}`
-      ).catch(() => []);
+        `/${locale.value}/${slug.value}`,
+      ).catch(() => [])
 
-      return { content, surround };
-    } catch (e) {
-      return null;
+      return { content, surround }
+    }
+    catch (e) {
+      return null
     }
   },
-  { watch: [locale, slug] }
-);
+  { watch: [locale, slug] },
+)
 
 // Gracefully handle missing content with a proper 404 response
 if (!data.value || !data.value.content || error.value) {
@@ -51,42 +52,45 @@ if (!data.value || !data.value.content || error.value) {
     statusCode: 404,
     statusMessage: `Project not found: ${route.fullPath}`,
     fatal: true,
-  });
+  })
 }
 
 // Map the alternate language slugs to @nuxtjs/i18n
 // This resolves /project/[fr-slug] vs /fr/project/[en-slug] cross-linking errors during SSR/prerendering
-const content = data.value.content;
-const slugEn = content.slugEn || content.slug_en || (locale.value === "en" ? slug.value : null);
-const slugFr = content.slugFr || content.slug_fr || (locale.value === "fr" ? slug.value : null);
+const content = data.value.content
+const slugEn = content.slugEn || content.slug_en || (locale.value === 'en' ? slug.value : null)
+const slugFr = content.slugFr || content.slug_fr || (locale.value === 'fr' ? slug.value : null)
 
 if (slugEn || slugFr) {
   setI18nParams({
     en: { slug: slugEn || slug.value },
     fr: { slug: slugFr || slug.value },
-  });
+  })
 }
 
 // Dynamic page head setup
 useHead({
   title: content.title,
   meta: [
-    { name: "description", content: content.subtitle },
-    { name: "og:title", content: content.title },
-    { name: "og:description", content: content.subtitle },
-    { name: "twitter:title", content: content.title },
-    { name: "twitter:description", content: content.subtitle },
+    { name: 'description', content: content.subtitle },
+    { name: 'og:title', content: content.title },
+    { name: 'og:description', content: content.subtitle },
+    { name: 'twitter:title', content: content.title },
+    { name: 'twitter:description', content: content.subtitle },
   ],
-});
+})
 
 onMounted(() => {
-  updateFadeInElements();
-});
+  updateFadeInElements()
+})
 </script>
 
 <template>
   <div>
-    <Header :title="data.content?.title ?? ''" :subtitle="data.content?.subtitle" />
+    <Header
+      :title="data.content?.title ?? ''"
+      :subtitle="data.content?.subtitle"
+    />
     <main>
       <section id="info">
         <div class="container">
@@ -95,7 +99,7 @@ onMounted(() => {
               <span class="section-title-number">01.</span>
               {{ $t("project.sections.info") }}
             </h2>
-            <hr />
+            <hr>
           </div>
           <div class="info-status-dates fade-in">
             <p class="info-status">
@@ -112,36 +116,85 @@ onMounted(() => {
             {{ $t("project.technologies") }}
           </h3>
           <ul class="technology-list">
-            <li class="technology-item fade-in" v-for="technology in data.content?.technologies" :key="technology.name">
-              <img class="technology-item-vector" :src="`https://cdn.simpleicons.org/${technology.icon}/f5f3fa`"
-                alt="icon" />
-              <p class="technology-item-name">{{ technology.name }}</p>
+            <li
+              v-for="technology in data.content?.technologies"
+              :key="technology.name"
+              class="technology-item fade-in"
+            >
+              <img
+                class="technology-item-vector"
+                :src="`https://cdn.simpleicons.org/${technology.icon}/f5f3fa`"
+                alt="icon"
+              >
+              <p class="technology-item-name">
+                {{ technology.name }}
+              </p>
               <p class="technology-item-description">
                 // {{ technology.description }}
               </p>
             </li>
           </ul>
-          <h3 class="fillTextWithgradient fade-in">{{ $t("project.team") }}</h3>
+          <h3 class="fillTextWithgradient fade-in">
+            {{ $t("project.team") }}
+          </h3>
           <ul class="team-list">
-            <li class="team-item fade-in" v-for="member in data.content?.team" :key="member.name">
-              <p class="team-item-name">{{ member.name }}</p>
-              <p class="team-item-role">// {{ member.role }}</p>
+            <li
+              v-for="member in data.content?.team"
+              :key="member.name"
+              class="team-item fade-in"
+            >
+              <p class="team-item-name">
+                {{ member.name }}
+              </p>
+              <p class="team-item-role">
+                // {{ member.role }}
+              </p>
             </li>
           </ul>
         </div>
       </section>
-      <section id="image" class="fade-in">
+      <section
+        id="image"
+        class="fade-in"
+      >
         <ClientOnly>
-          <Swiper v-if="data.content?.images?.length > 1" class="project-slider" :slides-per-view="1" :space-between="20"
-            :navigation="true" :pagination="{ clickable: true }" :loop="false" :grab-cursor="true" :centeredSlides="true"
-            :modules="modules">
-            <SwiperSlide class="project-slider-item" v-for="image in data.content?.images" :key="image">
-              <NuxtImg :src="image" format="webp" placeholder loading="lazy" quality="50"
-                :alt="`Project ${data.content?.title}`" />
+          <Swiper
+            v-if="data.content?.images?.length > 1"
+            class="project-slider"
+            :slides-per-view="1"
+            :space-between="20"
+            :navigation="true"
+            :pagination="{ clickable: true }"
+            :loop="false"
+            :grab-cursor="true"
+            :centered-slides="true"
+            :modules="modules"
+          >
+            <SwiperSlide
+              v-for="image in data.content?.images"
+              :key="image"
+              class="project-slider-item"
+            >
+              <NuxtImg
+                :src="image"
+                format="webp"
+                placeholder
+                loading="lazy"
+                quality="50"
+                :alt="`Project ${data.content?.title}`"
+              />
             </SwiperSlide>
           </Swiper>
-          <NuxtImg v-else-if="data.content?.images" :src="data.content?.images[0]" format="webp" placeholder
-            loading="lazy" quality="50" id="header-image" alt="Project {{ data.content?.title }}" />
+          <NuxtImg
+            v-else-if="data.content?.images"
+            id="header-image"
+            :src="data.content?.images[0]"
+            format="webp"
+            placeholder
+            loading="lazy"
+            quality="50"
+            alt="Project {{ data.content?.title }}"
+          />
         </ClientOnly>
       </section>
       <section id="links">
@@ -151,28 +204,61 @@ onMounted(() => {
               <span class="section-title-number">02.</span>
               {{ $t("project.sections.links") }}
             </h2>
-            <hr />
+            <hr>
           </div>
-          <ul class="link-list" v-if="data.content?.links?.length > 0">
-            <li class="link-item fade-in" v-for="link in data.content?.links" :key="link.name">
-              <a class="link-item-anchor" :href="link.url" target="_blank">
-                <div v-if="link.icon == 'download'" class="link-item-vector">
-                  <FileDown :size="60" color="#f5f3fa" />
+          <ul
+            v-if="data.content?.links?.length > 0"
+            class="link-list"
+          >
+            <li
+              v-for="link in data.content?.links"
+              :key="link.name"
+              class="link-item fade-in"
+            >
+              <a
+                class="link-item-anchor"
+                :href="link.url"
+                target="_blank"
+              >
+                <div
+                  v-if="link.icon == 'download'"
+                  class="link-item-vector"
+                >
+                  <FileDown
+                    :size="60"
+                    color="#f5f3fa"
+                  />
                 </div>
-                <div v-if="link.icon == 'web'" class="link-item-vector">
-                  <ExternalLink :size="60" color="#f5f3fa" />
+                <div
+                  v-if="link.icon == 'web'"
+                  class="link-item-vector"
+                >
+                  <ExternalLink
+                    :size="60"
+                    color="#f5f3fa"
+                  />
                 </div>
-                <img v-else class="link-item-vector" :src="`https://cdn.simpleicons.org/${link.icon}/f5f3fa`"
-                  alt="icon" />
-                <p class="link-item-text" v-html="link.name"></p>
+                <img
+                  v-else
+                  class="link-item-vector"
+                  :src="`https://cdn.simpleicons.org/${link.icon}/f5f3fa`"
+                  alt="icon"
+                >
+                <p
+                  class="link-item-text"
+                  v-html="link.name"
+                />
               </a>
             </li>
           </ul>
-          <div class="link-empty fade-in" v-else>
+          <div
+            v-else
+            class="link-empty fade-in"
+          >
             <p class="link-empty-text">
-              /*<br />
-              &nbsp;* {{ $t("project.noLinks.1") }}<br />
-              &nbsp;* {{ $t("project.nolinks.2") }}<br />
+              /*<br>
+              &nbsp;* {{ $t("project.noLinks.1") }}<br>
+              &nbsp;* {{ $t("project.nolinks.2") }}<br>
               &nbsp;*/
             </p>
           </div>
@@ -185,7 +271,7 @@ onMounted(() => {
               <span class="section-title-number">03.</span>
               {{ $t("project.sections.presentation") }}
             </h2>
-            <hr />
+            <hr>
           </div>
           <div class="presentation-content-block fade-in">
             <ContentRenderer :value="data?.content" />
@@ -196,12 +282,16 @@ onMounted(() => {
         <div class="container fade-in">
           <UnderlinedButton
             :href="data.surround[0] === null ? '#' : localePath(`/project/${data.surround[0].path.split('/').pop()}`)"
-            arrowPosition="left" :disabled="data.surround[0] === null">
+            arrow-position="left"
+            :disabled="data.surround[0] === null"
+          >
             {{ $t("project.nav.next") }}
           </UnderlinedButton>
           <UnderlinedButton
             :href="data.surround[1] === null ? '#' : localePath(`/project/${data.surround[1].path.split('/').pop()}`)"
-            arrowPosition="right" :disabled="data.surround[1] === null">
+            arrow-position="right"
+            :disabled="data.surround[1] === null"
+          >
             {{ $t("project.nav.last") }}
           </UnderlinedButton>
         </div>

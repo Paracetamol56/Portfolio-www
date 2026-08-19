@@ -1,14 +1,17 @@
 <script lang="ts" setup>
-import { updateFadeInElements } from '~/app.vue';
+import { updateFadeInElements } from '~/app.vue'
 
 onMounted(() => {
-  updateFadeInElements();
-});
+  updateFadeInElements()
+})
 </script>
 
 <template>
   <div>
-    <Header :title="$t('projects.title')" :subtitle="$t('projects.subtitle')" />
+    <Header
+      :title="$t('projects.title')"
+      :subtitle="$t('projects.subtitle')"
+    />
     <ProjectListSection />
   </div>
 </template>

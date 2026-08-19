@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { LMap, LTileLayer, LMarker, LControlZoom } from '@vue-leaflet/vue-leaflet';
-import 'leaflet/dist/leaflet.css';
+import { ref } from 'vue'
+import { LMap, LTileLayer, LMarker, LControlZoom } from '@vue-leaflet/vue-leaflet'
+import 'leaflet/dist/leaflet.css'
 
-const center = ref({ lat: 45.78710146863226, lng: 3.0714223231138087 });
-const zoom = ref(5);
+const center = ref({ lat: 45.78710146863226, lng: 3.0714223231138087 })
+const zoom = ref(5)
 
 const centerHumanReadable = ref({
   lat: { dir: '', deg: 0, min: 0, sec: 0 },
-  lng: { dir: '', deg: 0, min: 0, sec: 0 }
-});
+  lng: { dir: '', deg: 0, min: 0, sec: 0 },
+})
 
 // Compute the center coordinates in the human readable format
 centerHumanReadable.value = {
@@ -17,32 +17,38 @@ centerHumanReadable.value = {
     dir: center.value.lat < 0 ? 'S' : 'N',
     deg: Math.floor(Math.abs(center.value.lat)),
     min: Math.floor((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 60),
-    sec: ((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 3600 - Math.floor((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 60) * 60).toFixed(2)
+    sec: ((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 3600 - Math.floor((Math.abs(center.value.lat) - Math.floor(Math.abs(center.value.lat))) * 60) * 60).toFixed(2),
   },
   lng: {
     dir: center.value.lng < 0 ? 'W' : 'E',
     deg: Math.floor(Math.abs(center.value.lng)),
     min: Math.floor((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 60),
-    sec: ((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 3600 - Math.floor((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 60) * 60).toFixed(2)
-  }
-};
+    sec: ((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 3600 - Math.floor((Math.abs(center.value.lng) - Math.floor(Math.abs(center.value.lng))) * 60) * 60).toFixed(2),
+  },
+}
 </script>
 
 <template>
-  <section id="location" class="fade-in">
+  <section
+    id="location"
+    class="fade-in"
+  >
     <div class="container">
       <div class="section-title centered">
         <h2>
           <span class="section-title-number type-write">01.</span>
           <span class="type-write">{{ $t("contact.map.title") }}</span>
         </h2>
-        <hr />
+        <hr>
         <p class="section-title-subtitle type-write">
           {{ $t("contact.map.subtitle") }}
         </p>
       </div>
     </div>
-    <div id="map-container" style="height: 40rem">
+    <div
+      id="map-container"
+      style="height: 40rem"
+    >
       <LMap
         :zoom="zoom"
         :center="[center.lat, center.lng]"
@@ -69,14 +75,14 @@ centerHumanReadable.value = {
           {{ centerHumanReadable.lat.min }}<span class="colored">'</span>
           {{ centerHumanReadable.lat.sec
           }}<span class="colored">" {{ centerHumanReadable.lat.dir }}</span>
-          <br />
+          <br>
           {{ centerHumanReadable.lng.deg }}<span class="colored">°</span>
           {{ centerHumanReadable.lng.min }}<span class="colored">'</span>
           {{ centerHumanReadable.lng.sec
           }}<span class="colored">" {{ centerHumanReadable.lng.dir }}</span>
         </p>
         <p class="location-infos-text">
-          <b> {{ $t("contact.map.city") }} </b>, {{ $t("contact.map.region") }} <br />
+          <b> {{ $t("contact.map.city") }} </b>, {{ $t("contact.map.region") }} <br>
           <span class="colored">
             {{ $t("contact.map.country") }}
           </span>

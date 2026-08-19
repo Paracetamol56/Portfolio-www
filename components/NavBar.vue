@@ -1,46 +1,53 @@
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
-import { useI18n } from "vue-i18n";
+import { ref, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const { locale, locales, setLocale } = useI18n();
-const localePath = useLocalePath();
-const switchLocalePath = useSwitchLocalePath();
-const route = useRoute();
+const { locale, locales, setLocale } = useI18n()
+const localePath = useLocalePath()
+const switchLocalePath = useSwitchLocalePath()
+const route = useRoute()
 const availableLocales = computed(() => {
-  return locales.value.filter((i) => i.code !== locale.value);
-});
+  return locales.value.filter(i => i.code !== locale.value)
+})
 
-const navActive = ref(false);
-const linkList = ref<NodeListOf<HTMLAnchorElement>>();
+const navActive = ref(false)
+const linkList = ref<NodeListOf<HTMLAnchorElement>>()
 
 onMounted(() => {
-  linkList.value = document.querySelectorAll(".nav-menu-list-element a");
-  updateActive(window.location.href);
+  linkList.value = document.querySelectorAll('.nav-menu-list-element a')
+  updateActive(window.location.href)
 
-  window.addEventListener("scroll", () => {
+  window.addEventListener('scroll', () => {
     if (window.scrollY < window.innerHeight) {
-      document.getElementById("navbar")?.classList.add("translucent");
-    } else {
-      document.getElementById("navbar")?.classList.remove("translucent");
+      document.getElementById('navbar')?.classList.add('translucent')
     }
-  });
-});
+    else {
+      document.getElementById('navbar')?.classList.remove('translucent')
+    }
+  })
+})
 
 const updateActive = (path: string) => {
   linkList.value?.forEach((link: HTMLAnchorElement) => {
-    link.classList.remove("active");
+    link.classList.remove('active')
     if (link.href === path) {
-      link.classList.add("active");
+      link.classList.add('active')
     }
-  });
-};
+  })
+}
 </script>
 
 <template>
-  <nav id="navbar" class="translucent">
+  <nav
+    id="navbar"
+    class="translucent"
+  >
     <div class="nav-container container">
       <div class="nav-logo">
-        <NuxtLink class="nav-logo-link coloredOnHover" :to="localePath('/')">
+        <NuxtLink
+          class="nav-logo-link coloredOnHover"
+          :to="localePath('/')"
+        >
           <svg
             class="nav-logo-svg"
             xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +69,10 @@ const updateActive = (path: string) => {
               class="cls-2"
               points="667.98 270 346.07 827.65 387.85 900 512.1 900 875.86 269.95 667.98 270"
             />
-            <polygon class="cls-2" points="0 900 180 900 180 540 0 180 0 900" />
+            <polygon
+              class="cls-2"
+              points="0 900 180 900 180 540 0 180 0 900"
+            />
           </svg>
           <span class="nav-logo-link-bold">Portfolio</span>
           <span class="nav-logo-link-thin"> Mathéo Galuba</span>
@@ -72,14 +82,14 @@ const updateActive = (path: string) => {
         <ul
           id="nav-menu-list"
           class="nav-menu-list"
-          v-bind:class="{ 'nav-active': navActive }"
+          :class="{ 'nav-active': navActive }"
         >
           <li class="nav-menu-list-element">
             <NuxtLink :to="localePath('/')">
               <span>
                 {{ $t("nav.home") }}
               </span>
-              <div></div>
+              <div />
             </NuxtLink>
           </li>
           <li class="nav-menu-list-element">
@@ -87,7 +97,7 @@ const updateActive = (path: string) => {
               <span>
                 {{ $t("nav.about") }}
               </span>
-              <div></div>
+              <div />
             </NuxtLink>
           </li>
           <li class="nav-menu-list-element">
@@ -95,7 +105,7 @@ const updateActive = (path: string) => {
               <span>
                 {{ $t("nav.projects") }}
               </span>
-              <div></div>
+              <div />
             </NuxtLink>
           </li>
           <li class="nav-menu-list-element">
@@ -103,18 +113,18 @@ const updateActive = (path: string) => {
               <span>
                 {{ $t("nav.contact") }}
               </span>
-              <div></div>
+              <div />
             </NuxtLink>
           </li>
 
           <li
-            class="nav-lang-button"
             v-for="l in availableLocales"
             :key="l.code"
+            class="nav-lang-button"
           >
-            <SwitchLocalePathLink :locale="l.code" >
-							{{ l.code.toUpperCase() }}
-						</SwitchLocalePathLink>
+            <SwitchLocalePathLink :locale="l.code">
+              {{ l.code.toUpperCase() }}
+            </SwitchLocalePathLink>
           </li>
         </ul>
 
@@ -123,9 +133,12 @@ const updateActive = (path: string) => {
           class="nav-menu-toggle"
           type="checkbox"
           @click="navActive = !navActive"
-        />
+        >
         <label for="nav-menu-toggle-id">
-          <svg class="nav-menu-toggle-icon" viewBox="0 0 60 30">
+          <svg
+            class="nav-menu-toggle-icon"
+            viewBox="0 0 60 30"
+          >
             <g class="nav-menu-toggle-icon-group">
               <g class="nav-menu-toggle-icon-open">
                 <path d="M 6 0 L 54 0" />

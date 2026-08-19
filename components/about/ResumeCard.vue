@@ -1,25 +1,25 @@
 <script lang="ts" setup>
-const { locale } = useI18n();
-const resume: Ref<HTMLElement | null> = ref(null);
-const glow: Ref<HTMLElement | null> = ref(null);
-let bounds: DOMRect;
-let center = { x: 0, y: 0 };
-let distance = reactive({ value: 0 });
+const { locale } = useI18n()
+const resume: Ref<HTMLElement | null> = ref(null)
+const glow: Ref<HTMLElement | null> = ref(null)
+let bounds: DOMRect
+let center = { x: 0, y: 0 }
+let distance = reactive({ value: 0 })
 
 function getBounds() {
-  bounds = resume.value!.getBoundingClientRect();
+  bounds = resume.value!.getBoundingClientRect()
 }
 
 function rotateToMouse(e: MouseEvent) {
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
-  const leftX = mouseX - bounds.x;
-  const topY = mouseY - bounds.y;
+  const mouseX = e.clientX
+  const mouseY = e.clientY
+  const leftX = mouseX - bounds.x
+  const topY = mouseY - bounds.y
   center = {
     x: leftX - bounds.width / 2,
     y: topY - bounds.height / 2,
-  };
-  distance = Math.sqrt(center.x ** 2 + center.y ** 2);
+  }
+  distance = Math.sqrt(center.x ** 2 + center.y ** 2)
 
   resume.value!.style.transform = `
     scale3d(1.07, 1.07, 1.07)
@@ -28,7 +28,7 @@ function rotateToMouse(e: MouseEvent) {
       ${-center.x / 100},
       0,
       ${Math.log(distance) * 2}deg
-    )`;
+    )`
 
   glow.value!.style.backgroundImage = `
     radial-gradient(
@@ -38,20 +38,38 @@ function rotateToMouse(e: MouseEvent) {
       #8251e90f,
       #8251e955
     )
-  `;
+  `
 }
 
 function resetRotation() {
-  resume.value.style.transform = "rotate3d(0, 0, 0, 0deg)";
+  resume.value.style.transform = 'rotate3d(0, 0, 0, 0deg)'
 }
 </script>
 
 <template>
   <div class="resume">
-    <a class="resume-thumbnail-container" ref="resume" :href="`/cv_${locale}_2026.pdf`" download>
-      <NuxtImg src="`/img/CV_${locale}_2026.jpg`" format="webp" placeholder loading="lazy" quality="50" alt="Resume Thumbnail"
-        class="resume-thumbnail" @mouseenter="getBounds" @mousemove="rotateToMouse" @mouseleave="resetRotation" />
-      <div class="resume-thumbnail-glow" ref="glow" />
+    <a
+      ref="resume"
+      class="resume-thumbnail-container"
+      :href="`/cv_${locale}_2026.pdf`"
+      download
+    >
+      <NuxtImg
+        src="`/img/CV_${locale}_2026.jpg`"
+        format="webp"
+        placeholder
+        loading="lazy"
+        quality="50"
+        alt="Resume Thumbnail"
+        class="resume-thumbnail"
+        @mouseenter="getBounds"
+        @mousemove="rotateToMouse"
+        @mouseleave="resetRotation"
+      />
+      <div
+        ref="glow"
+        class="resume-thumbnail-glow"
+      />
     </a>
   </div>
 </template>

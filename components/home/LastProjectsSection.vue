@@ -1,22 +1,22 @@
 <script lang="ts" setup>
-import ProjectCard from "@/components/ProjectCard.vue";
-import BoxButton from "@/components/BoxButton.vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import ProjectCard from '@/components/ProjectCard.vue'
+import BoxButton from '@/components/BoxButton.vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 
-const { locale } = useI18n();
-const localePath = useLocalePath();
-const modules = [Navigation, Pagination];
+const { locale } = useI18n()
+const localePath = useLocalePath()
+const modules = [Navigation, Pagination]
 
 defineProps({
   number: {
     type: String,
     required: true,
   },
-});
+})
 
 const { data } = await useAsyncData(
   `projects-${locale.value}-limit4`,
@@ -24,25 +24,36 @@ const { data } = await useAsyncData(
     .select('number', 'title', 'subtitle', 'thumbnail', 'dates', 'tags', 'status')
     .order('number', 'DESC')
     .limit(4)
-    .all()
-);
+    .all(),
+)
 </script>
 
 <template>
-  <section id="projects" class="fade-in">
+  <section
+    id="projects"
+    class="fade-in"
+  >
     <div class="container">
       <div class="section-title">
         <h2>
           <span class="section-title-number">{{ number }}.</span>
           {{ $t("home.projects.title") }}
         </h2>
-        <hr />
+        <hr>
       </div>
     </div>
 
     <ClientOnly>
-      <Swiper class="project-slider" :slides-per-view="1.1" :space-between="20" :navigation="true"
-        :pagination="{ clickable: true }" :loop="false" :grab-cursor="true" :centeredSlides="true" :breakpoints="{
+      <Swiper
+        class="project-slider"
+        :slides-per-view="1.1"
+        :space-between="20"
+        :navigation="true"
+        :pagination="{ clickable: true }"
+        :loop="false"
+        :grab-cursor="true"
+        :centered-slides="true"
+        :breakpoints="{
           576: {
             slidesPerView: 1.2,
             spaceBetween: 40,
@@ -63,8 +74,14 @@ const { data } = await useAsyncData(
             slidesPerView: 2.2,
             spaceBetween: 100,
           },
-        }" :modules="modules">
-        <SwiperSlide class="project-slider-item" v-for="project in data" :key="project.number">
+        }"
+        :modules="modules"
+      >
+        <SwiperSlide
+          v-for="project in data"
+          :key="project.number"
+          class="project-slider-item"
+        >
           <ProjectCard :project="project" />
         </SwiperSlide>
       </Swiper>

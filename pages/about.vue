@@ -1,15 +1,18 @@
 <script lang="ts" setup>
-import { onMounted } from "vue";
-import { updateFadeInElements } from "~/app.vue";
+import { onMounted } from 'vue'
+import { updateFadeInElements } from '~/app.vue'
 
 onMounted(() => {
-  updateFadeInElements();
-});
+  updateFadeInElements()
+})
 </script>
 
 <template>
   <div>
-    <Header :title="$t('about.title')" :subtitle="$t('about.subtitle')" />
+    <Header
+      :title="$t('about.title')"
+      :subtitle="$t('about.subtitle')"
+    />
     <main>
       <AboutSkillSection number="1" />
       <AboutInterestSection number="2" />

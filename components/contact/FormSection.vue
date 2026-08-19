@@ -1,10 +1,13 @@
 <script lang="ts" setup>
-import BoxButton from "@/components/BoxButton.vue";
-import { Send } from "lucide-vue-next";
+import BoxButton from '@/components/BoxButton.vue'
+import { Send } from 'lucide-vue-next'
 </script>
 
 <template>
-  <section id="contact" class="fade-in">
+  <section
+    id="contact"
+    class="fade-in"
+  >
     <div class="container">
       <div class="section-title centered">
         <h2>
@@ -13,7 +16,7 @@ import { Send } from "lucide-vue-next";
             {{ $t("contact.title") }}
           </span>
         </h2>
-        <hr />
+        <hr>
         <p class="section-title-subtitle type-write">
           {{ $t("contact.subtitle") }}
         </p>
@@ -29,62 +32,89 @@ import { Send } from "lucide-vue-next";
       >
         <p class="contact-form-hidden">
           <label>
-            Don’t fill this out if you’re human: <input name="bot-field" />
+            Don’t fill this out if you’re human: <input name="bot-field">
           </label>
         </p>
-        <input type="hidden" name="form-name" value="contact" />
+        <input
+          type="hidden"
+          name="form-name"
+          value="contact"
+        >
         <div class="concat-form-horizontal-wrapper">
           <input
+            id="name"
             type="text"
             class="contact-form-input"
-            id="name"
             :placeholder="$t('contact.form.name')"
             name="name"
             value=""
             required
-          />
+          >
           <input
+            id="email"
             type="email"
             class="contact-form-input"
-            id="email"
             :placeholder="$t('contact.form.email')"
             name="email"
             value=""
             required
-          />
+          >
         </div>
         <select
+          id="subject"
           class="contact-form-select"
           name="subject"
-          id="subject"
           required
         >
-          <option class="contact-form-select-option" value="" selected disabled>
+          <option
+            class="contact-form-select-option"
+            value=""
+            selected
+            disabled
+          >
             {{ $t("contact.form.subject") }}
           </option>
-          <option class="contact-form-select-option" value="help">
+          <option
+            class="contact-form-select-option"
+            value="help"
+          >
             {{ $t("contact.form.subject-option.1") }}
           </option>
-          <option class="contact-form-select-option" value="work">
+          <option
+            class="contact-form-select-option"
+            value="work"
+          >
             {{ $t("contact.form.subject-option.2") }}
           </option>
-          <option class="contact-form-select-option" value="discuss">
+          <option
+            class="contact-form-select-option"
+            value="discuss"
+          >
             {{ $t("contact.form.subject-option.3") }}
           </option>
-          <option class="contact-form-select-option" value="hello">
+          <option
+            class="contact-form-select-option"
+            value="hello"
+          >
             {{ $t("contact.form.subject-option.4") }}
           </option>
         </select>
         <textarea
-          class="contact-form-input"
           id="message"
+          class="contact-form-input"
           rows="10"
           :placeholder="$t('contact.form.message')"
           name="message"
           required
-        ></textarea>
-        <button id="contact-form-submit" type="submit">
-          <Send :size="18" stroke-width="3" />
+        />
+        <button
+          id="contact-form-submit"
+          type="submit"
+        >
+          <Send
+            :size="18"
+            stroke-width="3"
+          />
           <span>&nbsp;Send</span>
           <svg
             width="16"
@@ -101,7 +131,7 @@ import { Send } from "lucide-vue-next";
               d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z"
               class="octicon-chevrow-right"
               data-v-411b7433=""
-            ></path>
+            />
             <path
               stroke="currentColor"
               d="M1.75 8H11"
@@ -109,10 +139,13 @@ import { Send } from "lucide-vue-next";
               stroke-linecap="round"
               class="octicon-chevrow-stem"
               data-v-411b7433=""
-            ></path>
+            />
           </svg>
         </button>
-        <p class="contact-form-state" id="state-feedback"></p>
+        <p
+          id="state-feedback"
+          class="contact-form-state"
+        />
       </form>
     </div>
   </section>

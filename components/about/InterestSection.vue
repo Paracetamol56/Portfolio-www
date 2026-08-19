@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { FlaskConical, Bike, CircuitBoard, Telescope } from "lucide-vue-next";
+import { FlaskConical, Bike, CircuitBoard, Telescope } from 'lucide-vue-next'
 
 const props = defineProps({
   number: {
     type: String,
     required: true,
   },
-});
+})
 </script>
 
 <template>
@@ -17,38 +17,123 @@ const props = defineProps({
           <span class="section-title-number">{{ number }}.</span>
           {{ $t("about.interest.title") }}
         </h2>
-        <hr />
+        <hr>
       </div>
       <div class="interest-wrapper">
         <div class="interest-row fade-in">
           <div class="interest-row-illustration">
-            <Telescope size="128" stroke-width="2" color="var(--primary-color)" />
-            <svg id="astronomy-vector" class="interest-row-illustration-vector" data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+            <Telescope
+              size="128"
+              stroke-width="2"
+              color="var(--primary-color)"
+            />
+            <svg
+              id="astronomy-vector"
+              class="interest-row-illustration-vector"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 500 500"
+            >
               <defs>
-                <radialGradient id="radial-gradient-1" cx="186.4" cy="330.79" r="102.5"
-                  gradientTransform="translate(-204.62 -556.81) scale(2.44 2.44)" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#ad56e3" stop-opacity="0.3" />
-                  <stop offset="0.01" stop-color="#ad56e3" stop-opacity="0.29" />
-                  <stop offset="0.27" stop-color="#ad56e3" stop-opacity="0.16" />
-                  <stop offset="0.52" stop-color="#ad56e3" stop-opacity="0.07" />
-                  <stop offset="0.76" stop-color="#ad56e3" stop-opacity="0.02" />
-                  <stop offset="1" stop-color="#ad56e3" stop-opacity="0" />
+                <radialGradient
+                  id="radial-gradient-1"
+                  cx="186.4"
+                  cy="330.79"
+                  r="102.5"
+                  gradientTransform="translate(-204.62 -556.81) scale(2.44 2.44)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop
+                    offset="0"
+                    stop-color="#ad56e3"
+                    stop-opacity="0.3"
+                  />
+                  <stop
+                    offset="0.01"
+                    stop-color="#ad56e3"
+                    stop-opacity="0.29"
+                  />
+                  <stop
+                    offset="0.27"
+                    stop-color="#ad56e3"
+                    stop-opacity="0.16"
+                  />
+                  <stop
+                    offset="0.52"
+                    stop-color="#ad56e3"
+                    stop-opacity="0.07"
+                  />
+                  <stop
+                    offset="0.76"
+                    stop-color="#ad56e3"
+                    stop-opacity="0.02"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#ad56e3"
+                    stop-opacity="0"
+                  />
                 </radialGradient>
-                <radialGradient id="radial-gradient-2" cx="152.78" cy="302.5" r="52.48"
-                  gradientTransform="translate(-204.62 -556.81) scale(2.44 2.44)" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#5f78ef" stop-opacity="0.1" />
-                  <stop offset="0.17" stop-color="#5f78ef" stop-opacity="0.07" />
-                  <stop offset="0.59" stop-color="#5f78ef" stop-opacity="0.02" />
-                  <stop offset="1" stop-color="#5f78ef" stop-opacity="0" />
+                <radialGradient
+                  id="radial-gradient-2"
+                  cx="152.78"
+                  cy="302.5"
+                  r="52.48"
+                  gradientTransform="translate(-204.62 -556.81) scale(2.44 2.44)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop
+                    offset="0"
+                    stop-color="#5f78ef"
+                    stop-opacity="0.1"
+                  />
+                  <stop
+                    offset="0.17"
+                    stop-color="#5f78ef"
+                    stop-opacity="0.07"
+                  />
+                  <stop
+                    offset="0.59"
+                    stop-color="#5f78ef"
+                    stop-opacity="0.02"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#5f78ef"
+                    stop-opacity="0"
+                  />
                 </radialGradient>
-                <radialGradient id="radial-gradient-3" cx="230.68" cy="322.18" r="52.48"
-                  xlink:href="#radial-gradient-2" />
+                <radialGradient
+                  id="radial-gradient-3"
+                  cx="230.68"
+                  cy="322.18"
+                  r="52.48"
+                  xlink:href="#radial-gradient-2"
+                />
               </defs>
               <g id="Gradients">
-                <circle id="MainGradient" class="cls-3" cx="250" cy="250" r="250" />
-                <circle id="Gradient3" class="cls-4" cx="168" cy="181" r="128" />
-                <circle id="Gradient4" class="cls-5" cx="358" cy="229" r="128" />
+                <circle
+                  id="MainGradient"
+                  class="cls-3"
+                  cx="250"
+                  cy="250"
+                  r="250"
+                />
+                <circle
+                  id="Gradient3"
+                  class="cls-4"
+                  cx="168"
+                  cy="181"
+                  r="128"
+                />
+                <circle
+                  id="Gradient4"
+                  class="cls-5"
+                  cx="358"
+                  cy="229"
+                  r="128"
+                />
               </g>
             </svg>
           </div>
@@ -63,30 +148,104 @@ const props = defineProps({
         </div>
         <div class="interest-row fade-in">
           <div class="interest-row-illustration">
-            <CircuitBoard size="128" stroke-width="2" color="var(--primary-color)" />
-            <svg id="electronic-vector" class="interest-row-illustration-vector" data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+            <CircuitBoard
+              size="128"
+              stroke-width="2"
+              color="var(--primary-color)"
+            />
+            <svg
+              id="electronic-vector"
+              class="interest-row-illustration-vector"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 500 500"
+            >
               <defs>
-                <radialGradient id="radial-gradient-4" cx="200.75" cy="345.14" r="88.15"
-                  gradientTransform="translate(-204.62 -556.81) scale(2.44 2.44)" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#df7bf5" stop-opacity="0.3" />
-                  <stop offset="0.05" stop-color="#df7bf5" stop-opacity="0.27" />
-                  <stop offset="0.29" stop-color="#df7bf5" stop-opacity="0.15" />
-                  <stop offset="0.53" stop-color="#df7bf5" stop-opacity="0.07" />
-                  <stop offset="0.77" stop-color="#df7bf5" stop-opacity="0.02" />
-                  <stop offset="1" stop-color="#df7bf5" stop-opacity="0" />
+                <radialGradient
+                  id="radial-gradient-4"
+                  cx="200.75"
+                  cy="345.14"
+                  r="88.15"
+                  gradientTransform="translate(-204.62 -556.81) scale(2.44 2.44)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop
+                    offset="0"
+                    stop-color="#df7bf5"
+                    stop-opacity="0.3"
+                  />
+                  <stop
+                    offset="0.05"
+                    stop-color="#df7bf5"
+                    stop-opacity="0.27"
+                  />
+                  <stop
+                    offset="0.29"
+                    stop-color="#df7bf5"
+                    stop-opacity="0.15"
+                  />
+                  <stop
+                    offset="0.53"
+                    stop-color="#df7bf5"
+                    stop-opacity="0.07"
+                  />
+                  <stop
+                    offset="0.77"
+                    stop-color="#df7bf5"
+                    stop-opacity="0.02"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#df7bf5"
+                    stop-opacity="0"
+                  />
                 </radialGradient>
-                <radialGradient id="radial-gradient-5" cx="154.42" cy="322.59" r="62.73"
-                  gradientTransform="translate(-204.62 -556.81) scale(2.44 2.44)" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#8251e9" stop-opacity="0.1" />
-                  <stop offset="0.16" stop-color="#8251e9" stop-opacity="0.07" />
-                  <stop offset="0.59" stop-color="#8251e9" stop-opacity="0.02" />
-                  <stop offset="1" stop-color="#8251e9" stop-opacity="0" />
+                <radialGradient
+                  id="radial-gradient-5"
+                  cx="154.42"
+                  cy="322.59"
+                  r="62.73"
+                  gradientTransform="translate(-204.62 -556.81) scale(2.44 2.44)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop
+                    offset="0"
+                    stop-color="#8251e9"
+                    stop-opacity="0.1"
+                  />
+                  <stop
+                    offset="0.16"
+                    stop-color="#8251e9"
+                    stop-opacity="0.07"
+                  />
+                  <stop
+                    offset="0.59"
+                    stop-color="#8251e9"
+                    stop-opacity="0.02"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#8251e9"
+                    stop-opacity="0"
+                  />
                 </radialGradient>
               </defs>
               <g id="Gradients">
-                <circle id="MainGradient" class="cls-1" cx="285" cy="285" r="215" />
-                <circle id="Gradient3" class="cls-2" cx="172" cy="230" r="153" />
+                <circle
+                  id="MainGradient"
+                  class="cls-1"
+                  cx="285"
+                  cy="285"
+                  r="215"
+                />
+                <circle
+                  id="Gradient3"
+                  class="cls-2"
+                  cx="172"
+                  cy="230"
+                  r="153"
+                />
               </g>
             </svg>
           </div>
@@ -101,33 +260,119 @@ const props = defineProps({
         </div>
         <div class="interest-row fade-in">
           <div class="interest-row-illustration">
-            <FlaskConical size="128" stroke-width="2" color="var(--primary-color)" />
-            <svg id="science-vector" class="interest-row-illustration-vector" data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 455 479">
+            <FlaskConical
+              size="128"
+              stroke-width="2"
+              color="var(--primary-color)"
+            />
+            <svg
+              id="science-vector"
+              class="interest-row-illustration-vector"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 455 479"
+            >
               <defs>
-                <radialGradient id="radial-gradient-6" cx="168.77" cy="321.36" r="88.15"
-                  gradientTransform="translate(-196.62 -568.81) scale(2.44 2.44)" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#8251e9" stop-opacity="0.3" />
-                  <stop offset="0.03" stop-color="#8251e9" stop-opacity="0.28" />
-                  <stop offset="0.28" stop-color="#8251e9" stop-opacity="0.16" />
-                  <stop offset="0.52" stop-color="#8251e9" stop-opacity="0.07" />
-                  <stop offset="0.77" stop-color="#8251e9" stop-opacity="0.02" />
-                  <stop offset="1" stop-color="#8251e9" stop-opacity="0" />
+                <radialGradient
+                  id="radial-gradient-6"
+                  cx="168.77"
+                  cy="321.36"
+                  r="88.15"
+                  gradientTransform="translate(-196.62 -568.81) scale(2.44 2.44)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop
+                    offset="0"
+                    stop-color="#8251e9"
+                    stop-opacity="0.3"
+                  />
+                  <stop
+                    offset="0.03"
+                    stop-color="#8251e9"
+                    stop-opacity="0.28"
+                  />
+                  <stop
+                    offset="0.28"
+                    stop-color="#8251e9"
+                    stop-opacity="0.16"
+                  />
+                  <stop
+                    offset="0.52"
+                    stop-color="#8251e9"
+                    stop-opacity="0.07"
+                  />
+                  <stop
+                    offset="0.77"
+                    stop-color="#8251e9"
+                    stop-opacity="0.02"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#8251e9"
+                    stop-opacity="0"
+                  />
                 </radialGradient>
-                <radialGradient id="radial-gradient-7" cx="204.44" cy="366.87" r="62.73"
-                  gradientTransform="translate(-196.62 -568.81) scale(2.44 2.44)" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#df7bf5" stop-opacity="0.1" />
-                  <stop offset="0.18" stop-color="#df7bf5" stop-opacity="0.07" />
-                  <stop offset="0.6" stop-color="#df7bf5" stop-opacity="0.02" />
-                  <stop offset="1" stop-color="#df7bf5" stop-opacity="0" />
+                <radialGradient
+                  id="radial-gradient-7"
+                  cx="204.44"
+                  cy="366.87"
+                  r="62.73"
+                  gradientTransform="translate(-196.62 -568.81) scale(2.44 2.44)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop
+                    offset="0"
+                    stop-color="#df7bf5"
+                    stop-opacity="0.1"
+                  />
+                  <stop
+                    offset="0.18"
+                    stop-color="#df7bf5"
+                    stop-opacity="0.07"
+                  />
+                  <stop
+                    offset="0.6"
+                    stop-color="#df7bf5"
+                    stop-opacity="0.02"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#df7bf5"
+                    stop-opacity="0"
+                  />
                 </radialGradient>
-                <radialGradient id="radial-gradient-8" cx="201.16" cy="289.38" r="40.18"
-                  xlink:href="#radial-gradient-7" />
+                <radialGradient
+                  id="radial-gradient-8"
+                  cx="201.16"
+                  cy="289.38"
+                  r="40.18"
+                  xlink:href="#radial-gradient-7"
+                />
               </defs>
               <g id="Gradients">
-                <circle id="MainGradient" class="cls-1" cx="215" cy="215" r="215" />
-                <circle id="Gradient3" class="cls-2" cx="302" cy="326" r="153" />
-                <circle id="Gradient3-2" data-name="Gradient3" class="cls-3" cx="294" cy="137" r="98" />
+                <circle
+                  id="MainGradient"
+                  class="cls-1"
+                  cx="215"
+                  cy="215"
+                  r="215"
+                />
+                <circle
+                  id="Gradient3"
+                  class="cls-2"
+                  cx="302"
+                  cy="326"
+                  r="153"
+                />
+                <circle
+                  id="Gradient3-2"
+                  data-name="Gradient3"
+                  class="cls-3"
+                  cx="294"
+                  cy="137"
+                  r="98"
+                />
               </g>
             </svg>
           </div>
@@ -142,33 +387,119 @@ const props = defineProps({
         </div>
         <div class="interest-row fade-in">
           <div class="interest-row-illustration">
-            <Bike size="128" stroke-width="2" color="var(--primary-color)" />
-            <svg id="sport-vector" class="interest-row-illustration-vector" data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 481.72 480">
+            <Bike
+              size="128"
+              stroke-width="2"
+              color="var(--primary-color)"
+            />
+            <svg
+              id="sport-vector"
+              class="interest-row-illustration-vector"
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 481.72 480"
+            >
               <defs>
-                <radialGradient id="radial-gradient-9" cx="183" cy="331.61" r="98.4"
-                  gradientTransform="translate(-204.62 -568.81) scale(2.44 2.44)" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#5f78ef" stop-opacity="0.3" />
-                  <stop offset="0.04" stop-color="#5f78ef" stop-opacity="0.28" />
-                  <stop offset="0.29" stop-color="#5f78ef" stop-opacity="0.16" />
-                  <stop offset="0.53" stop-color="#5f78ef" stop-opacity="0.07" />
-                  <stop offset="0.77" stop-color="#5f78ef" stop-opacity="0.02" />
-                  <stop offset="1" stop-color="#5f78ef" stop-opacity="0" />
+                <radialGradient
+                  id="radial-gradient-9"
+                  cx="183"
+                  cy="331.61"
+                  r="98.4"
+                  gradientTransform="translate(-204.62 -568.81) scale(2.44 2.44)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop
+                    offset="0"
+                    stop-color="#5f78ef"
+                    stop-opacity="0.3"
+                  />
+                  <stop
+                    offset="0.04"
+                    stop-color="#5f78ef"
+                    stop-opacity="0.28"
+                  />
+                  <stop
+                    offset="0.29"
+                    stop-color="#5f78ef"
+                    stop-opacity="0.16"
+                  />
+                  <stop
+                    offset="0.53"
+                    stop-color="#5f78ef"
+                    stop-opacity="0.07"
+                  />
+                  <stop
+                    offset="0.77"
+                    stop-color="#5f78ef"
+                    stop-opacity="0.02"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#5f78ef"
+                    stop-opacity="0"
+                  />
                 </radialGradient>
-                <radialGradient id="radial-gradient-10" cx="142.23" cy="331.04" r="58.33"
-                  gradientTransform="translate(-204.62 -568.81) scale(2.44 2.44)" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#b4e2f9" stop-opacity="0.1" />
-                  <stop offset="0.19" stop-color="#b4e2f9" stop-opacity="0.07" />
-                  <stop offset="0.6" stop-color="#b4e2f9" stop-opacity="0.02" />
-                  <stop offset="1" stop-color="#b4e2f9" stop-opacity="0" />
+                <radialGradient
+                  id="radial-gradient-10"
+                  cx="142.23"
+                  cy="331.04"
+                  r="58.33"
+                  gradientTransform="translate(-204.62 -568.81) scale(2.44 2.44)"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop
+                    offset="0"
+                    stop-color="#b4e2f9"
+                    stop-opacity="0.1"
+                  />
+                  <stop
+                    offset="0.19"
+                    stop-color="#b4e2f9"
+                    stop-opacity="0.07"
+                  />
+                  <stop
+                    offset="0.6"
+                    stop-color="#b4e2f9"
+                    stop-opacity="0.02"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#b4e2f9"
+                    stop-opacity="0"
+                  />
                 </radialGradient>
-                <radialGradient id="radial-gradient-11" cx="210.61" cy="349.61" r="42.82"
-                  xlink:href="#radial-gradient-10" />
+                <radialGradient
+                  id="radial-gradient-11"
+                  cx="210.61"
+                  cy="349.61"
+                  r="42.82"
+                  xlink:href="#radial-gradient-10"
+                />
               </defs>
               <g id="Gradients">
-                <circle id="MainGradient" class="cls-1" cx="241.72" cy="240" r="240" />
-                <circle id="Gradient3" class="cls-2" cx="142.28" cy="238.61" r="142.28" />
-                <circle id="Gradient3-2" data-name="Gradient3" class="cls-3" cx="309.07" cy="283.9" r="104.44" />
+                <circle
+                  id="MainGradient"
+                  class="cls-1"
+                  cx="241.72"
+                  cy="240"
+                  r="240"
+                />
+                <circle
+                  id="Gradient3"
+                  class="cls-2"
+                  cx="142.28"
+                  cy="238.61"
+                  r="142.28"
+                />
+                <circle
+                  id="Gradient3-2"
+                  data-name="Gradient3"
+                  class="cls-3"
+                  cx="309.07"
+                  cy="283.9"
+                  r="104.44"
+                />
               </g>
             </svg>
           </div>

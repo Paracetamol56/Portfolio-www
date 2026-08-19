@@ -1,27 +1,30 @@
 <script lang="ts" setup>
-import { GraduationCap, Sparkles } from "lucide-vue-next";
-import UnderlinedButton from "../UnderlinedButton.vue";
+import { GraduationCap, Sparkles } from 'lucide-vue-next'
+import UnderlinedButton from '../UnderlinedButton.vue'
 
 const props = defineProps({
   number: {
     type: String,
     required: true,
   },
-});
+})
 </script>
 
 <template>
-  <section id="about" class="fade-in">
+  <section
+    id="about"
+    class="fade-in"
+  >
     <div class="container">
       <div class="section-title">
         <h2>
           <span class="section-title-number">{{ number }}.</span>
           {{ $t("home.about.title") }}
         </h2>
-        <hr />
+        <hr>
       </div>
       <div class="about-introduction fade-in">
-        <p v-html="$t('home.about.main-paragraph')"></p>
+        <p v-html="$t('home.about.main-paragraph')" />
       </div>
       <SocialList />
       <div class="about-spotlight">
@@ -46,45 +49,87 @@ const props = defineProps({
           </h3>
           <ul class="about-spotlight-list">
             <li class="about-spotlight-item">
-              <h4 class="about-spotlight-subtitle">Dev website</h4>
+              <h4 class="about-spotlight-subtitle">
+                Dev website
+              </h4>
               <div class="about-spotlight-item-content">
-                <NuxtImg src="/img/spotlights/dev.png" format="webp" placeholder loading="lazy" quality="50"
-                  alt="Dev website" class="about-spotlight-logo" width="75" height="75" />
+                <NuxtImg
+                  src="/img/spotlights/dev.png"
+                  format="webp"
+                  placeholder
+                  loading="lazy"
+                  quality="50"
+                  alt="Dev website"
+                  class="about-spotlight-logo"
+                  width="75"
+                  height="75"
+                />
                 <div>
                   <p class="about-spotlight-description">
                     A blog to share my knowledge and my projects.
                   </p>
-                  <UnderlinedButton href="https://dev.matheo-galuba.com" target="_blank">
+                  <UnderlinedButton
+                    href="https://dev.matheo-galuba.com"
+                    target="_blank"
+                  >
                     Go
                   </UnderlinedButton>
                 </div>
               </div>
             </li>
             <li class="about-spotlight-item">
-              <h4 class="about-spotlight-subtitle">Ticketing</h4>
+              <h4 class="about-spotlight-subtitle">
+                Ticketing
+              </h4>
               <div class="about-spotlight-item-content">
-                <NuxtImg src="/img/spotlights/ticket.png" format="webp" placeholder loading="lazy" quality="50"
-                  alt="Ticketing" class="about-spotlight-logo" width="75" height="75" />
+                <NuxtImg
+                  src="/img/spotlights/ticket.png"
+                  format="webp"
+                  placeholder
+                  loading="lazy"
+                  quality="50"
+                  alt="Ticketing"
+                  class="about-spotlight-logo"
+                  width="75"
+                  height="75"
+                />
                 <div>
                   <p class="about-spotlight-description">
                     A personal ticketing system.
                   </p>
-                  <UnderlinedButton href="https://ticket.matheo-galuba.com" target="_blank">
+                  <UnderlinedButton
+                    href="https://ticket.matheo-galuba.com"
+                    target="_blank"
+                  >
                     Go
                   </UnderlinedButton>
                 </div>
               </div>
             </li>
             <li class="about-spotlight-item">
-              <h4 class="about-spotlight-subtitle">Les actus de Bob</h4>
+              <h4 class="about-spotlight-subtitle">
+                Les actus de Bob
+              </h4>
               <div class="about-spotlight-item-content">
-                <NuxtImg src="/img/spotlights/actus-de-bob.png" format="webp" placeholder loading="lazy" quality="50"
-                  alt="Les actus de Bob" class="about-spotlight-logo" width="75" height="75" />
+                <NuxtImg
+                  src="/img/spotlights/actus-de-bob.png"
+                  format="webp"
+                  placeholder
+                  loading="lazy"
+                  quality="50"
+                  alt="Les actus de Bob"
+                  class="about-spotlight-logo"
+                  width="75"
+                  height="75"
+                />
                 <div>
                   <p class="about-spotlight-description">
                     A blog about useless facts.
                   </p>
-                  <UnderlinedButton href="https://actus-de-bob.fun" target="_blank">
+                  <UnderlinedButton
+                    href="https://actus-de-bob.fun"
+                    target="_blank"
+                  >
                     Go
                   </UnderlinedButton>
                 </div>
