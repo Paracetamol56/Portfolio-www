@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ExternalLink } from 'lucide-vue-next'
 
-const props = defineProps({
+defineProps({
   number: {
     type: String,
     required: true,
@@ -21,8 +21,8 @@ const props = defineProps({
       </div>
       <ul class="formation-list">
         <li
-          v-for="(num, index) in 6"
-          :key="index"
+          v-for="(num, i) in 6"
+          :key="i"
           class="formation-item fade-in"
         >
           <div class="formation-item-timeline">
@@ -48,8 +48,8 @@ const props = defineProps({
               </p>
               <ul style="list-style: none;">
                 <li
-                  v-for="(skill, index) in $t(`about.formation.${num}.description`).split(';')"
-                  :key="index"
+                  v-for="(skill, j) in $t(`about.formation.${num}.description`).split(';')"
+                  :key="j"
                 >
                   {{ skill }}
                 </li>
@@ -72,51 +72,51 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 ul.formation-list {
-	list-style: none;
-	padding: 0;
-	margin-top: 3rem;
-	li.formation-item {
-		display: flex;
-		flex-direction: row;
-		justify-content: stretch;
-		align-items: stretch;
-		margin-bottom: 2rem;
-		p,
-		h3 {
-			margin: 0.5rem 0;
-		}
-		.formation-item-timeline {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			margin-right: 1rem;
-			p.formation-start-date,
-			p.formation-end-date {
-				margin: 0;
-				color: var(--secondary-color);
-			}
-			span.formation-start-date-separator {
-				width: 2px;
-				flex: 1;
-				background-color: var(--secondary-color);
-			}
-		}
-		.formatioon-item-content {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
-			h3.formation-title {
-				margin-top: 0;
-			}
-			p.formation-description {
-				color: var(--comment-color);
-			}
-			a svg.formation-link-vector {
-				height: 1rem;
-			}
-		}
-	}
+  list-style: none;
+  padding: 0;
+  margin-top: 3rem;
+  li.formation-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+    margin-bottom: 2rem;
+    p,
+    h3 {
+      margin: 0.5rem 0;
+    }
+    .formation-item-timeline {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
+      p.formation-start-date,
+      p.formation-end-date {
+        margin: 0;
+        color: var(--secondary-color);
+      }
+      span.formation-start-date-separator {
+        width: 2px;
+        flex: 1;
+        background-color: var(--secondary-color);
+      }
+    }
+    .formatioon-item-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      h3.formation-title {
+        margin-top: 0;
+      }
+      p.formation-description {
+        color: var(--comment-color);
+      }
+      a svg.formation-link-vector {
+        height: 1rem;
+      }
+    }
+  }
 }
 </style>

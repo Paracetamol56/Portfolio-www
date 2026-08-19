@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { LMap, LTileLayer, LMarker, LControlZoom } from '@vue-leaflet/vue-leaflet'
+import { LMap, LTileLayer, LMarker } from '@vue-leaflet/vue-leaflet'
 import 'leaflet/dist/leaflet.css'
 
 const center = ref({ lat: 45.78710146863226, lng: 3.0714223231138087 })

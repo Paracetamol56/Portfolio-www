@@ -18,13 +18,13 @@
       <polygon
         class="st0"
         points="581.9,739 581.9,436.6 669.2,436.6 775.4,620.5 859.8,474.4 1035.5,474.4 1035.5,739 837.9,739
-	881.6,663.4 959.9,663.4 959.9,549.9 903.4,549.9 794.3,739 756.5,739 657.5,567.5 657.5,739 "
+              881.6,663.4 959.9,663.4 959.9,549.9 903.4,549.9 794.3,739 756.5,739 657.5,567.5 657.5,739 "
       />
       <path
         id="path20_00000139974231263478493260000014802661880912911535_"
         class="st0"
         d="M1035.5,436.6V361H794.3l-62.6,108.3
-	l43.7,75.6l62.5-108.3H1035.5"
+         l43.7,75.6l62.5-108.3H1035.5"
       />
       <polygon
         class="st1"
@@ -43,7 +43,7 @@
         id="path22"
         class="st2"
         d="M581.9,739h75.6V567.5l99,171.4h37.8l109.1-189h56.5v113.4h-78.3L837.9,739h197.6V474.4H859.8
-	l-84.3,146.1L669.2,436.6h-87.3V739"
+         l-84.3,146.1L669.2,436.6h-87.3V739"
       />
       <g id="g98">
         <path
@@ -504,7 +504,7 @@ const props = defineProps({
   },
 })
 
-const { progress, isLoading, error, start, finish, clear } = useLoadingIndicator({
+const { isLoading } = useLoadingIndicator({
   duration: props.duration,
   throttle: props.throttle,
   hideDelay: props.hideDelay,
@@ -524,7 +524,7 @@ const { progress, isLoading, error, start, finish, clear } = useLoadingIndicator
     circle,
     #2c1b4f 0%,
     #111416 100%
-  ) !important;
+    ) !important;
   background-position: center;
   animation: background 6s infinite;
   z-index: 99;
@@ -614,33 +614,33 @@ const { progress, isLoading, error, start, finish, clear } = useLoadingIndicator
       }
     }
 
-    @keyframes background {
-      0% {
-        background-size: 100%;
-      }
-
-      50% {
-        background-size: 150%;
-      }
-
-      100% {
-        background-size: 100%;
-      }
+  @keyframes background {
+    0% {
+      background-size: 100%;
     }
 
-    @keyframes dot-1 {
-      0% {
-        transform: translateY(0);
-      }
-
-      10% {
-        transform: translateY(-5px);
-      }
-
-      20% {
-        transform: translateY(0);
-      }
+    50% {
+      background-size: 150%;
     }
+
+    100% {
+      background-size: 100%;
+    }
+  }
+
+@keyframes dot-1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(-5px);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+}
 
     @keyframes dot-2 {
       10% {
@@ -656,33 +656,33 @@ const { progress, isLoading, error, start, finish, clear } = useLoadingIndicator
       }
     }
 
-    @keyframes dot-3 {
-      20% {
-        transform: translateY(0);
-      }
-
-      30% {
-        transform: translateY(-5px);
-      }
-
-      40% {
-        transform: translateY(0);
-      }
+  @keyframes dot-3 {
+    20% {
+      transform: translateY(0);
     }
 
-    @keyframes dot-4 {
-      30% {
-        transform: translateY(0);
-      }
-
-      40% {
-        transform: translateY(-5px);
-      }
-
-      50% {
-        transform: translateY(0);
-      }
+    30% {
+      transform: translateY(-5px);
     }
+
+    40% {
+      transform: translateY(0);
+    }
+  }
+
+@keyframes dot-4 {
+  30% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+}
 
     @keyframes dot-5 {
       40% {
@@ -699,14 +699,14 @@ const { progress, isLoading, error, start, finish, clear } = useLoadingIndicator
     }
   }
 
-  @keyframes loader-fade-in {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
+@keyframes loader-fade-in {
+  0% {
+    opacity: 0;
   }
+
+  100% {
+    opacity: 1;
+  }
+}
 }
 </style>

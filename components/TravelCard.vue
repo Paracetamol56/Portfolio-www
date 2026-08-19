@@ -1,11 +1,11 @@
 <i18n>
 {
-	"en": {
-		"more": "See more"
-	},
-	"fr": {
-		"more": "Voir plus"
-	}
+  "en": {
+    "more": "See more"
+  },
+  "fr": {
+    "more": "Voir plus"
+  }
 }
 </i18n>
 
@@ -163,94 +163,94 @@ export default {
   overflow: hidden;
   border-radius: var(--border-radius);
 
-  @media (max-width: 576px) {
-    aspect-ratio: unset;
+@media (max-width: 576px) {
+  aspect-ratio: unset;
+}
+
+img.travel-card-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  // make the image 80% transparent
+opacity: 0.5;
+}
+
+.travel-card-text {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  background-image: linear-gradient(135deg, #2c1b4fa0 70%, #111416a0 100%);
+  background-size: 400%;
+  background-position: 100%;
+  transition: background-position 1s var(--easing);
+
+  &:hover {
+    background-position: 0%;
   }
 
-  img.travel-card-image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    // make the image 80% transparent
-    opacity: 0.5;
+  .colored {
+    color: var(--secondary-color);
   }
 
-  .travel-card-text {
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem;
-    background-image: linear-gradient(135deg, #2c1b4fa0 70%, #111416a0 100%);
-    background-size: 400%;
-    background-position: 100%;
-    transition: background-position 1s var(--easing);
+  .travel-card-text-date {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin: 0.5rem 0;
 
-    &:hover {
-      background-position: 0%;
-    }
-
-    .colored {
-      color: var(--secondary-color);
-    }
-
-    .travel-card-text-date {
-      font-size: 1rem;
-      color: var(--secondary-color);
-      margin: 0.5rem 0;
-
-      @media (max-width: 768px) {
-        font-size: 0.8rem;
-      }
-    }
-
-    .travel-card-text-title {
-      font-size: 2.5rem;
-      font-weight: 500;
-      margin: 0;
-
-      @media (max-width: 768px) {
-        font-size: 1.2rem;
-      }
-
-      .travel-card-text-title-number {
-        color: var(--secondary-color);
-        font-weight: 700;
-      }
-    }
-
-    .travel-card-text-description {
-      font-size: 1rem;
-      font-weight: 300;
-      margin: 0 0 1rem;
-
-      @media (max-width: 768px) {
-        font-size: 0.8rem;
-      }
-    }
-
-    .travel-card-text-link {
-      font-size: 1rem;
-      font-weight: 500;
-      padding: 0.2rem 0.5rem;
-      color: var(--text-color);
-      text-decoration: none;
-      border: 1px solid var(--text-color);
-      transform: translate(0, 0) scale(1) !important;
-      transition: color 0.2s var(--easing), border 0.2s var(--easing);
-
-      @media (max-width: 768px) {
-        font-size: 0.8rem;
-      }
-
-      &:hover {
-        color: var(--secondary-color);
-        border: 1px solid var(--secondary-color);
-      }
-    }
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
   }
+  }
+
+  .travel-card-text-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  .travel-card-text-title-number {
+    color: var(--secondary-color);
+    font-weight: 700;
+  }
+  }
+
+  .travel-card-text-description {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0 0 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+  }
+
+  .travel-card-text-link {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border: 1px solid var(--text-color);
+    transform: translate(0, 0) scale(1) !important;
+    transition: color 0.2s var(--easing), border 0.2s var(--easing);
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+
+  &:hover {
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+  }
+  }
+}
 }
 </style>

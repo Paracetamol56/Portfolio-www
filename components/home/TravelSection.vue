@@ -381,7 +381,6 @@ function slideChange(e: any) {
           :pagination="{ clickable: true }"
           :loop="false"
           :grab-cursor="true"
-          @swiper="onSwiper"
           :centered-slides="true"
           :breakpoints="{
             576: {
@@ -406,6 +405,7 @@ function slideChange(e: any) {
             },
           }"
           :modules="modules"
+          @swiper="onSwiper"
           @slide-change="slideChange"
         >
           <SwiperSlide

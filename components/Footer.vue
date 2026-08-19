@@ -62,62 +62,62 @@
 
 <style scoped lang="scss">
 footer {
-	width: 100%;
-	padding: 50px 0;
-	position: relative;
-	background-color: #111416;
-	.footer-author {
-		font-family: "Fira Code", monospace;
-		font-size: 0.8rem;
-		font-weight: 300;
-		text-align: center;
-		color: #ffffff;
-		margin: 20px 0;
-		padding: 0;
-		span.hearth {
-			color: #ffffff;
-			transition: all 0.25s var(--easing);
-			&:hover {
-				color: #8251e9;
-				transition: all 0.25s var(--easing);
-			}
-			svg.hearth-vector {
-				max-height: 0.8rem;
-			}
-		}
-	}
-	.footer-credits {
-		font-family: "Fira Code", monospace;
-		font-size: 0.8rem;
-		font-weight: 300;
-		text-align: center;
-		color: #ffffff;
-		margin: 20px 0;
-		padding: 0;
-	}
-	a {
-		color: #ffffff;
-		text-decoration: dotted underline;
-		transition: all 0.25s var(--easing);
-		&:hover {
-			color: #8251e9;
-			text-decoration: solid underline;
-			transition: all 0.25s var(--easing);
-		}
-	}
-	.bottom-gradient {
-		width: 100%;
-		height: 10px;
-		background-image: linear-gradient(
-			90deg,
-			#b4e2f9 0%,
-			#5f78ef 25%,
-			#8251e9 50%,
-			#ad56e3 75%,
-			#df7bf5 100%
-		);
-		position: absolute;
-		bottom: 0;
-	}
+  width: 100%;
+  padding: 50px 0;
+  position: relative;
+  background-color: #111416;
+  .footer-author {
+    font-family: "Fira Code", monospace;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+    margin: 20px 0;
+    padding: 0;
+    span.hearth {
+      color: #ffffff;
+      transition: all 0.25s var(--easing);
+      &:hover {
+        color: #8251e9;
+        transition: all 0.25s var(--easing);
+      }
+      svg.hearth-vector {
+        max-height: 0.8rem;
+      }
+    }
+  }
+  .footer-credits {
+    font-family: "Fira Code", monospace;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+    margin: 20px 0;
+    padding: 0;
+  }
+  a {
+    color: #ffffff;
+    text-decoration: dotted underline;
+    transition: all 0.25s var(--easing);
+    &:hover {
+      color: #8251e9;
+      text-decoration: solid underline;
+      transition: all 0.25s var(--easing);
+    }
+  }
+  .bottom-gradient {
+    width: 100%;
+    height: 10px;
+    background-image: linear-gradient(
+      90deg,
+      #b4e2f9 0%,
+      #5f78ef 25%,
+      #8251e9 50%,
+      #ad56e3 75%,
+      #df7bf5 100%
+      );
+    position: absolute;
+    bottom: 0;
+  }
 }
 </style>

@@ -6,11 +6,6 @@ const { locale } = useI18n()
 const route = useRoute()
 const setI18nParams = useSetI18nParams()
 
-type Data = {
-  content: any
-  surround: any[]
-}
-
 const slug = computed(() => route.params.slug as string)
 
 const { data, error } = await useAsyncData(
@@ -40,6 +35,7 @@ const { data, error } = await useAsyncData(
       return { content, surround }
     }
     catch (e) {
+      console.error(`Error fetching project data for slug: ${slug.value}`, e)
       return null
     }
   },

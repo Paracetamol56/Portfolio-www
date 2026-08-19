@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-const localePath = useLocalePath()
-
 defineProps({
   href: {
     type: String,

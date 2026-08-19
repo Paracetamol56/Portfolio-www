@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { Code, Cog, Brain, ListTodo, Bot, ServerCog } from 'lucide-vue-next'
 
-const props = defineProps({
+defineProps({
   number: {
     type: String,
     required: true,

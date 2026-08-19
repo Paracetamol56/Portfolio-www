@@ -9,8 +9,6 @@ defineProps({
     required: true,
   },
 })
-
-const handleError = () => clearError({ redirect: '/' })
 </script>
 
 <template>

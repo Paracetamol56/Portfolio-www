@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import BoxButton from '@/components/BoxButton.vue'
 import { Send } from 'lucide-vue-next'
 </script>
 

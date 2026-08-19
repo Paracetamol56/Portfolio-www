@@ -2,10 +2,8 @@
 import { ref, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { locale, locales, setLocale } = useI18n()
+const { locale, locales } = useI18n()
 const localePath = useLocalePath()
-const switchLocalePath = useSwitchLocalePath()
-const route = useRoute()
 const availableLocales = computed(() => {
   return locales.value.filter(i => i.code !== locale.value)
 })

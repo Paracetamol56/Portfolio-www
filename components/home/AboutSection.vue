@@ -2,7 +2,7 @@
 import { GraduationCap, Sparkles } from 'lucide-vue-next'
 import UnderlinedButton from '../UnderlinedButton.vue'
 
-const props = defineProps({
+defineProps({
   number: {
     type: String,
     required: true,

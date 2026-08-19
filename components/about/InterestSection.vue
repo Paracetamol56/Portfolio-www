@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { FlaskConical, Bike, CircuitBoard, Telescope } from 'lucide-vue-next'
 
-const props = defineProps({
+defineProps({
   number: {
     type: String,
     required: true,
