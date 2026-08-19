@@ -90,6 +90,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-09-04',
 
   nitro: {
+    experimental: {
+      wasm: true
+    },
     prerender: {
       failOnError: false,
       concurrency: 2,
@@ -132,4 +135,14 @@ export default defineNuxtConfig({
   image: {
     provider: 'netlify',
   },
+
+  content: {
+    experimental: {
+      sqliteConnector: 'native'
+    },
+    database: {
+      type: 'sqlite',
+      filename: ':memory:'
+    }
+  }
 })
