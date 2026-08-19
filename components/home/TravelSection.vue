@@ -369,34 +369,36 @@ function slideChange(e: any) {
         @mousedown="touchStart"-->
         <!-- The globe goes here -->
       </div>
-      <Swiper class="travel-slider" @swiper="onSwiper" @slideChange="slideChange" :slides-per-view="1.1"
-        :space-between="20" :navigation="true" :pagination="{ clickable: true }" :loop="false" :grab-cursor="true"
-        :centeredSlides="true" :breakpoints="{
-          576: {
-            slidesPerView: 1.2,
-            spaceBetween: 40,
-          },
-          768: {
-            slidesPerView: 1.4,
-            spaceBetween: 60,
-          },
-          992: {
-            slidesPerView: 1.6,
-            spaceBetween: 80,
-          },
-          1200: {
-            slidesPerView: 1.8,
-            spaceBetween: 100,
-          },
-          1400: {
-            slidesPerView: 2.2,
-            spaceBetween: 100,
-          },
-        }" :modules="modules">
-        <SwiperSlide class="project-slider-item" v-for="travel in travels" :key="travel.id">
-          <TravelCard :travel="travel" />
-        </SwiperSlide>
-      </Swiper>
+      <ClientOnly>
+        <Swiper class="travel-slider" @swiper="onSwiper" @slideChange="slideChange" :slides-per-view="1.1"
+          :space-between="20" :navigation="true" :pagination="{ clickable: true }" :loop="false" :grab-cursor="true"
+          :centeredSlides="true" :breakpoints="{
+            576: {
+              slidesPerView: 1.2,
+              spaceBetween: 40,
+            },
+            768: {
+              slidesPerView: 1.4,
+              spaceBetween: 60,
+            },
+            992: {
+              slidesPerView: 1.6,
+              spaceBetween: 80,
+            },
+            1200: {
+              slidesPerView: 1.8,
+              spaceBetween: 100,
+            },
+            1400: {
+              slidesPerView: 2.2,
+              spaceBetween: 100,
+            },
+          }" :modules="modules">
+          <SwiperSlide class="project-slider-item" v-for="travel in travels" :key="travel.id">
+            <TravelCard :travel="travel" />
+          </SwiperSlide>
+        </Swiper>
+      </ClientOnly>
     </div>
   </section>
 </template>

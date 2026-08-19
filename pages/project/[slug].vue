@@ -1,89 +1,86 @@
 <script lang="ts" setup>
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import { updateFadeInElements } from "~/app.vue";
-import { ExternalLink, FileDown } from "lucide-vue-next";
 
-const localePath = useLocalePath()
-
-const modules = [Navigation, Pagination];
+const localePath = useLocalePath();
 const { locale } = useI18n();
 const route = useRoute();
+const setI18nParams = useSetI18nParams();
 
 type Data = {
-  content: {
-    title: string;
-    subtitle: string;
-    status: string;
-    dates: {
-      start: string;
-      end: string;
-    };
-    technologies: {
-      name: string;
-      icon: string;
-      description: string;
-    }[];
-    team: {
-      name: string;
-      role: string;
-    }[];
-    images: string[];
-    links: {
-      name: string;
-      url: string;
-      icon: string;
-    }[];
-  };
-  surround: { path: string, stem: string, title: string }[];
+  content: any;
+  surround: any[];
 };
 
 const slug = computed(() => route.params.slug as string);
 
-const { data }: { data: Ref<Data> } = await useAsyncData(
-  `page-${locale.value}-${slug.value}`, async () => {
-    const [content, surround] = await Promise.all([
-      queryCollection(locale.value)
+const { data, error } = await useAsyncData(
+  `page-${locale.value}-${slug.value}`,
+  async () => {
+    try {
+      // 1. Try querying the content collection matching current locale
+      let content = await queryCollection(locale.value as any)
         .path(`/${locale.value}/${slug.value}`)
-        .first(),
-      queryCollectionItemSurroundings(locale.value, `/${locale.value}/${slug.value}`)
-        .order('number', 'DESC')
-    ]);
+        .first();
 
-    return {
-      content,
-      surround,
-    };
+      // Fallback: try without the leading locale prefix
+      if (!content) {
+        content = await queryCollection(locale.value as any)
+          .path(`/${slug.value}`)
+          .first();
+      }
+
+      if (!content) return null;
+
+      // 2. Safely load surrounding links (previous / next projects)
+      const surround = await queryCollectionItemSurroundings(
+        locale.value as any,
+        `/${locale.value}/${slug.value}`
+      ).catch(() => []);
+
+      return { content, surround };
+    } catch (e) {
+      return null;
+    }
   },
   { watch: [locale, slug] }
 );
 
-if (!data.value.content) {
-  const route = useRoute();
+// Gracefully handle missing content with a proper 404 response
+if (!data.value || !data.value.content || error.value) {
   throw createError({
     statusCode: 404,
-    message: `Page not found: ${route.fullPath}`,
+    statusMessage: `Project not found: ${route.fullPath}`,
+    fatal: true,
   });
 }
 
+// Map the alternate language slugs to @nuxtjs/i18n
+// This resolves /project/[fr-slug] vs /fr/project/[en-slug] cross-linking errors during SSR/prerendering
+const content = data.value.content;
+const slugEn = content.slugEn || content.slug_en || (locale.value === "en" ? slug.value : null);
+const slugFr = content.slugFr || content.slug_fr || (locale.value === "fr" ? slug.value : null);
+
+if (slugEn || slugFr) {
+  setI18nParams({
+    en: { slug: slugEn || slug.value },
+    fr: { slug: slugFr || slug.value },
+  });
+}
+
+// Dynamic page head setup
+useHead({
+  title: content.title,
+  meta: [
+    { name: "description", content: content.subtitle },
+    { name: "og:title", content: content.title },
+    { name: "og:description", content: content.subtitle },
+    { name: "twitter:title", content: content.title },
+    { name: "twitter:description", content: content.subtitle },
+  ],
+});
+
 onMounted(() => {
   updateFadeInElements();
-  useHead({
-    title: data.value.content?.title,
-    meta: [
-      {
-        name: "description",
-        content: data.value.content?.subtitle,
-      },
-      { name: "og:title", content: data.value.content?.title },
-      { name: "og:description", content: data.value.content?.subtitle },
-      { name: "twitter:title", content: data.value.content?.title },
-      { name: "twitter:description", content: data.value.content?.subtitle },
-    ],
-  });
 });
 </script>
 
@@ -134,16 +131,18 @@ onMounted(() => {
         </div>
       </section>
       <section id="image" class="fade-in">
-        <Swiper v-if="data.content?.images?.length > 1" class="project-slider" :slides-per-view="1" :space-between="20"
-          :navigation="true" :pagination="{ clickable: true }" :loop="false" :grab-cursor="true" :centeredSlides="true"
-          :modules="modules">
-          <SwiperSlide class="project-slider-item" v-for="image in data.content?.images" :key="image">
-            <NuxtImg :src="image" format="webp" placeholder loading="lazy" quality="50"
-              :alt="`Project ${data.content?.title}`" />
-          </SwiperSlide>
-        </Swiper>
-        <NuxtImg v-else-if="data.content?.images" :src="data.content?.images[0]" format="webp" placeholder
-          loading="lazy" quality="50" id="header-image" alt="Project {{ data.content?.title }}" />
+        <ClientOnly>
+          <Swiper v-if="data.content?.images?.length > 1" class="project-slider" :slides-per-view="1" :space-between="20"
+            :navigation="true" :pagination="{ clickable: true }" :loop="false" :grab-cursor="true" :centeredSlides="true"
+            :modules="modules">
+            <SwiperSlide class="project-slider-item" v-for="image in data.content?.images" :key="image">
+              <NuxtImg :src="image" format="webp" placeholder loading="lazy" quality="50"
+                :alt="`Project ${data.content?.title}`" />
+            </SwiperSlide>
+          </Swiper>
+          <NuxtImg v-else-if="data.content?.images" :src="data.content?.images[0]" format="webp" placeholder
+            loading="lazy" quality="50" id="header-image" alt="Project {{ data.content?.title }}" />
+        </ClientOnly>
       </section>
       <section id="links">
         <div class="container">
