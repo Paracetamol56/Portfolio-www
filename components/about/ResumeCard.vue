@@ -55,7 +55,7 @@ function resetRotation() {
       download
     >
       <NuxtImg
-        src="`/img/CV_${locale}_2026.jpg`"
+        :src="`/img/CV_${locale}_2026.jpg`"
         format="webp"
         placeholder
         loading="lazy"

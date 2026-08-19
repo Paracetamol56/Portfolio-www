@@ -157,12 +157,23 @@
   margin: 0 auto 20px;
   padding: 0;
   list-style: none;
+
   .logo-item {
     margin: 0 10px;
+
     .logo-link {
+      display: inline-block;
+
       .logo-image {
         width: 2rem;
         height: 2rem;
+        transition: fill 0.2s ease;
+      }
+
+      &:hover {
+        .logo-image {
+          fill: #8251e9;
+        }
       }
     }
   }
